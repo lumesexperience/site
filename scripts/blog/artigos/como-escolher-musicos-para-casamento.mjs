@@ -35,7 +35,7 @@ export const musicos = {
   <li><strong>Alianças e assinaturas.</strong> Músicas mais curtas, que acompanham sem chamar atenção.</li>
   <li><strong>Saída.</strong> Uma música alegre, já com clima de festa.</li>
 </ol>
-<p>Na recepção, a lógica é outra: no coquetel e no jantar, volume baixo para as pessoas conversarem; depois, a primeira dança e a pista. O roteiro completo está na <a href="../../#momentos">página do Lumens</a>.</p>
+<p>Na recepção, a lógica é outra: no coquetel e no jantar, volume baixo para as pessoas conversarem; depois, a primeira dança e a pista. O roteiro completo está na <a href="../../#momentos">página do Lumes Experience</a>.</p>
 
 <h2>Na igreja, a música segue o rito</h2>
 <p>Na Igreja Católica, a música faz parte da liturgia, e não é trilha de fundo. A instrução <em>Musicam Sacram</em>, do Vaticano, pede que se evite introduzir algo “meramente secular” na celebração, e cita o casamento como exemplo. Em Belo Horizonte, o diretório da arquidiocese diz:</p>

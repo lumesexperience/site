@@ -1,31 +1,31 @@
 ---
-name: Lumens
-description: Música ao vivo para casamentos em BH. O dia da cerimônia vira a noite da festa, acesa em dourado e laranja.
+name: Lumes Experience
+description: Música ao vivo para casamentos em BH. A identidade Lumes Experience (terracota e pêssego, os dois arcos, o L e a estrela) leva o dia da cerimônia à noite da festa.
 colors:
-  dia: "#EFE3D6"
-  dia-2: "#F8F1E9"
-  dia-linha: "#DDCBB9"
-  tinta: "#2B2520"
-  tinta-suave: "#5E5248"
-  ouro: "#7A5C1E"
-  ouro-linha: "#B08D45"
-  verde: "#3E5A42"
-  verde-escuro: "#2E4532"
-  sobre-verde: "#F8F1E9"
-  lume: "#D9732F"
-  foco: "#B4521D"
-  lume-escuro: "#9C4418"
-  noite: "#17201A"
-  noite-2: "#202B23"
-  noite-linha: "#364539"
-  noite-campo: "#7E8F80"
-  noite-dica: "#9AA89B"
-  luz: "#D9B26A"
-  luz-clara: "#E8CB8E"
-  noite-foco: "#E0844A"
-  noite-texto: "#F2E9DE"
-  noite-suave: "#CBC3B5"
-  noite-resposta: "#E5DCCF"
+  dia: "#F6E5D2"
+  dia-2: "#FCF3E8"
+  dia-linha: "#E5C9AA"
+  pessego: "#EDC79B"
+  tinta: "#33200F"
+  tinta-suave: "#6A4A33"
+  terracota: "#8E5226"
+  terracota-funda: "#6F3E1B"
+  sobre-terracota: "#FFF8F0"
+  terracota-marca: "#BB7944"
+  lume: "#BB7944"
+  foco: "#8E5226"
+  lume-escuro: "#8E5226"
+  noite: "#2B1A0F"
+  noite-2: "#3A2416"
+  noite-linha: "#5C3B25"
+  noite-campo: "#9C7A60"
+  noite-dica: "#C2A388"
+  luz: "#EDC79B"
+  luz-clara: "#F6DDBF"
+  noite-foco: "#E9A86F"
+  noite-texto: "#F8EBDD"
+  noite-suave: "#DCC4AD"
+  noite-resposta: "#EAD6C2"
 typography:
   display:
     fontFamily: "Bodoni Moda, Bodoni reserva, Bodoni reserva Georgia, Bodoni reserva Times, serif"
@@ -81,6 +81,12 @@ typography:
     fontSize: "1rem"
     fontWeight: 600
     lineHeight: 1.2
+  caixa-alta:
+    fontFamily: "Manrope, Manrope reserva, Manrope reserva Arial, sans-serif"
+    fontSize: "clamp(0.75rem, 0.7rem + 0.3vw, 0.875rem)"
+    fontWeight: 600
+    lineHeight: 1.4
+    letterSpacing: "0.24em"
   meta:
     fontFamily: "Manrope, Manrope reserva, Manrope reserva Arial, sans-serif"
     fontSize: "0.9375rem"
@@ -103,14 +109,14 @@ spacing:
   passo: "1rem"
 components:
   botao:
-    backgroundColor: "{colors.verde}"
-    textColor: "{colors.sobre-verde}"
+    backgroundColor: "{colors.terracota}"
+    textColor: "{colors.sobre-terracota}"
     typography: "{typography.label}"
     rounded: "{rounded.pilula}"
     padding: "0.8rem 1.5rem"
     height: "3rem"
   botao-hover:
-    backgroundColor: "{colors.verde-escuro}"
+    backgroundColor: "{colors.terracota-funda}"
   botao-luz:
     backgroundColor: "{colors.luz}"
     textColor: "{colors.noite}"
@@ -123,6 +129,13 @@ components:
   botao-compacto:
     rounded: "{rounded.pilula}"
     padding: "0.55rem 1.1rem"
+    height: "2.75rem"
+  botao-abertura:
+    backgroundColor: "{colors.dia-2}"
+    textColor: "{colors.terracota}"
+    typography: "{typography.label}"
+    rounded: "{rounded.pilula}"
+    padding: "0.5rem 1.1rem"
     height: "2.75rem"
   capa-assunto:
     backgroundColor: "{colors.noite}"
@@ -152,61 +165,56 @@ components:
     height: "2.75rem"
 ---
 
-# Design System: Lumens
+# Design System: Lumes Experience
 
 ## Overview
 
-**Creative North Star: "O dia que vira noite"**
+**Creative North Star: "A porta acesa"**
 
-O casamento começa de dia e termina de noite, e o site segue essa passagem. A cerimônia acontece num nude claro de papel ao sol (`--dia`), com tinta marrom-escura e ações em verde. A festa acontece num verde quase preto (`--noite`), com o texto em creme e os botões acesos em dourado (`--luz`). Entre as duas, uma faixa de pôr do sol (`--anoitecer`) faz a única passagem larga de laranja, com as primeiras luzes acesas embaixo. Na página inicial essa passagem separa a cerimônia da recepção. No blog, ela fecha cada artigo, antes da Delliz e do WhatsApp.
+A identidade Lumes Experience (entregue pelo dono em 03/11/2026, pasta "Lumes - Identidade Visual") tem duas cores, terracota `#bb7944` e pêssego `#edc79b`, e um símbolo: dois arcos de igreja de mesmo raio, o de dentro mais baixo, e dentro deles um L de alto contraste com uma estrela pequena em cima e uma estrela de quatro pontas acesa ao lado, com oito raios claros atrás. O nome vem em caixa alta geométrica, LUMES, com EXPERIENCE embaixo.
 
-O material é luz, sem ruído. O fundo do dia tem um sol baixo dourado no canto superior direito e um reflexo laranja à esquerda (`--textura-dia`). A noite tem um brilho dourado no alto e uma brasa laranja à direita (`--textura-noite`). São halos radiais suaves, posicionados em rem a partir do topo de cada bloco, nunca grão ou textura de papel. A forma recorrente é o arco de igreja. Ele emoldura a Delliz na abertura, todas as capas do blog e as miniaturas de "Leia também".
+O site leva esse símbolo para a passagem do casamento. A primeira visita abre com o logo se desenhando no pêssego da marca, e o arco de dentro vira uma porta que se abre para a página. A cerimônia acontece num pêssego claro (`--dia`), com tinta marrom e ações em terracota. A festa acontece num marrom-terracota fechado (`--noite`), com texto creme e botões acesos em pêssego (`--luz`). Entre os dois, a faixa `--anoitecer` desce do pêssego ao terracota e à noite, e a estrela do logo acende no meio dela, como a primeira estrela da noite.
 
-A densidade é de revista: colunas de leitura de 42rem, listas numeradas com fio de 1px e numerais Bodoni dourados, muito espaço entre seções. O tom é de convite, não de vitrine. O sistema recusa a página de banda com foto em tela cheia e lista de serviços, e recusa foto genérica no lugar de material que ainda não chegou: os espaços reservados das amostras são luzes desfocadas sobre a noite.
+O material é luz, sem ruído: halos radiais suaves de pêssego e terracota (`--textura-dia`, `--textura-noite`), nunca grão. A forma recorrente é o arco: o logo, a foto da Delliz dentro dos dois arcos, o retrato, as capas do blog e as miniaturas. A densidade é de revista: colunas de leitura de 42rem, listas numeradas com fio de 1px e numerais Bodoni em terracota. O tom é de convite. O sistema recusa a página de banda com foto em tela cheia e recusa foto genérica no lugar de material que ainda não chegou.
 
 **Key Characteristics:**
-- Dois mundos de fundo, dia e noite, e nenhum terceiro; a passagem entre eles é sempre o `--anoitecer`.
-- Verde para agir no dia, dourado para agir na noite; laranja só em pontos de luz.
-- Bodoni Moda com tamanho óptico fixo para títulos e numerais; Manrope para todo o resto.
-- Textura "Luz": halos radiais suaves, sem ruído.
-- O arco de igreja como silhueta de toda imagem e capa.
+- Dois mundos de fundo, dia (pêssego claro) e noite (terracota fechado); a passagem é sempre o `--anoitecer`. O pêssego pleno da marca (`--pessego`) aparece na abertura.
+- Terracota para agir no dia, pêssego para agir na noite.
+- O terracota da marca (`--terracota-marca`) fica no logo e nos detalhes (arcos, fios, estrelas); texto e botões usam o terracota fechado (`--terracota`), que passa no contraste.
+- Bodoni Moda com tamanho óptico fixo para títulos e numerais; Manrope para o resto.
+- Os dois arcos e a estrela como assinatura.
 
 ## Colors
 
-Um nude quente de dia e um verde fechado de noite, ligados por dourado e por pontos de laranja: a luz do nome.
+O terracota e o pêssego da identidade, abertos em tons de uso: um pêssego claro para ler, um terracota fechado para agir e um marrom quase preto para a noite.
 
 ### Primary
-- **Verde Cerimônia** (`--verde`): o botão principal sobre o dia, os links dentro do texto, o título das caixas, o círculo de marcar da lista de checagem, o item ativo do sumário e da navegação, o título "Na cerimônia". O hover escurece para **Verde Fechado** (`--verde-escuro`). O texto sobre o verde é `--sobre-verde`.
-- **Luz Acesa** (`--luz`): o botão sobre a noite, os numerais dos passos e momentos da recepção, o ícone de tocar, o "+" das perguntas, o cursor e a marcação dos campos, a borda da opção marcada. O hover clareia para **Luz Clara** (`--luz-clara`), que também é a cor dos links e títulos na noite e do texto do chip de assunto das capas.
+- **Terracota** (`--terracota`, #8E5226): o botão principal sobre o dia, os links no texto, o título das caixas, os numerais das listas e do roteiro, o círculo de marcar da checagem, o item ativo do sumário e da navegação, o título "Na cerimônia", o botão "Ver a abertura com música". O hover fecha para **Terracota Funda** (`--terracota-funda`), que também é o texto da frase e do "Pular abertura" sobre o pêssego. O texto sobre o terracota é `--sobre-terracota`. Contrastes: 5,0:1 sobre `--dia`, 5,9:1 com `--sobre-terracota`.
+- **Luz** (`--luz`, o pêssego da marca): o botão sobre a noite, os numerais da recepção, o ícone de tocar, o "+" das perguntas, a marcação dos campos, o logo no rodapé. O hover clareia para **Luz Clara** (`--luz-clara`), que também é a cor dos links e títulos na noite e da estrela do anoitecer.
 
 ### Secondary
-- **Ouro Velho** (`--ouro`): o brilho legível sobre o dia: numerais das listas, dos prazos e do roteiro da cerimônia, marcadores de lista. Escuro o bastante para texto.
-- **Fio de Ouro** (`--ouro-linha`): fios e traços decorativos sobre o dia: o fio acima do "Em resumo", o traço antes do fecho do artigo, o anel do halo atrás da Delliz. Nunca texto.
+- **Terracota da Marca** (`--terracota-marca`, #BB7944): o logo do topo, os traços da abertura, os dois arcos em volta da Delliz, os fios decorativos (o fio do "Em resumo", o traço do fecho). Nunca texto nem botão: tem 2,9:1 sobre o dia, abaixo do mínimo para texto. Logotipo e ornamento ficam fora da regra de contraste.
+- **Pêssego** (`--pessego`, #EDC79B): o fundo da abertura, como nas peças da identidade.
 
 ### Tertiary
-- **Lume** (`--lume`): o laranja da luz do nome, em pontos: o centro do halo atrás da Delliz e das capas, a luz que acende no trilho do sumário, a mistura de 8% no fundo da caixa de aviso. Na noite, o ponto laranja é **Lume da Noite** (`--noite-foco`), que também acende as lâmpadas e estrelas das capas.
-- **Foco** (`--foco`): o anel de foco de teclado sobre o dia (3px, afastado 3px). Na noite, o anel passa a `--noite-foco`.
-- **Lume Escuro** (`--lume-escuro`): o título da caixa de aviso; o único laranja usado como texto sobre o dia. Só existe no blog.
+- **Lume** (`--lume`): o terracota da marca em pontos de luz: o centro dos halos, a luz que acende no trilho do sumário, a mistura no fundo da caixa de aviso. Na noite, o ponto é **Lume da Noite** (`--noite-foco`), que também acende as lâmpadas e estrelas das capas.
+- **Foco** (`--foco`): o anel de foco de teclado sobre o dia (3px, afastado 3px). Na noite, `--noite-foco`.
+- **Lume Escuro** (`--lume-escuro`): o título da caixa de aviso. Só existe no blog.
 
 ### Neutral
 - **Dia** (`--dia`): o fundo da cerimônia, do corpo do blog e do topo de toda página.
-- **Dia Claro** (`--dia-2`): o fundo das caixas de destaque e do sumário no celular.
-- **Linha do Dia** (`--dia-linha`): fios de 1px entre itens de lista, bordas de caixas, linha da assinatura e das fontes.
-- **Tinta** (`--tinta`): o texto principal sobre o dia e a base das sombras.
-- **Tinta Suave** (`--tinta-suave`): linha fina, descrições, metadados, navegação em repouso, legendas.
-- **Noite** (`--noite`): o fundo da recepção, do fechamento do blog e do rodapé; o fundo dos campos e do chip de assunto.
-- **Noite Dois** (`--noite-2`): superfícies levantadas na noite: o formulário de consulta, o fundo dos espaços reservados.
-- **Linha da Noite** (`--noite-linha`): fios de 1px entre itens na noite, borda do formulário e do rodapé.
-- **Campo da Noite** (`--noite-campo`): a borda dos campos e das opções, mais clara que a linha para ser vista como controle.
-- **Dica da Noite** (`--noite-dica`): o texto de exemplo dos campos.
-- **Texto da Noite** (`--noite-texto`), **Noite Suave** (`--noite-suave`) e **Resposta** (`--noite-resposta`): o texto principal, o secundário e o das respostas e da prévia da mensagem, sobre a noite.
+- **Dia Claro** (`--dia-2`): caixas de destaque, sumário no celular, o botão da abertura.
+- **Linha do Dia** (`--dia-linha`): fios de 1px, bordas de caixas.
+- **Tinta** (`--tinta`) e **Tinta Suave** (`--tinta-suave`): o texto principal e o secundário sobre o dia.
+- **Noite** (`--noite`), **Noite Dois** (`--noite-2`), **Linha da Noite** (`--noite-linha`), **Campo da Noite** (`--noite-campo`), **Dica da Noite** (`--noite-dica`): o fundo da recepção e do rodapé, as superfícies levantadas, os fios, as bordas de controle e o texto de exemplo.
+- **Texto da Noite** (`--noite-texto`), **Noite Suave** (`--noite-suave`) e **Resposta** (`--noite-resposta`): os textos sobre a noite.
 
 ### Named Rules
-**A Regra do Dia e da Noite.** Todo bloco pertence ao dia (`--dia` com `--tinta`) ou à noite (`--noite` com `--noite-texto`). Não existe um terceiro fundo, e a passagem do dia para a noite é sempre a faixa `--anoitecer`, nunca um corte seco.
+**A Regra do Dia e da Noite.** Todo bloco pertence ao dia (`--dia` com `--tinta`) ou à noite (`--noite` com `--noite-texto`). A passagem é sempre a faixa `--anoitecer`, nunca um corte seco. A única exceção é a abertura, no pêssego pleno da marca.
 
-**A Regra do Lume em Pontos.** O laranja (`--lume`, `--noite-foco`) aparece em pontos: foco, a luz do sumário, as lâmpadas das capas, o centro dos halos. O único campo largo de laranja é o `--anoitecer`, pedido pelo usuário como a luz do Lumens.
+**A Regra das Duas Terracotas.** O terracota da marca (#bb7944) é para o logo e os ornamentos; o terracota fechado (#8E5226) é para texto e ação. Nunca troque um pelo outro.
 
-**A Regra da Cor que Age.** No dia, quem age é verde; na noite, quem age é dourado (`.botao--luz`). Dourado sobre o dia é brilho (numerais, fios), nunca botão. A barra fixa do celular segue a mesma regra: clara com botão verde sobre o dia, escura com botão dourado sobre a noite.
+**A Regra da Cor que Age.** No dia, quem age é terracota; na noite, quem age é pêssego (`.botao--luz`). A barra fixa do celular segue a mesma regra.
 
 **A Regra do Root Único.** Os tokens de `:root` de `index.html` e de `assets/css/blog.css` são os mesmos; `scripts/checar.mjs` acusa qualquer divergência. Mude um, mude os dois.
 
@@ -215,116 +223,129 @@ Um nude quente de dia e um verde fechado de noite, ligados por dourado e por pon
 **Display Font:** Bodoni Moda (com Bodoni reserva: Noto Serif, Georgia ou Times com `size-adjust`)
 **Body Font:** Manrope (com Manrope reserva: Roboto ou Arial com `size-adjust`)
 
-**Character:** Um Bodoni de alto contraste, de convite de casamento, contra uma sans geométrica e calma que carrega todo o texto corrido, os botões e os metadados.
+**Character:** O Bodoni de alto contraste conversa com o L da identidade; a Manrope, geométrica e calma, carrega o texto, os botões e os metadados. O LUMES e o EXPERIENCE do logo não são fonte: são vetores traçados da identidade (`scripts/blog/marca.mjs`).
 
 ### Hierarchy
-- **Display** (500, `clamp(2.75rem, 1.4rem + 5.6vw, 4.75rem)`, 1.02, `-0.015em`, opsz 48): só o h1 da abertura, com largura máxima de 8.5em.
-- **Headline do artigo** (500, `clamp(2.25rem, 1.5rem + 3.2vw, 3.5rem)`, 1.05, opsz 48): o h1 dos artigos e da página do blog.
-- **Headline** (500, `clamp(2rem, 1.5rem + 2.2vw, 3rem)`, 1.08): os h2 de seção da página inicial.
-- **Title** (500, `clamp(1.75rem, 1.4rem + 1.4vw, 2.25rem)`): os h2 dentro do texto do artigo; os h3 de parte, como "Na cerimônia", ficam entre 1.5rem e 2rem; títulos de cartão entre 1.5rem e 2rem, o destaque até 2.75rem com opsz 36.
-- **Title pequeno** (500, 1.375rem, opsz 14 ou 12): "Em resumo", "Neste artigo", "Leia também", nomes dos momentos, perguntas, passos.
-- **Numeral** (Bodoni, 1.5rem a 2.25rem, numerais alinhados): os números das listas, momentos, passos e prazos, em `--ouro` no dia e `--luz` na noite.
-- **Lead** (400, `clamp(1.125rem, 1rem + 0.45vw, 1.3125rem)`): o texto de abertura e a linha fina dos artigos.
-- **Body** (400, 1.0625rem, 1.65 na página inicial e 1.7 no blog; 1.125rem a partir de 64rem): o texto corrido, em coluna de até 42rem.
-- **Label** (600, 1rem, 1.2): botões; 0.9375rem nos compactos, 0.8125rem no chip de assunto e nos controles das amostras.
-- **Meta** (400, 0.875rem a 0.9375rem): trilha, assinatura, legendas, notas, fontes, rodapé.
+- **Display** (500, `clamp(2.75rem, 1.4rem + 5.6vw, 4.75rem)`, 1.02, `-0.015em`, opsz 48): só o h1 do topo, com largura máxima de 8.5em.
+- **Headline do artigo** (500, `clamp(2.25rem, 1.5rem + 3.2vw, 3.5rem)`, 1.05, opsz 48): o h1 dos artigos e do blog.
+- **Headline** (500, `clamp(2rem, 1.5rem + 2.2vw, 3rem)`, 1.08): os h2 de seção.
+- **Title** (500, `clamp(1.75rem, 1.4rem + 1.4vw, 2.25rem)`): os h2 do artigo; os h3 de parte entre 1.5rem e 2rem.
+- **Title pequeno** (500, 1.375rem, opsz 14 ou 12): "Em resumo", "Neste artigo", "Leia também", momentos, perguntas, passos.
+- **Numeral** (Bodoni, 1.5rem a 2.25rem, numerais alinhados): em `--terracota` no dia e `--luz` na noite.
+- **Lead** (400, `clamp(1.125rem, 1rem + 0.45vw, 1.3125rem)`): o texto do topo e a linha fina dos artigos.
+- **Body** (400, 1.0625rem, 1.65 na página inicial e 1.7 no blog; 1.125rem a partir de 64rem): o texto corrido, em até 42rem.
+- **Label** (600, 1rem, 1.2): botões; 0.9375rem nos compactos, 0.8125rem no chip de assunto.
+- **Caixa alta** (600, 0.75 a 0.875rem, espaçamento 0.24em): só a frase da abertura, no espírito do EXPERIENCE.
+- **Meta** (400, 0.875rem a 0.9375rem): trilha, assinatura, legendas, notas, rodapé.
 
 ### Named Rules
-**A Regra do Tamanho Óptico Fixo.** O Bodoni nunca usa o tamanho óptico automático, que afina o traço demais abaixo de ~60px ("BH" vira "BII"). Todo título, numeral e marca declara `font-variation-settings: "opsz" var(--opsz)`: 48 no h1, 24 por padrão, 18 na marca, 14 em h3 e numerais, 12 nos nomes pequenos.
+**A Regra do Tamanho Óptico Fixo.** O Bodoni nunca usa o tamanho óptico automático, que afina o traço demais abaixo de ~60px ("BH" vira "BII"). Todo título e numeral declara `font-variation-settings: "opsz" var(--opsz)`: 48 no h1, 24 por padrão, 14 em h3 e numerais, 12 nos nomes pequenos.
 
-**A Regra da Fonte Reserva Medida.** Toda fonte da página tem reservas locais com `size-adjust` medido, para que a troca não mova linhas nem o botão principal.
+**A Regra da Fonte Reserva Medida.** Toda fonte tem reservas locais com `size-adjust` medido, para que a troca não mova linhas nem o botão principal.
 
-**A Regra dos Numerais Dourados.** Sequência numerada é Bodoni dourado com numerais alinhados, cada item sobre um fio de 1px. É o mesmo desenho no roteiro da página inicial, nos passos e nas listas e prazos do blog.
+**A Regra dos Numerais em Terracota.** Sequência numerada é Bodoni em terracota com numerais alinhados, cada item sobre um fio de 1px: o roteiro, os passos e as listas e prazos do blog.
+
+**A Regra do Texto Justificado.** Pedido do dono em 03/11/2026, ajustado na revisão impeccable do mesmo dia: o texto corrido é justificado só nas colunas largas e só a partir de 64rem. Na página inicial, a bio da Delliz, as introduções de seção e as respostas do FAQ; no blog, os parágrafos e listas do corpo do artigo, o resumo, o aviso e a bio da autora. Vai sempre com `hyphens: auto` (o `lang="pt-BR"` da página) e `hyphenate-limit-chars: 11 4 4`, que só quebra palavras de 11 letras ou mais, para nunca partir nomes como Delliz, Christine, Experience ou Horizonte. No celular e nas colunas estreitas (o texto do topo, a ficha de fatos, os passos, o roteiro, as notas, as legendas, os prazos, a checagem, as fontes, os cartões, as citações e o sumário), o texto fica alinhado à esquerda, porque a justificação abre buracos entre as palavras.
 
 ## Layout
 
-Uma coluna centralizada de até 72rem (`--largura`) com margem lateral fluida (`--margem`). O texto corrido nunca passa de 42rem (`--leitura`). As seções da página inicial respiram `clamp(4rem, 3rem + 6vw, 7.5rem)` em cima e embaixo; as variantes "emenda" e "seguida" tiram o espaço quando dois blocos continuam a mesma ideia.
+Uma coluna centralizada de até 72rem (`--largura`) com margem fluida (`--margem`). O texto corrido nunca passa de 42rem. As seções respiram `clamp(4rem, 3rem + 6vw, 7.5rem)`; as variantes "emenda" e "seguida" tiram o espaço quando dois blocos continuam a mesma ideia.
 
-A partir de 56rem, seções com título e texto usam duas colunas na proporção 1:2 (gap 4rem), a navegação do topo aparece e a barra fixa do WhatsApp some. A partir de 60rem, a abertura e o topo dos artigos viram duas colunas: texto à esquerda, o arco à direita (22rem na abertura, 19rem no artigo). Abaixo disso, na página inicial o arco vem depois do botão; no artigo, a capa vira uma faixa com o topo em arco acima da trilha.
+A partir de 56rem, seções com título e texto usam duas colunas 1:2 (gap 4rem), a navegação do topo aparece e a barra fixa do WhatsApp some. A seção "A voz do Lumes Experience" põe o retrato na coluna estreita e o título com a bio ao lado. A partir de 60rem, o topo e os artigos viram duas colunas: texto à esquerda, o arco à direita (22rem no topo, 19rem no artigo). No celular, a foto do topo vem depois do botão, com 72vw no máximo para os arcos caberem.
 
-No artigo, a partir de 64rem, o sumário ocupa uma segunda coluna de 15rem, fixa a 2rem do topo enquanto o texto rola. No celular ele é uma caixa entre o resumo e o texto. No blog, os cartões ficam em duas colunas a partir de 48rem, com o destaque ocupando a linha inteira (arco de 18rem ao lado do texto).
-
-No celular, abaixo de 56rem, uma barra fixa com o botão do WhatsApp aparece embaixo, e a rolagem reserva 7rem no fim para que o foco de teclado nunca fique sob ela. Em telas abaixo de 23.5rem, os botões estreitam o padding e os rótulos longos encurtam.
+No artigo, a partir de 64rem, o sumário ocupa uma segunda coluna de 15rem, fixa ao rolar. No blog, os cartões ficam em duas colunas a partir de 48rem. No celular, abaixo de 56rem, uma barra fixa com o botão do WhatsApp aparece embaixo.
 
 ## Elevation & Depth
 
-O sistema é plano, e a profundidade vem da luz. O fundo do dia e o da noite carregam os halos radiais da textura "Luz"; o arco da Delliz tem um halo de dois anéis (um campo de lume e luz com 190% da largura, um anel de `--ouro-linha` a 45% com 122%) que acende uma vez ao carregar. As capas do blog brilham por dentro com um centro de lume e luz sobre um gradiente de verde-noite. Na noite, a textura fica só no começo; o rodapé é `--noite` liso, para não haver emenda.
+O sistema é plano, e a profundidade vem da luz: os halos da textura "Luz" e o halo pêssego atrás da Delliz, que acende uma vez ao carregar (ou quando a porta da abertura se abre). As capas do blog brilham por dentro sobre um gradiente de marrom-terracota. O rodapé é `--noite` liso.
 
 ### Shadow Vocabulary
-- **Sombra do arco** (`box-shadow: 0 1.75rem 3rem -1.5rem color-mix(in srgb, var(--tinta) 45%, transparent)`): a foto da Delliz e as capas do blog. Difusa e baixa, faz o arco pousar no dia. As miniaturas não usam.
-- **Sombra da barra** (`box-shadow: 0 -0.75rem 2rem -1rem color-mix(in srgb, var(--noite) 50%, transparent)`): a barra fixa do celular sobre a noite; sobre o dia, a mesma forma com `--tinta` a 25%.
+- **Sombra do arco** (`box-shadow: 0 1.75rem 3rem -1.5rem color-mix(in srgb, var(--tinta) 45%, transparent)`): a foto da Delliz, o retrato e as capas do blog.
+- **Sombra da barra** (`box-shadow: 0 -0.75rem 2rem -1rem color-mix(in srgb, var(--noite) 50%, transparent)`): a barra fixa do celular.
 
 ### Named Rules
-**A Regra da Luz no Lugar da Sombra.** Caixas, cartões, formulário e campos não têm sombra; separam-se por fio de 1px e por tom (`--dia-2` no dia, `--noite-2` na noite). Só o arco e a barra fixa projetam sombra.
+**A Regra da Luz no Lugar da Sombra.** Caixas, cartões, formulário e campos não têm sombra; separam-se por fio de 1px e por tom. Só o arco e a barra fixa projetam sombra.
 
-**A Regra do Halo Sem Ruído.** A textura é feita só de gradientes radiais suaves e transparentes. Nada de grão, ruído ou imagem de papel.
+**A Regra do Halo Sem Ruído.** A textura é feita só de gradientes radiais suaves. Nada de grão, ruído ou imagem de papel.
 
 ## Shapes
 
-A silhueta da marca é o arco de igreja: topo semicircular e base quase reta (`border-radius: 50% 50% 0.375rem 0.375rem / 40% 40% 0.375rem 0.375rem`, em 4:5). Em faixas largas (capa do artigo no celular, cartões do blog), o arco abre na horizontal com 62% de raio vertical, em 2:1. Ação é pílula (999px): botões, chip de assunto, opções do formulário, botão "Ouvir a Delliz", controles das amostras. Caixas, sumário e formulário têm cantos de 6px; campos, 4px; amostras de mídia, 2px. A prévia da mensagem é um balão de conversa com o canto inferior direito quase reto. Retratos de assinatura e da autora são círculos. Fios são sempre de 1px; a única borda mais grossa é o círculo de marcar da checagem (1.5px).
+A silhueta da marca é o arco de igreja: topo semicircular e base quase reta (`border-radius: 50% 50% 0.375rem 0.375rem / 40% 40% 0.375rem 0.375rem`, em 4:5). Em faixas largas, o arco abre com 62% de raio vertical, em 2:1. O símbolo da identidade usa dois arcos de traço fino e mesmo raio, o de dentro deslocado para baixo em metade do raio. Ação é pílula (999px). Caixas, sumário e formulário têm cantos de 6px; campos, 4px; amostras, 2px. Retratos de assinatura são círculos. Fios são de 1px.
 
 ## Components
 
+### Logo
+A sub-marca horizontal da identidade (os dois arcos com o L e as estrelas, LUMES e EXPERIENCE) é um `<symbol id="marca-logo">` no sprite de cada página, usado com `<svg viewBox="0 0 1745 594"><use href="#marca-logo"/></svg>` (o viewBox de fora começa em 0, porque o símbolo já tem o seu). No topo, em `--terracota-marca`, com 2.35 a 2.85rem de altura; no rodapé, em `--luz`, com 3.25rem. Os arcos do símbolo têm traço que não escala (`vector-effect`), para não sumir em tamanho pequeno. Vetores em `scripts/blog/marca.mjs`; `scripts/blog/marca-no-index.mjs` copia para a página inicial.
+
+### Abertura (a intro)
+O logo principal se desenha no pêssego pleno, a 100 bpm (um tempo = 0,6 s). Primeiro os dois arcos, em colcheias. Depois cintila a estrela pequena e o L sobe por trás de um recorte. A estrela grande acende com os raios girando e um halo. As linhas se abrem do centro, LUMES entra letra a letra em semicolcheias e vêm EXPERIENCE e a frase em caixa alta. Os detalhes somem, o arco de dentro vira uma porta (o furo de uma máscara SVG, medido em pixels na tela) que se acende e se abre até cobrir a tela, e o logo cresce junto, com os traços dos arcos acompanhando a borda da porta. São cerca de 7 s. Clique, tecla, rolagem ou "Pular abertura" encerram na hora.
+- **Quando roda sozinha:** na primeira visita da sessão (`sessionStorage`), sem âncora na URL e sem "reduzir movimento". A decisão sai de um script no `<head>`, antes da primeira pintura (classe `com-abertura`). `?abertura` força, para revisar.
+- **Com música:** o botão "Ver a abertura com música", sob a foto do topo, repete a abertura com uma trilha sintetizada no navegador (Web Audio, nenhum arquivo): cordas em Ré maior (I–vi–IV–I), sinos para a luz dos arcos, harpa para o L e as letras, um grave e um sopro de ar na estrela e na porta, salão gerado na hora. Os tempos da animação e da música saem do mesmo objeto `T` no JS. A imagem espera a latência de saída da placa de som.
+- **Movimento reduzido:** não roda sozinha; pelo botão, o logo aparece parado, a música toca e a tela esmaece no tempo da porta.
+- **Segurança:** se o JS falhar, a abertura some sozinha em 9 s. A luz e os arcos da foto do topo esperam a porta abrir para acender.
+
 ### Buttons
-Pílulas firmes e cheias, uma cor por mundo.
-- **Shape:** pílula (999px), altura mínima de 3rem, ícone SVG do WhatsApp a 1.2em à esquerda.
-- **Primary (dia):** `--verde` com texto `--sobre-verde`, padding 0.8rem 1.5rem, Manrope 600 a 1rem.
-- **Luz (noite):** `--luz` com texto `--noite`; usado no formulário, no fechamento do blog e na barra fixa sobre a noite.
-- **Hover / Focus:** o fundo muda em 0.2s (`--verde-escuro` ou `--luz-clara`); foco com anel de 3px em `--foco` (dia) ou `--noite-foco` (noite), afastado 3px.
-- **Compacto:** altura 2.75rem, padding 0.55rem 1.1rem, 0.9375rem; o botão do topo.
+- **Shape:** pílula, altura mínima de 3rem, ícone do WhatsApp a 1.2em à esquerda.
+- **Primary (dia):** `--terracota` com texto `--sobre-terracota`, padding 0.8rem 1.5rem, Manrope 600 a 1rem.
+- **Luz (noite):** `--luz` com texto `--noite`.
+- **Hover / Focus:** o fundo muda em 0.2s (`--terracota-funda` ou `--luz-clara`); anel de 3px em `--foco` ou `--noite-foco`.
+- **Compacto:** altura 2.75rem; o botão do topo.
+- **Abertura:** pílula clara (`--dia-2` a 70%), borda `--dia-linha`, texto `--terracota` com o ícone de nota; no hover, a borda passa ao terracota da marca. Só aparece com JS (classe `.js`).
 
 ### Chips
-- **Assunto da capa:** pílula `--noite` com borda de 1px em `--luz` a 45% e texto `--luz-clara` (600, 0.8125rem), centralizada na base da capa. Some nas miniaturas.
-- **Opção do formulário:** pílula com borda `--noite-campo`, rádio ou caixa em `--luz`; marcada, a borda vira `--luz` e o fundo recebe 12% de `--luz`.
+- **Assunto da capa:** pílula `--noite` com borda em `--luz` a 45% e texto `--luz-clara`.
+- **Opção do formulário:** pílula com borda `--noite-campo`; marcada, a borda vira `--luz` com 12% de `--luz` no fundo.
 
 ### Cards / Containers
-- **Caixa de destaque (blog):** `--dia-2`, borda de 1px `--dia-linha`, cantos de 6px, padding de 1.25rem em cima e 1.5rem embaixo. Título em `--verde` (650). Variantes: **igreja** (a norma em citação Bodoni de 1.19 a 1.375rem), **aviso** (borda e fundo com lume: 40% na borda, 8% no fundo; título em `--lume-escuro`), **checagem** (círculos verdes vazios para marcar à mão) e **prazos** (prazo em numeral Bodoni dourado, explicação em meta, duas colunas a partir de 36rem). A fonte do dado vem embaixo, em meta.
-- **Cartão do blog:** sem fundo nem borda; arco em cima, título Bodoni, resumo em `--tinta-suave`. O cartão inteiro é clicável; no hover, a arte da capa cresce 4% em 0.6s e o título sublinha.
+- **Caixa de destaque (blog):** `--dia-2`, borda `--dia-linha`, cantos de 6px. Título em `--terracota`. Variantes: igreja, aviso (lume na borda e no fundo; título em `--lume-escuro`), checagem e prazos.
+- **Cartão do blog:** arco em cima, título Bodoni, resumo em `--tinta-suave`; no hover, a capa cresce 4% e o título sublinha.
 - **Formulário de consulta:** `--noite-2`, borda `--noite-linha`, cantos de 6px.
 
 ### Inputs / Fields
-- **Style:** fundo `--noite`, borda de 1px `--noite-campo`, cantos de 4px, altura mínima de 3rem, cursor em `--luz`, exemplo em `--noite-dica`. Rótulo acima, 600 a 0.9375rem.
-- **Focus:** o anel de foco da noite (`--noite-foco`).
-- **Prévia:** o texto que vai para o WhatsApp, num balão `--noite` alinhado à direita, em `--noite-resposta`.
+- **Style:** fundo `--noite`, borda `--noite-campo`, cantos de 4px, altura mínima de 3rem, exemplo em `--noite-dica`.
+- **Focus:** o anel da noite (`--noite-foco`).
+- **Prévia:** o texto que vai para o WhatsApp, num balão `--noite` à direita.
 
 ### Navigation
-- **Topo:** a marca "Lumens" em Bodoni 500 a 1.75rem à esquerda, os links em Manrope 0.9375rem `--tinta-suave` e o botão compacto à direita. Hover e página atual em `--verde` sublinhado. Abaixo de 56rem os links somem e fica só a marca e o botão; abaixo de 22.5rem o botão perde o rótulo.
-- **Sumário do artigo:** no computador, um trilho de 1px `--dia-linha` à esquerda dos itens; a seção que está sendo lida fica `--verde` em 600 e acende um ponto `--lume` de 7px sobre o trilho. No celular, uma caixa `--dia-2`.
-- **Trilha:** um link em meta acima do h1, com área de toque ampliada.
-- **Rodapé:** na noite lisa, marca em `--noite-texto`, links com 2.75rem de altura.
+- **Topo:** o logo à esquerda, os links em Manrope 0.9375rem `--tinta-suave` e o botão compacto à direita. Hover e página atual em `--terracota` sublinhado.
+- **Sumário do artigo:** trilho de 1px `--dia-linha`; a seção lida fica `--terracota` em 600 com um ponto `--lume`.
+- **Rodapé:** na noite lisa, o logo em `--luz`, links com 2.75rem de altura.
 
 ### Arco da voz (assinatura)
-A Delliz num arco 4:5 com a foto em `object-fit: cover`, o halo de lume e luz atrás e um anel de ouro em volta, que acendem juntos (`acender`, 2.4s, de 82% a 100% de escala). Na base, a pílula translúcida "Ouvir a Delliz" (`--noite` a 72%, desfoque de 8px) com o triângulo em `--luz`. No hover, a foto cresce 3%.
+A Delliz num arco 4:5, dentro dos dois arcos da identidade (`.voz__arcos`, SVG atrás da foto: mesmo raio, o de dentro mais baixo, traço de ~1,2px em `--terracota-marca`, desenhados na carga em 2.2s). O de fora contorna a foto; o de dentro aparece atrás dos ombros. O halo pêssego acende atrás (`acender`, 2.4s). Na base, a pílula "Ouvir a Delliz" abre o vídeo no YouTube. Embaixo da legenda, o botão da abertura com música.
+
+### Retrato da Delliz (seção "A voz do Lumes Experience")
+Uma segunda foto no mesmo arco 4:5, com a sombra do arco e sem halo nem arcos. No computador, a foto fica na coluna estreita, com o título e a bio ao lado. No celular: título, foto (até 16rem) e texto.
 
 ### Capa do artigo (assinatura)
-O arco sobre um gradiente de verde-noite com um brilho de lume e luz no centro, e um desenho em traço dourado em SVG inline (`scripts/blog/capas.mjs`): alianças, um varal de lâmpadas ou uma pauta musical, com estrelas e lâmpadas em lume. O mesmo desenho sai na imagem de compartilhamento. Em 4:5 no computador; em faixa 2:1 no celular e nos cartões, com a arte ampliada 30%.
+O arco sobre um gradiente de marrom-terracota com um brilho de lume e luz no centro, e um desenho em traço pêssego (`scripts/blog/capas.mjs`): alianças, varal de lâmpadas ou pauta, com estrelas e lâmpadas em lume.
 
 ### Anoitecer e fechamento
-A faixa `--anoitecer` (de 9 a 16rem na página inicial, de 6 a 10rem no blog) desce do nude ao verde-noite passando por pêssego, laranja e bronze, com as luzes `--luzes-do-anoitecer` acesas na metade de baixo. No blog, ela abre o bloco da autora (retrato de 4rem, bio, botão de luz) e o "Leia também", que lista os outros artigos em Bodoni de 1.25rem com miniatura do arco de 4.5rem.
+A faixa `--anoitecer` desce do pêssego ao terracota e à noite, com as luzes acesas na metade de baixo e a estrela do logo (`#marca-estrela`) acesa no meio, em `--luz-clara`, com um brilho que pulsa devagar (5s). No blog, ela abre o bloco da autora e o "Leia também".
 
 ### Listas numeradas e roteiro
-Cada item sobre um fio de 1px, o numeral Bodoni à esquerda. No roteiro da página inicial, a partir de 56rem, o item vira três colunas: número (4rem), nome do momento em Bodoni (17rem) e descrição. A contagem da recepção continua a da cerimônia.
+Cada item sobre um fio de 1px, o numeral Bodoni à esquerda. No roteiro, a partir de 56rem, três colunas: número, momento em Bodoni e descrição.
 
 ### Perguntas
-`details` com fio de 1px entre itens, pergunta em Bodoni de 1.2 a 1.4rem, um "+" desenhado em dois traços de 1.5px em `--luz` que gira 45° ao abrir (0.25s).
+`details` com fio de 1px, pergunta em Bodoni, um "+" em `--luz` que gira 45° ao abrir.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** manter cada bloco no dia ou na noite e passar de um para o outro pela faixa `--anoitecer`.
-- **Do** usar `.botao` (verde) sobre o dia e `.botao--luz` (dourado) sobre a noite, com altura mínima de 3rem (2.75rem no compacto).
-- **Do** declarar `--opsz` em todo texto em Bodoni: 48 em h1, 14 em h3 e numerais, 12 em nomes pequenos.
-- **Do** emoldurar toda foto da Delliz e toda capa no arco de igreja, abrindo para 62% em faixas largas.
-- **Do** separar itens de lista e seções com fios de 1px (`--dia-linha` no dia, `--noite-linha` na noite) em vez de cartões com sombra.
-- **Do** manter os `:root` de `index.html` e `assets/css/blog.css` iguais, e rodar `scripts/checar.mjs` depois de mudar uma cor.
-- **Do** citar a fonte de cada dado numa caixa de destaque, em meta, no fim da caixa.
-- **Do** desligar animações e transições com `prefers-reduced-motion: reduce`.
+- **Do** usar o terracota da marca (#bb7944) no logo e nos ornamentos, e o terracota fechado (#8E5226) em texto e botões.
+- **Do** manter cada bloco no dia ou na noite e passar de um para o outro pelo `--anoitecer`.
+- **Do** usar os vetores de `scripts/blog/marca.mjs` para o logo, a estrela e a abertura, e rodar `marca-no-index.mjs` depois de mudá-los.
+- **Do** declarar `--opsz` em todo texto em Bodoni.
+- **Do** emoldurar toda foto da Delliz e toda capa no arco de igreja.
+- **Do** manter os `:root` de `index.html` e `assets/css/blog.css` iguais e rodar `scripts/checar.mjs`.
+- **Do** manter a abertura curta, pulável e só na primeira visita; a ação principal continua sendo o WhatsApp.
+- **Do** respeitar `prefers-reduced-motion: reduce`.
 
 ### Don't:
-- **Don't** usar laranja em campos largos além do `--anoitecer`; o lume é ponto de luz.
-- **Don't** usar dourado como botão sobre o dia nem verde como botão sobre a noite.
-- **Don't** pôr grão, ruído ou imagem de papel na textura; a textura "Luz" é só halo radial.
-- **Don't** pôr foto genérica no lugar de material que ainda não chegou; o espaço reservado é feito de luzes desfocadas sobre `--noite-2`.
-- **Don't** dar sombra a caixas, cartões, campos ou formulário; só o arco e a barra fixa projetam sombra.
-- **Don't** deixar a textura da noite correr para o rodapé; o rodapé é `--noite` liso.
-- **Don't** usar `--ouro-linha` como cor de texto; para texto dourado sobre o dia, use `--ouro`.
+- **Don't** usar o terracota da marca (#bb7944) em texto ou com texto branco: não passa no contraste.
+- **Don't** redesenhar o logo com fonte: LUMES e EXPERIENCE são os vetores da identidade.
+- **Don't** tocar som sem um clique da pessoa.
+- **Don't** pôr grão, ruído ou imagem de papel na textura.
+- **Don't** pôr foto genérica ou de estúdio no lugar das amostras de casamento.
+- **Don't** dar sombra a caixas, cartões, campos ou formulário.
+- **Don't** usar `vector-effect: non-scaling-stroke` em traço com tracejado animado (`stroke-dasharray`): o tracejado sai falhado.

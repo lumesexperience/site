@@ -1,350 +1,30 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-21T16:48:36.537Z",
-  "title": "Design System: Lumens",
+  "generatedAt": "2026-11-03T23:29:34.654Z",
+  "title": "Design System: Lumes Experience",
   "extensions": {
     "colorMeta": {
       "dia": {
         "role": "neutral",
         "displayName": "Dia",
-        "canonical": "#EFE3D6",
+        "canonical": "#F6E5D2",
         "cssVar": "--dia",
         "tonalRamp": [
-          "oklch(15.0% 0.022 69.8)",
-          "oklch(26.4% 0.022 69.8)",
-          "oklch(37.9% 0.022 69.8)",
-          "oklch(49.3% 0.022 69.8)",
-          "oklch(60.7% 0.022 69.8)",
-          "oklch(72.1% 0.022 69.8)",
-          "oklch(83.6% 0.022 69.8)",
-          "oklch(95.0% 0.022 69.8)"
+          "oklch(15.0% 0.031 70.5)",
+          "oklch(26.4% 0.031 70.5)",
+          "oklch(37.9% 0.031 70.5)",
+          "oklch(49.3% 0.031 70.5)",
+          "oklch(60.7% 0.031 70.5)",
+          "oklch(72.1% 0.031 70.5)",
+          "oklch(83.6% 0.031 70.5)",
+          "oklch(95.0% 0.031 70.5)"
         ]
       },
       "dia-2": {
         "role": "neutral",
         "displayName": "Dia Claro",
-        "canonical": "#F8F1E9",
+        "canonical": "#FCF3E8",
         "cssVar": "--dia-2",
-        "tonalRamp": [
-          "oklch(15.0% 0.013 71.3)",
-          "oklch(26.4% 0.013 71.3)",
-          "oklch(37.9% 0.013 71.3)",
-          "oklch(49.3% 0.013 71.3)",
-          "oklch(60.7% 0.013 71.3)",
-          "oklch(72.1% 0.013 71.3)",
-          "oklch(83.6% 0.013 71.3)",
-          "oklch(95.0% 0.013 71.3)"
-        ]
-      },
-      "dia-linha": {
-        "role": "neutral",
-        "displayName": "Linha do Dia",
-        "canonical": "#DDCBB9",
-        "cssVar": "--dia-linha",
-        "tonalRamp": [
-          "oklch(15.0% 0.032 67.4)",
-          "oklch(26.4% 0.032 67.4)",
-          "oklch(37.9% 0.032 67.4)",
-          "oklch(49.3% 0.032 67.4)",
-          "oklch(60.7% 0.032 67.4)",
-          "oklch(72.1% 0.032 67.4)",
-          "oklch(83.6% 0.032 67.4)",
-          "oklch(95.0% 0.032 67.4)"
-        ]
-      },
-      "tinta": {
-        "role": "neutral",
-        "displayName": "Tinta",
-        "canonical": "#2B2520",
-        "cssVar": "--tinta",
-        "tonalRamp": [
-          "oklch(15.0% 0.013 62.1)",
-          "oklch(26.4% 0.013 62.1)",
-          "oklch(37.9% 0.013 62.1)",
-          "oklch(49.3% 0.013 62.1)",
-          "oklch(60.7% 0.013 62.1)",
-          "oklch(72.1% 0.013 62.1)",
-          "oklch(83.6% 0.013 62.1)",
-          "oklch(95.0% 0.013 62.1)"
-        ]
-      },
-      "tinta-suave": {
-        "role": "neutral",
-        "displayName": "Tinta Suave",
-        "canonical": "#5E5248",
-        "cssVar": "--tinta-suave",
-        "tonalRamp": [
-          "oklch(15.0% 0.023 62.0)",
-          "oklch(26.4% 0.023 62.0)",
-          "oklch(37.9% 0.023 62.0)",
-          "oklch(49.3% 0.023 62.0)",
-          "oklch(60.7% 0.023 62.0)",
-          "oklch(72.1% 0.023 62.0)",
-          "oklch(83.6% 0.023 62.0)",
-          "oklch(95.0% 0.023 62.0)"
-        ]
-      },
-      "ouro": {
-        "role": "secondary",
-        "displayName": "Ouro Velho",
-        "canonical": "#7A5C1E",
-        "cssVar": "--ouro",
-        "tonalRamp": [
-          "oklch(15.0% 0.052 82.0)",
-          "oklch(26.4% 0.070 82.0)",
-          "oklch(37.9% 0.087 82.0)",
-          "oklch(49.3% 0.087 82.0)",
-          "oklch(60.7% 0.087 82.0)",
-          "oklch(72.1% 0.072 82.0)",
-          "oklch(83.6% 0.055 82.0)",
-          "oklch(95.0% 0.037 82.0)"
-        ]
-      },
-      "ouro-linha": {
-        "role": "secondary",
-        "displayName": "Fio de Ouro",
-        "canonical": "#B08D45",
-        "cssVar": "--ouro-linha",
-        "tonalRamp": [
-          "oklch(15.0% 0.052 83.4)",
-          "oklch(26.4% 0.070 83.4)",
-          "oklch(37.9% 0.087 83.4)",
-          "oklch(49.3% 0.100 83.4)",
-          "oklch(60.7% 0.089 83.4)",
-          "oklch(72.1% 0.072 83.4)",
-          "oklch(83.6% 0.055 83.4)",
-          "oklch(95.0% 0.037 83.4)"
-        ]
-      },
-      "verde": {
-        "role": "primary",
-        "displayName": "Verde Cerimônia",
-        "canonical": "#3E5A42",
-        "cssVar": "--verde",
-        "tonalRamp": [
-          "oklch(15.0% 0.052 148.4)",
-          "oklch(26.4% 0.052 148.4)",
-          "oklch(37.9% 0.052 148.4)",
-          "oklch(49.3% 0.052 148.4)",
-          "oklch(60.7% 0.052 148.4)",
-          "oklch(72.1% 0.052 148.4)",
-          "oklch(83.6% 0.052 148.4)",
-          "oklch(95.0% 0.037 148.4)"
-        ]
-      },
-      "verde-escuro": {
-        "role": "primary",
-        "displayName": "Verde Fechado",
-        "canonical": "#2E4532",
-        "cssVar": "--verde-escuro",
-        "tonalRamp": [
-          "oklch(15.0% 0.043 149.3)",
-          "oklch(26.4% 0.043 149.3)",
-          "oklch(37.9% 0.043 149.3)",
-          "oklch(49.3% 0.043 149.3)",
-          "oklch(60.7% 0.043 149.3)",
-          "oklch(72.1% 0.043 149.3)",
-          "oklch(83.6% 0.043 149.3)",
-          "oklch(95.0% 0.037 149.3)"
-        ]
-      },
-      "sobre-verde": {
-        "role": "neutral",
-        "displayName": "Sobre o Verde",
-        "canonical": "#F8F1E9",
-        "cssVar": "--sobre-verde",
-        "tonalRamp": [
-          "oklch(15.0% 0.013 71.3)",
-          "oklch(26.4% 0.013 71.3)",
-          "oklch(37.9% 0.013 71.3)",
-          "oklch(49.3% 0.013 71.3)",
-          "oklch(60.7% 0.013 71.3)",
-          "oklch(72.1% 0.013 71.3)",
-          "oklch(83.6% 0.013 71.3)",
-          "oklch(95.0% 0.013 71.3)"
-        ]
-      },
-      "lume": {
-        "role": "tertiary",
-        "displayName": "Lume",
-        "canonical": "#D9732F",
-        "cssVar": "--lume",
-        "tonalRamp": [
-          "oklch(15.0% 0.052 50.5)",
-          "oklch(26.4% 0.070 50.5)",
-          "oklch(37.9% 0.087 50.5)",
-          "oklch(49.3% 0.104 50.5)",
-          "oklch(60.7% 0.089 50.5)",
-          "oklch(72.1% 0.072 50.5)",
-          "oklch(83.6% 0.055 50.5)",
-          "oklch(95.0% 0.037 50.5)"
-        ]
-      },
-      "foco": {
-        "role": "tertiary",
-        "displayName": "Foco",
-        "canonical": "#B4521D",
-        "cssVar": "--foco",
-        "tonalRamp": [
-          "oklch(15.0% 0.052 45.1)",
-          "oklch(26.4% 0.070 45.1)",
-          "oklch(37.9% 0.087 45.1)",
-          "oklch(49.3% 0.104 45.1)",
-          "oklch(60.7% 0.089 45.1)",
-          "oklch(72.1% 0.072 45.1)",
-          "oklch(83.6% 0.055 45.1)",
-          "oklch(95.0% 0.037 45.1)"
-        ]
-      },
-      "lume-escuro": {
-        "role": "tertiary",
-        "displayName": "Lume Escuro",
-        "canonical": "#9C4418",
-        "cssVar": "--lume-escuro",
-        "tonalRamp": [
-          "oklch(15.0% 0.052 43.7)",
-          "oklch(26.4% 0.070 43.7)",
-          "oklch(37.9% 0.087 43.7)",
-          "oklch(49.3% 0.104 43.7)",
-          "oklch(60.7% 0.089 43.7)",
-          "oklch(72.1% 0.072 43.7)",
-          "oklch(83.6% 0.055 43.7)",
-          "oklch(95.0% 0.037 43.7)"
-        ]
-      },
-      "noite": {
-        "role": "neutral",
-        "displayName": "Noite",
-        "canonical": "#17201A",
-        "cssVar": "--noite",
-        "tonalRamp": [
-          "oklch(15.0% 0.017 155.6)",
-          "oklch(26.4% 0.017 155.6)",
-          "oklch(37.9% 0.017 155.6)",
-          "oklch(49.3% 0.017 155.6)",
-          "oklch(60.7% 0.017 155.6)",
-          "oklch(72.1% 0.017 155.6)",
-          "oklch(83.6% 0.017 155.6)",
-          "oklch(95.0% 0.017 155.6)"
-        ]
-      },
-      "noite-2": {
-        "role": "neutral",
-        "displayName": "Noite Dois",
-        "canonical": "#202B23",
-        "cssVar": "--noite-2",
-        "tonalRamp": [
-          "oklch(15.0% 0.021 153.3)",
-          "oklch(26.4% 0.021 153.3)",
-          "oklch(37.9% 0.021 153.3)",
-          "oklch(49.3% 0.021 153.3)",
-          "oklch(60.7% 0.021 153.3)",
-          "oklch(72.1% 0.021 153.3)",
-          "oklch(83.6% 0.021 153.3)",
-          "oklch(95.0% 0.021 153.3)"
-        ]
-      },
-      "noite-linha": {
-        "role": "neutral",
-        "displayName": "Linha da Noite",
-        "canonical": "#364539",
-        "cssVar": "--noite-linha",
-        "tonalRamp": [
-          "oklch(15.0% 0.028 150.8)",
-          "oklch(26.4% 0.028 150.8)",
-          "oklch(37.9% 0.028 150.8)",
-          "oklch(49.3% 0.028 150.8)",
-          "oklch(60.7% 0.028 150.8)",
-          "oklch(72.1% 0.028 150.8)",
-          "oklch(83.6% 0.028 150.8)",
-          "oklch(95.0% 0.028 150.8)"
-        ]
-      },
-      "noite-campo": {
-        "role": "neutral",
-        "displayName": "Campo da Noite",
-        "canonical": "#7E8F80",
-        "cssVar": "--noite-campo",
-        "tonalRamp": [
-          "oklch(15.0% 0.030 148.6)",
-          "oklch(26.4% 0.030 148.6)",
-          "oklch(37.9% 0.030 148.6)",
-          "oklch(49.3% 0.030 148.6)",
-          "oklch(60.7% 0.030 148.6)",
-          "oklch(72.1% 0.030 148.6)",
-          "oklch(83.6% 0.030 148.6)",
-          "oklch(95.0% 0.030 148.6)"
-        ]
-      },
-      "noite-dica": {
-        "role": "neutral",
-        "displayName": "Dica da Noite",
-        "canonical": "#9AA89B",
-        "cssVar": "--noite-dica",
-        "tonalRamp": [
-          "oklch(15.0% 0.024 147.3)",
-          "oklch(26.4% 0.024 147.3)",
-          "oklch(37.9% 0.024 147.3)",
-          "oklch(49.3% 0.024 147.3)",
-          "oklch(60.7% 0.024 147.3)",
-          "oklch(72.1% 0.024 147.3)",
-          "oklch(83.6% 0.024 147.3)",
-          "oklch(95.0% 0.024 147.3)"
-        ]
-      },
-      "luz": {
-        "role": "primary",
-        "displayName": "Luz Acesa",
-        "canonical": "#D9B26A",
-        "cssVar": "--luz",
-        "tonalRamp": [
-          "oklch(15.0% 0.052 81.7)",
-          "oklch(26.4% 0.070 81.7)",
-          "oklch(37.9% 0.087 81.7)",
-          "oklch(49.3% 0.101 81.7)",
-          "oklch(60.7% 0.089 81.7)",
-          "oklch(72.1% 0.072 81.7)",
-          "oklch(83.6% 0.055 81.7)",
-          "oklch(95.0% 0.037 81.7)"
-        ]
-      },
-      "luz-clara": {
-        "role": "primary",
-        "displayName": "Luz Clara",
-        "canonical": "#E8CB8E",
-        "cssVar": "--luz-clara",
-        "tonalRamp": [
-          "oklch(15.0% 0.052 85.2)",
-          "oklch(26.4% 0.070 85.2)",
-          "oklch(37.9% 0.085 85.2)",
-          "oklch(49.3% 0.085 85.2)",
-          "oklch(60.7% 0.085 85.2)",
-          "oklch(72.1% 0.072 85.2)",
-          "oklch(83.6% 0.055 85.2)",
-          "oklch(95.0% 0.037 85.2)"
-        ]
-      },
-      "noite-foco": {
-        "role": "tertiary",
-        "displayName": "Lume da Noite",
-        "canonical": "#E0844A",
-        "cssVar": "--noite-foco",
-        "tonalRamp": [
-          "oklch(15.0% 0.052 51.1)",
-          "oklch(26.4% 0.070 51.1)",
-          "oklch(37.9% 0.087 51.1)",
-          "oklch(49.3% 0.104 51.1)",
-          "oklch(60.7% 0.089 51.1)",
-          "oklch(72.1% 0.072 51.1)",
-          "oklch(83.6% 0.055 51.1)",
-          "oklch(95.0% 0.037 51.1)"
-        ]
-      },
-      "noite-texto": {
-        "role": "neutral",
-        "displayName": "Texto da Noite",
-        "canonical": "#F2E9DE",
-        "cssVar": "--noite-texto",
         "tonalRamp": [
           "oklch(15.0% 0.018 73.1)",
           "oklch(26.4% 0.018 73.1)",
@@ -356,58 +36,378 @@
           "oklch(95.0% 0.018 73.1)"
         ]
       },
+      "dia-linha": {
+        "role": "neutral",
+        "displayName": "Linha do Dia",
+        "canonical": "#E5C9AA",
+        "cssVar": "--dia-linha",
+        "tonalRamp": [
+          "oklch(15.0% 0.052 69.9)",
+          "oklch(26.4% 0.052 69.9)",
+          "oklch(37.9% 0.052 69.9)",
+          "oklch(49.3% 0.052 69.9)",
+          "oklch(60.7% 0.052 69.9)",
+          "oklch(72.1% 0.052 69.9)",
+          "oklch(83.6% 0.052 69.9)",
+          "oklch(95.0% 0.052 69.9)"
+        ]
+      },
+      "pessego": {
+        "role": "secondary",
+        "displayName": "Pêssego",
+        "canonical": "#EDC79B",
+        "cssVar": "--pessego",
+        "tonalRamp": [
+          "oklch(15.0% 0.072 70.7)",
+          "oklch(26.4% 0.072 70.7)",
+          "oklch(37.9% 0.072 70.7)",
+          "oklch(49.3% 0.072 70.7)",
+          "oklch(60.7% 0.072 70.7)",
+          "oklch(72.1% 0.072 70.7)",
+          "oklch(83.6% 0.072 70.7)",
+          "oklch(95.0% 0.072 70.7)"
+        ]
+      },
+      "tinta": {
+        "role": "neutral",
+        "displayName": "Tinta",
+        "canonical": "#33200F",
+        "cssVar": "--tinta",
+        "tonalRamp": [
+          "oklch(15.0% 0.041 61.4)",
+          "oklch(26.4% 0.041 61.4)",
+          "oklch(37.9% 0.041 61.4)",
+          "oklch(49.3% 0.041 61.4)",
+          "oklch(60.7% 0.041 61.4)",
+          "oklch(72.1% 0.041 61.4)",
+          "oklch(83.6% 0.041 61.4)",
+          "oklch(95.0% 0.041 61.4)"
+        ]
+      },
+      "tinta-suave": {
+        "role": "neutral",
+        "displayName": "Tinta Suave",
+        "canonical": "#6A4A33",
+        "cssVar": "--tinta-suave",
+        "tonalRamp": [
+          "oklch(15.0% 0.056 56.4)",
+          "oklch(26.4% 0.056 56.4)",
+          "oklch(37.9% 0.056 56.4)",
+          "oklch(49.3% 0.056 56.4)",
+          "oklch(60.7% 0.056 56.4)",
+          "oklch(72.1% 0.056 56.4)",
+          "oklch(83.6% 0.056 56.4)",
+          "oklch(95.0% 0.056 56.4)"
+        ]
+      },
+      "terracota": {
+        "role": "primary",
+        "displayName": "Terracota",
+        "canonical": "#8E5226",
+        "cssVar": "--terracota",
+        "tonalRamp": [
+          "oklch(15.0% 0.099 54.3)",
+          "oklch(26.4% 0.099 54.3)",
+          "oklch(37.9% 0.099 54.3)",
+          "oklch(49.3% 0.099 54.3)",
+          "oklch(60.7% 0.099 54.3)",
+          "oklch(72.1% 0.099 54.3)",
+          "oklch(83.6% 0.099 54.3)",
+          "oklch(95.0% 0.099 54.3)"
+        ]
+      },
+      "terracota-funda": {
+        "role": "primary",
+        "displayName": "Terracota Funda",
+        "canonical": "#6F3E1B",
+        "cssVar": "--terracota-funda",
+        "tonalRamp": [
+          "oklch(15.0% 0.084 53.5)",
+          "oklch(26.4% 0.084 53.5)",
+          "oklch(37.9% 0.084 53.5)",
+          "oklch(49.3% 0.084 53.5)",
+          "oklch(60.7% 0.084 53.5)",
+          "oklch(72.1% 0.084 53.5)",
+          "oklch(83.6% 0.084 53.5)",
+          "oklch(95.0% 0.084 53.5)"
+        ]
+      },
+      "sobre-terracota": {
+        "role": "primary",
+        "displayName": "Sobre Terracota",
+        "canonical": "#FFF8F0",
+        "cssVar": "--sobre-terracota",
+        "tonalRamp": [
+          "oklch(15.0% 0.013 71.3)",
+          "oklch(26.4% 0.013 71.3)",
+          "oklch(37.9% 0.013 71.3)",
+          "oklch(49.3% 0.013 71.3)",
+          "oklch(60.7% 0.013 71.3)",
+          "oklch(72.1% 0.013 71.3)",
+          "oklch(83.6% 0.013 71.3)",
+          "oklch(95.0% 0.013 71.3)"
+        ]
+      },
+      "terracota-marca": {
+        "role": "secondary",
+        "displayName": "Terracota da Marca",
+        "canonical": "#BB7944",
+        "cssVar": "--terracota-marca",
+        "tonalRamp": [
+          "oklch(15.0% 0.108 57.9)",
+          "oklch(26.4% 0.108 57.9)",
+          "oklch(37.9% 0.108 57.9)",
+          "oklch(49.3% 0.108 57.9)",
+          "oklch(60.7% 0.108 57.9)",
+          "oklch(72.1% 0.108 57.9)",
+          "oklch(83.6% 0.108 57.9)",
+          "oklch(95.0% 0.108 57.9)"
+        ]
+      },
+      "lume": {
+        "role": "tertiary",
+        "displayName": "Lume",
+        "canonical": "#BB7944",
+        "cssVar": "--lume",
+        "tonalRamp": [
+          "oklch(15.0% 0.108 57.9)",
+          "oklch(26.4% 0.108 57.9)",
+          "oklch(37.9% 0.108 57.9)",
+          "oklch(49.3% 0.108 57.9)",
+          "oklch(60.7% 0.108 57.9)",
+          "oklch(72.1% 0.108 57.9)",
+          "oklch(83.6% 0.108 57.9)",
+          "oklch(95.0% 0.108 57.9)"
+        ]
+      },
+      "foco": {
+        "role": "tertiary",
+        "displayName": "Foco",
+        "canonical": "#8E5226",
+        "cssVar": "--foco",
+        "tonalRamp": [
+          "oklch(15.0% 0.099 54.3)",
+          "oklch(26.4% 0.099 54.3)",
+          "oklch(37.9% 0.099 54.3)",
+          "oklch(49.3% 0.099 54.3)",
+          "oklch(60.7% 0.099 54.3)",
+          "oklch(72.1% 0.099 54.3)",
+          "oklch(83.6% 0.099 54.3)",
+          "oklch(95.0% 0.099 54.3)"
+        ]
+      },
+      "lume-escuro": {
+        "role": "tertiary",
+        "displayName": "Lume Escuro",
+        "canonical": "#8E5226",
+        "cssVar": "--lume-escuro",
+        "tonalRamp": [
+          "oklch(15.0% 0.099 54.3)",
+          "oklch(26.4% 0.099 54.3)",
+          "oklch(37.9% 0.099 54.3)",
+          "oklch(49.3% 0.099 54.3)",
+          "oklch(60.7% 0.099 54.3)",
+          "oklch(72.1% 0.099 54.3)",
+          "oklch(83.6% 0.099 54.3)",
+          "oklch(95.0% 0.099 54.3)"
+        ]
+      },
+      "noite": {
+        "role": "neutral",
+        "displayName": "Noite",
+        "canonical": "#2B1A0F",
+        "cssVar": "--noite",
+        "tonalRamp": [
+          "oklch(15.0% 0.033 53.3)",
+          "oklch(26.4% 0.033 53.3)",
+          "oklch(37.9% 0.033 53.3)",
+          "oklch(49.3% 0.033 53.3)",
+          "oklch(60.7% 0.033 53.3)",
+          "oklch(72.1% 0.033 53.3)",
+          "oklch(83.6% 0.033 53.3)",
+          "oklch(95.0% 0.033 53.3)"
+        ]
+      },
+      "noite-2": {
+        "role": "neutral",
+        "displayName": "Noite Dois",
+        "canonical": "#3A2416",
+        "cssVar": "--noite-2",
+        "tonalRamp": [
+          "oklch(15.0% 0.041 52.8)",
+          "oklch(26.4% 0.041 52.8)",
+          "oklch(37.9% 0.041 52.8)",
+          "oklch(49.3% 0.041 52.8)",
+          "oklch(60.7% 0.041 52.8)",
+          "oklch(72.1% 0.041 52.8)",
+          "oklch(83.6% 0.041 52.8)",
+          "oklch(95.0% 0.041 52.8)"
+        ]
+      },
+      "noite-linha": {
+        "role": "neutral",
+        "displayName": "Linha da Noite",
+        "canonical": "#5C3B25",
+        "cssVar": "--noite-linha",
+        "tonalRamp": [
+          "oklch(15.0% 0.058 53.9)",
+          "oklch(26.4% 0.058 53.9)",
+          "oklch(37.9% 0.058 53.9)",
+          "oklch(49.3% 0.058 53.9)",
+          "oklch(60.7% 0.058 53.9)",
+          "oklch(72.1% 0.058 53.9)",
+          "oklch(83.6% 0.058 53.9)",
+          "oklch(95.0% 0.058 53.9)"
+        ]
+      },
+      "noite-campo": {
+        "role": "neutral",
+        "displayName": "Campo da Noite",
+        "canonical": "#9C7A60",
+        "cssVar": "--noite-campo",
+        "tonalRamp": [
+          "oklch(15.0% 0.057 58.8)",
+          "oklch(26.4% 0.057 58.8)",
+          "oklch(37.9% 0.057 58.8)",
+          "oklch(49.3% 0.057 58.8)",
+          "oklch(60.7% 0.057 58.8)",
+          "oklch(72.1% 0.057 58.8)",
+          "oklch(83.6% 0.057 58.8)",
+          "oklch(95.0% 0.057 58.8)"
+        ]
+      },
+      "noite-dica": {
+        "role": "neutral",
+        "displayName": "Dica da Noite",
+        "canonical": "#C2A388",
+        "cssVar": "--noite-dica",
+        "tonalRamp": [
+          "oklch(15.0% 0.052 62.9)",
+          "oklch(26.4% 0.052 62.9)",
+          "oklch(37.9% 0.052 62.9)",
+          "oklch(49.3% 0.052 62.9)",
+          "oklch(60.7% 0.052 62.9)",
+          "oklch(72.1% 0.052 62.9)",
+          "oklch(83.6% 0.052 62.9)",
+          "oklch(95.0% 0.052 62.9)"
+        ]
+      },
+      "luz": {
+        "role": "primary",
+        "displayName": "Luz",
+        "canonical": "#EDC79B",
+        "cssVar": "--luz",
+        "tonalRamp": [
+          "oklch(15.0% 0.072 70.7)",
+          "oklch(26.4% 0.072 70.7)",
+          "oklch(37.9% 0.072 70.7)",
+          "oklch(49.3% 0.072 70.7)",
+          "oklch(60.7% 0.072 70.7)",
+          "oklch(72.1% 0.072 70.7)",
+          "oklch(83.6% 0.072 70.7)",
+          "oklch(95.0% 0.072 70.7)"
+        ]
+      },
+      "luz-clara": {
+        "role": "primary",
+        "displayName": "Luz Clara",
+        "canonical": "#F6DDBF",
+        "cssVar": "--luz-clara",
+        "tonalRamp": [
+          "oklch(15.0% 0.048 72.2)",
+          "oklch(26.4% 0.048 72.2)",
+          "oklch(37.9% 0.048 72.2)",
+          "oklch(49.3% 0.048 72.2)",
+          "oklch(60.7% 0.048 72.2)",
+          "oklch(72.1% 0.048 72.2)",
+          "oklch(83.6% 0.048 72.2)",
+          "oklch(95.0% 0.048 72.2)"
+        ]
+      },
+      "noite-foco": {
+        "role": "tertiary",
+        "displayName": "Lume da Noite",
+        "canonical": "#E9A86F",
+        "cssVar": "--noite-foco",
+        "tonalRamp": [
+          "oklch(15.0% 0.106 61.6)",
+          "oklch(26.4% 0.106 61.6)",
+          "oklch(37.9% 0.106 61.6)",
+          "oklch(49.3% 0.106 61.6)",
+          "oklch(60.7% 0.106 61.6)",
+          "oklch(72.1% 0.106 61.6)",
+          "oklch(83.6% 0.106 61.6)",
+          "oklch(95.0% 0.106 61.6)"
+        ]
+      },
+      "noite-texto": {
+        "role": "neutral",
+        "displayName": "Texto da Noite",
+        "canonical": "#F8EBDD",
+        "cssVar": "--noite-texto",
+        "tonalRamp": [
+          "oklch(15.0% 0.023 69.6)",
+          "oklch(26.4% 0.023 69.6)",
+          "oklch(37.9% 0.023 69.6)",
+          "oklch(49.3% 0.023 69.6)",
+          "oklch(60.7% 0.023 69.6)",
+          "oklch(72.1% 0.023 69.6)",
+          "oklch(83.6% 0.023 69.6)",
+          "oklch(95.0% 0.023 69.6)"
+        ]
+      },
       "noite-suave": {
         "role": "neutral",
         "displayName": "Noite Suave",
-        "canonical": "#CBC3B5",
+        "canonical": "#DCC4AD",
         "cssVar": "--noite-suave",
         "tonalRamp": [
-          "oklch(15.0% 0.021 81.8)",
-          "oklch(26.4% 0.021 81.8)",
-          "oklch(37.9% 0.021 81.8)",
-          "oklch(49.3% 0.021 81.8)",
-          "oklch(60.7% 0.021 81.8)",
-          "oklch(72.1% 0.021 81.8)",
-          "oklch(83.6% 0.021 81.8)",
-          "oklch(95.0% 0.021 81.8)"
+          "oklch(15.0% 0.041 66.0)",
+          "oklch(26.4% 0.041 66.0)",
+          "oklch(37.9% 0.041 66.0)",
+          "oklch(49.3% 0.041 66.0)",
+          "oklch(60.7% 0.041 66.0)",
+          "oklch(72.1% 0.041 66.0)",
+          "oklch(83.6% 0.041 66.0)",
+          "oklch(95.0% 0.041 66.0)"
         ]
       },
       "noite-resposta": {
         "role": "neutral",
         "displayName": "Resposta",
-        "canonical": "#E5DCCF",
+        "canonical": "#EAD6C2",
         "cssVar": "--noite-resposta",
         "tonalRamp": [
-          "oklch(15.0% 0.020 77.3)",
-          "oklch(26.4% 0.020 77.3)",
-          "oklch(37.9% 0.020 77.3)",
-          "oklch(49.3% 0.020 77.3)",
-          "oklch(60.7% 0.020 77.3)",
-          "oklch(72.1% 0.020 77.3)",
-          "oklch(83.6% 0.020 77.3)",
-          "oklch(95.0% 0.020 77.3)"
+          "oklch(15.0% 0.035 67.4)",
+          "oklch(26.4% 0.035 67.4)",
+          "oklch(37.9% 0.035 67.4)",
+          "oklch(49.3% 0.035 67.4)",
+          "oklch(60.7% 0.035 67.4)",
+          "oklch(72.1% 0.035 67.4)",
+          "oklch(83.6% 0.035 67.4)",
+          "oklch(95.0% 0.035 67.4)"
         ]
       }
     },
     "gradients": [
       {
         "name": "textura-dia",
-        "value": "radial-gradient(58rem 32rem at calc(100% + 6rem) -7rem, rgb(176 141 69 / 0.32), transparent 70%), radial-gradient(40rem 26rem at -12rem 30rem, rgb(217 115 47 / 0.11), transparent 70%)",
-        "purpose": "Textura \"Luz\" do dia: sol baixo dourado no alto à direita e reflexo de lume à esquerda. Fundo do body."
+        "value": "radial-gradient(58rem 32rem at calc(100% + 6rem) -7rem, rgb(237 199 155 / 0.62), transparent 70%), radial-gradient(40rem 26rem at -12rem 30rem, rgb(187 121 68 / 0.12), transparent 70%)",
+        "purpose": "Textura \"Luz\" do dia: halo pêssego no alto à direita e reflexo terracota à esquerda. Fundo do body."
       },
       {
         "name": "textura-noite",
-        "value": "radial-gradient(64rem 26rem at 50% -9rem, rgb(217 178 106 / 0.13), transparent 70%), radial-gradient(44rem 30rem at calc(100% + 10rem) 55%, rgb(217 115 47 / 0.07), transparent 70%)",
-        "purpose": "Textura \"Luz\" da noite: brilho dourado no alto e brasa à direita. Não vai no rodapé."
+        "value": "radial-gradient(64rem 26rem at 50% -9rem, rgb(237 199 155 / 0.12), transparent 70%), radial-gradient(44rem 30rem at calc(100% + 10rem) 55%, rgb(187 121 68 / 0.12), transparent 70%)",
+        "purpose": "Textura \"Luz\" da noite: brilho pêssego no alto e brasa terracota à direita. Não vai no rodapé."
       },
       {
         "name": "anoitecer",
-        "value": "linear-gradient(to bottom, var(--dia) 0%, #EDD5BA 22%, #E0A878 42%, #9C6E4A 60%, #45503F 80%, var(--noite) 100%)",
-        "purpose": "A passagem do dia para a noite; o único campo largo de laranja."
+        "value": "linear-gradient(to bottom, var(--dia) 0%, #F0D3B0 22%, #E2A877 42%, #BB7944 60%, #6B4026 80%, var(--noite) 100%)",
+        "purpose": "O pôr do sol entre a cerimônia e a festa: do pêssego ao terracota e à noite. A estrela do logo acende no meio."
       },
       {
         "name": "luzes-do-anoitecer",
-        "value": "seis pontos radiais de 1.5 a 2px em --luz-clara e --noite-foco, mais um brilho elíptico de --luz a 18% na base",
+        "value": "radial-gradient(circle at 12% 70%, color-mix(in srgb, var(--luz-clara) 90%, transparent) 0 2px, transparent 3px), radial-gradient(circle at 26% 58%, color-mix(in srgb, var(--luz-clara) 70%, transparent) 0 1.5px, transparent 2.5px), radial-gradient(circle at 41% 74%, color-mix(in srgb, var(--luz-clara) 85%, transparent) 0 2px, transparent 3px), radial-gradient(circle at 57% 62%, color-mix(in srgb, var(--noite-foco) 80%, transparent) 0 1.5px, transparent 2.5px), radial-gradient(circle at 71% 76%, color-mix(in srgb, var(--luz-clara) 90%, transparent) 0 2px, transparent 3px), radial-gradient(circle at 86% 60%, color-mix(in srgb, var(--luz-clara) 70%, transparent) 0 1.5px, transparent 2.5px), radial-gradient(ellipse at 50% 100%, color-mix(in srgb, var(--luz) 18%, transparent), transparent 70%)",
         "purpose": "As primeiras luzes acesas na metade de baixo do anoitecer."
       },
       {
@@ -480,6 +480,21 @@
         "name": "reduzir",
         "value": "prefers-reduced-motion: reduce -> animation e transition none",
         "purpose": "Desliga todo movimento."
+      },
+      {
+        "name": "abertura",
+        "value": "100 bpm (1 tempo = 0,6 s); arcos 0-1,7 s, estrela pequena 1,8, L 2,1, estrela 2,7, LUMES 3,45 + 0,15 por letra, EXPERIENCE 4,2, saída 5,1, porta 5,7-6,9 s",
+        "purpose": "A intro da identidade: o logo se desenha no pêssego e o arco de dentro vira porta. Os mesmos tempos movem a trilha (Web Audio)."
+      },
+      {
+        "name": "desenhar-arco",
+        "value": "stroke-dashoffset 1 -> 0, 2.2s cubic-bezier(0.45, 0, 0.2, 1)",
+        "purpose": "Os dois arcos em volta da Delliz se desenham ao carregar (ou quando a porta abre)."
+      },
+      {
+        "name": "cintilar",
+        "value": "5s ease-in-out infinite; opacity 0.85 <-> 1, scale 1 <-> 1.12",
+        "purpose": "A estrela do anoitecer pulsa devagar."
       }
     ],
     "breakpoints": [
@@ -525,12 +540,28 @@
   },
   "components": [
     {
+      "name": "Logo",
+      "kind": "brand",
+      "refersTo": "marca",
+      "description": "A sub-marca da identidade (arcos, L, estrelas, LUMES EXPERIENCE), vetorial, em terracota da marca no dia e pêssego na noite.",
+      "html": "<a class=\"ds-marca\" href=\"#\" aria-label=\"Lumes Experience\"><svg viewBox=\"0 0 1745 594\" aria-hidden=\"true\"><use href=\"#marca-logo\"/></svg></a>",
+      "css": ".ds-marca { display: inline-flex; align-items: center; min-height: 2.75rem; color: var(--terracota-marca); } .ds-marca svg { height: 2.6rem; width: auto; aspect-ratio: 1745 / 594; }"
+    },
+    {
+      "name": "Logo",
+      "kind": "brand",
+      "refersTo": "marca",
+      "description": "A sub-marca da identidade (arcos, L, estrelas, LUMES EXPERIENCE), vetorial, em terracota da marca no dia e pêssego na noite.",
+      "html": "<a class=\"ds-marca\" href=\"#\" aria-label=\"Lumes Experience\"><svg viewBox=\"0 0 1745 594\" aria-hidden=\"true\"><use href=\"#marca-logo\"/></svg></a>",
+      "css": ".ds-marca { display: inline-flex; align-items: center; min-height: 2.75rem; color: var(--terracota-marca); } .ds-marca svg { height: 2.6rem; width: auto; aspect-ratio: 1745 / 594; }"
+    },
+    {
       "name": "Botão",
       "kind": "button",
       "refersTo": "botao",
       "description": "A ação principal sobre o dia: consultar a data no WhatsApp.",
       "html": "<a class=\"ds-botao\" href=\"#\">Consultar nossa data no WhatsApp</a>",
-      "css": ".ds-botao { display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; min-height: 3rem; padding: 0.8rem 1.5rem; border: 0; border-radius: 999px; background: var(--verde); color: var(--sobre-verde); font: 600 1rem/1.2 var(--sans); text-decoration: none; transition: background-color 0.2s; } .ds-botao:hover { background: var(--verde-escuro); } .ds-botao:focus-visible { outline: 3px solid var(--foco); outline-offset: 3px; }"
+      "css": ".ds-botao { display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; min-height: 3rem; padding: 0.8rem 1.5rem; border: 0; border-radius: 999px; background: var(--terracota); color: var(--sobre-terracota); font: 600 1rem/1.2 var(--sans); text-decoration: none; transition: background-color 0.2s; } .ds-botao:hover { background: var(--terracota-funda); } .ds-botao:focus-visible { outline: 3px solid var(--foco); outline-offset: 3px; }"
     },
     {
       "name": "Botão de luz",
@@ -545,8 +576,8 @@
       "kind": "nav",
       "refersTo": "botao-compacto",
       "description": "Marca em Bodoni, links em Manrope e o botão compacto.",
-      "html": "<header class=\"ds-topo\"><a class=\"ds-marca\" href=\"#\">Lumens</a><nav class=\"ds-nav\"><a href=\"#\">Delliz</a><a href=\"#\">Momentos</a><a href=\"#\" aria-current=\"page\">Blog</a></nav><a class=\"ds-botao-compacto\" href=\"#\">Consultar data</a></header>",
-      "css": ".ds-topo { display: flex; align-items: center; gap: 1rem; padding: 1.25rem; background: var(--dia); } .ds-marca { font: 500 1.75rem/1 var(--serif); font-variation-settings: \"opsz\" 18; letter-spacing: 0.01em; color: var(--tinta); text-decoration: none; } .ds-nav { display: flex; gap: 1.75rem; margin-left: auto; margin-right: 1.5rem; } .ds-nav a { color: var(--tinta-suave); font: 400 0.9375rem var(--sans); text-decoration: none; text-underline-offset: 0.22em; } .ds-nav a:hover, .ds-nav a[aria-current] { color: var(--verde); text-decoration: underline; } .ds-botao-compacto { display: inline-flex; align-items: center; min-height: 2.75rem; padding: 0.55rem 1.1rem; border-radius: 999px; background: var(--verde); color: var(--sobre-verde); font: 600 0.9375rem/1.2 var(--sans); text-decoration: none; transition: background-color 0.2s; } .ds-botao-compacto:hover { background: var(--verde-escuro); } .ds-topo a:focus-visible { outline: 3px solid var(--foco); outline-offset: 3px; }"
+      "html": "<header class=\"ds-topo\"><a class=\"ds-marca\" href=\"#\">Lumes Experience</a><nav class=\"ds-nav\"><a href=\"#\">Delliz</a><a href=\"#\">Momentos</a><a href=\"#\" aria-current=\"page\">Blog</a></nav><a class=\"ds-botao-compacto\" href=\"#\">Consultar data</a></header>",
+      "css": ".ds-topo { display: flex; align-items: center; gap: 1rem; padding: 1.25rem; background: var(--dia); } .ds-marca { font: 500 1.75rem/1 var(--serif); font-variation-settings: \"opsz\" 18; letter-spacing: 0.01em; color: var(--tinta); text-decoration: none; } .ds-nav { display: flex; gap: 1.75rem; margin-left: auto; margin-right: 1.5rem; } .ds-nav a { color: var(--tinta-suave); font: 400 0.9375rem var(--sans); text-decoration: none; text-underline-offset: 0.22em; } .ds-nav a:hover, .ds-nav a[aria-current] { color: var(--terracota); text-decoration: underline; } .ds-botao-compacto { display: inline-flex; align-items: center; min-height: 2.75rem; padding: 0.55rem 1.1rem; border-radius: 999px; background: var(--terracota); color: var(--sobre-terracota); font: 600 0.9375rem/1.2 var(--sans); text-decoration: none; transition: background-color 0.2s; } .ds-botao-compacto:hover { background: var(--terracota-funda); } .ds-topo a:focus-visible { outline: 3px solid var(--foco); outline-offset: 3px; }"
     },
     {
       "name": "Campo da noite",
@@ -570,7 +601,7 @@
       "refersTo": "caixa",
       "description": "Prazos, checagem e norma da igreja dentro do artigo, com a fonte no fim.",
       "html": "<aside class=\"ds-caixa\"><p class=\"ds-caixa__titulo\">Os prazos do cartório em Minas</p><dl class=\"ds-prazos\"><div><dt>Até 5 dias úteis</dt><dd>para sair o certificado, depois da publicação do edital</dd></div><div><dt>90 dias corridos</dt><dd>de validade do certificado de habilitação</dd></div></dl></aside>",
-      "css": ".ds-caixa { padding: 1.25rem 1.5rem 1.5rem; border: 1px solid var(--dia-linha); border-radius: 6px; background: var(--dia-2); color: var(--tinta); font: 400 1.0625rem/1.7 var(--sans); } .ds-caixa__titulo { margin: 0 0 0.75rem; color: var(--verde); font-weight: 650; line-height: 1.4; } .ds-prazos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem 2rem; margin: 0; } .ds-prazos dt { color: var(--ouro); font: 500 1.5rem/1.15 var(--serif); font-variation-settings: \"opsz\" 14; font-variant-numeric: lining-nums; } .ds-prazos dd { margin: 0.2rem 0 0; color: var(--tinta-suave); font-size: 0.9375rem; line-height: 1.5; } .ds-caixa__fonte { margin: 0.9rem 0 0; color: var(--tinta-suave); font-size: 0.875rem; }"
+      "css": ".ds-caixa { padding: 1.25rem 1.5rem 1.5rem; border: 1px solid var(--dia-linha); border-radius: 6px; background: var(--dia-2); color: var(--tinta); font: 400 1.0625rem/1.7 var(--sans); } .ds-caixa__titulo { margin: 0 0 0.75rem; color: var(--terracota); font-weight: 650; line-height: 1.4; } .ds-prazos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem 2rem; margin: 0; } .ds-prazos dt { color: var(--terracota); font: 500 1.5rem/1.15 var(--serif); font-variation-settings: \"opsz\" 14; font-variant-numeric: lining-nums; } .ds-prazos dd { margin: 0.2rem 0 0; color: var(--tinta-suave); font-size: 0.9375rem; line-height: 1.5; } .ds-caixa__fonte { margin: 0.9rem 0 0; color: var(--tinta-suave); font-size: 0.875rem; }"
     },
     {
       "name": "Caixa de aviso",
@@ -585,16 +616,16 @@
       "kind": "custom",
       "refersTo": "capa-assunto",
       "description": "O arco da marca aceso por dentro, com o chip de assunto; a arte vem de scripts/blog/capas.mjs.",
-      "html": "<figure class=\"ds-capa\"><svg viewBox=\"0 0 320 400\" aria-hidden=\"true\"><g fill=\"none\" stroke=\"#D9B26A\"><circle cx=\"134\" cy=\"218\" r=\"56\" stroke-width=\"3.5\"/><circle cx=\"188\" cy=\"218\" r=\"56\" stroke-width=\"3.5\"/></g></svg><figcaption class=\"ds-capa__assunto\">Dicas</figcaption></figure>",
+      "html": "<figure class=\"ds-capa\"><svg viewBox=\"0 0 320 400\" aria-hidden=\"true\"><g fill=\"none\" stroke=\"#EDC79B\"><circle cx=\"134\" cy=\"218\" r=\"56\" stroke-width=\"3.5\"/><circle cx=\"188\" cy=\"218\" r=\"56\" stroke-width=\"3.5\"/></g></svg><figcaption class=\"ds-capa__assunto\">Dicas</figcaption></figure>",
       "css": ".ds-capa { position: relative; overflow: hidden; width: 16rem; margin: 0; aspect-ratio: 4 / 5; border-radius: 50% 50% 0.375rem 0.375rem / 40% 40% 0.375rem 0.375rem; background: radial-gradient(circle at 50% 56%, color-mix(in srgb, var(--lume) 30%, transparent) 0%, color-mix(in srgb, var(--luz) 14%, transparent) 36%, transparent 68%), linear-gradient(170deg, #2B3A30 0%, #1E2921 55%, var(--noite) 100%); box-shadow: 0 1.75rem 3rem -1.5rem color-mix(in srgb, var(--tinta) 45%, transparent); } .ds-capa svg { position: absolute; inset: 0; width: 100%; height: 100%; transition: scale 0.6s cubic-bezier(0.2, 0.7, 0.2, 1); } .ds-capa:hover svg { scale: 1.04; } .ds-capa__assunto { position: absolute; left: 50%; bottom: 1rem; translate: -50% 0; padding: 0.3rem 0.85rem; border: 1px solid color-mix(in srgb, var(--luz) 45%, transparent); border-radius: 999px; background: var(--noite); color: var(--luz-clara); font: 600 0.8125rem/1.3 var(--sans); white-space: nowrap; }"
     },
     {
       "name": "Lista numerada",
       "kind": "custom",
       "refersTo": "numeral",
-      "description": "Numerais Bodoni dourados sobre fios de 1px: roteiro, passos e listas do blog.",
+      "description": "Numerais Bodoni pêssegos sobre fios de 1px: roteiro, passos e listas do blog.",
       "html": "<ol class=\"ds-lista\"><li>Chegada dos convidados</li><li>Cortejo</li><li>Entrada da noiva</li></ol>",
-      "css": ".ds-lista { margin: 0; padding: 0; list-style: none; counter-reset: item; background: var(--dia); color: var(--tinta); font: 400 1.0625rem/1.65 var(--sans); } .ds-lista li { position: relative; padding: 1rem 0 1rem 2.75rem; border-top: 1px solid var(--dia-linha); counter-increment: item; } .ds-lista li::before { content: counter(item); position: absolute; left: 0; top: 0.95rem; color: var(--ouro); font: 500 1.5rem/1.1 var(--serif); font-variation-settings: \"opsz\" 14; font-variant-numeric: lining-nums; }"
+      "css": ".ds-lista { margin: 0; padding: 0; list-style: none; counter-reset: item; background: var(--dia); color: var(--tinta); font: 400 1.0625rem/1.65 var(--sans); } .ds-lista li { position: relative; padding: 1rem 0 1rem 2.75rem; border-top: 1px solid var(--dia-linha); counter-increment: item; } .ds-lista li::before { content: counter(item); position: absolute; left: 0; top: 0.95rem; color: var(--terracota); font: 500 1.5rem/1.1 var(--serif); font-variation-settings: \"opsz\" 14; font-variant-numeric: lining-nums; }"
     },
     {
       "name": "Anoitecer",
@@ -606,80 +637,75 @@
     }
   ],
   "narrative": {
-    "northStar": "O dia que vira noite",
-    "overview": "O casamento começa de dia e termina de noite, e o site segue essa passagem. A cerimônia acontece num nude claro de papel ao sol (`--dia`), com tinta marrom-escura e ações em verde. A festa acontece num verde quase preto (`--noite`), com o texto em creme e os botões acesos em dourado (`--luz`). Entre as duas, uma faixa de pôr do sol (`--anoitecer`) faz a única passagem larga de laranja, com as primeiras luzes acesas embaixo. Na página inicial essa passagem separa a cerimônia da recepção. No blog, ela fecha cada artigo, antes da Delliz e do WhatsApp.\n\nO material é luz, sem ruído. O fundo do dia tem um sol baixo dourado no canto superior direito e um reflexo laranja à esquerda (`--textura-dia`). A noite tem um brilho dourado no alto e uma brasa laranja à direita (`--textura-noite`). São halos radiais suaves, posicionados em rem a partir do topo de cada bloco, nunca grão ou textura de papel. A forma recorrente é o arco de igreja. Ele emoldura a Delliz na abertura, todas as capas do blog e as miniaturas de \"Leia também\".\n\nA densidade é de revista: colunas de leitura de 42rem, listas numeradas com fio de 1px e numerais Bodoni dourados, muito espaço entre seções. O tom é de convite, não de vitrine. O sistema recusa a página de banda com foto em tela cheia e lista de serviços, e recusa foto genérica no lugar de material que ainda não chegou: os espaços reservados das amostras são luzes desfocadas sobre a noite.",
+    "northStar": "A porta acesa",
+    "overview": "A identidade Lumes Experience (entregue pelo dono em 03/11/2026, pasta \"Lumes - Identidade Visual\") tem duas cores, terracota `#bb7944` e pêssego `#edc79b`, e um símbolo: dois arcos de igreja de mesmo raio, o de dentro mais baixo, e dentro deles um L de alto contraste com uma estrela pequena em cima e uma estrela de quatro pontas acesa ao lado, com oito raios claros atrás. O nome vem em caixa alta geométrica, LUMES, com EXPERIENCE embaixo.\n\nO site leva esse símbolo para a passagem do casamento. A primeira visita abre com o logo se desenhando no pêssego da marca, e o arco de dentro vira uma porta que se abre para a página. A cerimônia acontece num pêssego claro (`--dia`), com tinta marrom e ações em terracota. A festa acontece num marrom-terracota fechado (`--noite`), com texto creme e botões acesos em pêssego (`--luz`). Entre os dois, a faixa `--anoitecer` desce do pêssego ao terracota e à noite, e a estrela do logo acende no meio dela, como a primeira estrela da noite.\n\nO material é luz, sem ruído: halos radiais suaves de pêssego e terracota (`--textura-dia`, `--textura-noite`), nunca grão. A forma recorrente é o arco: o logo, a foto da Delliz dentro dos dois arcos, o retrato, as capas do blog e as miniaturas. A densidade é de revista: colunas de leitura de 42rem, listas numeradas com fio de 1px e numerais Bodoni em terracota. O tom é de convite. O sistema recusa a página de banda com foto em tela cheia e recusa foto genérica no lugar de material que ainda não chegou.",
     "keyCharacteristics": [
-      "Dois mundos de fundo, dia e noite, e nenhum terceiro; a passagem entre eles é sempre o `--anoitecer`.",
-      "Verde para agir no dia, dourado para agir na noite; laranja só em pontos de luz.",
-      "Bodoni Moda com tamanho óptico fixo para títulos e numerais; Manrope para todo o resto.",
-      "Textura \"Luz\": halos radiais suaves, sem ruído.",
-      "O arco de igreja como silhueta de toda imagem e capa."
+      "Dois mundos de fundo, dia (pêssego claro) e noite (terracota fechado); a passagem é sempre o `--anoitecer`. O pêssego pleno da marca (`--pessego`) aparece na abertura.",
+      "Terracota para agir no dia, pêssego para agir na noite.",
+      "O terracota da marca (`--terracota-marca`) fica no logo e nos detalhes (arcos, fios, estrelas); texto e botões usam o terracota fechado (`--terracota`), que passa no contraste.",
+      "Bodoni Moda com tamanho óptico fixo para títulos e numerais; Manrope para o resto.",
+      "Os dois arcos e a estrela como assinatura."
     ],
     "rules": [
       {
         "name": "A Regra do Dia e da Noite",
-        "body": "Todo bloco pertence ao dia (`--dia` com `--tinta`) ou à noite (`--noite` com `--noite-texto`). Não existe um terceiro fundo, e a passagem do dia para a noite é sempre a faixa `--anoitecer`, nunca um corte seco.",
-        "section": "colors"
+        "body": "Todo bloco pertence ao dia (`--dia` com `--tinta`) ou à noite (`--noite` com `--noite-texto`). A passagem é sempre a faixa `--anoitecer`, nunca um corte seco. A única exceção é a abertura, no pêssego pleno da marca."
       },
       {
-        "name": "A Regra do Lume em Pontos",
-        "body": "O laranja (`--lume`, `--noite-foco`) aparece em pontos: foco, a luz do sumário, as lâmpadas das capas, o centro dos halos. O único campo largo de laranja é o `--anoitecer`, pedido pelo usuário como a luz do Lumens.",
-        "section": "colors"
+        "name": "A Regra das Duas Terracotas",
+        "body": "O terracota da marca (#bb7944) é para o logo e os ornamentos; o terracota fechado (#8E5226) é para texto e ação. Nunca troque um pelo outro."
       },
       {
         "name": "A Regra da Cor que Age",
-        "body": "No dia, quem age é verde; na noite, quem age é dourado (`.botao--luz`). Dourado sobre o dia é brilho (numerais, fios), nunca botão. A barra fixa do celular segue a mesma regra: clara com botão verde sobre o dia, escura com botão dourado sobre a noite.",
-        "section": "colors"
+        "body": "No dia, quem age é terracota; na noite, quem age é pêssego (`.botao--luz`). A barra fixa do celular segue a mesma regra."
       },
       {
         "name": "A Regra do Root Único",
-        "body": "Os tokens de `:root` de `index.html` e de `assets/css/blog.css` são os mesmos; `scripts/checar.mjs` acusa qualquer divergência. Mude um, mude os dois.",
-        "section": "colors"
+        "body": "Os tokens de `:root` de `index.html` e de `assets/css/blog.css` são os mesmos; `scripts/checar.mjs` acusa qualquer divergência. Mude um, mude os dois."
       },
       {
         "name": "A Regra do Tamanho Óptico Fixo",
-        "body": "O Bodoni nunca usa o tamanho óptico automático, que afina o traço demais abaixo de ~60px (\"BH\" vira \"BII\"). Todo título, numeral e marca declara `font-variation-settings: \"opsz\" var(--opsz)`: 48 no h1, 24 por padrão, 18 na marca, 14 em h3 e numerais, 12 nos nomes pequenos.",
-        "section": "typography"
+        "body": "O Bodoni nunca usa o tamanho óptico automático, que afina o traço demais abaixo de ~60px (\"BH\" vira \"BII\"). Todo título e numeral declara `font-variation-settings: \"opsz\" var(--opsz)`: 48 no h1, 24 por padrão, 14 em h3 e numerais, 12 nos nomes pequenos."
       },
       {
         "name": "A Regra da Fonte Reserva Medida",
-        "body": "Toda fonte da página tem reservas locais com `size-adjust` medido, para que a troca não mova linhas nem o botão principal.",
-        "section": "typography"
+        "body": "Toda fonte tem reservas locais com `size-adjust` medido, para que a troca não mova linhas nem o botão principal."
       },
       {
-        "name": "A Regra dos Numerais Dourados",
-        "body": "Sequência numerada é Bodoni dourado com numerais alinhados, cada item sobre um fio de 1px. É o mesmo desenho no roteiro da página inicial, nos passos e nas listas e prazos do blog.",
-        "section": "typography"
+        "name": "A Regra dos Numerais em Terracota",
+        "body": "Sequência numerada é Bodoni em terracota com numerais alinhados, cada item sobre um fio de 1px: o roteiro, os passos e as listas e prazos do blog."
+      },
+      {
+        "name": "A Regra do Texto Justificado",
+        "body": "Pedido do dono em 03/11/2026, ajustado na revisão impeccable do mesmo dia: o texto corrido é justificado só nas colunas largas e só a partir de 64rem. Na página inicial, a bio da Delliz, as introduções de seção e as respostas do FAQ; no blog, os parágrafos e listas do corpo do artigo, o resumo, o aviso e a bio da autora. Vai sempre com `hyphens: auto` (o `lang=\"pt-BR\"` da página) e `hyphenate-limit-chars: 11 4 4`, que só quebra palavras de 11 letras ou mais, para nunca partir nomes como Delliz, Christine, Experience ou Horizonte. No celular e nas colunas estreitas (o texto do topo, a ficha de fatos, os passos, o roteiro, as notas, as legendas, os prazos, a checagem, as fontes, os cartões, as citações e o sumário), o texto fica alinhado à esquerda, porque a justificação abre buracos entre as palavras."
       },
       {
         "name": "A Regra da Luz no Lugar da Sombra",
-        "body": "Caixas, cartões, formulário e campos não têm sombra; separam-se por fio de 1px e por tom (`--dia-2` no dia, `--noite-2` na noite). Só o arco e a barra fixa projetam sombra.",
-        "section": "elevation"
+        "body": "Caixas, cartões, formulário e campos não têm sombra; separam-se por fio de 1px e por tom. Só o arco e a barra fixa projetam sombra."
       },
       {
         "name": "A Regra do Halo Sem Ruído",
-        "body": "A textura é feita só de gradientes radiais suaves e transparentes. Nada de grão, ruído ou imagem de papel.",
-        "section": "elevation"
+        "body": "A textura é feita só de gradientes radiais suaves. Nada de grão, ruído ou imagem de papel."
       }
     ],
     "dos": [
-      "**Do** manter cada bloco no dia ou na noite e passar de um para o outro pela faixa `--anoitecer`.",
-      "**Do** usar `.botao` (verde) sobre o dia e `.botao--luz` (dourado) sobre a noite, com altura mínima de 3rem (2.75rem no compacto).",
-      "**Do** declarar `--opsz` em todo texto em Bodoni: 48 em h1, 14 em h3 e numerais, 12 em nomes pequenos.",
-      "**Do** emoldurar toda foto da Delliz e toda capa no arco de igreja, abrindo para 62% em faixas largas.",
-      "**Do** separar itens de lista e seções com fios de 1px (`--dia-linha` no dia, `--noite-linha` na noite) em vez de cartões com sombra.",
-      "**Do** manter os `:root` de `index.html` e `assets/css/blog.css` iguais, e rodar `scripts/checar.mjs` depois de mudar uma cor.",
-      "**Do** citar a fonte de cada dado numa caixa de destaque, em meta, no fim da caixa.",
-      "**Do** desligar animações e transições com `prefers-reduced-motion: reduce`."
+      "**Do** usar o terracota da marca (#bb7944) no logo e nos ornamentos, e o terracota fechado (#8E5226) em texto e botões.",
+      "**Do** manter cada bloco no dia ou na noite e passar de um para o outro pelo `--anoitecer`.",
+      "**Do** usar os vetores de `scripts/blog/marca.mjs` para o logo, a estrela e a abertura, e rodar `marca-no-index.mjs` depois de mudá-los.",
+      "**Do** declarar `--opsz` em todo texto em Bodoni.",
+      "**Do** emoldurar toda foto da Delliz e toda capa no arco de igreja.",
+      "**Do** manter os `:root` de `index.html` e `assets/css/blog.css` iguais e rodar `scripts/checar.mjs`.",
+      "**Do** manter a abertura curta, pulável e só na primeira visita; a ação principal continua sendo o WhatsApp.",
+      "**Do** respeitar `prefers-reduced-motion: reduce`."
     ],
     "donts": [
-      "**Don't** usar laranja em campos largos além do `--anoitecer`; o lume é ponto de luz.",
-      "**Don't** usar dourado como botão sobre o dia nem verde como botão sobre a noite.",
-      "**Don't** pôr grão, ruído ou imagem de papel na textura; a textura \"Luz\" é só halo radial.",
-      "**Don't** pôr foto genérica no lugar de material que ainda não chegou; o espaço reservado é feito de luzes desfocadas sobre `--noite-2`.",
-      "**Don't** dar sombra a caixas, cartões, campos ou formulário; só o arco e a barra fixa projetam sombra.",
-      "**Don't** deixar a textura da noite correr para o rodapé; o rodapé é `--noite` liso.",
-      "**Don't** usar `--ouro-linha` como cor de texto; para texto dourado sobre o dia, use `--ouro`."
+      "**Don't** usar o terracota da marca (#bb7944) em texto ou com texto branco: não passa no contraste.",
+      "**Don't** redesenhar o logo com fonte: LUMES e EXPERIENCE são os vetores da identidade.",
+      "**Don't** tocar som sem um clique da pessoa.",
+      "**Don't** pôr grão, ruído ou imagem de papel na textura.",
+      "**Don't** pôr foto genérica ou de estúdio no lugar das amostras de casamento.",
+      "**Don't** dar sombra a caixas, cartões, campos ou formulário.",
+      "**Don't** usar `vector-effect: non-scaling-stroke` em traço com tracejado animado (`stroke-dasharray`): o tracejado sai falhado."
     ]
   }
 }

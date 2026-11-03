@@ -1,4 +1,4 @@
-# Lumens: música ao vivo para casamentos em Belo Horizonte e região.
+# Lumes Experience: música ao vivo para casamentos em Belo Horizonte e região.
 # Queremos ser encontrados por buscadores e citados por assistentes de IA: tudo liberado.
 # Os grupos nomeados abaixo só deixam a intenção explícita; "User-agent: *" já libera todos.
 
@@ -27,4 +27,4 @@ User-agent: meta-externalagent
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://lumens.example/sitemap.xml
+Sitemap: https://lumesexperience.com.br/sitemap.xml

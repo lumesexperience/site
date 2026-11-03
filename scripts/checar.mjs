@@ -11,8 +11,8 @@ const artigosDoBlog = readdirSync(new URL('blog/', raiz))
 const PAGINAS = ['index.html', 'blog/index.html', ...artigosDoBlog.map((slug) => `blog/${slug}/index.html`)];
 const ARQUIVOS_PUBLICADOS = [...PAGINAS, 'robots.txt', 'sitemap.xml', 'llms.txt'];
 const MARCADORES_OBRIGATORIOS = [
-  { texto: 'lumens.example', dica: 'troque pelo domínio real (ex.: https://www.seudominio.com.br)' },
-  { texto: '55DDDNUMERO', dica: 'troque pelo WhatsApp do Lumens só com dígitos (ex.: 5531999999999)' },
+  { texto: 'lumes.example', dica: 'troque pelo domínio real (ex.: https://www.seudominio.com.br)' },
+  { texto: '55DDDNUMERO', dica: 'troque pelo WhatsApp do Lumes Experience só com dígitos (ex.: 5531999999999)' },
 ];
 
 const erros = [];

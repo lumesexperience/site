@@ -1,4 +1,4 @@
-# Pesquisa que embasou a landing do Lumens
+# Pesquisa que embasou a landing do Lumes Experience
 
 Feita em 20/10/2026, antes da implementação. Cada item traz a fonte; o que é estimativa ou hipótese está marcado.
 
@@ -28,7 +28,7 @@ Contrastes medidos para texto: tinta 12,9:1; texto secundário 6,3:1; vinho com 
 - **Menos campos, mais conversão**: 1 campo converte 18,2% e 4 campos 9,9% ([NP Digital](https://neilpatel.com/marketing-stats/conversion-rate-by-form-fields/)). Por isso, no formulário, todos os campos são opcionais e o botão funciona mesmo vazio.
 - **O WhatsApp está na tela inicial de 65% dos smartphones no Brasil** ([Mobile Time](https://www.mobiletime.com.br/tag/homescreen/)). Não achamos teste A/B confiável de formulário contra WhatsApp no Brasil.
 - **Velocidade**: ganhar 0,1 s aumentou em 21,6% o avanço do formulário até o envio em sites de captação ([Deloitte/Google, web.dev](https://web.dev/case-studies/milliseconds-make-millions)).
-- **Preço**: mais de 80% dos casais querem uma noção de preço antes de entrar em contato ([Easy Weddings](https://easyweddings.com.au/pro-education/pricing-on-storefronts)). Mostrar o preço aumentou a resposta em 25%, mas o dado é de vendedor ([WeddingPro](https://pros.weddingpro.com/blog/vendor-storefront-pricing/)). Hoje a página está "sob consulta", por decisão do Lumens.
+- **Preço**: mais de 80% dos casais querem uma noção de preço antes de entrar em contato ([Easy Weddings](https://easyweddings.com.au/pro-education/pricing-on-storefronts)). Mostrar o preço aumentou a resposta em 25%, mas o dado é de vendedor ([WeddingPro](https://pros.weddingpro.com/blog/vendor-storefront-pricing/)). Hoje a página está "sob consulta", por decisão do Lumes Experience.
 - **Prova social**: com 5 avaliações, a chance de compra é 270% maior do que com nenhuma ([Spiegel/Northwestern](https://www.xait.com/hubfs/Spiegel_Online-Review_eBook_Jun2017_FINAL.pdf)). Depoimento inventado é publicidade enganosa ([CDC, art. 37](https://www.legjur.com/legislacao/art/LEI_00080781990-37)).
 - **Escassez falsa e contador regressivo são dark patterns** ([Princeton](https://webtransparency.cs.princeton.edu/dark-patterns/)).
 - **Tempo de resposta**: responder em até 1 hora dá cerca de 7 vezes mais chance de qualificar o contato ([HBR](https://hbr.org/2011/03/the-short-life-of-online-sales-leads)).
@@ -66,7 +66,7 @@ Contrastes medidos para texto: tinta 12,9:1; texto secundário 6,3:1; vinho com 
   - Preços explícitos e datas recentes, que tiveram efeito em experimento controlado ([revisão de 45 estudos, 2026](https://arxiv.org/pdf/2607.14035)).
   - Citações e estatísticas ([paper GEO, KDD 2024](https://arxiv.org/html/2311.09735v3)).
   - Encher de palavras-chave piora cerca de 9%.
-- **Cerca de 44% das citações do ChatGPT vêm do primeiro terço da página** [hipótese] ([Practical Ecommerce](https://www.practicalecommerce.com/studies-reveal-ai-citation-clues)). Por isso a página abre com uma frase que define o Lumens, seguida do bloco de fatos.
+- **Cerca de 44% das citações do ChatGPT vêm do primeiro terço da página** [hipótese] ([Practical Ecommerce](https://www.practicalecommerce.com/studies-reveal-ai-citation-clues)). Por isso a página abre com uma frase que define o Lumes Experience, seguida do bloco de fatos.
 - **Os robôs de IA (GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot) não executam JavaScript** ([Vercel](https://vercel.com/blog/the-rise-of-the-ai-crawler)). Por isso todo o conteúdo está no HTML estático.
 - **Schema sozinho não aumentou citações em IA** num estudo com grupo de controle ([Ahrefs](https://ahrefs.com/blog/schema-ai-citations/)). Mesmo assim, ajuda Google e Bing a entender a entidade.
 - **Busca local em IA**:

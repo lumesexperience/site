@@ -22,44 +22,43 @@
 @font-face { font-family: "Manrope reserva Arial"; src: local("Arial"), local("ArialMT"), local("Helvetica"), local("Liberation Sans"); size-adjust: 103.3%; }
 
 :root {
-  --dia: #EFE3D6;
-  --dia-2: #F8F1E9;
-  --dia-linha: #DDCBB9;
-  --tinta: #2B2520;
-  --tinta-suave: #5E5248;
-  --ouro: #7A5C1E;
-  --ouro-linha: #B08D45;
-  --verde: #3E5A42;
-  --verde-escuro: #2E4532;
-  --sobre-verde: #F8F1E9;
-  --lume: #D9732F;
-  --foco: #B4521D;
-  --lume-escuro: #9C4418;
+  --dia: #F6E5D2;
+  --dia-2: #FCF3E8;
+  --dia-linha: #E5C9AA;
+  --pessego: #EDC79B;
+  --tinta: #33200F;
+  --tinta-suave: #6A4A33;
+  --terracota-marca: #BB7944;
+  --terracota: #8E5226;
+  --terracota-funda: #6F3E1B;
+  --sobre-terracota: #FFF8F0;
+  --lume: #BB7944;
+  --foco: #8E5226;
+  --lume-escuro: #8E5226;
 
-  --noite: #17201A;
-  --noite-2: #202B23;
-  --noite-linha: #364539;
-  --noite-campo: #7E8F80;
-  --noite-dica: #9AA89B;
-  --luz: #D9B26A;
-  --luz-clara: #E8CB8E;
-  --noite-foco: #E0844A;
-  --noite-texto: #F2E9DE;
-  --noite-suave: #CBC3B5;
-  --noite-resposta: #E5DCCF;
+  --noite: #2B1A0F;
+  --noite-2: #3A2416;
+  --noite-linha: #5C3B25;
+  --noite-campo: #9C7A60;
+  --noite-dica: #C2A388;
+  --luz: #EDC79B;
+  --luz-clara: #F6DDBF;
+  --noite-foco: #E9A86F;
+  --noite-texto: #F8EBDD;
+  --noite-suave: #DCC4AD;
+  --noite-resposta: #EAD6C2;
 
   /* Textura de luz: o sol baixo no dia e as luzes acesas na noite. Posições em rem a partir do topo,
      para valer em blocos de qualquer altura. */
   --textura-dia:
-    radial-gradient(58rem 32rem at calc(100% + 6rem) -7rem, rgb(176 141 69 / 0.32), transparent 70%),
-    radial-gradient(40rem 26rem at -12rem 30rem, rgb(217 115 47 / 0.11), transparent 70%);
+    radial-gradient(58rem 32rem at calc(100% + 6rem) -7rem, rgb(237 199 155 / 0.62), transparent 70%),
+    radial-gradient(40rem 26rem at -12rem 30rem, rgb(187 121 68 / 0.12), transparent 70%);
   --textura-noite:
-    radial-gradient(64rem 26rem at 50% -9rem, rgb(217 178 106 / 0.13), transparent 70%),
-    radial-gradient(44rem 30rem at calc(100% + 10rem) 55%, rgb(217 115 47 / 0.07), transparent 70%);
+    radial-gradient(64rem 26rem at 50% -9rem, rgb(237 199 155 / 0.12), transparent 70%),
+    radial-gradient(44rem 30rem at calc(100% + 10rem) 55%, rgb(187 121 68 / 0.12), transparent 70%);
 
-  /* O pôr do sol entre a cerimônia e a festa: o único campo largo de laranja, porque o pedido foi
-     dourado e laranja como a luz do Lumens. Embaixo, as primeiras luzes acesas. */
-  --anoitecer: linear-gradient(to bottom, var(--dia) 0%, #EDD5BA 22%, #E0A878 42%, #9C6E4A 60%, #45503F 80%, var(--noite) 100%);
+  /* O pôr do sol entre a cerimônia e a festa: do pêssego ao terracota e à noite. Embaixo, as primeiras luzes acesas. */
+  --anoitecer: linear-gradient(to bottom, var(--dia) 0%, #F0D3B0 22%, #E2A877 42%, #BB7944 60%, #6B4026 80%, var(--noite) 100%);
   --luzes-do-anoitecer:
     radial-gradient(circle at 12% 70%, color-mix(in srgb, var(--luz-clara) 90%, transparent) 0 2px, transparent 3px),
     radial-gradient(circle at 26% 58%, color-mix(in srgb, var(--luz-clara) 70%, transparent) 0 1.5px, transparent 2.5px),
@@ -124,6 +123,24 @@ h3, .lista-numerada > li::before, .prazos dt { --opsz: 14; }
 p, li, dd, td { text-wrap: pretty; }
 p { margin: 0 0 1em; }
 
+/* Texto corrido justificado só nas colunas largas, no computador (pedido do dono, ajustado na revisão
+   impeccable de 03/11/2026): o corpo do artigo, o resumo, o aviso e a bio da autora. No celular e nas
+   colunas estreitas (prazos, checagem, fontes, cartões, linha fina, sumário) o texto fica à esquerda.
+   A hifenização só quebra palavras de 11 letras ou mais, para nunca partir nomes. */
+@media (min-width: 64rem) {
+  .texto > p,
+  .texto > ul > li,
+  .lista-numerada > li,
+  .resumo li,
+  .caixa--aviso > p:not(.caixa__titulo),
+  .autora__bio {
+    text-align: justify;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    hyphenate-limit-chars: 11 4 4;
+  }
+}
+
 :focus-visible { outline: 3px solid var(--foco); outline-offset: 3px; }
 
 .icones { position: absolute; }
@@ -146,7 +163,7 @@ p { margin: 0 0 1em; }
   padding-inline: var(--margem);
 }
 
-/* Botões: verde sobre o dia, luz sobre a noite. */
+/* Botões: terracota sobre o dia, pêssego sobre a noite. */
 .botao {
   display: inline-flex;
   align-items: center;
@@ -155,14 +172,14 @@ p { margin: 0 0 1em; }
   min-height: 3rem;
   padding: 0.8rem 1.5rem;
   border-radius: 999px;
-  background: var(--verde);
-  color: var(--sobre-verde);
+  background: var(--terracota);
+  color: var(--sobre-terracota);
   font: 600 1rem/1.2 var(--sans);
   text-align: center;
   text-decoration: none;
   transition: background-color 0.2s;
 }
-.botao:hover { background: var(--verde-escuro); }
+.botao:hover { background: var(--terracota-funda); }
 .botao svg { width: 1.2em; height: 1.2em; flex: none; fill: currentColor; }
 .botao--luz { background: var(--luz); color: var(--noite); }
 .botao--luz:hover { background: var(--luz-clara); }
@@ -182,22 +199,22 @@ p { margin: 0 0 1em; }
   padding-block: 1.25rem;
 }
 
+/* A sub-marca da identidade (símbolo + LUMES EXPERIENCE), em terracota da marca: logotipo não entra na regra de contraste. */
 .marca {
-  padding-block: 0.5rem;
-  font-family: var(--serif);
-  font-size: 1.75rem;
-  font-weight: 500;
-  line-height: 1;
-  letter-spacing: 0.01em;
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  color: var(--terracota-marca);
   text-decoration: none;
 }
+.marca svg { display: block; width: auto; height: clamp(2.35rem, 2rem + 1vw, 2.85rem); aspect-ratio: 1745 / 594; }
 
 .topo__nav { display: none; }
 
 @media (min-width: 56rem) {
   .topo__nav { display: flex; gap: 1.75rem; margin-left: auto; margin-right: 1.5rem; }
   .topo__nav a { color: var(--tinta-suave); text-decoration: none; font-size: 0.9375rem; }
-  .topo__nav a:hover, .topo__nav a[aria-current] { color: var(--verde); text-decoration: underline; }
+  .topo__nav a:hover, .topo__nav a[aria-current] { color: var(--terracota); text-decoration: underline; }
 }
 
 @media (max-width: 22.49rem) {
@@ -205,7 +222,9 @@ p { margin: 0 0 1em; }
   .topo .botao { padding-inline: 0.85rem; }
 }
 
-/* ---------- Capa: o arco da marca, aceso por dentro ---------- */
+/* ---------- Capa: o arco da marca, como nas peças da identidade ----------
+   Sempre o arco de verdade (topo em meio círculo, laterais retas, 4:5), nunca achatado.
+   Campo chapado com uma luz suave no centro: terracota com traço creme, ou pêssego com traço terracota. */
 .capa {
   position: relative;
   isolation: isolate;
@@ -213,10 +232,18 @@ p { margin: 0 0 1em; }
   margin: 0;
   aspect-ratio: 4 / 5;
   border-radius: 50% 50% 0.375rem 0.375rem / 40% 40% 0.375rem 0.375rem;
-  background:
-    radial-gradient(circle at 50% 56%, color-mix(in srgb, var(--lume) 30%, transparent) 0%, color-mix(in srgb, var(--luz) 14%, transparent) 36%, transparent 68%),
-    linear-gradient(170deg, #2B3A30 0%, #1E2921 55%, var(--noite) 100%);
-  box-shadow: 0 1.75rem 3rem -1.5rem color-mix(in srgb, var(--tinta) 45%, transparent);
+  background: var(--capa-fundo, var(--terracota-marca));
+  box-shadow: 0 1.5rem 2.5rem -1.5rem color-mix(in srgb, var(--tinta) 40%, transparent);
+}
+.capa--terracota {
+  --capa-fundo:
+    radial-gradient(circle at 50% 56%, color-mix(in srgb, var(--luz-clara) 34%, transparent) 0%, transparent 62%),
+    var(--terracota-marca);
+}
+.capa--pessego {
+  --capa-fundo:
+    radial-gradient(circle at 50% 56%, color-mix(in srgb, var(--sobre-terracota) 60%, transparent) 0%, transparent 62%),
+    var(--pessego);
 }
 .capa__arte {
   position: absolute;
@@ -232,21 +259,12 @@ p { margin: 0 0 1em; }
   translate: -50% 0;
   margin: 0;
   padding: 0.3rem 0.85rem;
-  border: 1px solid color-mix(in srgb, var(--luz) 45%, transparent);
   border-radius: 999px;
-  background: var(--noite);
-  color: var(--luz-clara);
+  background: var(--sobre-terracota);
+  color: var(--terracota-funda);
   font: 600 0.8125rem/1.3 var(--sans);
   white-space: nowrap;
 }
-
-/* Em faixa larga (celular e cartões), o arco abre na horizontal. */
-.capa--faixa {
-  aspect-ratio: 2 / 1;
-  border-radius: 50% 50% 0.375rem 0.375rem / 62% 62% 0.375rem 0.375rem;
-}
-.capa--faixa .capa__arte { scale: 1.3; translate: 0 -7%; }
-.cartao:hover .capa--faixa .capa__arte { scale: 1.35; }
 
 /* ---------- Artigo ---------- */
 .artigo__topo {
@@ -257,13 +275,12 @@ p { margin: 0 0 1em; }
 }
 .artigo__abertura { max-width: var(--leitura); }
 
+/* No celular, a capa do artigo é um arco pequeno acima da trilha (nunca uma faixa achatada). */
 .capa--artigo {
   order: -1;
-  aspect-ratio: auto;
-  height: clamp(12rem, 48vw, 18rem);
-  border-radius: 50% 50% 0.375rem 0.375rem / 62% 62% 0.375rem 0.375rem;
+  width: min(9.5rem, 38vw);
 }
-.capa--artigo .capa__arte { scale: 1.3; translate: 0 -7%; }
+.capa--artigo .capa__assunto { display: none; }
 
 @media (min-width: 60rem) {
   .artigo__topo {
@@ -271,13 +288,8 @@ p { margin: 0 0 1em; }
     column-gap: clamp(3rem, 1rem + 5vw, 7rem);
     align-items: center;
   }
-  .capa--artigo {
-    order: 0;
-    height: auto;
-    aspect-ratio: 4 / 5;
-    border-radius: 50% 50% 0.375rem 0.375rem / 40% 40% 0.375rem 0.375rem;
-  }
-  .capa--artigo .capa__arte { scale: none; translate: none; }
+  .capa--artigo { order: 0; width: auto; }
+  .capa--artigo .capa__assunto { display: block; }
 }
 
 .trilha { margin: 0 0 1.25rem; font-size: 0.9375rem; color: var(--tinta-suave); }
@@ -310,7 +322,7 @@ p { margin: 0 0 1em; }
 .assinatura img { width: 3.25rem; height: 3.25rem; border-radius: 50%; }
 .assinatura p { margin: 0; line-height: 1.45; }
 .assinatura__nome { font-weight: 600; }
-.assinatura__nome a { color: var(--verde); }
+.assinatura__nome a { color: var(--terracota); }
 .assinatura__meta { color: var(--tinta-suave); font-size: 0.9375rem; }
 
 /* Texto numa coluna de leitura; no computador, o sumário acompanha ao lado. */
@@ -337,12 +349,12 @@ p { margin: 0 0 1em; }
 
 .resumo {
   padding-block: 1.5rem 0.5rem;
-  border-top: 1px solid var(--ouro-linha);
+  border-top: 1px solid var(--terracota-marca);
 }
 .resumo h2 { margin-bottom: 0.75rem; font-size: 1.375rem; --opsz: 14; }
 .resumo ul { margin: 0 0 1em; padding-left: 1.2rem; }
 .resumo li + li { margin-top: 0.4rem; }
-.resumo li::marker { color: var(--ouro); }
+.resumo li::marker { color: var(--terracota); }
 
 .sumario {
   margin-top: 1.5rem;
@@ -361,8 +373,8 @@ p { margin: 0 0 1em; }
   line-height: 1.4;
   text-decoration: none;
 }
-.sumario a:hover { color: var(--verde); text-decoration: underline; }
-.sumario a[aria-current] { color: var(--verde); font-weight: 600; }
+.sumario a:hover { color: var(--terracota); text-decoration: underline; }
+.sumario a[aria-current] { color: var(--terracota); font-weight: 600; }
 
 @media (min-width: 64rem) {
   .sumario { margin-top: 0; padding: 0; border: 0; background: none; }
@@ -387,11 +399,11 @@ p { margin: 0 0 1em; }
 .texto h3 { margin: 2rem 0 0.5rem; font-size: clamp(1.25rem, 1.15rem + 0.4vw, 1.4375rem); line-height: 1.25; }
 .texto ul, .texto ol { margin: 0 0 1.25em; padding-left: 1.2rem; }
 .texto li + li { margin-top: 0.5rem; }
-.texto li::marker { color: var(--ouro); }
+.texto li::marker { color: var(--terracota); }
 .texto strong { font-weight: 650; }
-.texto a { color: var(--verde); }
+.texto a { color: var(--terracota); }
 
-/* Lista com números no Bodoni dourado, o mesmo desenho do roteiro da página inicial. */
+/* Lista com números no Bodoni terracota, o mesmo desenho do roteiro da página inicial. */
 .texto .lista-numerada { padding-left: 0; list-style: none; counter-reset: item; }
 .texto .lista-numerada > li {
   position: relative;
@@ -405,7 +417,7 @@ p { margin: 0 0 1em; }
   position: absolute;
   left: 0;
   top: 0.95rem;
-  color: var(--ouro);
+  color: var(--terracota);
   font-family: var(--serif);
   font-size: 1.5rem;
   line-height: 1.1;
@@ -437,7 +449,7 @@ p { margin: 0 0 1em; }
   background: var(--dia-2);
 }
 .caixa > :last-child { margin-bottom: 0; }
-.caixa__titulo { margin: 0 0 0.75rem; color: var(--verde); font-weight: 650; line-height: 1.4; }
+.caixa__titulo { margin: 0 0 0.75rem; color: var(--terracota); font-weight: 650; line-height: 1.4; }
 .caixa__fonte { margin: 0.9rem 0 0; color: var(--tinta-suave); font-size: 0.875rem; }
 
 .caixa--igreja blockquote { margin: 0; }
@@ -466,12 +478,12 @@ p { margin: 0 0 1em; }
   top: 0.28em;
   width: 1.1rem;
   height: 1.1rem;
-  border: 1.5px solid var(--verde);
+  border: 1.5px solid var(--terracota);
   border-radius: 50%;
 }
 
 .prazos { display: grid; gap: 1rem; margin: 0; }
-.prazos dt { color: var(--ouro); font-family: var(--serif); font-size: 1.5rem; line-height: 1.15; font-variant-numeric: lining-nums; }
+.prazos dt { color: var(--terracota); font-family: var(--serif); font-size: 1.5rem; line-height: 1.15; font-variant-numeric: lining-nums; }
 .prazos dd { margin: 0.2rem 0 0; color: var(--tinta-suave); font-size: 0.9375rem; line-height: 1.5; }
 
 @media (min-width: 36rem) {
@@ -490,7 +502,7 @@ p { margin: 0 0 1em; }
   display: block;
   width: 3.5rem;
   margin-bottom: 1.5rem;
-  border-top: 1px solid var(--ouro-linha);
+  border-top: 1px solid var(--terracota-marca);
 }
 
 .fontes {
@@ -505,41 +517,68 @@ p { margin: 0 0 1em; }
 .fontes li + li { margin-top: 0.4rem; }
 .fontes a { overflow-wrap: anywhere; }
 
-/* ---------- Página do blog ---------- */
-.blog { padding-block: clamp(1.5rem, 0.5rem + 4vw, 4rem) clamp(4rem, 3rem + 5vw, 6.5rem); }
-.blog__topo { max-width: var(--leitura); }
+/* ---------- Página do blog ----------
+   Uma faixa inteira de pêssego no topo, com o símbolo da marca à direita, e os artigos numa fileira de arcos,
+   como as janelas de uma igreja. No celular, cada artigo é uma linha: o arco pequeno ao lado do título. */
+.blog__faixa {
+  background:
+    radial-gradient(48rem 26rem at calc(100% - 8rem) 40%, color-mix(in srgb, var(--sobre-terracota) 45%, transparent), transparent 70%),
+    var(--pessego);
+}
+.blog__topo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  gap: 2rem;
+  padding-block: clamp(2rem, 1rem + 4vw, 4.5rem);
+}
+.blog__abertura { max-width: var(--leitura); }
+.blog__faixa .linha-fina { color: var(--tinta-suave); }
+.blog__faixa .assinatura { border-top-color: color-mix(in srgb, var(--terracota-marca) 35%, transparent); }
+.blog__faixa .assinatura__nome a { color: var(--terracota-funda); }
+.blog__simbolo { display: none; color: var(--terracota-marca); }
+
+@media (min-width: 56rem) {
+  .blog__topo { grid-template-columns: minmax(0, 1fr) auto; column-gap: clamp(3rem, 1rem + 5vw, 7rem); }
+  .blog__simbolo { display: block; width: auto; height: clamp(14rem, 10rem + 8vw, 19rem); aspect-ratio: 1063 / 1440; }
+}
+
+.blog { padding-block: clamp(2.5rem, 1.5rem + 4vw, 4.5rem) clamp(4rem, 3rem + 5vw, 6.5rem); }
 
 .cartoes {
   display: grid;
-  gap: 3.5rem 2.5rem;
-  margin: clamp(2.5rem, 2rem + 3vw, 4.5rem) 0 0;
+  gap: 2.25rem;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
 
-@media (min-width: 48rem) {
-  .cartoes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .cartao--destaque { grid-column: 1 / -1; }
+.cartao {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 6.75rem) minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+  align-content: start;
 }
-
-.cartao { position: relative; display: grid; gap: 1.5rem; align-content: start; }
-.cartao__titulo { font-size: clamp(1.5rem, 1.25rem + 1vw, 2rem); line-height: 1.15; }
+.cartao .capa__assunto { display: none; }
+.cartao__titulo { font-size: clamp(1.3rem, 1.15rem + 0.8vw, 1.75rem); line-height: 1.15; }
 .cartao__titulo a { text-decoration: none; }
 .cartao__titulo a::after { content: ""; position: absolute; inset: 0; }
 .cartao:hover .cartao__titulo a { text-decoration: underline; text-decoration-thickness: 1px; }
 .cartao:hover .capa__arte { scale: 1.04; }
-.cartao__texto p { margin: 0.75rem 0 0; color: var(--tinta-suave); }
+.cartao__texto p { margin: 0.6rem 0 0; color: var(--tinta-suave); }
 .cartao__texto .cartao__meta { font-size: 0.875rem; }
 
-@media (min-width: 48rem) {
-  .cartao--destaque {
-    grid-template-columns: minmax(0, 18rem) minmax(0, 1fr);
-    column-gap: clamp(2.5rem, 1rem + 4vw, 5rem);
-    align-items: center;
-  }
-  .cartao--destaque .capa { aspect-ratio: 4 / 5; border-radius: 50% 50% 0.375rem 0.375rem / 40% 40% 0.375rem 0.375rem; }
-  .cartao--destaque .cartao__titulo { --opsz: 36; font-size: clamp(2rem, 1.25rem + 2vw, 2.75rem); line-height: 1.08; }
-  .cartao--destaque .cartao__texto > p:first-of-type { font-size: 1.125rem; }
+@media (min-width: 40rem) {
+  .cartao { grid-template-columns: minmax(0, 9rem) minmax(0, 1fr); gap: 1.75rem; align-items: center; }
+}
+
+@media (min-width: 60rem) {
+  .cartoes { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3rem clamp(2rem, 1rem + 2vw, 3.5rem); }
+  .cartao { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; align-items: start; }
+  .cartao .capa__assunto { display: block; }
+  .cartao__texto p { margin-top: 0.75rem; }
 }
 
 /* ---------- O fim do texto anoitece, como a página inicial ---------- */
@@ -554,6 +593,24 @@ p { margin: 0 0 1em; }
   inset: auto 0 0;
   height: 55%;
   background: var(--luzes-do-anoitecer);
+}
+/* A estrela do logo acende como a primeira estrela da noite, no meio do anoitecer. */
+.anoitecer__estrela {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 58%;
+  width: clamp(1.5rem, 1.2rem + 1vw, 2.1rem);
+  height: auto;
+  aspect-ratio: 1;
+  translate: -50% -50%;
+  color: var(--luz-clara);
+  filter: drop-shadow(0 0 0.6rem color-mix(in srgb, var(--luz) 75%, transparent));
+  animation: cintilar 5s ease-in-out infinite;
+}
+@keyframes cintilar {
+  0%, 100% { opacity: 0.85; scale: 1; }
+  50% { opacity: 1; scale: 1.12; }
 }
 
 .noite {
@@ -619,7 +676,8 @@ footer.noite { background: var(--noite); }
   color: var(--noite-suave);
   font-size: 0.9375rem;
 }
-.rodape .marca { display: inline-block; margin-bottom: 0.5rem; color: var(--noite-texto); }
+.rodape .marca { margin-bottom: 0.75rem; color: var(--luz); }
+.rodape .marca svg { height: 3.25rem; }
 .rodape__links { display: flex; flex-wrap: wrap; gap: 0 1.5rem; margin: 0.75rem 0; padding: 0; list-style: none; }
 .rodape__links a { display: inline-flex; align-items: center; min-height: 2.75rem; color: var(--noite-texto); }
 

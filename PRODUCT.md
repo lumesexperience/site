@@ -14,7 +14,7 @@ O blog atende o mesmo casal mais cedo, quando ainda está montando o casamento e
 
 ## Product Purpose
 
-O Lumens é um grupo de música ao vivo para casamentos, com a cantora Delliz Christine à frente. A página existe para o casal ouvir a Delliz, entender como o grupo atende cada momento do casamento e consultar a data pelo WhatsApp. Sucesso é uma consulta de data no WhatsApp.
+O Lumes Experience é um grupo de música ao vivo para casamentos, com a cantora Delliz Christine à frente. A página existe para o casal ouvir a Delliz, entender como o grupo atende cada momento do casamento e consultar a data pelo WhatsApp. Sucesso é uma consulta de data no WhatsApp.
 
 ## Positioning
 
@@ -22,7 +22,7 @@ A voz da Delliz conduz a cerimônia religiosa e a festa no mesmo casamento, com 
 
 ## Operating Context
 
-- A conversa comercial acontece no WhatsApp do Lumens, com a data, o local e os momentos que o casal quer.
+- A conversa comercial acontece no WhatsApp do Lumes Experience, com a data, o local e os momentos que o casal quer.
 - Cerimônias religiosas em geral (católica, evangélica, ecumênica), na igreja ou ao ar livre, seguem as regras de cada igreja.
 - Atendimento em BH e na região metropolitana.
 
@@ -33,18 +33,21 @@ A voz da Delliz conduz a cerimônia religiosa e a festa no mesmo casamento, com 
 - Som próprio, locável junto com o grupo.
 - Preço sob consulta: nada de valores na página.
 - Site estático em HTML, CSS e JS, sem build. O blog é gerado por `scripts/blog/gerar.mjs`.
-- Pendentes: o domínio (`lumens.example`) e o WhatsApp do Lumens (`55DDDNUMERO`).
+- Domínio: lumesexperience.com.br (GitHub Pages, organização `lumesexperience`). WhatsApp do Lumes Experience: 5531996154698.
 
 ## Brand Commitments
 
-- Nome: Lumens. A cantora: Delliz Christine (grafia do @dellizchristine; "Cristine" ainda a confirmar).
+- Nome: Lumes Experience. A cantora: Delliz Christine (grafia do @dellizchristine; "Cristine" ainda a confirmar).
+- Identidade visual (03/11/2026, pasta "Lumes - Identidade Visual"): terracota #bb7944 e pêssego #edc79b, dois arcos de igreja, o L com a estrela, LUMES / EXPERIENCE em caixa alta. O nome do site é "Lumes Experience" (escolha do dono; antes era "Lumens").
+- Os ícones da identidade (exclamação, livro com lâmpada, coroa, foguete, microfone, atendente) são capas de destaques do Instagram; não entram no site.
 - O Jeito Ágape aparece só de leve, na bio da Delliz e no rodapé.
 - O site fala com o casal em "vocês".
 - Os artigos do blog saem no nome da Delliz e passam pela aprovação dela antes de publicar.
 
 ## Evidence on Hand
 
-- O vídeo "Espírito Poderoso" no YouTube (https://www.youtube.com/shorts/NBmB7i5MffI), sem embed permitido, e um quadro dele como foto da Delliz (`assets/img/delliz-christine-cantando-*`).
+- O vídeo "Espírito Poderoso" no YouTube (https://www.youtube.com/shorts/NBmB7i5MffI), sem embed permitido: o arco do topo abre esse vídeo.
+- Um ensaio de estúdio da Delliz (11 fotos, Sony ZV-E10, 11/06/2024), em uso desde 03/11/2026: no topo (`delliz-christine-cantando-*`, luz de palco), na seção "A voz do Lumes Experience" (`delliz-christine-retrato-*`, vestido claro) e no rosto das assinaturas. São fotos de estúdio, não de casamento: nunca entram nas amostras. Uma delas mostra a Delliz com um rapaz cuja identidade não foi confirmada; ela fica de fora até o dono dizer quem é.
 - Ainda faltam fotos e vídeos de casamentos reais: as amostras são espaços reservados.
 - Não há depoimentos, números de casamentos nem preços. Não inventar.
 

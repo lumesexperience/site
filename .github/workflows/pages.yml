@@ -1,0 +1,50 @@
+# Publica o site no GitHub Pages (lumesexperience.com.br) a cada push na main.
+# Antes, roda o verificador; depois, separa só as páginas do site (os documentos de trabalho, como README,
+# DESIGN, PRODUCT, docs/, scripts/ e .impeccable/, não vão para o ar).
+name: Publicar no GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Conferir antes de publicar
+        run: node scripts/checar.mjs
+
+      - name: Separar só as páginas do site
+        run: |
+          mkdir _site
+          cp -R index.html blog assets robots.txt sitemap.xml llms.txt _site/
+          find _site \( -name '*.webp.json' -o -name '.gitkeep' \) -delete
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Publicar
+        id: deploy
+        uses: actions/deploy-pages@v4

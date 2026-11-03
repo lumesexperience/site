@@ -1,6 +1,6 @@
-# Lumens: landing page
+# Lumes Experience: landing page
 
-Página de captação de noivos do **Lumens**, grupo de música ao vivo para casamentos em Belo Horizonte e região metropolitana, com a cantora **Delliz Christine** à frente. A única conversão é o clique que abre o WhatsApp com a mensagem pronta (data, cidade e local, tipo de cerimônia, momentos com música).
+Página de captação de noivos do **Lumes Experience**, grupo de música ao vivo para casamentos em Belo Horizonte e região metropolitana, com a cantora **Delliz Christine** à frente. A única conversão é o clique que abre o WhatsApp com a mensagem pronta (data, cidade e local, tipo de cerimônia, momentos com música).
 
 HTML, CSS e JS puros num arquivo só (`index.html`), sem build e sem dependências. Fontes servidas pelo próprio site (Bodoni Moda nos títulos, Manrope no texto, 71 KB no total), com fontes do sistema de largura ajustada como reserva: se a fonte chegar tarde, nada pula na tela.
 
@@ -14,11 +14,11 @@ sitemap.xml         a página inicial, o blog e os artigos, com a data da últim
 llms.txt            resumo dos fatos para assistentes de IA
 assets/fonts/       fontes .woff2
 assets/css/blog.css estilos do blog (as cores repetem as da página inicial)
-assets/img/         Delliz cantando e o rosto dela para as assinaturas, imagens de compartilhamento, ícones
+assets/img/         Delliz cantando (topo), o retrato (seção da Delliz), o rosto para as assinaturas, imagens de compartilhamento, ícones
 assets/galeria/     fotos das amostras (vazio por enquanto)
 assets/video/       vídeos das amostras (vazio por enquanto)
 scripts/checar.mjs  confere tudo antes de publicar
-scripts/blog/       os artigos (texto e fontes), as capas e os geradores das páginas e das imagens
+scripts/blog/       os artigos (texto e fontes), as capas, os geradores das páginas e das imagens e os vetores da marca (marca.mjs)
 docs/PESQUISA.md    a pesquisa que embasou cores, texto, SEO e GEO, com fontes
 PRODUCT.md          o produto, para o impeccable (não publicar)
 DESIGN.md           o sistema visual: cores, tipos e componentes (não publicar)
@@ -30,37 +30,48 @@ DESIGN.md           o sistema visual: cores, tipos e componentes (não publicar)
 python3 -m http.server 4321    # depois abra http://localhost:4321
 ```
 
+A abertura animada só roda sozinha na primeira visita de cada aba. Para revê-la, abra `http://localhost:4321/?abertura` ou use o botão "Ver a abertura com música", embaixo da foto da Delliz.
+
+## Identidade visual e abertura
+
+A identidade **Lumes Experience** chegou do dono em 03/11/2026 (pasta "Lumes - Identidade Visual", só em JPG): terracota `#bb7944`, pêssego `#edc79b`, os dois arcos, o L, a estrela e o nome em caixa alta. O site inteiro segue essa identidade; as regras estão no `DESIGN.md`.
+
+- **Vetores.** O logo foi traçado dos JPGs com o `potrace` e reunido em `scripts/blog/marca.mjs`: arcos, linhas, L, estrelas, raios, LUMES e EXPERIENCE. O blog e as imagens de compartilhamento importam de lá. A página inicial, escrita à mão, recebe uma cópia: depois de mudar `marca.mjs`, rode `node scripts/blog/marca-no-index.mjs`, que reescreve o sprite e a arte da abertura entre os marcadores `<!-- marca:... -->` e `<!-- abertura:... -->`.
+- **Abertura.** Na primeira visita, o logo se desenha no pêssego e o arco de dentro vira uma porta que se abre para a página. São cerca de 7 s; clique, tecla ou rolagem pulam. O botão "Ver a abertura com música" repete a abertura com uma trilha composta para ela, sintetizada no navegador (Web Audio, nenhum arquivo de áudio). A animação e a música usam os mesmos tempos (objeto `T` no fim do `index.html`). Com "reduzir movimento", ela não roda sozinha; pelo botão, o logo fica parado e a música toca.
+- **Cores.** O terracota da marca vai no logo e nos ornamentos; botões, links e numerais usam um terracota mais fechado (`#8E5226`), porque o da marca com texto branco não passa no contraste (3,5:1).
+- **Ícones.** `assets/img/favicon.svg` é o L com as estrelas em branco sobre terracota; `node scripts/blog/imagens.mjs` gera dele os PNGs.
+
 ## Antes de publicar (obrigatório)
 
-1. **Domínio**: troque `https://lumens.example` pelo domínio real em `index.html`, `robots.txt`, `sitemap.xml` e `llms.txt`. Escolha uma versão (com ou sem `www`) e redirecione a outra para ela.
-2. **WhatsApp do Lumens**: troque `55DDDNUMERO` pelo número só com dígitos (ex.: `5531999999999`) em `index.html` e `llms.txt`. Aparece nos links, no script e no JSON-LD.
-3. Rode o verificador:
-   ```bash
-   node scripts/checar.mjs
-   ```
-   Ele falha se sobrar algum marcador, se um arquivo citado em `assets/` não existir, se o FAQ do schema estiver diferente do FAQ visível, ou se a data de atualização divergir entre página, sitemap e llms.txt. Também avisa quantas amostras ainda estão sem foto ou vídeo.
+O domínio (`https://lumesexperience.com.br`) e o WhatsApp do Lumes Experience (`5531996154698`) já estão no site desde 03/11/2026. Se algum dia mudarem, troque em `index.html`, `robots.txt`, `sitemap.xml`, `llms.txt` e `scripts/blog/gerar.mjs` (`SITE` e `WA`) e gere o blog de novo.
+
+Antes de cada publicação, rode o verificador (o deploy também roda e para se ele falhar):
+```bash
+node scripts/checar.mjs
+```
+Ele falha se sobrar algum marcador, se um arquivo citado em `assets/` não existir, se o FAQ do schema estiver diferente do FAQ visível, ou se a data de atualização divergir entre página, sitemap e llms.txt. Também avisa quantas amostras ainda estão sem foto ou vídeo.
 
 ### Para revisar com a Delliz
 
 - **Nome**: usei **Delliz Christine**, com "h", como no Instagram (`@dellizchristine`) e no site do Jeito Ágape. Se o certo for "Cristine", troque em todos os arquivos.
 - **Bio** (seção `#delliz` e a pergunta "Quem é Delliz Christine?"): tem só o que já é público. Vale acrescentar fatos reais e verificáveis: anos cantando, número de casamentos, onde estudou. Nunca números inventados.
-- **Foto do topo**: é um quadro do vídeo "Espírito Poderoso" (canal do Jeito Ágape), recortado em 4:5. Quando houver uma foto dela cantando num casamento, salve-a em 4:5 com os mesmos nomes (`assets/img/delliz-christine-cantando-480|720|880`, em `.jpg` e `.webp`).
-- **Vídeo**: o canal do Jeito Ágape não permite tocar esse vídeo dentro de outros sites, então o arco abre o YouTube em outra aba (no celular, abre o app). Se o canal liberar a incorporação, ou se houver um vídeo do próprio Lumens, dá para tocar na página.
-- **Instagram próprio do Lumens**: quando existir, adicione o link no rodapé e no `sameAs` do nó `#lumens` no JSON-LD.
+- **Fotos da Delliz**: desde 03/11/2026 vêm do ensaio de estúdio dela (11 fotos RAW da Sony, de 11/06/2024, na pasta do Drive que o dono mandou): no topo, a DSC03151 (luz de palco, microfone vintage); na seção `#delliz`, a DSC02895 (vestido claro); e o rosto das assinaturas é recortado da DSC02688. Todas estão em 4:5 no arco, e o rosto tem 192×192. Quando houver uma foto dela cantando num casamento, ela pode ir para o topo com os mesmos nomes (`assets/img/delliz-christine-cantando-480|720|880`, em `.jpg` e `.webp`). A origem de cada arquivo fica embutida no `.jpg` e num `.webp.json` ao lado, gravada com `impeccable embed-prompt`. Depois de trocar uma foto, rode `node scripts/blog/imagens.mjs` com o site servido, porque as imagens de compartilhamento usam essas fotos. No Mac, o script pede um `google-chrome` no PATH apontando para o Chrome.
+- **Vídeo**: o canal do Jeito Ágape não permite tocar esse vídeo dentro de outros sites, então o arco abre o YouTube em outra aba (no celular, abre o app). Se o canal liberar a incorporação, ou se houver um vídeo do próprio Lumes Experience, dá para tocar na página.
+- **Instagram próprio do Lumes Experience**: quando existir, adicione o link no rodapé e no `sameAs` do nó `#lumes` no JSON-LD.
 
 ### Opcional
 
 - **Medição (GA4)**: no fim do `index.html`, preencha `const GA4_ID = 'G-...'`. Cada clique no WhatsApp vira o evento `whatsapp_click` com `cta_location` (topo, abertura, fatos, formulário, barra no celular, rodapé). Vazio, nenhum script de terceiros é carregado.
-- **Preço "a partir de"**: a pesquisa mostra que preço visível aumenta contatos (detalhes em `docs/PESQUISA.md`). Quando houver um valor real, atualize o fato "Valor", a primeira pergunta do FAQ, o JSON-LD (`priceRange` no nó `#lumens`) e o `llms.txt`.
+- **Preço "a partir de"**: a pesquisa mostra que preço visível aumenta contatos (detalhes em `docs/PESQUISA.md`). Quando houver um valor real, atualize o fato "Valor", a primeira pergunta do FAQ, o JSON-LD (`priceRange` no nó `#lumes`) e o `llms.txt`.
 
 ## Publicar
 
-Qualquer hospedagem estática serve. Os caminhos são relativos, então funciona também numa subpasta. Publique só o site (`index.html`, `blog/`, `robots.txt`, `sitemap.xml`, `llms.txt` e `assets/`); as pastas `.claude/`, `.impeccable/`, `docs/` e `scripts/` e os arquivos `README.md`, `PRODUCT.md` e `DESIGN.md` são ferramentas de trabalho.
+O site fica no **GitHub Pages**, na organização `lumesexperience`, com o domínio **lumesexperience.com.br** (o `www` redireciona para ele). Cada push na `main` dispara `.github/workflows/pages.yml`, que roda `scripts/checar.mjs` e publica só as páginas do site (`index.html`, `blog/`, `assets/`, `robots.txt`, `sitemap.xml` e `llms.txt`). As pastas `.claude/`, `.impeccable/`, `docs/` e `scripts/` e os arquivos `README.md`, `PRODUCT.md` e `DESIGN.md` são ferramentas de trabalho e não vão para o ar. Para acompanhar: aba *Actions* do repositório.
 
-- **Cloudflare Pages**: `npx wrangler pages deploy . --project-name=lumens`. ⚠️ A Cloudflare bloqueia robôs de IA por padrão em domínios novos. No painel, em *Security → Bots*, deixe liberados os robôs de busca de IA (OAI-SearchBot, Claude-SearchBot, PerplexityBot), senão o `robots.txt` não adianta.
-- **GitHub Pages**: publique a raiz do repositório e coloque o domínio num arquivo `CNAME`.
-
-As duas comprimem e fazem cache sozinhas; os únicos avisos do Lighthouse local eram justamente esses.
+- **Pages:** em *Settings → Pages*, a fonte é "GitHub Actions" e o domínio personalizado é `lumesexperience.com.br`, com "Enforce HTTPS" ligado.
+- **DNS (Cloudflare, conta do domínio):** quatro registros `A` no `@` para 185.199.108.153, 185.199.109.153, 185.199.110.153 e 185.199.111.153, quatro `AAAA` no `@` para 2606:50c0:8000::153, 2606:50c0:8001::153, 2606:50c0:8002::153 e 2606:50c0:8003::153, e um `CNAME` `www` para `lumesexperience.github.io`. Todos em "DNS only" (nuvem cinza), para o GitHub emitir e renovar o certificado.
+- **Domínio verificado:** a organização verifica o domínio em *Settings → Pages* (um registro `TXT` `_github-pages-challenge-lumesexperience`), o que impede outra conta de usar o domínio.
+- **Robôs de IA:** se um dia o domínio passar pelo proxy da Cloudflare (nuvem laranja), em *Security → Bots* deixe liberados os robôs de busca de IA (OAI-SearchBot, Claude-SearchBot, PerplexityBot), senão o `robots.txt` não adianta.
 
 ## Trocar as amostras por fotos e vídeos reais
 
@@ -90,13 +101,13 @@ convert original.jpg -resize 1600x -strip -quality 82 -interlace JPEG assets/gal
 
 Use nomes descritivos (`cerimonia-igreja-nova-lima.jpg`, não `IMG_2034.jpg`) e um `alt` que diga o que se vê. Peça autorização dos casais que aparecem.
 
-**Vídeo no Google**: o Google só dá destaque de vídeo para páginas cujo assunto principal é um único vídeo. Para aparecer na aba Vídeos, publique os mesmos cortes no YouTube, no canal do Lumens, com título e descrição que comecem com "Música ao vivo para casamento em BH". Não acrescente `VideoObject` ao JSON-LD sem que o vídeo esteja de fato na página.
+**Vídeo no Google**: o Google só dá destaque de vídeo para páginas cujo assunto principal é um único vídeo. Para aparecer na aba Vídeos, publique os mesmos cortes no YouTube, no canal do Lumes Experience, com título e descrição que comecem com "Música ao vivo para casamento em BH". Não acrescente `VideoObject` ao JSON-LD sem que o vídeo esteja de fato na página.
 
 ## Ao mudar qualquer informação
 
 Os fatos moram em quatro lugares que precisam dizer a mesma coisa:
 
-1. o texto visível (abertura, bloco "O Lumens em poucas linhas" perto do fim, FAQ, rodapé);
+1. o texto visível (abertura, bloco "O Lumes Experience em poucas linhas" perto do fim, FAQ, rodapé);
 2. o JSON-LD no `<head>`;
 3. o `llms.txt`;
 4. a data de atualização: o `<time datetime>` do rodapé, o `dateModified` do JSON-LD, o `<lastmod>` do sitemap e a linha do `llms.txt`.
@@ -111,7 +122,7 @@ O blog fica em `/blog/`, com três artigos assinados por Delliz Christine:
 - [Dicas para quem vai casar](blog/dicas-para-quem-vai-casar/): dez dicas, com chuva e pôr do sol em BH mês a mês.
 - [Como escolher os músicos para o momento mais especial da vida de vocês](blog/como-escolher-musicos-para-casamento/): o que ouvir, perguntar e combinar com a igreja.
 
-**Antes de publicar, a Delliz precisa ler e aprovar os três.** Os textos saem no nome dela. Eles foram escritos com pesquisa e fontes (listadas no fim de cada artigo), em primeira pessoa só para recomendações. Não contam experiências que ela não viveu, nem números do Lumens. Se ela quiser acrescentar uma história ou um conselho próprio, é o que mais dá valor ao texto.
+**Antes de publicar, a Delliz precisa ler e aprovar os três.** Os textos saem no nome dela. Eles foram escritos com pesquisa e fontes (listadas no fim de cada artigo), em primeira pessoa só para recomendações. Não contam experiências que ela não viveu, nem números do Lumes Experience. Se ela quiser acrescentar uma história ou um conselho próprio, é o que mais dá valor ao texto.
 
 **Os valores do cartório mudam todo ano.** A tabela de emolumentos do TJMG sai em dezembro. Em janeiro, confira os valores do artigo sobre montar o casamento e atualize a data.
 
@@ -125,13 +136,13 @@ O blog fica em `/blog/`, com três artigos assinados por Delliz Christine:
 
 Ao mudar o conteúdo de um artigo, preencha `atualizado: 'AAAA-MM-DD'` nele: a data aparece no texto, no schema e no rodapé.
 
-**Capas.** Cada artigo tem uma capa desenhada em traço dourado sobre a noite verde, dentro do arco da marca: `aliancas`, `varal` ou `pauta`, em `scripts/blog/capas.mjs`. Para um assunto novo, acrescente um desenho ali.
+**Capas.** Cada artigo tem uma capa desenhada em traço pêssego sobre a noite terracota, dentro do arco da marca: `aliancas`, `varal` ou `pauta`, em `scripts/blog/capas.mjs`. Para um assunto novo, acrescente um desenho ali.
 
 **Caixas de destaque no corpo** (classes do `assets/css/blog.css`):
 
 - `<div class="caixa caixa--checagem">` com `<ul class="checagem">` ou `<ol class="checagem">`: lista para levar à conversa, com um círculo para marcar.
 - `caixa--prazos` com `<dl class="prazos">`: números grandes com a explicação embaixo.
-- `caixa--aviso`: um cuidado importante, com um toque de laranja.
+- `caixa--aviso`: um cuidado importante, com um toque de terracota.
 - `caixa--igreja`: citação de norma, com `<p class="caixa__fonte">`.
 - `<p class="fecho">`: a última frase do texto, em destaque.
 
@@ -142,17 +153,12 @@ Todas aceitam um `<p class="caixa__titulo">` no topo.
 O [impeccable](https://impeccable.style/) está instalado em `.claude/skills/impeccable`. O produto está descrito em `PRODUCT.md` e o sistema visual em `DESIGN.md`.
 
 - **Primeira rodada.** Crítica de design, detector e auditoria técnica levaram à Delliz no topo, às amostras honestas, à ficha de fatos perto do FAQ, à prévia da mensagem no formulário e aos ajustes de acessibilidade. O relatório fica em `.impeccable/critique/`.
-- **Segunda rodada.** A pedido, entrou a paleta atual:
-  - fundo nude no dia (a cerimônia);
-  - verde nos botões e nos detalhes;
-  - noite verde fechada na recepção;
-  - dourado como brilho;
-  - laranja (o "lume") só em pontos mínimos: anel de foco, centro do halo e algumas luzes.
-- **Textura.** O grão de papel saiu. No lugar entrou a textura "Luz": halos suaves de dourado e laranja (`--textura-dia` e `--textura-noite`). As alternativas testadas (linho, aquarela e pauta) ficaram de fora; a pauta pode voltar como complemento.
+- **Segunda rodada.** Paleta nude, verde e dourado, com textura "Luz" (halos radiais, sem grão).
+- **Terceira rodada (03/11/2026).** A identidade Lumes Experience substituiu a paleta: pêssego claro no dia, terracota nos botões, noite em marrom-terracota, pêssego como luz da noite, os dois arcos em volta da Delliz, a estrela do logo no anoitecer, o logo vetorial no topo e no rodapé e a abertura animada. A textura continua "Luz", agora em pêssego e terracota.
 
 - Numa máquina nova, depois de clonar: o binário do impeccable não vai para o git, e o launcher (`.claude/skills/impeccable/scripts/impeccable`) baixa o da plataforma na primeira vez que roda. O hook do detector fica em `.claude/settings.local.json`, que também é de cada máquina; para ligá-lo de novo, peça ao Claude Code `/impeccable hooks on`.
 - Para reavaliar depois de mudar a página, peça ao Claude Code `/impeccable critique index.html` ou `/impeccable audit index.html`.
-- O detector acusa `cream-palette` no fundo claro: é o nude pedido para a marca, e está registrado como exceção em `.impeccable/config.json`. Os avisos `cramped-padding` e `tight-leading` do scan por arquivo são falsos positivos (o motor não lê `padding-block` nem `clamp()`); o scan pela página renderizada não os mostra.
+- O detector acusa `cream-palette` no fundo claro: é o pêssego da identidade, e está registrado como exceção em `.impeccable/config.json`. Os avisos `cramped-padding` e `tight-leading` do scan por arquivo são falsos positivos (o motor não lê `padding-block` nem `clamp()`); o scan pela página renderizada não os mostra.
 
 ## Depois de publicar (SEO local e IAs)
 
@@ -160,11 +166,11 @@ O que mais pesa para ser encontrado e citado vem de fora da página:
 
 - [ ] **Google Search Console**: verifique o domínio, envie o `sitemap.xml` e peça a indexação da URL.
 - [ ] **Bing Webmaster Tools**: mesmo processo. O ChatGPT e o Copilot buscam no índice do Bing. Ative o IndexNow.
-- [ ] **Perfil da Empresa no Google**, como *empresa de área de atendimento*: endereço oculto, até 20 cidades da região metropolitana, nome exatamente "Lumens" (acrescentar "Música para Casamento BH" ao nome dá suspensão), fotos, vídeos, link do site e WhatsApp. Num estudo de 2026, o Perfil respondia por 28,6% das citações de IA em buscas locais.
+- [ ] **Perfil da Empresa no Google**, como *empresa de área de atendimento*: endereço oculto, até 20 cidades da região metropolitana, nome exatamente "Lumes Experience" (acrescentar "Música para Casamento BH" ao nome dá suspensão), fotos, vídeos, link do site e WhatsApp. Num estudo de 2026, o Perfil respondia por 28,6% das citações de IA em buscas locais.
 - [ ] **Portais de casamento**: perfis no Casamentos.com.br e no Lápis de Noiva com o mesmo nome, WhatsApp e site. Depois, coloque esses perfis no `sameAs` do JSON-LD.
 - [ ] **Avaliações reais**: peça a **todos** os casais, sem desconto nem brinde em troca (é proibido), no Google e no Casamentos.com.br. Quando houver depoimentos reais e autorizados, crie uma seção na página. Nunca marque `Review` ou `AggregateRating` no JSON-LD com depoimentos próprios.
 - [ ] **Responder rápido**: quem responde o contato em até 1 hora tem cerca de 7 vezes mais chance de fechar.
-- [ ] **Medir nas IAs**, uma vez por mês: pergunte ao ChatGPT, Gemini, Perplexity e Claude "quem faz música ao vivo para casamento em BH?", com 4 ou 5 variações cada, e anote se o Lumens aparece.
+- [ ] **Medir nas IAs**, uma vez por mês: pergunte ao ChatGPT, Gemini, Perplexity e Claude "quem faz música ao vivo para casamento em BH?", com 4 ou 5 variações cada, e anote se o Lumes Experience aparece.
 
 ## O que não fazer
 
