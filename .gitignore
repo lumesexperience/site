@@ -1,0 +1,11 @@
+# Criada e apagada por scripts/blog/imagens.mjs
+.imagem-temp.html
+
+# De cada máquina
+.claude/settings.local.json
+.impeccable/config.local.json
+.impeccable/hook.cache.json
+.impeccable/live/
+
+# O launcher do impeccable baixa o binário da plataforma na primeira vez que roda
+.claude/skills/impeccable/scripts/bin/

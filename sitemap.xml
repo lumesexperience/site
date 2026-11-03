@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://lumens.example/</loc>
+    <lastmod>2026-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://lumens.example/blog/</loc>
+    <lastmod>2026-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://lumens.example/blog/como-montar-o-casamento/</loc>
+    <lastmod>2026-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://lumens.example/blog/dicas-para-quem-vai-casar/</loc>
+    <lastmod>2026-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://lumens.example/blog/como-escolher-musicos-para-casamento/</loc>
+    <lastmod>2026-10-21</lastmod>
+  </url>
+</urlset>

@@ -1,0 +1,30 @@
+# Lumens: música ao vivo para casamentos em Belo Horizonte e região.
+# Queremos ser encontrados por buscadores e citados por assistentes de IA: tudo liberado.
+# Os grupos nomeados abaixo só deixam a intenção explícita; "User-agent: *" já libera todos.
+
+User-agent: *
+Allow: /
+
+# Busca e citação em respostas de IA
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Applebot
+User-agent: Meta-WebIndexer
+Allow: /
+
+# Treino de modelos: liberar ajuda os modelos a conhecerem a marca
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: meta-externalagent
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://lumens.example/sitemap.xml

@@ -1,0 +1,44 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-21T13:39:42.566Z",
+        "reason": "Cloud Dancer (Pantone 2026), a metade 'dia' do sistema dia/noite; decisão documentada em docs/PESQUISA.md"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-21T13:41:35.760Z",
+        "reason": "Claude, verificado no Chrome em 21/10/2026: .fato e .momento usam padding-block 0.9rem/1.1rem (14-18px reais) e .noite é faixa de fundo com filhos recuados 16-40px; o scan estático não lê propriedades lógicas e o scan da página renderizada não acusa"
+      },
+      {
+        "rule": "tight-leading",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-21T13:41:35.766Z",
+        "reason": "Claude, verificado no Chrome em 21/10/2026: .pergunta summary renderiza 29,12px/22,4px = 1,30; o scan estático resolve errado o clamp() do font-size"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "blog/**"
+        ],
+        "createdAt": "2026-10-21T14:17:08.192Z",
+        "reason": "Cloud Dancer (Pantone 2026), a metade 'dia' do sistema dia/noite também no blog; decisão documentada em docs/PESQUISA.md"
+      }
+    ]
+  }
+}

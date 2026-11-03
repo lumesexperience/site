@@ -1,0 +1,685 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-21T16:48:36.537Z",
+  "title": "Design System: Lumens",
+  "extensions": {
+    "colorMeta": {
+      "dia": {
+        "role": "neutral",
+        "displayName": "Dia",
+        "canonical": "#EFE3D6",
+        "cssVar": "--dia",
+        "tonalRamp": [
+          "oklch(15.0% 0.022 69.8)",
+          "oklch(26.4% 0.022 69.8)",
+          "oklch(37.9% 0.022 69.8)",
+          "oklch(49.3% 0.022 69.8)",
+          "oklch(60.7% 0.022 69.8)",
+          "oklch(72.1% 0.022 69.8)",
+          "oklch(83.6% 0.022 69.8)",
+          "oklch(95.0% 0.022 69.8)"
+        ]
+      },
+      "dia-2": {
+        "role": "neutral",
+        "displayName": "Dia Claro",
+        "canonical": "#F8F1E9",
+        "cssVar": "--dia-2",
+        "tonalRamp": [
+          "oklch(15.0% 0.013 71.3)",
+          "oklch(26.4% 0.013 71.3)",
+          "oklch(37.9% 0.013 71.3)",
+          "oklch(49.3% 0.013 71.3)",
+          "oklch(60.7% 0.013 71.3)",
+          "oklch(72.1% 0.013 71.3)",
+          "oklch(83.6% 0.013 71.3)",
+          "oklch(95.0% 0.013 71.3)"
+        ]
+      },
+      "dia-linha": {
+        "role": "neutral",
+        "displayName": "Linha do Dia",
+        "canonical": "#DDCBB9",
+        "cssVar": "--dia-linha",
+        "tonalRamp": [
+          "oklch(15.0% 0.032 67.4)",
+          "oklch(26.4% 0.032 67.4)",
+          "oklch(37.9% 0.032 67.4)",
+          "oklch(49.3% 0.032 67.4)",
+          "oklch(60.7% 0.032 67.4)",
+          "oklch(72.1% 0.032 67.4)",
+          "oklch(83.6% 0.032 67.4)",
+          "oklch(95.0% 0.032 67.4)"
+        ]
+      },
+      "tinta": {
+        "role": "neutral",
+        "displayName": "Tinta",
+        "canonical": "#2B2520",
+        "cssVar": "--tinta",
+        "tonalRamp": [
+          "oklch(15.0% 0.013 62.1)",
+          "oklch(26.4% 0.013 62.1)",
+          "oklch(37.9% 0.013 62.1)",
+          "oklch(49.3% 0.013 62.1)",
+          "oklch(60.7% 0.013 62.1)",
+          "oklch(72.1% 0.013 62.1)",
+          "oklch(83.6% 0.013 62.1)",
+          "oklch(95.0% 0.013 62.1)"
+        ]
+      },
+      "tinta-suave": {
+        "role": "neutral",
+        "displayName": "Tinta Suave",
+        "canonical": "#5E5248",
+        "cssVar": "--tinta-suave",
+        "tonalRamp": [
+          "oklch(15.0% 0.023 62.0)",
+          "oklch(26.4% 0.023 62.0)",
+          "oklch(37.9% 0.023 62.0)",
+          "oklch(49.3% 0.023 62.0)",
+          "oklch(60.7% 0.023 62.0)",
+          "oklch(72.1% 0.023 62.0)",
+          "oklch(83.6% 0.023 62.0)",
+          "oklch(95.0% 0.023 62.0)"
+        ]
+      },
+      "ouro": {
+        "role": "secondary",
+        "displayName": "Ouro Velho",
+        "canonical": "#7A5C1E",
+        "cssVar": "--ouro",
+        "tonalRamp": [
+          "oklch(15.0% 0.052 82.0)",
+          "oklch(26.4% 0.070 82.0)",
+          "oklch(37.9% 0.087 82.0)",
+          "oklch(49.3% 0.087 82.0)",
+          "oklch(60.7% 0.087 82.0)",
+          "oklch(72.1% 0.072 82.0)",
+          "oklch(83.6% 0.055 82.0)",
+          "oklch(95.0% 0.037 82.0)"
+        ]
+      },
+      "ouro-linha": {
+        "role": "secondary",
+        "displayName": "Fio de Ouro",
+        "canonical": "#B08D45",
+        "cssVar": "--ouro-linha",
+        "tonalRamp": [
+          "oklch(15.0% 0.052 83.4)",
+          "oklch(26.4% 0.070 83.4)",
+          "oklch(37.9% 0.087 83.4)",
+          "oklch(49.3% 0.100 83.4)",
+          "oklch(60.7% 0.089 83.4)",
+          "oklch(72.1% 0.072 83.4)",
+          "oklch(83.6% 0.055 83.4)",
+          "oklch(95.0% 0.037 83.4)"
+        ]
+      },
+      "verde": {
+        "role": "primary",
+        "displayName": "Verde Cerimônia",
+        "canonical": "#3E5A42",
+        "cssVar": "--verde",
+        "tonalRamp": [
+          "oklch(15.0% 0.052 148.4)",
+          "oklch(26.4% 0.052 148.4)",
+          "oklch(37.9% 0.052 148.4)",
+          "oklch(49.3% 0.052 148.4)",
+          "oklch(60.7% 0.052 148.4)",
+          "oklch(72.1% 0.052 148.4)",
+          "oklch(83.6% 0.052 148.4)",
+          "oklch(95.0% 0.037 148.4)"
+        ]
+      },
+      "verde-escuro": {
+        "role": "primary",
+        "displayName": "Verde Fechado",
+        "canonical": "#2E4532",
+        "cssVar": "--verde-escuro",
+        "tonalRamp": [
+          "oklch(15.0% 0.043 149.3)",
+          "oklch(26.4% 0.043 149.3)",
+          "oklch(37.9% 0.043 149.3)",
+          "oklch(49.3% 0.043 149.3)",
+          "oklch(60.7% 0.043 149.3)",
+          "oklch(72.1% 0.043 149.3)",
+          "oklch(83.6% 0.043 149.3)",
+          "oklch(95.0% 0.037 149.3)"
+        ]
+      },
+      "sobre-verde": {
+        "role": "neutral",
+        "displayName": "Sobre o Verde",
+        "canonical": "#F8F1E9",
+        "cssVar": "--sobre-verde",
+        "tonalRamp": [
+          "oklch(15.0% 0.013 71.3)",
+          "oklch(26.4% 0.013 71.3)",
+          "oklch(37.9% 0.013 71.3)",
+          "oklch(49.3% 0.013 71.3)",
+          "oklch(60.7% 0.013 71.3)",
+          "oklch(72.1% 0.013 71.3)",
+          "oklch(83.6% 0.013 71.3)",
+          "oklch(95.0% 0.013 71.3)"
+        ]
+      },
+      "lume": {
+        "role": "tertiary",
+        "displayName": "Lume",
+        "canonical": "#D9732F",
+        "cssVar": "--lume",
+        "tonalRamp": [
+          "oklch(15.0% 0.052 50.5)",
+          "oklch(26.4% 0.070 50.5)",
+          "oklch(37.9% 0.087 50.5)",
+          "oklch(49.3% 0.104 50.5)",
+          "oklch(60.7% 0.089 50.5)",
+          "oklch(72.1% 0.072 50.5)",
+          "oklch(83.6% 0.055 50.5)",
+          "oklch(95.0% 0.037 50.5)"
+        ]
+      },
+      "foco": {
+        "role": "tertiary",
+        "displayName": "Foco",
+        "canonical": "#B4521D",
+        "cssVar": "--foco",
+        "tonalRamp": [
+          "oklch(15.0% 0.052 45.1)",
+          "oklch(26.4% 0.070 45.1)",
+          "oklch(37.9% 0.087 45.1)",
+          "oklch(49.3% 0.104 45.1)",
+          "oklch(60.7% 0.089 45.1)",
+          "oklch(72.1% 0.072 45.1)",
+          "oklch(83.6% 0.055 45.1)",
+          "oklch(95.0% 0.037 45.1)"
+        ]
+      },
+      "lume-escuro": {
+        "role": "tertiary",
+        "displayName": "Lume Escuro",
+        "canonical": "#9C4418",
+        "cssVar": "--lume-escuro",
+        "tonalRamp": [
+          "oklch(15.0% 0.052 43.7)",
+          "oklch(26.4% 0.070 43.7)",
+          "oklch(37.9% 0.087 43.7)",
+          "oklch(49.3% 0.104 43.7)",
+          "oklch(60.7% 0.089 43.7)",
+          "oklch(72.1% 0.072 43.7)",
+          "oklch(83.6% 0.055 43.7)",
+          "oklch(95.0% 0.037 43.7)"
+        ]
+      },
+      "noite": {
+        "role": "neutral",
+        "displayName": "Noite",
+        "canonical": "#17201A",
+        "cssVar": "--noite",
+        "tonalRamp": [
+          "oklch(15.0% 0.017 155.6)",
+          "oklch(26.4% 0.017 155.6)",
+          "oklch(37.9% 0.017 155.6)",
+          "oklch(49.3% 0.017 155.6)",
+          "oklch(60.7% 0.017 155.6)",
+          "oklch(72.1% 0.017 155.6)",
+          "oklch(83.6% 0.017 155.6)",
+          "oklch(95.0% 0.017 155.6)"
+        ]
+      },
+      "noite-2": {
+        "role": "neutral",
+        "displayName": "Noite Dois",
+        "canonical": "#202B23",
+        "cssVar": "--noite-2",
+        "tonalRamp": [
+          "oklch(15.0% 0.021 153.3)",
+          "oklch(26.4% 0.021 153.3)",
+          "oklch(37.9% 0.021 153.3)",
+          "oklch(49.3% 0.021 153.3)",
+          "oklch(60.7% 0.021 153.3)",
+          "oklch(72.1% 0.021 153.3)",
+          "oklch(83.6% 0.021 153.3)",
+          "oklch(95.0% 0.021 153.3)"
+        ]
+      },
+      "noite-linha": {
+        "role": "neutral",
+        "displayName": "Linha da Noite",
+        "canonical": "#364539",
+        "cssVar": "--noite-linha",
+        "tonalRamp": [
+          "oklch(15.0% 0.028 150.8)",
+          "oklch(26.4% 0.028 150.8)",
+          "oklch(37.9% 0.028 150.8)",
+          "oklch(49.3% 0.028 150.8)",
+          "oklch(60.7% 0.028 150.8)",
+          "oklch(72.1% 0.028 150.8)",
+          "oklch(83.6% 0.028 150.8)",
+          "oklch(95.0% 0.028 150.8)"
+        ]
+      },
+      "noite-campo": {
+        "role": "neutral",
+        "displayName": "Campo da Noite",
+        "canonical": "#7E8F80",
+        "cssVar": "--noite-campo",
+        "tonalRamp": [
+          "oklch(15.0% 0.030 148.6)",
+          "oklch(26.4% 0.030 148.6)",
+          "oklch(37.9% 0.030 148.6)",
+          "oklch(49.3% 0.030 148.6)",
+          "oklch(60.7% 0.030 148.6)",
+          "oklch(72.1% 0.030 148.6)",
+          "oklch(83.6% 0.030 148.6)",
+          "oklch(95.0% 0.030 148.6)"
+        ]
+      },
+      "noite-dica": {
+        "role": "neutral",
+        "displayName": "Dica da Noite",
+        "canonical": "#9AA89B",
+        "cssVar": "--noite-dica",
+        "tonalRamp": [
+          "oklch(15.0% 0.024 147.3)",
+          "oklch(26.4% 0.024 147.3)",
+          "oklch(37.9% 0.024 147.3)",
+          "oklch(49.3% 0.024 147.3)",
+          "oklch(60.7% 0.024 147.3)",
+          "oklch(72.1% 0.024 147.3)",
+          "oklch(83.6% 0.024 147.3)",
+          "oklch(95.0% 0.024 147.3)"
+        ]
+      },
+      "luz": {
+        "role": "primary",
+        "displayName": "Luz Acesa",
+        "canonical": "#D9B26A",
+        "cssVar": "--luz",
+        "tonalRamp": [
+          "oklch(15.0% 0.052 81.7)",
+          "oklch(26.4% 0.070 81.7)",
+          "oklch(37.9% 0.087 81.7)",
+          "oklch(49.3% 0.101 81.7)",
+          "oklch(60.7% 0.089 81.7)",
+          "oklch(72.1% 0.072 81.7)",
+          "oklch(83.6% 0.055 81.7)",
+          "oklch(95.0% 0.037 81.7)"
+        ]
+      },
+      "luz-clara": {
+        "role": "primary",
+        "displayName": "Luz Clara",
+        "canonical": "#E8CB8E",
+        "cssVar": "--luz-clara",
+        "tonalRamp": [
+          "oklch(15.0% 0.052 85.2)",
+          "oklch(26.4% 0.070 85.2)",
+          "oklch(37.9% 0.085 85.2)",
+          "oklch(49.3% 0.085 85.2)",
+          "oklch(60.7% 0.085 85.2)",
+          "oklch(72.1% 0.072 85.2)",
+          "oklch(83.6% 0.055 85.2)",
+          "oklch(95.0% 0.037 85.2)"
+        ]
+      },
+      "noite-foco": {
+        "role": "tertiary",
+        "displayName": "Lume da Noite",
+        "canonical": "#E0844A",
+        "cssVar": "--noite-foco",
+        "tonalRamp": [
+          "oklch(15.0% 0.052 51.1)",
+          "oklch(26.4% 0.070 51.1)",
+          "oklch(37.9% 0.087 51.1)",
+          "oklch(49.3% 0.104 51.1)",
+          "oklch(60.7% 0.089 51.1)",
+          "oklch(72.1% 0.072 51.1)",
+          "oklch(83.6% 0.055 51.1)",
+          "oklch(95.0% 0.037 51.1)"
+        ]
+      },
+      "noite-texto": {
+        "role": "neutral",
+        "displayName": "Texto da Noite",
+        "canonical": "#F2E9DE",
+        "cssVar": "--noite-texto",
+        "tonalRamp": [
+          "oklch(15.0% 0.018 73.1)",
+          "oklch(26.4% 0.018 73.1)",
+          "oklch(37.9% 0.018 73.1)",
+          "oklch(49.3% 0.018 73.1)",
+          "oklch(60.7% 0.018 73.1)",
+          "oklch(72.1% 0.018 73.1)",
+          "oklch(83.6% 0.018 73.1)",
+          "oklch(95.0% 0.018 73.1)"
+        ]
+      },
+      "noite-suave": {
+        "role": "neutral",
+        "displayName": "Noite Suave",
+        "canonical": "#CBC3B5",
+        "cssVar": "--noite-suave",
+        "tonalRamp": [
+          "oklch(15.0% 0.021 81.8)",
+          "oklch(26.4% 0.021 81.8)",
+          "oklch(37.9% 0.021 81.8)",
+          "oklch(49.3% 0.021 81.8)",
+          "oklch(60.7% 0.021 81.8)",
+          "oklch(72.1% 0.021 81.8)",
+          "oklch(83.6% 0.021 81.8)",
+          "oklch(95.0% 0.021 81.8)"
+        ]
+      },
+      "noite-resposta": {
+        "role": "neutral",
+        "displayName": "Resposta",
+        "canonical": "#E5DCCF",
+        "cssVar": "--noite-resposta",
+        "tonalRamp": [
+          "oklch(15.0% 0.020 77.3)",
+          "oklch(26.4% 0.020 77.3)",
+          "oklch(37.9% 0.020 77.3)",
+          "oklch(49.3% 0.020 77.3)",
+          "oklch(60.7% 0.020 77.3)",
+          "oklch(72.1% 0.020 77.3)",
+          "oklch(83.6% 0.020 77.3)",
+          "oklch(95.0% 0.020 77.3)"
+        ]
+      }
+    },
+    "gradients": [
+      {
+        "name": "textura-dia",
+        "value": "radial-gradient(58rem 32rem at calc(100% + 6rem) -7rem, rgb(176 141 69 / 0.32), transparent 70%), radial-gradient(40rem 26rem at -12rem 30rem, rgb(217 115 47 / 0.11), transparent 70%)",
+        "purpose": "Textura \"Luz\" do dia: sol baixo dourado no alto à direita e reflexo de lume à esquerda. Fundo do body."
+      },
+      {
+        "name": "textura-noite",
+        "value": "radial-gradient(64rem 26rem at 50% -9rem, rgb(217 178 106 / 0.13), transparent 70%), radial-gradient(44rem 30rem at calc(100% + 10rem) 55%, rgb(217 115 47 / 0.07), transparent 70%)",
+        "purpose": "Textura \"Luz\" da noite: brilho dourado no alto e brasa à direita. Não vai no rodapé."
+      },
+      {
+        "name": "anoitecer",
+        "value": "linear-gradient(to bottom, var(--dia) 0%, #EDD5BA 22%, #E0A878 42%, #9C6E4A 60%, #45503F 80%, var(--noite) 100%)",
+        "purpose": "A passagem do dia para a noite; o único campo largo de laranja."
+      },
+      {
+        "name": "luzes-do-anoitecer",
+        "value": "seis pontos radiais de 1.5 a 2px em --luz-clara e --noite-foco, mais um brilho elíptico de --luz a 18% na base",
+        "purpose": "As primeiras luzes acesas na metade de baixo do anoitecer."
+      },
+      {
+        "name": "capa",
+        "value": "radial-gradient(circle at 50% 56%, color-mix(in srgb, var(--lume) 30%, transparent) 0%, color-mix(in srgb, var(--luz) 14%, transparent) 36%, transparent 68%), linear-gradient(170deg, #2B3A30 0%, #1E2921 55%, var(--noite) 100%)",
+        "purpose": "O fundo aceso por dentro das capas do blog."
+      }
+    ],
+    "shadows": [
+      {
+        "name": "sombra-arco",
+        "value": "0 1.75rem 3rem -1.5rem color-mix(in srgb, var(--tinta) 45%, transparent)",
+        "purpose": "Foto da Delliz e capas do blog."
+      },
+      {
+        "name": "sombra-barra-noite",
+        "value": "0 -0.75rem 2rem -1rem color-mix(in srgb, var(--noite) 50%, transparent)",
+        "purpose": "Barra fixa do WhatsApp sobre a noite."
+      },
+      {
+        "name": "sombra-barra-dia",
+        "value": "0 -0.75rem 2rem -1rem color-mix(in srgb, var(--tinta) 25%, transparent)",
+        "purpose": "Barra fixa do WhatsApp sobre o dia."
+      }
+    ],
+    "focus": [
+      {
+        "name": "foco-dia",
+        "value": "outline: 3px solid var(--foco); outline-offset: 3px",
+        "purpose": "Foco de teclado sobre o dia."
+      },
+      {
+        "name": "foco-noite",
+        "value": "outline-color: var(--noite-foco)",
+        "purpose": "Foco de teclado dentro de .noite."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-luz",
+        "value": "cubic-bezier(0.2, 0.7, 0.2, 1)",
+        "purpose": "Halo que acende, zoom das capas e entrada da barra fixa."
+      },
+      {
+        "name": "acender",
+        "value": "2.4s ease-luz; opacity 0 -> 1, scale 0.82 -> 1",
+        "purpose": "O halo atrás da Delliz acende uma vez ao carregar."
+      },
+      {
+        "name": "zoom-capa",
+        "value": "scale 0.6s ease-luz",
+        "purpose": "Foto e arte das capas crescem 3 a 4% no hover."
+      },
+      {
+        "name": "troca-de-fundo",
+        "value": "background-color 0.2s",
+        "purpose": "Hover dos botões."
+      },
+      {
+        "name": "barra",
+        "value": "translate 0.3s ease-luz, background-color 0.3s, border-color 0.3s",
+        "purpose": "Barra fixa entra e troca entre dia e noite."
+      },
+      {
+        "name": "pergunta",
+        "value": "transform 0.25s",
+        "purpose": "O \"+\" gira 45° ao abrir."
+      },
+      {
+        "name": "reduzir",
+        "value": "prefers-reduced-motion: reduce -> animation e transition none",
+        "purpose": "Desliga todo movimento."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "minimo",
+        "value": "22.49rem",
+        "purpose": "max-width: botão do topo perde o rótulo"
+      },
+      {
+        "name": "estreito",
+        "value": "23.49rem",
+        "purpose": "max-width: botões estreitam, rótulos longos encurtam"
+      },
+      {
+        "name": "prazos",
+        "value": "36rem"
+      },
+      {
+        "name": "tabela",
+        "value": "40rem",
+        "purpose": "abaixo disso a tabela de duas colunas vira pilha"
+      },
+      {
+        "name": "cartoes",
+        "value": "48rem"
+      },
+      {
+        "name": "colunas",
+        "value": "56rem",
+        "purpose": "navegação, duas colunas, fim da barra fixa"
+      },
+      {
+        "name": "abertura",
+        "value": "60rem",
+        "purpose": "abertura e topo do artigo em duas colunas"
+      },
+      {
+        "name": "leitura",
+        "value": "64rem",
+        "purpose": "corpo a 1.125rem, sumário fixo ao lado"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botão",
+      "kind": "button",
+      "refersTo": "botao",
+      "description": "A ação principal sobre o dia: consultar a data no WhatsApp.",
+      "html": "<a class=\"ds-botao\" href=\"#\">Consultar nossa data no WhatsApp</a>",
+      "css": ".ds-botao { display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; min-height: 3rem; padding: 0.8rem 1.5rem; border: 0; border-radius: 999px; background: var(--verde); color: var(--sobre-verde); font: 600 1rem/1.2 var(--sans); text-decoration: none; transition: background-color 0.2s; } .ds-botao:hover { background: var(--verde-escuro); } .ds-botao:focus-visible { outline: 3px solid var(--foco); outline-offset: 3px; }"
+    },
+    {
+      "name": "Botão de luz",
+      "kind": "button",
+      "refersTo": "botao-luz",
+      "description": "A ação sobre a noite: formulário, fechamento do blog, barra fixa.",
+      "html": "<div class=\"ds-noite\"><a class=\"ds-botao-luz\" href=\"#\">Mandar no WhatsApp</a></div>",
+      "css": ".ds-noite { padding: 1.5rem; background: var(--noite); } .ds-botao-luz { display: inline-flex; align-items: center; justify-content: center; min-height: 3rem; padding: 0.8rem 1.5rem; border-radius: 999px; background: var(--luz); color: var(--noite); font: 600 1rem/1.2 var(--sans); text-decoration: none; transition: background-color 0.2s; } .ds-botao-luz:hover { background: var(--luz-clara); } .ds-botao-luz:focus-visible { outline: 3px solid var(--noite-foco); outline-offset: 3px; }"
+    },
+    {
+      "name": "Navegação do topo",
+      "kind": "nav",
+      "refersTo": "botao-compacto",
+      "description": "Marca em Bodoni, links em Manrope e o botão compacto.",
+      "html": "<header class=\"ds-topo\"><a class=\"ds-marca\" href=\"#\">Lumens</a><nav class=\"ds-nav\"><a href=\"#\">Delliz</a><a href=\"#\">Momentos</a><a href=\"#\" aria-current=\"page\">Blog</a></nav><a class=\"ds-botao-compacto\" href=\"#\">Consultar data</a></header>",
+      "css": ".ds-topo { display: flex; align-items: center; gap: 1rem; padding: 1.25rem; background: var(--dia); } .ds-marca { font: 500 1.75rem/1 var(--serif); font-variation-settings: \"opsz\" 18; letter-spacing: 0.01em; color: var(--tinta); text-decoration: none; } .ds-nav { display: flex; gap: 1.75rem; margin-left: auto; margin-right: 1.5rem; } .ds-nav a { color: var(--tinta-suave); font: 400 0.9375rem var(--sans); text-decoration: none; text-underline-offset: 0.22em; } .ds-nav a:hover, .ds-nav a[aria-current] { color: var(--verde); text-decoration: underline; } .ds-botao-compacto { display: inline-flex; align-items: center; min-height: 2.75rem; padding: 0.55rem 1.1rem; border-radius: 999px; background: var(--verde); color: var(--sobre-verde); font: 600 0.9375rem/1.2 var(--sans); text-decoration: none; transition: background-color 0.2s; } .ds-botao-compacto:hover { background: var(--verde-escuro); } .ds-topo a:focus-visible { outline: 3px solid var(--foco); outline-offset: 3px; }"
+    },
+    {
+      "name": "Campo da noite",
+      "kind": "input",
+      "refersTo": "campo",
+      "description": "Campo do formulário de consulta, sobre a noite.",
+      "html": "<div class=\"ds-noite-campo\"><label class=\"ds-campo\">Data do casamento<input type=\"text\" placeholder=\"Ex.: 12 de setembro de 2027\"></label></div>",
+      "css": ".ds-noite-campo { padding: 1.5rem; background: var(--noite-2); color: var(--noite-texto); } .ds-campo { display: grid; gap: 0.4rem; font: 600 0.9375rem var(--sans); } .ds-campo input { min-height: 3rem; padding: 0.65rem 0.85rem; border: 1px solid var(--noite-campo); border-radius: 4px; background: var(--noite); color: var(--noite-texto); font: 400 1rem var(--sans); caret-color: var(--luz); } .ds-campo input::placeholder { color: var(--noite-dica); opacity: 1; } .ds-campo input:focus-visible { outline: 3px solid var(--noite-foco); outline-offset: 3px; }"
+    },
+    {
+      "name": "Opção",
+      "kind": "chip",
+      "refersTo": "opcao",
+      "description": "Escolha de momento no formulário; marcada acende em luz.",
+      "html": "<div class=\"ds-noite-opcoes\"><label class=\"ds-opcao\"><input type=\"checkbox\" checked> Cerimônia</label><label class=\"ds-opcao\"><input type=\"checkbox\"> Festa</label></div>",
+      "css": ".ds-noite-opcoes { display: flex; gap: 0.5rem; padding: 1.5rem; background: var(--noite-2); color: var(--noite-texto); font: 400 1rem var(--sans); } .ds-opcao { display: inline-flex; align-items: center; gap: 0.55rem; min-height: 2.75rem; padding: 0.4rem 1rem; border: 1px solid var(--noite-campo); border-radius: 999px; cursor: pointer; } .ds-opcao input { width: 1.1rem; height: 1.1rem; margin: 0; accent-color: var(--luz); } .ds-opcao:has(input:checked) { border-color: var(--luz); background: color-mix(in srgb, var(--luz) 12%, transparent); } .ds-opcao:has(input:focus-visible) { outline: 3px solid var(--noite-foco); outline-offset: 3px; }"
+    },
+    {
+      "name": "Caixa de destaque",
+      "kind": "card",
+      "refersTo": "caixa",
+      "description": "Prazos, checagem e norma da igreja dentro do artigo, com a fonte no fim.",
+      "html": "<aside class=\"ds-caixa\"><p class=\"ds-caixa__titulo\">Os prazos do cartório em Minas</p><dl class=\"ds-prazos\"><div><dt>Até 5 dias úteis</dt><dd>para sair o certificado, depois da publicação do edital</dd></div><div><dt>90 dias corridos</dt><dd>de validade do certificado de habilitação</dd></div></dl></aside>",
+      "css": ".ds-caixa { padding: 1.25rem 1.5rem 1.5rem; border: 1px solid var(--dia-linha); border-radius: 6px; background: var(--dia-2); color: var(--tinta); font: 400 1.0625rem/1.7 var(--sans); } .ds-caixa__titulo { margin: 0 0 0.75rem; color: var(--verde); font-weight: 650; line-height: 1.4; } .ds-prazos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem 2rem; margin: 0; } .ds-prazos dt { color: var(--ouro); font: 500 1.5rem/1.15 var(--serif); font-variation-settings: \"opsz\" 14; font-variant-numeric: lining-nums; } .ds-prazos dd { margin: 0.2rem 0 0; color: var(--tinta-suave); font-size: 0.9375rem; line-height: 1.5; } .ds-caixa__fonte { margin: 0.9rem 0 0; color: var(--tinta-suave); font-size: 0.875rem; }"
+    },
+    {
+      "name": "Caixa de aviso",
+      "kind": "card",
+      "refersTo": "caixa",
+      "description": "A variante com lume para o que pode dar errado.",
+      "html": "<aside class=\"ds-caixa-aviso\"><p class=\"ds-caixa-aviso__titulo\">Um cuidado com o calendário</p><p>A paróquia pode pedir o agendamento do civil meses antes, mas a habilitação vale só 90 dias. Perguntem ao cartório como reservar a data antes de entregar os documentos.</p></aside>",
+      "css": ".ds-caixa-aviso { padding: 1.25rem 1.5rem 1.5rem; border: 1px solid color-mix(in srgb, var(--lume) 40%, var(--dia-linha)); border-radius: 6px; background: color-mix(in srgb, var(--lume) 8%, var(--dia-2)); color: var(--tinta); font: 400 1.0625rem/1.7 var(--sans); } .ds-caixa-aviso p { margin: 0; } .ds-caixa-aviso__titulo { margin: 0 0 0.75rem !important; color: var(--lume-escuro); font-weight: 650; line-height: 1.4; }"
+    },
+    {
+      "name": "Capa em arco",
+      "kind": "custom",
+      "refersTo": "capa-assunto",
+      "description": "O arco da marca aceso por dentro, com o chip de assunto; a arte vem de scripts/blog/capas.mjs.",
+      "html": "<figure class=\"ds-capa\"><svg viewBox=\"0 0 320 400\" aria-hidden=\"true\"><g fill=\"none\" stroke=\"#D9B26A\"><circle cx=\"134\" cy=\"218\" r=\"56\" stroke-width=\"3.5\"/><circle cx=\"188\" cy=\"218\" r=\"56\" stroke-width=\"3.5\"/></g></svg><figcaption class=\"ds-capa__assunto\">Dicas</figcaption></figure>",
+      "css": ".ds-capa { position: relative; overflow: hidden; width: 16rem; margin: 0; aspect-ratio: 4 / 5; border-radius: 50% 50% 0.375rem 0.375rem / 40% 40% 0.375rem 0.375rem; background: radial-gradient(circle at 50% 56%, color-mix(in srgb, var(--lume) 30%, transparent) 0%, color-mix(in srgb, var(--luz) 14%, transparent) 36%, transparent 68%), linear-gradient(170deg, #2B3A30 0%, #1E2921 55%, var(--noite) 100%); box-shadow: 0 1.75rem 3rem -1.5rem color-mix(in srgb, var(--tinta) 45%, transparent); } .ds-capa svg { position: absolute; inset: 0; width: 100%; height: 100%; transition: scale 0.6s cubic-bezier(0.2, 0.7, 0.2, 1); } .ds-capa:hover svg { scale: 1.04; } .ds-capa__assunto { position: absolute; left: 50%; bottom: 1rem; translate: -50% 0; padding: 0.3rem 0.85rem; border: 1px solid color-mix(in srgb, var(--luz) 45%, transparent); border-radius: 999px; background: var(--noite); color: var(--luz-clara); font: 600 0.8125rem/1.3 var(--sans); white-space: nowrap; }"
+    },
+    {
+      "name": "Lista numerada",
+      "kind": "custom",
+      "refersTo": "numeral",
+      "description": "Numerais Bodoni dourados sobre fios de 1px: roteiro, passos e listas do blog.",
+      "html": "<ol class=\"ds-lista\"><li>Chegada dos convidados</li><li>Cortejo</li><li>Entrada da noiva</li></ol>",
+      "css": ".ds-lista { margin: 0; padding: 0; list-style: none; counter-reset: item; background: var(--dia); color: var(--tinta); font: 400 1.0625rem/1.65 var(--sans); } .ds-lista li { position: relative; padding: 1rem 0 1rem 2.75rem; border-top: 1px solid var(--dia-linha); counter-increment: item; } .ds-lista li::before { content: counter(item); position: absolute; left: 0; top: 0.95rem; color: var(--ouro); font: 500 1.5rem/1.1 var(--serif); font-variation-settings: \"opsz\" 14; font-variant-numeric: lining-nums; }"
+    },
+    {
+      "name": "Anoitecer",
+      "kind": "custom",
+      "refersTo": "anoitecer",
+      "description": "A faixa de pôr do sol entre o dia e a noite, com as primeiras luzes.",
+      "html": "<div class=\"ds-anoitecer\" aria-hidden=\"true\"></div>",
+      "css": ".ds-anoitecer { position: relative; height: 10rem; background: var(--anoitecer); } .ds-anoitecer::after { content: \"\"; position: absolute; inset: auto 0 0; height: 55%; background: var(--luzes-do-anoitecer); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "O dia que vira noite",
+    "overview": "O casamento começa de dia e termina de noite, e o site segue essa passagem. A cerimônia acontece num nude claro de papel ao sol (`--dia`), com tinta marrom-escura e ações em verde. A festa acontece num verde quase preto (`--noite`), com o texto em creme e os botões acesos em dourado (`--luz`). Entre as duas, uma faixa de pôr do sol (`--anoitecer`) faz a única passagem larga de laranja, com as primeiras luzes acesas embaixo. Na página inicial essa passagem separa a cerimônia da recepção. No blog, ela fecha cada artigo, antes da Delliz e do WhatsApp.\n\nO material é luz, sem ruído. O fundo do dia tem um sol baixo dourado no canto superior direito e um reflexo laranja à esquerda (`--textura-dia`). A noite tem um brilho dourado no alto e uma brasa laranja à direita (`--textura-noite`). São halos radiais suaves, posicionados em rem a partir do topo de cada bloco, nunca grão ou textura de papel. A forma recorrente é o arco de igreja. Ele emoldura a Delliz na abertura, todas as capas do blog e as miniaturas de \"Leia também\".\n\nA densidade é de revista: colunas de leitura de 42rem, listas numeradas com fio de 1px e numerais Bodoni dourados, muito espaço entre seções. O tom é de convite, não de vitrine. O sistema recusa a página de banda com foto em tela cheia e lista de serviços, e recusa foto genérica no lugar de material que ainda não chegou: os espaços reservados das amostras são luzes desfocadas sobre a noite.",
+    "keyCharacteristics": [
+      "Dois mundos de fundo, dia e noite, e nenhum terceiro; a passagem entre eles é sempre o `--anoitecer`.",
+      "Verde para agir no dia, dourado para agir na noite; laranja só em pontos de luz.",
+      "Bodoni Moda com tamanho óptico fixo para títulos e numerais; Manrope para todo o resto.",
+      "Textura \"Luz\": halos radiais suaves, sem ruído.",
+      "O arco de igreja como silhueta de toda imagem e capa."
+    ],
+    "rules": [
+      {
+        "name": "A Regra do Dia e da Noite",
+        "body": "Todo bloco pertence ao dia (`--dia` com `--tinta`) ou à noite (`--noite` com `--noite-texto`). Não existe um terceiro fundo, e a passagem do dia para a noite é sempre a faixa `--anoitecer`, nunca um corte seco.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra do Lume em Pontos",
+        "body": "O laranja (`--lume`, `--noite-foco`) aparece em pontos: foco, a luz do sumário, as lâmpadas das capas, o centro dos halos. O único campo largo de laranja é o `--anoitecer`, pedido pelo usuário como a luz do Lumens.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra da Cor que Age",
+        "body": "No dia, quem age é verde; na noite, quem age é dourado (`.botao--luz`). Dourado sobre o dia é brilho (numerais, fios), nunca botão. A barra fixa do celular segue a mesma regra: clara com botão verde sobre o dia, escura com botão dourado sobre a noite.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra do Root Único",
+        "body": "Os tokens de `:root` de `index.html` e de `assets/css/blog.css` são os mesmos; `scripts/checar.mjs` acusa qualquer divergência. Mude um, mude os dois.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra do Tamanho Óptico Fixo",
+        "body": "O Bodoni nunca usa o tamanho óptico automático, que afina o traço demais abaixo de ~60px (\"BH\" vira \"BII\"). Todo título, numeral e marca declara `font-variation-settings: \"opsz\" var(--opsz)`: 48 no h1, 24 por padrão, 18 na marca, 14 em h3 e numerais, 12 nos nomes pequenos.",
+        "section": "typography"
+      },
+      {
+        "name": "A Regra da Fonte Reserva Medida",
+        "body": "Toda fonte da página tem reservas locais com `size-adjust` medido, para que a troca não mova linhas nem o botão principal.",
+        "section": "typography"
+      },
+      {
+        "name": "A Regra dos Numerais Dourados",
+        "body": "Sequência numerada é Bodoni dourado com numerais alinhados, cada item sobre um fio de 1px. É o mesmo desenho no roteiro da página inicial, nos passos e nas listas e prazos do blog.",
+        "section": "typography"
+      },
+      {
+        "name": "A Regra da Luz no Lugar da Sombra",
+        "body": "Caixas, cartões, formulário e campos não têm sombra; separam-se por fio de 1px e por tom (`--dia-2` no dia, `--noite-2` na noite). Só o arco e a barra fixa projetam sombra.",
+        "section": "elevation"
+      },
+      {
+        "name": "A Regra do Halo Sem Ruído",
+        "body": "A textura é feita só de gradientes radiais suaves e transparentes. Nada de grão, ruído ou imagem de papel.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** manter cada bloco no dia ou na noite e passar de um para o outro pela faixa `--anoitecer`.",
+      "**Do** usar `.botao` (verde) sobre o dia e `.botao--luz` (dourado) sobre a noite, com altura mínima de 3rem (2.75rem no compacto).",
+      "**Do** declarar `--opsz` em todo texto em Bodoni: 48 em h1, 14 em h3 e numerais, 12 em nomes pequenos.",
+      "**Do** emoldurar toda foto da Delliz e toda capa no arco de igreja, abrindo para 62% em faixas largas.",
+      "**Do** separar itens de lista e seções com fios de 1px (`--dia-linha` no dia, `--noite-linha` na noite) em vez de cartões com sombra.",
+      "**Do** manter os `:root` de `index.html` e `assets/css/blog.css` iguais, e rodar `scripts/checar.mjs` depois de mudar uma cor.",
+      "**Do** citar a fonte de cada dado numa caixa de destaque, em meta, no fim da caixa.",
+      "**Do** desligar animações e transições com `prefers-reduced-motion: reduce`."
+    ],
+    "donts": [
+      "**Don't** usar laranja em campos largos além do `--anoitecer`; o lume é ponto de luz.",
+      "**Don't** usar dourado como botão sobre o dia nem verde como botão sobre a noite.",
+      "**Don't** pôr grão, ruído ou imagem de papel na textura; a textura \"Luz\" é só halo radial.",
+      "**Don't** pôr foto genérica no lugar de material que ainda não chegou; o espaço reservado é feito de luzes desfocadas sobre `--noite-2`.",
+      "**Don't** dar sombra a caixas, cartões, campos ou formulário; só o arco e a barra fixa projetam sombra.",
+      "**Don't** deixar a textura da noite correr para o rodapé; o rodapé é `--noite` liso.",
+      "**Don't** usar `--ouro-linha` como cor de texto; para texto dourado sobre o dia, use `--ouro`."
+    ]
+  }
+}
