@@ -33,30 +33,30 @@ colors:
   anoitecer-3: "#8A4D24"
 typography:
   display:
-    fontFamily: "Bodoni um, Bodoni um Noto, Bodoni Moda, Bodoni reserva, Bodoni reserva Georgia, Bodoni reserva Times, serif"
+    fontFamily: "Gilda Display, Gilda reserva, Gilda reserva Georgia, Gilda reserva Times, serif"
     fontSize: "clamp(2.75rem, 1.9rem + 3.6vw, 3.25rem)"
-    fontWeight: 500
+    fontWeight: 400
     lineHeight: 1.02
     letterSpacing: "-0.015em"
     fontVariation: "\"opsz\" 48"
   display-largo:
-    fontFamily: "Bodoni um, Bodoni um Noto, Bodoni Moda, Bodoni reserva, Bodoni reserva Georgia, Bodoni reserva Times, serif"
+    fontFamily: "Gilda Display, Gilda reserva, Gilda reserva Georgia, Gilda reserva Times, serif"
     fontSize: "clamp(3.75rem, 1.25rem + 3.8vw, 4.75rem)"
-    fontWeight: 500
+    fontWeight: 400
     lineHeight: 1.02
     letterSpacing: "-0.015em"
     fontVariation: "\"opsz\" 48"
   porta:
-    fontFamily: "Bodoni um, Bodoni um Noto, Bodoni Moda, Bodoni reserva, Bodoni reserva Georgia, Bodoni reserva Times, serif"
+    fontFamily: "Gilda Display, Gilda reserva, Gilda reserva Georgia, Gilda reserva Times, serif"
     fontSize: "clamp(2.125rem, 1.4rem + 3vw, 3.75rem)"
-    fontWeight: 500
+    fontWeight: 400
     lineHeight: 1.04
     letterSpacing: "-0.01em"
     fontVariation: "\"opsz\" 48"
   evento:
-    fontFamily: "Bodoni um, Bodoni um Noto, Bodoni Moda, Bodoni reserva, Bodoni reserva Georgia, Bodoni reserva Times, serif"
+    fontFamily: "Gilda Display, Gilda reserva, Gilda reserva Georgia, Gilda reserva Times, serif"
     fontSize: "clamp(2rem, 1.45rem + 2.4vw, 3.25rem)"
-    fontWeight: 500
+    fontWeight: 400
     lineHeight: 1.04
     letterSpacing: "-0.01em"
     fontVariation: "\"opsz\" 48"
@@ -68,15 +68,15 @@ typography:
     letterSpacing: "-0.01em"
     fontVariation: "\"opsz\" 48"
   headline:
-    fontFamily: "Bodoni um, Bodoni um Noto, Bodoni Moda, Bodoni reserva, Bodoni reserva Georgia, Bodoni reserva Times, serif"
+    fontFamily: "Gilda Display, Gilda reserva, Gilda reserva Georgia, Gilda reserva Times, serif"
     fontSize: "clamp(2rem, 1.5rem + 2.2vw, 3rem)"
-    fontWeight: 500
+    fontWeight: 400
     lineHeight: 1.08
     fontVariation: "\"opsz\" 24"
   citacao-grande:
-    fontFamily: "Bodoni um, Bodoni um Noto, Bodoni Moda, Bodoni reserva, Bodoni reserva Georgia, Bodoni reserva Times, serif"
+    fontFamily: "Gilda Display, Gilda reserva, Gilda reserva Georgia, Gilda reserva Times, serif"
     fontSize: "clamp(1.625rem, 1.2rem + 1.8vw, 2.5rem)"
-    fontWeight: 500
+    fontWeight: 400
     lineHeight: 1.2
     fontVariation: "\"opsz\" 48"
   title:
@@ -86,27 +86,27 @@ typography:
     lineHeight: 1.1
     fontVariation: "\"opsz\" 24"
   lead-voz:
-    fontFamily: "Bodoni um, Bodoni um Noto, Bodoni Moda, Bodoni reserva, Bodoni reserva Georgia, Bodoni reserva Times, serif"
+    fontFamily: "Gilda Display, Gilda reserva, Gilda reserva Georgia, Gilda reserva Times, serif"
     fontSize: "clamp(1.375rem, 1.1rem + 1vw, 1.875rem)"
-    fontWeight: 500
+    fontWeight: 400
     lineHeight: 1.3
     fontVariation: "\"opsz\" 24"
   title-sm:
-    fontFamily: "Bodoni um, Bodoni um Noto, Bodoni Moda, Bodoni reserva, Bodoni reserva Georgia, Bodoni reserva Times, serif"
+    fontFamily: "Gilda Display, Gilda reserva, Gilda reserva Georgia, Gilda reserva Times, serif"
     fontSize: "clamp(1.375rem, 1.2rem + 0.6vw, 1.75rem)"
-    fontWeight: 500
+    fontWeight: 400
     lineHeight: 1.25
     fontVariation: "\"opsz\" 14"
   citacao:
-    fontFamily: "Bodoni um, Bodoni um Noto, Bodoni Moda, Bodoni reserva, Bodoni reserva Georgia, Bodoni reserva Times, serif"
+    fontFamily: "Gilda Display, Gilda reserva, Gilda reserva Georgia, Gilda reserva Times, serif"
     fontSize: "clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem)"
-    fontWeight: 500
+    fontWeight: 400
     lineHeight: 1.3
     fontVariation: "\"opsz\" 14"
   legenda-serif:
-    fontFamily: "Bodoni um, Bodoni um Noto, Bodoni Moda, Bodoni reserva, Bodoni reserva Georgia, Bodoni reserva Times, serif"
+    fontFamily: "Gilda Display, Gilda reserva, Gilda reserva Georgia, Gilda reserva Times, serif"
     fontSize: "1.125rem"
-    fontWeight: 500
+    fontWeight: 400
     lineHeight: 1.35
     fontVariation: "\"opsz\" 14"
   lead:
@@ -243,7 +243,7 @@ O material é luz, sem ruído: halos radiais suaves de pêssego (`--textura-dia`
 - Dois mundos de fundo, dia (pêssego claro) e noite (terracota fechado), mais dois campos chapados da marca: a porta terracota e a porta acesa em pêssego. O pêssego pleno (`--pessego`) também é o fundo da abertura e da primeira dobra.
 - Terracota para agir no dia e sobre o pêssego, pêssego para agir na noite.
 - O terracota da marca (`--terracota-marca`) fica no logo, nos ornamentos e na porta terracota (só com texto grande em branco); texto e botões usam o terracota fechado (`--terracota`).
-- Bodoni Moda com tamanho óptico fixo para títulos e numerais; Manrope para o resto.
+- Gilda Display nos títulos da página inicial, Bodoni Moda (tamanho óptico fixo) no blog; Manrope para o resto.
 - Os dois arcos, a porta e a estrela de quatro pontas como assinatura. Nada de ícone genérico: a estrela da marca marca os eventos, os passos, as assinaturas e os espaços vazios.
 
 ## Colors
@@ -280,7 +280,7 @@ O terracota e o pêssego da identidade, abertos em tons de uso: um pêssego clar
 
 **A Regra da Cor que Age.** No dia e no pêssego, quem age é terracota; na noite, quem age é pêssego (`.botao--luz`). A barra fixa do celular segue a mesma regra.
 
-**A Regra do Root Único.** Os tokens de `:root` de `index.html` e de `assets/css/blog.css` são os mesmos; `scripts/checar.mjs` acusa qualquer divergência. Mude um, mude os dois.
+**A Regra do Root Único.** Os tokens de `:root` de `index.html` e de `assets/css/blog.css` são os mesmos, menos `--serif` (Gilda na página inicial, Bodoni no blog); `scripts/checar.mjs` acusa qualquer outra divergência. Mude um, mude os dois.
 
 **A Regra do Navegador Vestido.** O que o navegador desenha sozinho segue a marca:
 - seleção de texto em pêssego com tinta funda;
@@ -292,10 +292,10 @@ O terracota e o pêssego da identidade, abertos em tons de uso: um pêssego clar
 
 ## Typography
 
-**Display Font:** Bodoni Moda (com o "1" de uma serifa do sistema e as reservas Noto Serif, Georgia ou Times com `size-adjust`)
+**Display Font:** Gilda Display na página inicial (escolha do dono em 04/11/2026, só o peso 400, com as reservas Noto Serif, Georgia ou Times medidas com `size-adjust`); Bodoni Moda no blog e nas capas (com o "1" de uma serifa do sistema)
 **Body Font:** Manrope (com Manrope reserva: Roboto ou Arial com `size-adjust`)
 
-**Character:** O Bodoni de alto contraste conversa com o L da identidade; a Manrope, geométrica e calma, carrega o texto, os botões e os metadados. O LUMES e o EXPERIENCE do logo não são fonte: são vetores traçados da identidade (`scripts/blog/marca.mjs`).
+**Character:** A Gilda Display, didone delicada e de contraste mais calmo, dá aos títulos da página inicial o tom de convite que o dono pediu ("uma fonte mais elegante"); o Bodoni de alto contraste continua no blog e conversa com o L da identidade; a Manrope, geométrica e calma, carrega o texto, os botões e os metadados. O LUMES e o EXPERIENCE do logo não são fonte: são vetores traçados da identidade (`scripts/blog/marca.mjs`).
 
 ### Hierarchy
 - **Display** (opsz 48): só o h1 do topo, com largura máxima de 8,5em; `clamp(2.75rem, 1.9rem + 3.6vw, 3.25rem)` no celular e `clamp(3.75rem, 1.25rem + 3.8vw, 4.75rem)` a partir de 60rem.
@@ -315,9 +315,11 @@ O terracota e o pêssego da identidade, abertos em tons de uso: um pêssego clar
 - **Meta** (0,9375rem), **nota** (0,875rem) e **selo** (600, 0,75rem).
 
 ### Named Rules
-**A Regra do Tamanho Óptico Fixo.** O Bodoni nunca usa o tamanho óptico automático, que afina o traço demais abaixo de ~60px ("BH" vira "BII"). Todo título e numeral declara `font-variation-settings: "opsz" var(--opsz)`: 48 no display, na porta, nos eventos e na citação grande; 24 por padrão; 14 nos títulos pequenos, perguntas e legendas.
+**A Regra da Fonte dos Títulos.** Na página inicial, todo título e texto em serifa usa a Gilda Display, sempre em 400 e com `font-synthesis: none` (sem negrito falso). No blog e nas capas, o Bodoni Moda. O `scripts/checar.mjs` aceita só essa diferença entre os dois `:root` (`--serif`).
 
-**A Regra do Um.** No Bodoni Moda o "1" é idêntico ao "l" ("15 anos" lia "l5 anos") e a fonte não tem alternativa. O `@font-face` "Bodoni um" (Times New Roman, Liberation Serif) e "Bodoni um Noto" (Android) troca só o U+0031, com `unicode-range` e `size-adjust`. Ficam na frente de `--serif`; sem a fonte no aparelho, vale o Bodoni.
+**A Regra do Tamanho Óptico Fixo.** No blog, o Bodoni nunca usa o tamanho óptico automático, que afina o traço demais abaixo de ~60px ("BH" vira "BII"). Todo título e numeral declara `font-variation-settings: "opsz" var(--opsz)`: 48 no display, na porta, nos eventos e na citação grande; 24 por padrão; 14 nos títulos pequenos, perguntas e legendas.
+
+**A Regra do Um.** No Bodoni Moda (blog) o "1" é idêntico ao "l" ("15 anos" lia "l5 anos") e a fonte não tem alternativa. O `@font-face` "Bodoni um" (Times New Roman, Liberation Serif) e "Bodoni um Noto" (Android) troca só o U+0031, com `unicode-range` e `size-adjust`. Ficam na frente de `--serif`; sem a fonte no aparelho, vale o Bodoni.
 
 **A Regra da Fonte Reserva Medida.** Toda fonte tem reservas locais com `size-adjust` medido, para que a troca não mova linhas nem o botão principal.
 

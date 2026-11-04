@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-04T13:15:43.982Z",
+  "generatedAt": "2026-11-04T13:54:43.466Z",
   "title": "Design System: Lumes Experience",
   "extensions": {
     "colorMeta": {
@@ -740,7 +740,7 @@
       "Dois mundos de fundo, dia (pêssego claro) e noite (terracota fechado), mais dois campos chapados da marca: a porta terracota e a porta acesa em pêssego. O pêssego pleno (`--pessego`) também é o fundo da abertura e da primeira dobra.",
       "Terracota para agir no dia e sobre o pêssego, pêssego para agir na noite.",
       "O terracota da marca (`--terracota-marca`) fica no logo, nos ornamentos e na porta terracota (só com texto grande em branco); texto e botões usam o terracota fechado (`--terracota`).",
-      "Bodoni Moda com tamanho óptico fixo para títulos e numerais; Manrope para o resto.",
+      "Gilda Display nos títulos da página inicial, Bodoni Moda (tamanho óptico fixo) no blog; Manrope para o resto.",
       "Os dois arcos, a porta e a estrela de quatro pontas como assinatura. Nada de ícone genérico: a estrela da marca marca os eventos, os passos, as assinaturas e os espaços vazios."
     ],
     "rules": [
@@ -761,7 +761,7 @@
       },
       {
         "name": "A Regra do Root Único",
-        "body": "Os tokens de `:root` de `index.html` e de `assets/css/blog.css` são os mesmos; `scripts/checar.mjs` acusa qualquer divergência. Mude um, mude os dois.",
+        "body": "Os tokens de `:root` de `index.html` e de `assets/css/blog.css` são os mesmos, menos `--serif` (Gilda na página inicial, Bodoni no blog); `scripts/checar.mjs` acusa qualquer outra divergência. Mude um, mude os dois.",
         "section": "colors"
       },
       {
@@ -770,13 +770,18 @@
         "section": "colors"
       },
       {
+        "name": "A Regra da Fonte dos Títulos",
+        "body": "Na página inicial, todo título e texto em serifa usa a Gilda Display, sempre em 400 e com `font-synthesis: none` (sem negrito falso). No blog e nas capas, o Bodoni Moda. O `scripts/checar.mjs` aceita só essa diferença entre os dois `:root` (`--serif`).",
+        "section": "typography"
+      },
+      {
         "name": "A Regra do Tamanho Óptico Fixo",
-        "body": "O Bodoni nunca usa o tamanho óptico automático, que afina o traço demais abaixo de ~60px (\"BH\" vira \"BII\"). Todo título e numeral declara `font-variation-settings: \"opsz\" var(--opsz)`: 48 no display, na porta, nos eventos e na citação grande; 24 por padrão; 14 nos títulos pequenos, perguntas e legendas.",
+        "body": "No blog, o Bodoni nunca usa o tamanho óptico automático, que afina o traço demais abaixo de ~60px (\"BH\" vira \"BII\"). Todo título e numeral declara `font-variation-settings: \"opsz\" var(--opsz)`: 48 no display, na porta, nos eventos e na citação grande; 24 por padrão; 14 nos títulos pequenos, perguntas e legendas.",
         "section": "typography"
       },
       {
         "name": "A Regra do Um",
-        "body": "No Bodoni Moda o \"1\" é idêntico ao \"l\" (\"15 anos\" lia \"l5 anos\") e a fonte não tem alternativa. O `@font-face` \"Bodoni um\" (Times New Roman, Liberation Serif) e \"Bodoni um Noto\" (Android) troca só o U+0031, com `unicode-range` e `size-adjust`. Ficam na frente de `--serif`; sem a fonte no aparelho, vale o Bodoni.",
+        "body": "No Bodoni Moda (blog) o \"1\" é idêntico ao \"l\" (\"15 anos\" lia \"l5 anos\") e a fonte não tem alternativa. O `@font-face` \"Bodoni um\" (Times New Roman, Liberation Serif) e \"Bodoni um Noto\" (Android) troca só o U+0031, com `unicode-range` e `size-adjust`. Ficam na frente de `--serif`; sem a fonte no aparelho, vale o Bodoni.",
         "section": "typography"
       },
       {

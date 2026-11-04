@@ -123,8 +123,10 @@ for (const slug of artigosDoBlog) {
 const tokens = (css) => Object.fromEntries([...css.matchAll(/^\s*(--[\w-]+):\s*([^;]+);/gm)].map(([, nome, valor]) => [nome, valor.replace(/\s+/g, ' ').trim()]));
 const tokensDaPagina = tokens(html.match(/:root\s*{([\s\S]*?)}/)[1]);
 const tokensDoBlog = tokens(ler('assets/css/blog.css').match(/:root\s*{([\s\S]*?)}/)[1]);
+// Exceção decidida pelo dono em 04/11/2026: os títulos da página inicial são em Gilda Display; o blog segue em Bodoni.
+const PODEM_DIFERIR = new Set(['--serif']);
 for (const [nome, valor] of Object.entries(tokensDoBlog)) {
-  if (nome in tokensDaPagina && tokensDaPagina[nome] !== valor) {
+  if (nome in tokensDaPagina && tokensDaPagina[nome] !== valor && !PODEM_DIFERIR.has(nome)) {
     erros.push(`assets/css/blog.css: ${nome} está diferente de index.html (${valor} × ${tokensDaPagina[nome]})`);
   }
 }

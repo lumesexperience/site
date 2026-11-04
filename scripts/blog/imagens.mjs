@@ -42,7 +42,9 @@ ${ESTILO_BASE}
 .marca{width:300px}
 .arcos{position:absolute;z-index:-1;left:-12%;top:-17.6%;width:124%;height:122.4%;overflow:visible}
 .arcos path{fill:none;stroke:var(--terracota-marca);stroke-width:.45}
-h1{font-size:68px;line-height:1.04;letter-spacing:-.015em;text-wrap:nowrap;font-variation-settings:"opsz" 48}
+@font-face{font-family:"Gilda Display";src:url("/assets/fonts/gilda-display.woff2")}
+/* O mote na fonte dos títulos da página inicial (Gilda Display). */
+h1{font-family:"Gilda Display",Georgia,serif;font-weight:400;font-size:72px;line-height:1.04;letter-spacing:-.01em;text-wrap:nowrap}
 .voz{position:absolute;right:130px;top:92px;width:352px;aspect-ratio:4/5}
 .voz::before{content:"";position:absolute;z-index:-1;left:50%;top:40%;width:190%;aspect-ratio:1;border-radius:50%;translate:-50% -50%;
   background:radial-gradient(circle,color-mix(in srgb,var(--luz-clara) 70%,transparent) 0%,color-mix(in srgb,var(--luz) 42%,transparent) 26%,color-mix(in srgb,var(--luz) 14%,transparent) 46%,transparent 68%)}

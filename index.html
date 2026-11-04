@@ -37,8 +37,6 @@
     try {
       const busca = new URLSearchParams(location.search);
       if (busca.has('previa')) document.documentElement.classList.add('previa');
-      // Prévia de fontes para o dono escolher (04/11/2026): ?fonte=bodoni-leve|cormorant|gilda|marcellus.
-      if (/^(atual|bodoni-leve|cormorant|gilda|marcellus)$/.test(busca.get('fonte') || '')) document.documentElement.dataset.fonte = busca.get('fonte');
       const forcar = busca.has('abertura');
       let vista = 0;
       try { vista = Number(localStorage.getItem('abertura-vista')) || 0; } catch (e) {}
@@ -49,7 +47,7 @@
     } catch (e) {}
   </script>
 
-  <link rel="preload" href="assets/fonts/bodoni-moda.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/gilda-display.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- Todo fato aqui precisa estar escrito, igual, no texto visível da página (regra do Google). -->
@@ -364,10 +362,12 @@
   </script>
 
   <style>
+    /* Títulos em Gilda Display (escolha do dono, 04/11/2026, entre Bodoni leve, Cormorant, Gilda e Marcellus).
+       Ela só tem o peso 400 e o "1" com bandeira; o blog continua em Bodoni Moda. */
     @font-face {
-      font-family: "Bodoni Moda";
-      src: url("assets/fonts/bodoni-moda.woff2") format("woff2");
-      font-weight: 400 700;
+      font-family: "Gilda Display";
+      src: url("assets/fonts/gilda-display.woff2") format("woff2");
+      font-weight: 400;
       font-style: normal;
       font-display: swap;
     }
@@ -379,21 +379,11 @@
       font-display: swap;
     }
 
-    /* Prévia de fontes dos títulos (?fonte=...). Sem o parâmetro, nenhuma destas é baixada. */
-    @font-face { font-family: "Cormorant Garamond"; src: url("assets/fonts/cormorant-garamond.woff2") format("woff2"); font-weight: 300 700; font-display: swap; }
-    @font-face { font-family: "Gilda Display"; src: url("assets/fonts/gilda-display.woff2") format("woff2"); font-weight: 400; font-display: swap; }
-    @font-face { font-family: "Marcellus"; src: url("assets/fonts/marcellus.woff2") format("woff2"); font-weight: 400; font-display: swap; }
-
-    /* O "1" do Bodoni Moda é idêntico ao "l" ("15 anos" lia "l5 anos"), e a fonte não tem alternativa.
-       Só esse algarismo vem de uma serifa do sistema, que tem a bandeira no alto; o resto continua Bodoni. */
-    @font-face { font-family: "Bodoni um"; src: local("Times New Roman"), local("TimesNewRomanPSMT"), local("Liberation Serif"); unicode-range: U+0031; size-adjust: 112%; }
-    @font-face { font-family: "Bodoni um Noto"; src: local("Noto Serif"), local("NotoSerif-Regular"); unicode-range: U+0031; size-adjust: 100%; }
-
-    /* Fontes do sistema com a largura ajustada à fonte da página: se ela chegar tarde,
-       as linhas quebram no mesmo lugar e o botão principal não pula (medido: 46 px sem isso). */
-    @font-face { font-family: "Bodoni reserva"; src: local("Noto Serif"), local("NotoSerif-Regular"); size-adjust: 96.5%; }
-    @font-face { font-family: "Bodoni reserva Georgia"; src: local("Georgia"); size-adjust: 103%; }
-    @font-face { font-family: "Bodoni reserva Times"; src: local("Times New Roman"), local("TimesNewRomanPSMT"), local("Liberation Serif"); size-adjust: 114.7%; }
+    /* Fontes do sistema com a largura ajustada à fonte da página: se ela chegar tarde, as linhas quebram no mesmo
+       lugar e nada pula (medido em 04/11/2026: a Gilda tem 100,9% da Georgia e 110,5% da Times). */
+    @font-face { font-family: "Gilda reserva"; src: local("Noto Serif"), local("NotoSerif-Regular"); size-adjust: 92.9%; }
+    @font-face { font-family: "Gilda reserva Georgia"; src: local("Georgia"); size-adjust: 100.9%; }
+    @font-face { font-family: "Gilda reserva Times"; src: local("Times New Roman"), local("TimesNewRomanPSMT"), local("Liberation Serif"); size-adjust: 110.5%; }
     @font-face { font-family: "Manrope reserva"; src: local("Roboto"), local("Roboto-Regular"); size-adjust: 102.5%; }
     @font-face { font-family: "Manrope reserva Arial"; src: local("Arial"), local("ArialMT"), local("Helvetica"), local("Liberation Sans"); size-adjust: 103.3%; }
 
@@ -449,7 +439,8 @@
         radial-gradient(circle at 86% 60%, color-mix(in srgb, var(--luz-clara) 70%, transparent) 0 1.5px, transparent 2.5px),
         radial-gradient(ellipse at 50% 100%, color-mix(in srgb, var(--luz) 18%, transparent), transparent 70%);
 
-      --serif: "Bodoni um", "Bodoni um Noto", "Bodoni Moda", "Bodoni reserva", "Bodoni reserva Georgia", "Bodoni reserva Times", serif;
+      --serif: "Gilda Display", "Gilda reserva", "Gilda reserva Georgia", "Gilda reserva Times", serif;
+      --peso-titulo: 400;
       --sans: "Manrope", "Manrope reserva", "Manrope reserva Arial", sans-serif;
 
       --largura: 72rem;
@@ -460,33 +451,6 @@
 
     *, *::before, *::after { box-sizing: border-box; }
 
-    /* ---------- Prévia de fontes (?fonte=...) ---------- */
-    [data-fonte="bodoni-leve"] { --peso-titulo: 400; }
-    [data-fonte="cormorant"] { --serif: "Cormorant Garamond", "Bodoni reserva Georgia", serif; --peso-titulo: 600; }
-    [data-fonte="gilda"] { --serif: "Gilda Display", "Bodoni reserva Georgia", serif; --peso-titulo: 400; }
-    [data-fonte="marcellus"] { --serif: "Marcellus", "Bodoni reserva Georgia", serif; --peso-titulo: 400; }
-    [data-fonte] :is(h1, h2, h3, .compromisso__nome, .depoimento blockquote, .pergunta summary, .amostra figcaption, .assinatura-voz, .delliz__texto p:first-child, .historia__fecho) { font-synthesis: none; }
-    /* A Cormorant desenha pequeno: sobe um pouco para ficar do mesmo tamanho visual. */
-    [data-fonte="cormorant"] :is(h1, h2, h3) { font-size-adjust: 0.5; }
-    .escolha-fonte { display: none; }
-    [data-fonte] .escolha-fonte {
-      position: fixed;
-      z-index: 40;
-      top: 0.5rem;
-      left: 50%;
-      translate: -50% 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.25rem;
-      max-width: calc(100vw - 1rem);
-      padding: 0.35rem;
-      border-radius: 1.25rem;
-      background: var(--tinta-funda);
-      font: 600 0.8125rem/1 var(--sans);
-    }
-    .escolha-fonte a { display: inline-flex; align-items: center; min-height: 2.25rem; padding: 0 0.75rem; border-radius: 999px; color: var(--noite-texto); text-decoration: none; }
-    .escolha-fonte a[aria-current] { background: var(--luz); color: var(--tinta-funda); }
 
     /* O que o navegador desenha sozinho também segue a marca: barra de rolagem, toque, seleção, cursor. */
     html {
@@ -539,9 +503,10 @@
       text-wrap: balance;
       overflow-wrap: break-word;
       font-variant-numeric: lining-nums;
+      font-synthesis: none;
     }
 
-    /* O tamanho óptico automático do Bodoni deixa o fio fino demais abaixo de ~60px ("BH" vira "BII"). */
+    /* O tamanho óptico (opsz) só vale para fontes variáveis; a Gilda o ignora, e a regra fica para o caso de voltar ao Bodoni. */
     h1, h2, h3, .marca, .compromisso__nome, .depoimento blockquote, .pergunta summary, .amostra figcaption, .assinatura-voz {
       font-variation-settings: "opsz" var(--opsz, 24);
     }
@@ -1499,10 +1464,6 @@
 </head>
 <body>
   <a class="pular" href="#principal">Pular para o conteúdo</a>
-  <!-- Prévia de fontes para o dono (só aparece com ?fonte=...). Sai depois da escolha. -->
-  <nav class="escolha-fonte" aria-label="Prévia de fontes">
-    <a href="?fonte=atual#principal">Atual</a><a href="?fonte=bodoni-leve#principal">Bodoni leve</a><a href="?fonte=cormorant#principal">Cormorant</a><a href="?fonte=gilda#principal">Gilda</a><a href="?fonte=marcellus#principal">Marcellus</a>
-  </nav>
 
   <svg class="icones" width="0" height="0" aria-hidden="true">
     <symbol id="icone-whatsapp" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
@@ -1864,9 +1825,6 @@ Momentos com música:</p>
 
       const reduzirMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-      // Prévia de fontes: marca a opção atual na barrinha.
-      const fonte = document.documentElement.dataset.fonte;
-      if (fonte) document.querySelectorAll('.escolha-fonte a').forEach((a) => { if (a.href.includes(`fonte=${fonte}#`)) a.setAttribute('aria-current', 'true'); });
 
       // Barra fixa no celular: aparece sempre que nenhum outro botão do WhatsApp está inteiro na tela, inclusive
       // na primeira dobra de um celular baixo (no Safari com as barras à mostra, o botão do topo pode ficar abaixo
