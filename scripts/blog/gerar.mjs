@@ -9,7 +9,7 @@ const RAIZ = new URL('../../', import.meta.url).pathname.replace(/\/$/, '');
 const SITE = 'https://lumesexperience.com.br';
 const WA = 'https://wa.me/5531996154698?text=Ol%C3%A1%2C%20Lumes%20Experience!%20Vi%20o%20site%20e%20quero%20consultar%20uma%20data.%0AEvento%3A%20%0AData%3A%20%0ACidade%20e%20local%3A%20%0ACerim%C3%B4nia%3A%20%0AMomentos%20com%20m%C3%BAsica%3A%20';
 // O mesmo ID da medição do index.html (GA4_ID). Vazio = nenhum script de terceiros.
-const GA4_ID = '';
+const GA4_ID = 'G-NVSQXPS0KX';
 const MESES = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
 
 const dataPorExtenso = (iso) => { const [a, m, d] = iso.split('-').map(Number); return `${d} de ${MESES[m - 1]} de ${a}`; };
@@ -138,6 +138,7 @@ ${capa(a, 'capa--mini').replace(/^/gm, '            ')}
         <li><a href="https://jeitoagape.com.br/" target="_blank" rel="noopener">Jeito Ágape</a></li>
       </ul>
       <p>Delliz Christine é integrante do Jeito Ágape, ministério de música católica.</p>
+      <p>Este site usa o Google Analytics para contar visitas e cliques, sem identificar quem visita.</p>
       <p>© 2026 Lumes Experience. Atualizado em <time datetime="${dataModificada}">${dataModificada.split('-').reverse().join('/')}</time>.</p>
     </div>
   </footer>${script}${GA4_ID ? MEDICAO : ''}
@@ -206,15 +207,15 @@ const MARCAR_SECAO = `
 // Medição opcional, igual à da página inicial: o clique em qualquer [data-cta] vira whatsapp_click com cta_location.
 const MEDICAO = `
   <script>
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function gtag() { dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', '${GA4_ID}', { allow_google_signals: false, allow_ad_personalization_signals: false });
     addEventListener('load', () => {
       const s = document.createElement('script');
       s.async = true;
       s.src = 'https://www.googletagmanager.com/gtag/js?id=${GA4_ID}';
       document.head.append(s);
-      window.dataLayer = window.dataLayer || [];
-      window.gtag = function gtag() { dataLayer.push(arguments); };
-      gtag('js', new Date());
-      gtag('config', '${GA4_ID}');
     });
     document.addEventListener('click', (e) => {
       const c = e.target.closest('[data-cta]');

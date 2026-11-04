@@ -75,7 +75,14 @@ Ele falha se sobrar algum marcador, se um arquivo citado em `assets/` não exist
 
 ### Opcional
 
-- **Medição (GA4)**: preencha o mesmo ID em dois lugares, `const GA4_ID = 'G-...'` no fim do `index.html` e em `scripts/blog/gerar.mjs` (depois, gere o blog de novo). Cada clique no WhatsApp vira o evento `whatsapp_click` com `cta_location`: `topo`, `abertura`, `passos`, `perguntas`, `contato`, `contato-numero`, `barra-celular` e `rodape` na página inicial, e `topo`, `blog` e `rodape` no blog. Marque `whatsapp_click` como evento principal (conversão) no GA4. Vazio, nenhum script de terceiros é carregado.
+- **Medição (GA4)**: ligada desde 04/11/2026, com o ID `G-NVSQXPS0KX` (conta "Lumes Experience" no Google Analytics da agência, agenciamarketingfigueroa@gmail.com; propriedade "Lumes Experience (site)", fuso de São Paulo, real, retenção de 14 meses, sem Google Signals). O mesmo ID está no fim do `index.html` e em `scripts/blog/gerar.mjs`. Eventos:
+  - `whatsapp_click`, com `cta_location`: `topo`, `abertura`, `passos`, `perguntas`, `contato`, `contato-numero`, `barra-celular` e `rodape` na página inicial; `topo`, `blog` e `rodape` no blog;
+  - `ouvir_delliz` (com `local`), `abrir_pergunta` (com `pergunta`) e `rever_abertura`;
+  - a medição otimizada do Google (rolagem, cliques de saída).
+
+  As dimensões personalizadas "Local do botão" (`cta_location`) e "Pergunta do FAQ" (`pergunta`) já estão criadas. Em `localhost` a medição fica desligada.
+- **Search Console**: propriedade `https://lumesexperience.com.br/` na conta da agência, verificada pela tag meta `google-site-verification` no `<head>` do `index.html`. Não tire essa tag. A propriedade de domínio (que cobre o `www`) pede um registro TXT na Cloudflare com o mesmo código; esse passo fica com a agência.
+- **IndexNow**: a cada publicação, o workflow avisa os buscadores do protocolo (Bing, que alimenta o ChatGPT e o Copilot, Yandex e outros) com as URLs do sitemap. A chave é o arquivo `44471026c34d670e45776ad54e93c283.txt` na raiz; não o apague.
 - **Preço "a partir de"**: a pesquisa mostra que preço visível aumenta contatos (detalhes em `docs/PESQUISA.md`). Quando houver um valor real, atualize o fato "Valor", a primeira pergunta do FAQ, o JSON-LD (`priceRange` no nó `#lumes`) e o `llms.txt`.
 
 ## Publicar

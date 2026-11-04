@@ -36,7 +36,7 @@ jobs:
       - name: Separar só as páginas do site
         run: |
           mkdir _site
-          cp -R index.html blog assets robots.txt sitemap.xml llms.txt _site/
+          cp -R index.html blog assets robots.txt sitemap.xml llms.txt 44471026c34d670e45776ad54e93c283.txt _site/
           find _site \( -name '*.webp.json' -o -name '.gitkeep' \) -delete
 
       - uses: actions/configure-pages@v5
@@ -48,3 +48,15 @@ jobs:
       - name: Publicar
         id: deploy
         uses: actions/deploy-pages@v4
+
+      # IndexNow: avisa o Bing (que alimenta o ChatGPT e o Copilot) e os outros buscadores do protocolo de que as
+      # páginas do sitemap mudaram. Sem conta: a chave é o arquivo 44471026c34d670e45776ad54e93c283.txt na raiz do site.
+      - name: Avisar os buscadores (IndexNow)
+        continue-on-error: true
+        env:
+          CHAVE: 44471026c34d670e45776ad54e93c283
+        run: |
+          URLS=$(grep -o '<loc>[^<]*' sitemap.xml | sed 's/<loc>//' | jq -R . | jq -sc .)
+          curl -s -o /dev/null -w "IndexNow: HTTP %{http_code}\n" -X POST https://api.indexnow.org/indexnow \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            -d "{\"host\":\"lumesexperience.com.br\",\"key\":\"$CHAVE\",\"keyLocation\":\"https://lumesexperience.com.br/$CHAVE.txt\",\"urlList\":$URLS}"

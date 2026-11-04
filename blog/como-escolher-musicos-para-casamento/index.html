@@ -386,6 +386,7 @@
         <li><a href="https://jeitoagape.com.br/" target="_blank" rel="noopener">Jeito Ágape</a></li>
       </ul>
       <p>Delliz Christine é integrante do Jeito Ágape, ministério de música católica.</p>
+      <p>Este site usa o Google Analytics para contar visitas e cliques, sem identificar quem visita.</p>
       <p>© 2026 Lumes Experience. Atualizado em <time datetime="2026-11-04">04/11/2026</time>.</p>
     </div>
   </footer>
@@ -400,6 +401,22 @@
     }
     addEventListener('scroll', () => requestAnimationFrame(marcarSecao), { passive: true });
     marcarSecao();
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function gtag() { dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', 'G-NVSQXPS0KX', { allow_google_signals: false, allow_ad_personalization_signals: false });
+    addEventListener('load', () => {
+      const s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NVSQXPS0KX';
+      document.head.append(s);
+    });
+    document.addEventListener('click', (e) => {
+      const c = e.target.closest('[data-cta]');
+      if (c && window.gtag) gtag('event', 'whatsapp_click', { cta_location: c.dataset.cta });
+    });
   </script>
 </body>
 </html>

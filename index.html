@@ -7,6 +7,8 @@
   <meta name="description" content="Música ao vivo para casamentos, bodas e festas de 15 anos em BH e região, com a voz de Delliz Christine. Consultem a data pelo WhatsApp.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://lumesexperience.com.br/">
+  <!-- Search Console (conta da agência, propriedade https://lumesexperience.com.br/) -->
+  <meta name="google-site-verification" content="xeOI9ge5e6MwnwOMTQsAS7XQJj7SrNMpv2Z-0E_hVLI">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
@@ -1583,7 +1585,7 @@
             <path class="brilho" d="M100 4q1.6 7.4 9 9q-7.4 1.6-9 9q-1.6-7.4-9-9q7.4-1.6 9-9Z"/>
           </svg>
           <!-- A porta da abertura pousa neste arco (id usado pelo script). -->
-          <a class="voz__capa" id="voz-capa" href="https://www.youtube.com/shorts/NBmB7i5MffI" target="_blank" rel="noopener"
+          <a class="voz__capa" id="voz-capa" data-evento="ouvir_delliz" data-local="topo" href="https://www.youtube.com/shorts/NBmB7i5MffI" target="_blank" rel="noopener"
              aria-label="Ouvir a Delliz: Delliz Christine canta “Espírito Poderoso”, no YouTube">
             <picture>
               <source type="image/webp" sizes="(min-width: 60rem) min(30rem, 36vw), min(15rem, 58vw)"
@@ -1708,7 +1710,7 @@
         <div class="amostras">
         <div>
         <h2 id="titulo-amostras">Fotos e vídeos dos casamentos</h2>
-        <p class="introducao">Os primeiros registros de casamentos com o Lumes Experience entram aqui em breve. Enquanto isso, <a href="https://www.youtube.com/shorts/NBmB7i5MffI" target="_blank" rel="noopener">ouçam a Delliz em “Espírito Poderoso”, no YouTube</a>.</p>
+        <p class="introducao">Os primeiros registros de casamentos com o Lumes Experience entram aqui em breve. Enquanto isso, <a data-evento="ouvir_delliz" data-local="amostras" href="https://www.youtube.com/shorts/NBmB7i5MffI" target="_blank" rel="noopener">ouçam a Delliz em “Espírito Poderoso”, no YouTube</a>.</p>
         </div>
 
         <!--
@@ -1836,9 +1838,10 @@ Momentos com música:</p>
         <li><a href="blog/">Blog</a></li>
         <li><a href="https://www.instagram.com/dellizchristine/" target="_blank" rel="noopener">Instagram da Delliz</a></li>
         <li><a href="https://jeitoagape.com.br/" target="_blank" rel="noopener">Jeito Ágape</a></li>
-        <li><button class="rodape__rever" type="button" data-abertura-musica><svg aria-hidden="true"><use href="#icone-nota"/></svg><span data-rotulo-abertura>Rever a abertura, com som</span></button></li>
+        <li><button class="rodape__rever" type="button" data-abertura-musica data-evento="rever_abertura" data-local="rodape"><svg aria-hidden="true"><use href="#icone-nota"/></svg><span data-rotulo-abertura>Rever a abertura, com som</span></button></li>
       </ul>
       <p>Delliz Christine é integrante do Jeito Ágape, ministério de música católica.</p>
+      <p>Este site usa o Google Analytics para contar visitas e cliques, sem identificar quem visita.</p>
       <p>© 2026 Lumes Experience. Atualizado em <time datetime="2026-11-04">04/11/2026</time>.</p>
     </div>
   </footer>
@@ -1855,9 +1858,9 @@ Momentos com música:</p>
 
   <script>
     (() => {
-      // Vazio = sem medição. Com um ID (ex.: 'G-XXXXXXXXXX'), registra o evento whatsapp_click por seção.
-      // O mesmo ID vai em scripts/blog/gerar.mjs (GA4_ID), para medir também o blog.
-      const GA4_ID = '';
+      // Google Analytics 4 (propriedade "Lumes Experience (site)", conta da agência). O mesmo ID vai em
+      // scripts/blog/gerar.mjs (GA4_ID), para medir também o blog. Vazio = sem medição.
+      const GA4_ID = 'G-NVSQXPS0KX';
 
       const reduzirMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -1954,20 +1957,31 @@ Momentos com música:</p>
         if (evento.target === ampliada) ampliada.close();
       });
 
-      if (GA4_ID) {
+      // Medição: o gtag já fica pronto (os cliques antes do carregamento entram na fila) e o script do Google só
+      // baixa depois da página, para não pesar na primeira dobra. Sem Google Signals e sem personalização de anúncios.
+      // Eventos: whatsapp_click (com cta_location, o botão de onde veio), ouvir_delliz, abrir_pergunta (com a
+      // pergunta) e rever_abertura. Os do Google (rolagem, cliques de saída) vêm da medição otimizada.
+      if (GA4_ID && !/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) {
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function gtag() { window.dataLayer.push(arguments); };
+        window.gtag('js', new Date());
+        window.gtag('config', GA4_ID, { allow_google_signals: false, allow_ad_personalization_signals: false });
         window.addEventListener('load', () => {
           const script = document.createElement('script');
           script.async = true;
           script.src = `https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`;
           document.head.append(script);
-          window.dataLayer = window.dataLayer || [];
-          window.gtag = function gtag() { window.dataLayer.push(arguments); };
-          window.gtag('js', new Date());
-          window.gtag('config', GA4_ID);
         });
         document.addEventListener('click', (evento) => {
           const chamada = evento.target.closest('[data-cta]');
           if (chamada) window.gtag('event', 'whatsapp_click', { cta_location: chamada.dataset.cta });
+          const evento2 = evento.target.closest('[data-evento]');
+          if (evento2) window.gtag('event', evento2.dataset.evento, { local: evento2.dataset.local || '' });
+        });
+        document.querySelectorAll('.pergunta').forEach((pergunta) => {
+          pergunta.addEventListener('toggle', () => {
+            if (pergunta.open) window.gtag('event', 'abrir_pergunta', { pergunta: pergunta.querySelector('summary').textContent.trim() });
+          });
         });
       }
     })();
