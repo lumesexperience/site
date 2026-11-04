@@ -192,9 +192,9 @@ O [impeccable](https://impeccable.style/) está instalado em `.claude/skills/imp
 
 O que mais pesa para ser encontrado e citado vem de fora da página:
 
-- [ ] **Google Search Console**: verifique o domínio, envie o `sitemap.xml` e peça a indexação da URL.
-- [ ] **Bing Webmaster Tools**: mesmo processo. O ChatGPT e o Copilot buscam no índice do Bing. Ative o IndexNow.
-- [ ] **Perfil da Empresa no Google**, como *empresa de área de atendimento*: endereço oculto, até 20 cidades da região metropolitana, nome exatamente "Lumes Experience" (acrescentar "Música para Casamento BH" ao nome dá suspensão), fotos, vídeos, link do site e WhatsApp. Num estudo de 2026, o Perfil respondia por 28,6% das citações de IA em buscas locais.
+- [x] **Google Search Console** (04/11/2026, conta da agência): propriedade `https://lumesexperience.com.br/` verificada pela tag meta, sitemap enviado, indexação pedida para a página inicial, o blog e o artigo de músicos, vínculo com o GA4. Falta a propriedade de domínio (TXT na Cloudflare).
+- [ ] **Bing Webmaster Tools**: importar do Search Console (entrar com a conta da agência). O IndexNow já está ativo no deploy, e o ChatGPT e o Copilot buscam no índice do Bing.
+- [ ] **Perfil da Empresa no Google**: criado em 04/11/2026 na conta da agência ("Lumes Experience", categoria Band, 8 cidades, telefone, site, descrição), **ainda não visível**. Falta a verificação (o Google pede endereço de correspondência, que não aparece no perfil, ou vídeo), as categorias extras "Serviços para casamento" e "Músico", e as fotos. Regras: endereço oculto, até 20 cidades da região metropolitana, nome exatamente "Lumes Experience" (acrescentar "Música para Casamento BH" ao nome dá suspensão), fotos, vídeos, link do site e WhatsApp. Num estudo de 2026, o Perfil respondia por 28,6% das citações de IA em buscas locais.
 - [ ] **Portais de casamento**: perfis no Casamentos.com.br e no Lápis de Noiva com o mesmo nome, WhatsApp e site. Depois, coloque esses perfis no `sameAs` do JSON-LD.
 - [ ] **Avaliações reais**: peça a **todos** os casais, sem desconto nem brinde em troca (é proibido), no Google e no Casamentos.com.br. Quando houver depoimentos reais e autorizados, crie uma seção na página. Nunca marque `Review` ou `AggregateRating` no JSON-LD com depoimentos próprios.
 - [ ] **Responder rápido**: quem responde o contato em até 1 hora tem cerca de 7 vezes mais chance de fechar.
