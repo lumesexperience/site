@@ -26,7 +26,7 @@ const ABERTURA = `<div class="intro" id="intro">
         <path class="intro__linha intro__linha--2" d="${LINHA_2}"/>
         <g transform="translate(761.5 2080) scale(.5175) translate(-720 -1273)"><path class="intro__experience" d="${EXPERIENCE.join('')}"/></g>
       </svg>
-      <p class="intro__frase">Música ao vivo para casamentos em BH</p>
+      <p class="intro__frase">Casamentos, bodas e 15 anos em BH</p>
     </div>
     <button class="intro__pular" type="button">Pular abertura</button>
   </div>`;

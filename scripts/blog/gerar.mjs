@@ -75,7 +75,7 @@ function topo(raiz) {
     <a class="marca" href="${raiz}" aria-label="Lumes Experience, página inicial"><svg viewBox="0 0 1745 594" aria-hidden="true"><use href="#marca-logo"/></svg></a>
     <nav class="topo__nav" aria-label="Seções">
       <a href="${raiz}#delliz">Delliz</a>
-      <a href="${raiz}#momentos">Momentos</a>
+      <a href="${raiz}#eventos">Eventos</a>
       <a href="${raiz}blog/" aria-current="page">Blog</a>
     </nav>
     <a class="botao botao--compacto" data-cta="topo" target="_blank" rel="noopener"

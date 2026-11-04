@@ -40,14 +40,14 @@ ${ESTILO_BASE}
 .marca{width:520px}
 .arcos{position:absolute;z-index:-1;left:-12%;top:-17.6%;width:124%;height:122.4%;overflow:visible}
 .arcos path{fill:none;stroke:var(--terracota-marca);stroke-width:.45}
-h1{font-size:36px;line-height:1.25;text-wrap:nowrap}
+h1{font-size:54px;line-height:1.08;text-wrap:nowrap;font-variation-settings:"opsz" 48}
 .voz{position:absolute;right:130px;top:92px;width:352px;aspect-ratio:4/5}
 .voz::before{content:"";position:absolute;z-index:-1;left:50%;top:40%;width:190%;aspect-ratio:1;border-radius:50%;translate:-50% -50%;
   background:radial-gradient(circle,color-mix(in srgb,var(--luz-clara) 70%,transparent) 0%,color-mix(in srgb,var(--luz) 42%,transparent) 26%,color-mix(in srgb,var(--luz) 14%,transparent) 46%,transparent 68%)}
 .voz img{width:100%;height:100%;object-fit:cover;border-radius:50% 50% 6px 6px/40% 40% 6px 6px;box-shadow:0 28px 48px -24px rgb(51 32 15/.45)}
 </style></head><body>
 <div class="voz"><svg class="arcos" viewBox="-12 -22 124 153"><path d="M-10 129V40A60 60 0 0 1 110 40V129"/><path d="M-10 129V69.4A60 60 0 0 1 110 69.4V129"/></svg><img src="/assets/img/delliz-christine-cantando-880.jpg" alt=""></div>
-<div class="texto">${SUBMARCA('#BB7944', 'marca')}<h1>Música ao vivo para casamentos<br>em BH, do sim à pista.</h1>${quem('Cantora à frente do Lumes Experience')}</div>
+<div class="texto">${SUBMARCA('#BB7944', 'marca')}<h1>Só resta a mim<br>cantar o amor.</h1>${quem('Cantora à frente do Lumes Experience')}</div>
 </body></html>`;
 
 // O ícone da tela inicial do celular precisa ocupar o quadrado inteiro; o favicon mantém o canto arredondado.

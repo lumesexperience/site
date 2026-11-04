@@ -32,6 +32,10 @@ python3 -m http.server 4321    # depois abra http://localhost:4321
 
 A abertura animada só roda sozinha na primeira visita de cada aba. Para revê-la, abra `http://localhost:4321/?abertura` ou use o botão "Ver a abertura com música", embaixo da foto da Delliz.
 
+## Depoimentos (prévia)
+
+A seção de depoimentos ("Quem já viveu") tem **exemplos para aprovar o layout**, visíveis só em `https://lumesexperience.com.br/?previa`, cada um com o selo "Exemplo". No site normal ela fica escondida e nunca entra no JSON-LD. Não publique depoimento inventado: é propaganda enganosa (CDC, art. 37). Para colher os reais, depois de cada evento mande ao casal algo como: *"Oi, [nomes]! Foi uma alegria cantar no casamento de vocês. Se puderem, escrevam em duas ou três frases como foi a música no dia, e nos digam se podemos publicar no nosso site com o primeiro nome de vocês e o mês do casamento."* Com a resposta e a autorização, troque os textos no `index.html`, tire os selos e o atributo `data-previa` da seção.
+
 ## Identidade visual e abertura
 
 A identidade **Lumes Experience** chegou do dono em 03/11/2026 (pasta "Lumes - Identidade Visual", só em JPG): terracota `#bb7944`, pêssego `#edc79b`, os dois arcos, o L, a estrela e o nome em caixa alta. O site inteiro segue essa identidade; as regras estão no `DESIGN.md`.

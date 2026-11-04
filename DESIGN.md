@@ -311,6 +311,15 @@ O logo principal se desenha no pêssego pleno, a 100 bpm (um tempo = 0,6 s). Pri
 - **Sumário do artigo:** trilho de 1px `--dia-linha`; a seção lida fica `--terracota` em 600 com um ponto `--lume`.
 - **Rodapé:** na noite lisa, o logo em `--luz`, links com 2.75rem de altura.
 
+### Topo (primeira dobra)
+Ocupa a tela inteira, no pêssego pleno da marca (a mesma cor da abertura, então a porta se abre para ele sem emenda). Só o essencial: o mote "Só resta a mim cantar o amor." (escolhido pelo dono em 03/11/2026), a frase com as palavras-chave (casamentos, bodas e festas de 15 anos em BH, com a voz de Delliz Christine), o botão do WhatsApp e a Delliz grande dentro dos dois arcos, com **as alianças** em traço terracota pousadas no canto da foto (desenham-se depois dos arcos; no celular sobem para não tocar no "Ouvir a Delliz"). No celular a foto vem primeiro. No pé, o pêssego se desfaz no dia. O resto vem ao rolar.
+
+### Eventos, a música e o que importa
+"Os momentos que a gente canta" (casamentos, bodas e renovação de votos, festas de 15 anos) substituiu o roteiro de 11 momentos: três itens sem caixa, fio de 1px, símbolo de traço da família da marca (alianças, alianças com brilho, coroa) e o nome em Bodoni. "Por que a música faz diferença" cita o The Knot com o link da fonte. "O que é mais importante para nós" lista quatro compromissos, só com fatos do PRODUCT.md.
+
+### Depoimentos (prévia)
+A seção "Quem já viveu" existe, mas só aparece com `?previa` no endereço (classe `.previa` posta pelo script do `<head>`): por enquanto são exemplos para aprovar o layout com o cliente, cada um com o selo "Exemplo", e nunca entram no JSON-LD. Com depoimentos reais e autorizados, troque os textos, tire os selos e o atributo `data-previa`.
+
 ### Arco da voz (assinatura)
 A Delliz num arco 4:5, dentro dos dois arcos da identidade (`.voz__arcos`, SVG atrás da foto: mesmo raio, o de dentro mais baixo, traço de ~1,2px em `--terracota-marca`, desenhados na carga em 2.2s). O de fora contorna a foto; o de dentro aparece atrás dos ombros. O halo pêssego acende atrás (`acender`, 2.4s). Na base, a pílula "Ouvir a Delliz" abre o vídeo no YouTube. Embaixo da legenda, o botão da abertura com música.
 

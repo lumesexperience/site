@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Música para casamento em BH, da cerimônia à festa | Lumes Experience</title>
-  <meta name="description" content="Música ao vivo para casamentos em BH e região, com a cantora Delliz Christine. Cerimônia católica, evangélica ou ecumênica e festa. Consulte sua data.">
+  <title>Música ao vivo para casamentos, bodas e 15 anos em BH | Lumes Experience</title>
+  <meta name="description" content="Música ao vivo para casamentos, bodas e festas de 15 anos em BH e região, com a cantora Delliz Christine. Cerimônia e festa. Consulte sua data.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://lumesexperience.com.br/">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Lumes Experience">
-  <meta property="og:title" content="Lumes Experience: música ao vivo para casamentos em BH, do sim à pista">
-  <meta property="og:description" content="Cerimônia católica, evangélica ou ecumênica e recepção, do coquetel à pista. Com a cantora Delliz Christine à frente. Consulte sua data pelo WhatsApp.">
+  <meta property="og:title" content="Lumes Experience: só resta a mim cantar o amor">
+  <meta property="og:description" content="Música ao vivo para casamentos, bodas e festas de 15 anos em BH, com a cantora Delliz Christine. Consulte sua data pelo WhatsApp.">
   <meta property="og:url" content="https://lumesexperience.com.br/">
   <meta property="og:image" content="https://lumesexperience.com.br/assets/img/og-lumes.jpg">
   <meta property="og:image:width" content="1200">
@@ -33,7 +33,9 @@
   <script>
     document.documentElement.classList.add('js');
     try {
-      const forcar = new URLSearchParams(location.search).has('abertura');
+      const busca = new URLSearchParams(location.search);
+      if (busca.has('previa')) document.documentElement.classList.add('previa');
+      const forcar = busca.has('abertura');
       if ((forcar || (!sessionStorage.getItem('abertura-vista') && !location.hash)) && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
         document.documentElement.classList.add('com-abertura');
       }
@@ -60,8 +62,8 @@
         "@type": "WebPage",
         "@id": "https://lumesexperience.com.br/#webpage",
         "url": "https://lumesexperience.com.br/",
-        "name": "Música para casamento em BH, da cerimônia à festa | Lumes Experience",
-        "description": "Música ao vivo para casamentos em BH e região, com a cantora Delliz Christine. Cerimônia católica, evangélica ou ecumênica e festa. Consulte sua data.",
+        "name": "Música ao vivo para casamentos, bodas e 15 anos em BH | Lumes Experience",
+        "description": "Música ao vivo para casamentos, bodas e festas de 15 anos em BH e região, com a cantora Delliz Christine. Cerimônia e festa. Consulte sua data.",
         "isPartOf": { "@id": "https://lumesexperience.com.br/#website" },
         "about": { "@id": "https://lumesexperience.com.br/#lumes" },
         "datePublished": "2026-10-20",
@@ -73,7 +75,7 @@
         "@id": "https://lumesexperience.com.br/#lumes",
         "name": "Lumes Experience",
         "url": "https://lumesexperience.com.br/",
-        "description": "Grupo de música ao vivo para casamentos em Belo Horizonte e região metropolitana, com a cantora Delliz Christine à frente. Toca na cerimônia (católica, evangélica ou ecumênica, na igreja ou ao ar livre) e na recepção, do coquetel à pista.",
+        "description": "Grupo de música ao vivo para casamentos, bodas e festas de 15 anos em Belo Horizonte e região metropolitana, com a cantora Delliz Christine à frente. Toca na cerimônia (católica, evangélica ou ecumênica, na igreja ou ao ar livre) e na recepção, do coquetel à pista.",
         "logo": "https://lumesexperience.com.br/assets/img/icon-512.png",
         "image": "https://lumesexperience.com.br/assets/img/og-lumes.jpg",
         "telephone": "+5531996154698",
@@ -133,6 +135,24 @@
         "areaServed": { "@type": "AdministrativeArea", "name": "Região Metropolitana de Belo Horizonte" }
       },
       {
+        "@type": "Service",
+        "@id": "https://lumesexperience.com.br/#bodas",
+        "name": "Música ao vivo para bodas e renovação de votos",
+        "serviceType": "Música para bodas e renovação de votos",
+        "description": "Música ao vivo para bodas e renovação de votos, na cerimônia e na comemoração, com as músicas que marcaram a história do casal.",
+        "provider": { "@id": "https://lumesexperience.com.br/#lumes" },
+        "areaServed": { "@type": "AdministrativeArea", "name": "Região Metropolitana de Belo Horizonte" }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://lumesexperience.com.br/#quinze-anos",
+        "name": "Música ao vivo para festas de 15 anos",
+        "serviceType": "Música para festa de 15 anos",
+        "description": "Música ao vivo para festas de 15 anos: entrada da debutante, valsa e festa, com o repertório escolhido com ela e a família.",
+        "provider": { "@id": "https://lumesexperience.com.br/#lumes" },
+        "areaServed": { "@type": "AdministrativeArea", "name": "Região Metropolitana de Belo Horizonte" }
+      },
+      {
         "@type": "FAQPage",
         "@id": "https://lumesexperience.com.br/#perguntas",
         "isPartOf": { "@id": "https://lumesexperience.com.br/#webpage" },
@@ -142,6 +162,7 @@
           { "@type": "Question", "name": "Com quanta antecedência devemos reservar?", "acceptedAnswer": { "@type": "Answer", "text": "Assim que tiverem a data e o local. A data só fica garantida depois da reserva, então quanto antes vocês consultarem, maior a chance de ela estar livre." } },
           { "@type": "Question", "name": "O Lumes Experience toca na cerimônia e na festa?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Tocamos na cerimônia e na recepção: coquetel, jantar, primeira dança e pista. Vocês escolhem os momentos com música, e a proposta acompanha essa escolha." } },
           { "@type": "Question", "name": "Vocês tocam em casamento católico, evangélico ou ecumênico?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Tocamos em cerimônias católicas, evangélicas e ecumênicas, na igreja ou ao ar livre. Algumas igrejas permitem só música religiosa na cerimônia ou têm uma lista própria. Vale confirmar as orientações da igreja de vocês, e o repertório segue essas regras." } },
+          { "@type": "Question", "name": "Vocês tocam em bodas e festas de 15 anos?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Além de casamentos, fazemos bodas e renovação de votos e festas de 15 anos, na cerimônia e na festa, com o repertório escolhido com vocês." } },
           { "@type": "Question", "name": "Que música tocar na entrada da noiva?", "acceptedAnswer": { "@type": "Answer", "text": "Não existe uma música obrigatória: a escolha depende do rito e do estilo do casal. Entre os clássicos mais pedidos estão a Marcha Nupcial de Wagner, o Cânon em Ré de Pachelbel e a Ave Maria. A marcha de Mendelssohn costuma ficar para a saída dos noivos. Muitos casais preferem uma canção que tenha significado para os dois. Na igreja, confirmem antes se a música escolhida é permitida." } },
           { "@type": "Question", "name": "Podemos escolher as músicas?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. O repertório é escolhido com vocês, momento a momento. Se quiserem uma música que não está no repertório, peçam com antecedência para avaliarmos o arranjo." } },
           { "@type": "Question", "name": "Qual é a formação do grupo?", "acceptedAnswer": { "@type": "Answer", "text": "A formação é montada para cada casamento, de acordo com o estilo e o orçamento do casal. Pode ser mais enxuta, para uma cerimônia intimista, ou mais completa, para encher a pista." } },
@@ -276,11 +297,12 @@
     }
 
     /* O tamanho óptico automático do Bodoni deixa o fio fino demais abaixo de ~60px ("BH" vira "BII"). */
-    h1, h2, h3, .marca, .momento__nome, .momento::before, .passo::before, .pergunta summary, .amostra figcaption {
+    h1, h2, h3, .marca, .promessa__nome, .depoimento blockquote, .passo::before, .pergunta summary, .amostra figcaption {
       font-variation-settings: "opsz" var(--opsz, 24);
     }
-    h3, .momento__nome, .pergunta summary, .amostra figcaption { --opsz: 12; }
-    .momento::before, .passo::before { --opsz: 14; }
+    h3, .promessa__nome, .pergunta summary, .amostra figcaption { --opsz: 12; }
+    .passo::before { --opsz: 14; }
+    .promessa__nome { --opsz: 14; }
     .marca { --opsz: 18; }
 
     h2 { font-size: clamp(2rem, 1.5rem + 2.2vw, 3rem); }
@@ -518,9 +540,35 @@
     }
     .voz__arcos path + path { animation-delay: 0.45s; }
 
+    .voz__aliancas {
+      position: absolute;
+      z-index: 1;
+      left: -13%;
+      bottom: 27%;
+      width: 32%;
+      height: auto;
+      overflow: visible;
+      pointer-events: none;
+      color: var(--terracota-marca);
+    }
+    .voz__aliancas circle {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.2;
+      stroke-dasharray: 1;
+      animation: desenhar-arco 1.6s cubic-bezier(0.45, 0, 0.2, 1) 0.9s both;
+    }
+    .voz__aliancas circle + circle { animation-delay: 1.15s; }
+    /* No computador o botão "Ouvir a Delliz" ocupa menos da foto: as alianças descem para o canto. */
+    @media (min-width: 60rem) {
+      .voz__aliancas { left: -11%; bottom: 6%; width: 38%; }
+    }
+    .voz__aliancas .brilho { fill: currentColor; transform-box: fill-box; transform-origin: center; animation: acender 1s ease 2.1s both; }
+
     /* Com a abertura na tela, a luz e os arcos da foto esperam a porta abrir para acender. */
     .com-abertura .voz__moldura::before,
-    .com-abertura .voz__arcos path { animation-play-state: paused; }
+    .com-abertura .voz__arcos path,
+    .com-abertura .voz__aliancas * { animation-play-state: paused; }
 
     @keyframes acender {
       from { opacity: 0; scale: 0.82; }
@@ -633,42 +681,69 @@
     .delliz__links { margin: 1.25rem 0 0; padding: 0; list-style: none; }
     .delliz__links a { display: inline-flex; align-items: center; min-height: 2.75rem; color: var(--terracota); font-weight: 600; }
 
-    /* ---------- Programa (momentos) ---------- */
-    .programa__parte { margin-top: 3.5rem; }
-    .programa__parte h3 { margin-bottom: 1.25rem; color: var(--terracota); font-size: clamp(1.5rem, 1.25rem + 1vw, 2rem); }
-
-    .momentos {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      counter-reset: momento;
-    }
-    .momentos--recepcao { counter-reset: momento 7; }
-
-    .momento {
+    /* ---------- Eventos: os momentos que a gente canta ----------
+       Três celebrações, sem caixas: fio, símbolo de traço da família da marca (alianças, alianças com brilho,
+       coroa) e o nome em Bodoni. Lado a lado no computador, empilhadas no celular. */
+    .eventos { display: grid; margin: 2.25rem 0 0; padding: 0; list-style: none; }
+    .evento {
       display: grid;
-      grid-template-columns: 2.75rem minmax(0, 1fr);
-      gap: 0.2rem 1rem;
-      padding-block: 1.1rem;
+      grid-template-columns: 3.5rem minmax(0, 1fr);
+      gap: 0.35rem 1.25rem;
+      padding-block: 1.5rem;
       border-top: 1px solid var(--dia-linha);
-      counter-increment: momento;
     }
-    .momento::before {
-      content: counter(momento);
-      grid-row: span 2;
-      color: var(--terracota);
-      font-family: var(--serif);
-      font-size: 1.75rem;
-      line-height: 1;
-      font-variant-numeric: lining-nums;
-    }
-
-    .momento__nome { font-family: var(--serif); font-size: 1.375rem; line-height: 1.25; }
-    .momento__desc { margin: 0; color: var(--tinta-suave); }
+    .evento__simbolo { grid-row: span 2; width: 3.5rem; height: auto; color: var(--terracota-marca); overflow: visible; }
+    .evento__simbolo :is(circle, path) { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .evento__simbolo .brilho { fill: currentColor; stroke: none; }
+    .evento__nome { --opsz: 24; font-size: clamp(1.5rem, 1.3rem + 0.8vw, 1.875rem); line-height: 1.15; }
+    .evento p { margin: 0; color: var(--tinta-suave); }
 
     @media (min-width: 56rem) {
-      .momento { grid-template-columns: 4rem 17rem minmax(0, 1fr); align-items: baseline; }
-      .momento::before { grid-row: auto; }
+      .eventos { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: clamp(2rem, 1rem + 3vw, 4rem); }
+      .evento { grid-template-columns: minmax(0, 1fr); align-content: start; padding-top: 2rem; }
+      .evento__simbolo { grid-row: auto; width: 4.25rem; margin-bottom: 0.75rem; }
+    }
+
+    /* ---------- Por que a música faz diferença ---------- */
+    .musica__texto { max-width: 38rem; }
+    .musica__texto p:first-child { font-size: clamp(1.125rem, 1rem + 0.45vw, 1.3125rem); }
+    .musica__fonte { color: var(--tinta-suave); font-size: 0.875rem; }
+    .musica__fonte a { color: var(--terracota); }
+
+    /* ---------- O que é mais importante para nós ---------- */
+    .promessas { display: grid; margin: 2.25rem 0 0; padding: 0; list-style: none; }
+    .promessa { padding-block: 1.25rem; border-top: 1px solid var(--dia-linha); }
+    .promessa__nome { display: block; font-family: var(--serif); font-size: 1.375rem; line-height: 1.25; }
+    .promessa p { margin: 0.35rem 0 0; color: var(--tinta-suave); }
+
+    @media (min-width: 48rem) {
+      .promessas { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(2rem, 1rem + 3vw, 4rem); }
+    }
+
+    /* ---------- Depoimentos (prévia) ----------
+       Só aparecem com ?previa no endereço (classe .previa no <html>): por enquanto são exemplos para aprovar o
+       layout, com o selo "Exemplo". Com os depoimentos reais, tire data-previa da seção e os selos. */
+    [data-previa] { display: none; }
+    .previa [data-previa] { display: block; }
+    .depoimentos { display: grid; gap: 2rem; margin: 2.25rem 0 0; padding: 0; list-style: none; }
+    .depoimento { margin: 0; padding-top: 1.5rem; border-top: 1px solid var(--dia-linha); }
+    .depoimento blockquote { margin: 0; font-family: var(--serif); font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem); line-height: 1.35; }
+    .depoimento blockquote p { margin: 0; text-align: start; }
+    .depoimento figcaption { margin-top: 1rem; color: var(--tinta-suave); font-size: 0.9375rem; }
+    .depoimento__selo {
+      display: inline-block;
+      margin-left: 0.4rem;
+      padding: 0.05rem 0.55rem;
+      border: 1px solid var(--terracota-marca);
+      border-radius: 999px;
+      color: var(--terracota);
+      font-size: 0.75rem;
+      font-weight: 600;
+      vertical-align: middle;
+    }
+
+    @media (min-width: 56rem) {
+      .depoimentos { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: clamp(2rem, 1rem + 3vw, 4rem); }
     }
 
     /* O dia vira noite: a passagem da cerimônia para a recepção. */
@@ -714,13 +789,7 @@
     /* O brilho fica no começo da noite; o rodapé continua no escuro, sem emenda. */
     footer.noite { background: var(--noite); }
     .noite .introducao { color: var(--noite-suave); }
-    .noite .programa__parte h3 { color: var(--luz-clara); }
-    .noite .momento { border-top-color: var(--noite-linha); }
-    .noite .momento::before { color: var(--luz); }
-    .noite .momento__desc { color: var(--noite-suave); }
 
-    .recepcao { padding-top: 1rem; }
-    .recepcao .programa__parte { margin-top: 0; }
 
     /* ---------- Amostras ---------- */
     .amostras__grade {
@@ -1137,7 +1206,7 @@
         <path class="intro__linha intro__linha--2" d="M561.5 2032H1581.5"/>
         <g transform="translate(761.5 2080) scale(.5175) translate(-720 -1273)"><path class="intro__experience" d="M 720 1333l0 61 43 0 43 0 0-6 0-5-36 0-37 0 0-23 0-22 32 0 31 0 0-6 0-5-31 0-32 0 0-21 0-22 35 0 36-1 0-5 0-5-42 0-42 0 0 60 zM 844 1290c7 9 17 22 22 29l9 12-4 5c-5 8-40 55-41 57-1 1 0 1 6 1l8 0 19-27 19-26 3 3c1 1 10 13 19 26l18 24 7 0c5 0 7 0 6-1 0-1-10-15-22-31-12-16-22-30-22-31 0 0 4-6 8-12 5-6 14-19 21-29l13-17-7 0-7 0-18 24c-9 14-18 25-18 25 0 0-9-11-18-25l-18-24-8 0-7 0 12 17 zM 969 1333l0 61 6 0 6 0 0-19 0-19 22 0c18-1 24-1 30-3 13-3 22-11 27-21 4-10 4-26 0-36-3-6-11-14-17-17-11-5-16-6-46-6l-28 0 0 60zm 61-47c9 3 16 9 19 16 2 6 2 18 0 24-3 7-10 13-18 16-6 2-10 2-29 2l-21 0 0-30 0-30 21 0c19 0 23 0 28 2 zM 1102 1333l0 61 43 0 43 0 0-6 0-5-36 0-37 0 0-23 0-22 32 0 31 0 0-6 0-5-31 0-32 0 0-22 0-21 35 0 35 0 0-6 0-5-41 0-42 0 0 60 zM 1227 1333l0 61 6 0 7 0 0-19 1-20 21 0 21 0 13 19 14 20 7 0c6 0 7 0 6-1-5-7-28-40-28-40 0-1 3-2 7-4 5-3 12-9 15-14 6-9 7-28 2-38-4-8-10-14-17-18-10-5-15-6-47-6l-28 0 0 60zm 66-46c11 6 16 14 16 27 0 9-3 16-8 22-9 7-17 9-44 9l-17 0 0-31 0-30 23 0c23 0 24 1 30 3 zM 1362 1333l0 61 7 0 6 0 0-61 0-60-6 0-7 0 0 60 zM 1423 1333l0 61 43 0 43 0 0-6 0-5-36 0-37 0 0-23 0-22 32 0 31 0 0-6 0-5-31 0-32 0 0-21 0-22 35 0 36-1 0-5 0-5-42 0-42 0 0 60 zM 1548 1333l0 61 6 0 7 0 0-49 1-49 38 49 39 49 6 0 5 0 0-61 0-60-6 0-7 0 0 49 0 48-39-48-38-49-6 0-6 0 0 60 zM 1734 1274c-21 5-37 20-44 41-2 8-3 23-1 32 5 22 21 39 43 45 13 4 30 3 44-2 6-2 18-10 19-12 0-1-1-3-4-5l-3-4-6 4c-12 11-34 13-50 7-29-12-41-47-23-75 11-17 34-26 56-20 7 1 11 3 18 8l5 4 4-3c1-2 3-4 3-5 0-1-7-7-13-10-11-7-34-9-48-5 zM 1832 1333l0 61 43 0 43 0 0-6 0-5-36 0-37 0 0-23 0-22 32 0 31 0 0-6 0-5-31 0-32 0 0-21 0-22 35 0 36-1 0-5 0-5-42 0-42 0 0 60 z"/></g>
       </svg>
-      <p class="intro__frase">Música ao vivo para casamentos em BH</p>
+      <p class="intro__frase">Casamentos, bodas e 15 anos em BH</p>
     </div>
     <button class="intro__pular" type="button">Pular abertura</button>
   </div>
@@ -1148,7 +1217,7 @@
     <a class="marca" href="./" aria-label="Lumes Experience, página inicial"><svg viewBox="0 0 1745 594" aria-hidden="true"><use href="#marca-logo"/></svg></a>
     <nav class="topo__nav" aria-label="Seções">
       <a href="#delliz">Delliz</a>
-      <a href="#momentos">Momentos</a>
+      <a href="#eventos">Eventos</a>
       <a href="#perguntas">Perguntas</a>
       <a href="blog/">Blog</a>
     </nav>
@@ -1163,8 +1232,8 @@
     <section class="abertura" aria-labelledby="titulo">
       <div class="abertura__grade conteudo">
       <div class="abertura__texto">
-        <h1 id="titulo">Música ao vivo para casamentos, do sim à pista.</h1>
-        <p class="abertura__lead">Com a cantora Delliz Christine, na cerimônia e na recepção, em Belo Horizonte e região metropolitana.</p>
+        <h1 id="titulo">Só resta a mim cantar o amor.</h1>
+        <p class="abertura__lead">Música ao vivo para casamentos, bodas e festas de 15 anos em Belo Horizonte e região, com a voz de Delliz Christine.</p>
         <div class="abertura__acoes" id="acoes-abertura">
           <a class="botao" data-cta="abertura" target="_blank" rel="noopener"
              href="https://wa.me/5531996154698?text=Ol%C3%A1%2C%20Lumes%20Experience!%20Vi%20o%20site%20e%20quero%20consultar%20uma%20data%20para%20o%20nosso%20casamento.%0AData%3A%20%0ACidade%20e%20local%3A%20%0ACerim%C3%B4nia%3A%20%0AMomentos%20com%20m%C3%BAsica%3A%20">
@@ -1182,6 +1251,12 @@
           <svg class="voz__arcos" viewBox="-12 -22 124 153" aria-hidden="true">
             <path pathLength="1" d="M-10 129V40A60 60 0 0 1 110 40V129"/>
             <path pathLength="1" d="M-10 129V69.4A60 60 0 0 1 110 69.4V129"/>
+          </svg>
+          <!-- As alianças, em traço terracota, pousadas no canto da foto: o casamento como foco. -->
+          <svg class="voz__aliancas" viewBox="0 0 120 84" aria-hidden="true">
+            <circle pathLength="1" cx="42" cy="48" r="27"/>
+            <circle pathLength="1" cx="70" cy="48" r="27"/>
+            <path class="brilho" d="M100 4q1.6 7.4 9 9q-7.4 1.6-9 9q-1.6-7.4-9-9q7.4-1.6 9-9Z"/>
           </svg>
           <a class="voz__capa" href="https://www.youtube.com/shorts/NBmB7i5MffI" target="_blank" rel="noopener"
              aria-label="Ouvir a Delliz: Delliz Christine canta “Espírito Poderoso”, no YouTube">
@@ -1215,7 +1290,7 @@
                alt="Delliz Christine, de vestido claro, sorri de olhos fechados com um microfone vintage junto ao rosto">
         </picture>
         <div class="delliz__texto">
-          <p>O Lumes Experience é um grupo de música ao vivo para casamentos em Belo Horizonte e região metropolitana. Tocamos na cerimônia, na igreja ou ao ar livre, e na recepção, do coquetel à pista.</p>
+          <p>O Lumes Experience é um grupo de música ao vivo para casamentos, bodas e festas de 15 anos em Belo Horizonte e região metropolitana. Tocamos na cerimônia, na igreja ou ao ar livre, e na festa, do coquetel à pista.</p>
           <p>Delliz Christine é a cantora à frente do Lumes Experience. Também integra o Jeito Ágape, ministério de música católica de Belo Horizonte, e é uma das vozes da série Incondicional Sessions.</p>
           <p>No Lumes Experience, a proposta é música que acompanha cada momento do casamento sem tirar a atenção do casal: do silêncio antes da entrada da noiva à última música da festa.</p>
           <ul class="delliz__links">
@@ -1229,39 +1304,64 @@
       </div>
     </section>
 
-    <section class="secao secao--seguida secao--emenda conteudo" id="momentos" aria-labelledby="titulo-momentos">
-      <h2 id="titulo-momentos">Música para cada momento do casamento</h2>
-      <p class="introducao">O repertório é escolhido com vocês, momento a momento. Este é o roteiro mais comum de um casamento; cada rito e cada casal ajustam o seu.</p>
+    <section class="secao conteudo" id="eventos" aria-labelledby="titulo-eventos">
+      <h2 id="titulo-eventos">Os momentos que a gente canta</h2>
+      <p class="introducao">Música ao vivo para as celebrações em que o amor é o motivo da festa. Em cada uma, o repertório é escolhido com vocês.</p>
+      <ul class="eventos">
+        <li class="evento">
+          <svg class="evento__simbolo" viewBox="0 0 64 48" aria-hidden="true"><circle cx="24" cy="28" r="13"/><circle cx="38" cy="28" r="13"/><path class="brilho" d="M52 4q1.2 5.2 6.4 6.4q-5.2 1.2-6.4 6.4q-1.2-5.2-6.4-6.4q5.2-1.2 6.4-6.4Z"/></svg>
+          <h3 class="evento__nome">Casamentos</h3>
+          <p>Na cerimônia, católica, evangélica ou ecumênica, na igreja ou ao ar livre, da entrada da noiva à saída dos noivos. Na recepção, do coquetel e do jantar à primeira dança e à pista.</p>
+        </li>
+        <li class="evento">
+          <svg class="evento__simbolo" viewBox="0 0 64 48" aria-hidden="true"><circle cx="22" cy="30" r="12"/><circle cx="35" cy="30" r="12"/><path class="brilho" d="M50 3q1 4.4 5.4 5.4q-4.4 1-5.4 5.4q-1-4.4-5.4-5.4q4.4-1 5.4-5.4Z"/><path class="brilho" d="M58 16q.7 3 3.7 3.7q-3 .7-3.7 3.7q-.7-3-3.7-3.7q3-.7 3.7-3.7Z"/></svg>
+          <h3 class="evento__nome">Bodas e renovação de votos</h3>
+          <p>Para celebrar os anos juntos com as músicas que marcaram a história de vocês, na renovação dos votos e na comemoração com a família e os amigos.</p>
+        </li>
+        <li class="evento">
+          <svg class="evento__simbolo" viewBox="0 0 64 48" aria-hidden="true"><path d="M12 40h40M14 40l-3-21 11 9 10-16 10 16 11-9-3 21"/><path class="brilho" d="M32 0q1 4.2 5.2 5.2q-4.2 1-5.2 5.2q-1-4.2-5.2-5.2q4.2-1 5.2-5.2Z"/></svg>
+          <h3 class="evento__nome">Festas de 15 anos</h3>
+          <p>Da entrada da debutante à valsa e à festa, com o repertório escolhido com ela e com a família.</p>
+        </li>
+      </ul>
+    </section>
 
-      <div class="programa__parte">
-        <h3>Na cerimônia</h3>
-        <ol class="momentos">
-          <li class="momento"><span class="momento__nome">Chegada dos convidados</span><p class="momento__desc">Música suave enquanto a igreja ou o espaço se enche.</p></li>
-          <li class="momento"><span class="momento__nome">Cortejo</span><p class="momento__desc">Noivo, pais e padrinhos entram, e cada entrada pode ter a sua música.</p></li>
-          <li class="momento"><span class="momento__nome">Entrada da noiva</span><p class="momento__desc">O momento mais esperado: um clássico como o Cânon em Ré ou a canção que conta a história de vocês.</p></li>
-          <li class="momento"><span class="momento__nome">Celebração</span><p class="momento__desc">Cantos e aclamações conforme o rito, na missa, no culto ou na cerimônia ecumênica.</p></li>
-          <li class="momento"><span class="momento__nome">Alianças</span><p class="momento__desc">Música para a entrada e a troca das alianças.</p></li>
-          <li class="momento"><span class="momento__nome">Assinaturas</span><p class="momento__desc">A música segue enquanto noivos e padrinhos assinam.</p></li>
-          <li class="momento"><span class="momento__nome">Saída dos noivos</span><p class="momento__desc">Uma música alegre para a saída, já com clima de festa.</p></li>
-        </ol>
+    <section class="secao secao--seguida conteudo" id="musica" aria-labelledby="titulo-musica">
+      <div class="duas-colunas">
+        <h2 id="titulo-musica">Por que a música faz diferença</h2>
+        <div class="musica__texto">
+          <p>Numa pesquisa do The Knot com convidados de casamentos nos Estados Unidos, a música foi o segundo item mais notado, atrás só da comida. Não é por acaso: é ela que avisa a todos que a noiva vai entrar, segura o silêncio antes do sim e decide se a pista enche.</p>
+          <p>Ao vivo, a música acompanha o que acontece. Se a entrada atrasa, a música espera; se a pista pede mais, o repertório segue. E a voz que canta o momento de vocês está ali, diante de todos.</p>
+          <p class="musica__fonte">Fonte: <a href="https://www.theknot.com/content/wedding-details-guests-care-about-most" target="_blank" rel="noopener">The Knot, “Wedding details guests care about most”</a>.</p>
+        </div>
       </div>
+    </section>
+
+    <section class="secao secao--seguida conteudo" id="compromisso" aria-labelledby="titulo-compromisso">
+      <h2 id="titulo-compromisso">O que é mais importante para nós</h2>
+      <ul class="promessas">
+        <li class="promessa"><span class="promessa__nome">O repertório de vocês</span><p>Cada música é escolhida com vocês, momento a momento, do jeito que vocês sonharam.</p></li>
+        <li class="promessa"><span class="promessa__nome">O rito respeitado</span><p>Na cerimônia, seguimos as regras da igreja e alinhamos os detalhes com a igreja ou o cerimonial antes do dia.</p></li>
+        <li class="promessa"><span class="promessa__nome">A atenção em vocês</span><p>A música acompanha cada momento sem roubar a cena: o centro do dia são vocês.</p></li>
+        <li class="promessa"><span class="promessa__nome">Tudo num lugar só</span><p>Formação montada para o evento e som próprio, que pode ser locado junto, para vocês não dependerem de mais um fornecedor.</p></li>
+      </ul>
+    </section>
+
+    <!-- Depoimentos: por enquanto são EXEMPLOS para aprovar o layout com o cliente. Só aparecem com ?previa no endereço
+         e levam o selo "Exemplo". Nunca vão para o JSON-LD. Quando chegarem os reais (com autorização do casal),
+         troque os textos, tire os selos e o atributo data-previa da seção. -->
+    <section class="secao secao--seguida conteudo" id="depoimentos" aria-labelledby="titulo-depoimentos" data-previa data-nosnippet>
+      <h2 id="titulo-depoimentos">Quem já viveu</h2>
+      <ul class="depoimentos">
+        <li><figure class="depoimento"><blockquote><p>“Quando a Delliz começou a cantar na entrada da noiva, a igreja inteira se emocionou. Até hoje os convidados falam disso.”</p></blockquote><figcaption>Ana e Rafael, casamento <span class="depoimento__selo">Exemplo</span></figcaption></figure></li>
+        <li><figure class="depoimento"><blockquote><p>“Combinaram cada detalhe com a paróquia e a festa não teve um minuto de silêncio. A gente só precisou aproveitar.”</p></blockquote><figcaption>Juliana e Pedro, casamento <span class="depoimento__selo">Exemplo</span></figcaption></figure></li>
+        <li><figure class="depoimento"><blockquote><p>“Na renovação dos nossos votos, tocaram a música do nosso casamento, 25 anos depois. Foi como casar de novo.”</p></blockquote><figcaption>Marta e José, bodas de prata <span class="depoimento__selo">Exemplo</span></figcaption></figure></li>
+      </ul>
     </section>
 
     <div class="anoitecer" aria-hidden="true"><svg class="anoitecer__estrela" viewBox="0 0 460 460"><use href="#marca-estrela"/></svg></div>
 
     <div class="noite">
-      <section class="recepcao conteudo" aria-label="Música na recepção">
-        <div class="programa__parte">
-          <h3>Na recepção</h3>
-          <ol class="momentos momentos--recepcao" start="8">
-            <li class="momento"><span class="momento__nome">Coquetel</span><p class="momento__desc">Música ao vivo para receber os convidados e embalar as conversas.</p></li>
-            <li class="momento"><span class="momento__nome">Jantar</span><p class="momento__desc">Repertório mais tranquilo, no volume certo para conversar.</p></li>
-            <li class="momento"><span class="momento__nome">Primeira dança</span><p class="momento__desc">A música do casal, tocada ao vivo, abrindo a pista.</p></li>
-            <li class="momento"><span class="momento__nome">Pista</span><p class="momento__desc">Festa aberta, com repertório pensado para os convidados de vocês.</p></li>
-          </ol>
-        </div>
-      </section>
-
       <section class="secao conteudo" id="amostras" aria-labelledby="titulo-amostras">
         <h2 id="titulo-amostras">Fotos e vídeos dos casamentos</h2>
         <p class="introducao">Os primeiros registros de casamentos com o Lumes Experience entram aqui em breve. Enquanto isso, <a href="https://www.youtube.com/shorts/NBmB7i5MffI" target="_blank" rel="noopener">ouçam a Delliz em “Espírito Poderoso”, no YouTube</a>.</p>
@@ -1320,10 +1420,11 @@
         <div class="duas-colunas">
           <h2 id="titulo-fatos">O Lumes Experience em poucas linhas</h2>
           <dl class="fatos__lista">
+            <div class="fato"><dt>Eventos</dt><dd>Casamentos, bodas e renovação de votos, festas de 15 anos.</dd></div>
             <div class="fato"><dt>Onde</dt><dd>Belo Horizonte e região metropolitana. Outras cidades, sob consulta.</dd></div>
             <div class="fato"><dt>Cerimônias</dt><dd>Católica, evangélica e ecumênica, na igreja ou ao ar livre.</dd></div>
             <div class="fato"><dt>Momentos</dt><dd>Cerimônia, coquetel, jantar e pista. Vocês escolhem quais.</dd></div>
-            <div class="fato"><dt>Formação</dt><dd>Montada para cada casamento, conforme o estilo e o orçamento do casal.</dd></div>
+            <div class="fato"><dt>Formação</dt><dd>Montada para cada evento, conforme o estilo e o orçamento de vocês.</dd></div>
             <div class="fato"><dt>Som</dt><dd>Equipamento próprio, que pode ser locado junto com a música.</dd></div>
             <div class="fato"><dt>Valor</dt><dd>Sob consulta, conforme data, local, momentos e formação.</dd></div>
             <div class="fato"><dt>À frente</dt><dd>Delliz Christine, cantora.</dd></div>
@@ -1346,6 +1447,7 @@
               <h3>Cerimônia e repertório</h3>
               <details class="pergunta"><summary>O Lumes Experience toca na cerimônia e na festa?</summary><div class="pergunta__resposta"><p>Sim. Tocamos na cerimônia e na recepção: coquetel, jantar, primeira dança e pista. Vocês escolhem os momentos com música, e a proposta acompanha essa escolha.</p></div></details>
               <details class="pergunta"><summary>Vocês tocam em casamento católico, evangélico ou ecumênico?</summary><div class="pergunta__resposta"><p>Sim. Tocamos em cerimônias católicas, evangélicas e ecumênicas, na igreja ou ao ar livre. Algumas igrejas permitem só música religiosa na cerimônia ou têm uma lista própria. Vale confirmar as orientações da igreja de vocês, e o repertório segue essas regras.</p></div></details>
+              <details class="pergunta"><summary>Vocês tocam em bodas e festas de 15 anos?</summary><div class="pergunta__resposta"><p>Sim. Além de casamentos, fazemos bodas e renovação de votos e festas de 15 anos, na cerimônia e na festa, com o repertório escolhido com vocês.</p></div></details>
               <details class="pergunta"><summary>Que música tocar na entrada da noiva?</summary><div class="pergunta__resposta"><p>Não existe uma música obrigatória: a escolha depende do rito e do estilo do casal. Entre os clássicos mais pedidos estão a Marcha Nupcial de Wagner, o Cânon em Ré de Pachelbel e a Ave Maria. A marcha de Mendelssohn costuma ficar para a saída dos noivos. Muitos casais preferem uma canção que tenha significado para os dois. Na igreja, confirmem antes se a música escolhida é permitida.</p></div></details>
               <details class="pergunta"><summary>Podemos escolher as músicas?</summary><div class="pergunta__resposta"><p>Sim. O repertório é escolhido com vocês, momento a momento. Se quiserem uma música que não está no repertório, peçam com antecedência para avaliarmos o arranjo.</p></div></details>
             </div>
