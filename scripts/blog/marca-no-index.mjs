@@ -8,10 +8,11 @@ const ARQUIVO = new URL('../../index.html', import.meta.url).pathname;
 
 // A abertura: o logo principal da identidade (arcos, L, estrelas, linhas e LUMES) com EXPERIENCE embaixo,
 // no sistema de coordenadas do "Símbolo Secundário". Cada peça tem a sua classe para o CSS animar.
-// A porta (.intro__porta) é o furo da máscara: o JS desenha o arco de dentro em pixels e o abre até cobrir a tela.
+// A porta (.intro__porta) é o furo da máscara e .intro__luz-porta é a luz dentro dela: o JS desenha o arco de dentro em
+// pixels e o leva aceso até os arcos da foto da Delliz, onde a luz se desfaz e o furo mostra a foto.
 const ABERTURA = `<div class="intro" id="intro">
     <div class="intro__arte" aria-hidden="true">
-      <svg class="intro__fundo"><defs><mask id="intro-mascara" maskUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%"><rect width="100%" height="100%" fill="#fff"/><path class="intro__porta" d="M0 0"/></mask></defs><rect class="intro__cor" width="100%" height="100%" mask="url(#intro-mascara)"/></svg>
+      <svg class="intro__fundo"><defs><mask id="intro-mascara" maskUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%"><rect width="100%" height="100%" fill="#fff"/><path class="intro__porta" d="M0 0"/></mask></defs><rect class="intro__cor" width="100%" height="100%" mask="url(#intro-mascara)"/><path class="intro__luz-porta" d="M0 0"/></svg>
       <svg class="intro__logo" viewBox="540 360 1063 1800">
         <defs><radialGradient id="intro-brilho"><stop offset="0" stop-color="#FFF8F0" stop-opacity=".95"/><stop offset=".38" stop-color="#F6DDBF" stop-opacity=".6"/><stop offset="1" stop-color="#F6DDBF" stop-opacity="0"/></radialGradient></defs>
         <circle class="intro__halo" cx="1267" cy="1290" r="380" fill="url(#intro-brilho)"/>

@@ -1,4 +1,4 @@
 {
-  "prompt": "Foto do ensaio de estúdio da Delliz Christine (DSC02895, Sony ZV-E10, 11/06/2024), enviada pelo dono em 03/11/2026; convertida do RAW, recortada em 4:5 e redimensionada; sem IA generativa.",
-  "createdAt": "2026-11-03T21:12:54.267Z"
+  "prompt": "Foto do ensaio de estúdio da Delliz Christine (DSC02895, Sony ZV-E10, 11/06/2024), enviada pelo dono em 03/11/2026; convertida do RAW, recortada em 4:5 e redimensionada. Em 04/11/2026, o fundo cinza-frio do estúdio foi aquecido para o pêssego da identidade com um ajuste de cor por pixel (ffmpeg geq: só os pixels claros e de pouca saturação, como o fundo, mudam de tom; pele, cabelo e microfone ficam como estavam); sem IA generativa.",
+  "createdAt": "2026-11-04T12:12:56.665Z"
 }

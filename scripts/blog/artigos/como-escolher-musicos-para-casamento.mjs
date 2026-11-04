@@ -1,11 +1,11 @@
 export const musicos = {
   slug: 'como-escolher-musicos-para-casamento',
-  titulo: 'Como escolher os músicos para o momento mais especial da vida de vocês',
+  titulo: 'Como escolher os músicos do casamento',
   tituloCurto: 'Como escolher músicos para casamento',
   descricao: 'O que ouvir, o que perguntar e o que combinar com a igreja antes de contratar músicos para o casamento: formações, repertório, som, contrato e prazos.',
   linhaFina: 'O que ouvir, o que perguntar e o que combinar com a igreja antes de fechar a música da cerimônia e da festa.',
   data: '2026-10-21',
-  atualizado: '2026-11-03',
+  atualizado: '2026-11-04',
   assunto: 'Música',
   capa: 'pauta',
   resumo: [
@@ -115,7 +115,7 @@ export const musicos = {
   <li>Deslocamento, alimentação da equipe e plano B para chuva.</li>
   <li>Valor do sinal, datas de pagamento e regras de cancelamento.</li>
 </ul>
-<p class="fecho">Escolher quem toca no casamento é escolher quem vai estar com vocês nos minutos mais emocionantes do dia. Ouçam com calma, perguntem tudo e fiquem com quem deixar vocês tranquilos.</p>`,
+<p class="fecho">Quem toca no casamento vai estar com vocês na entrada, no sim e na primeira dança. Ouçam com calma e fiquem com quem deixar vocês tranquilos.</p>`,
   fontes: [
     { texto: 'Como escolher a música para a cerimônia do seu casamento, Casamentos.com.br', url: 'https://www.casamentos.com.br/artigos/como-escolher-a-musica-para-a-cerimonia-do-seu-casamento--c2565' },
     { texto: 'Músicas católicas para casamento, Casamentos.com.br', url: 'https://www.casamentos.com.br/artigos/musicas-catolicas-para-casamento--c6718' },

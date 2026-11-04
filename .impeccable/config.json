@@ -7,37 +7,42 @@
         "rule": "cream-palette",
         "value": "*",
         "files": [
-          "index.html"
+          "index.html",
+          "blog/index.html",
+          "blog/*/index.html"
         ],
-        "createdAt": "2026-10-21T13:39:42.566Z",
-        "reason": "Cloud Dancer (Pantone 2026), a metade 'dia' do sistema dia/noite; decisão documentada em docs/PESQUISA.md"
+        "createdAt": "2026-11-04T12:40:00.000Z",
+        "reason": "Dono, 03/11/2026: o fundo é o pêssego da identidade Lumes Experience (--dia #F6E5D2, a partir do #EDC79B da marca), não um creme genérico. Na página renderizada, é o único achado (04/11/2026)."
       },
       {
         "rule": "cramped-padding",
         "value": "*",
         "files": [
-          "index.html"
+          "index.html",
+          "blog/index.html",
+          "blog/*/index.html"
         ],
-        "createdAt": "2026-10-21T13:41:35.760Z",
-        "reason": "Claude, verificado no Chrome em 21/10/2026: .fato e .momento usam padding-block 0.9rem/1.1rem (14-18px reais) e .noite é faixa de fundo com filhos recuados 16-40px; o scan estático não lê propriedades lógicas e o scan da página renderizada não acusa"
+        "createdAt": "2026-11-04T12:40:00.000Z",
+        "reason": "Claude, verificado em 04/11/2026: o scan estático não lê padding em calc()/clamp() nem padding-block (.porta, .porta-acesa, .caixa, .evento, .compromisso), e as faixas .noite/.topo-faixa recuam os filhos com .conteudo (16 a 40 px). O overlay na página renderizada (390 e 1280 px, 6 páginas) não acusa nenhum."
       },
       {
         "rule": "tight-leading",
         "value": "*",
         "files": [
-          "index.html"
+          "index.html",
+          "blog/*/index.html"
         ],
-        "createdAt": "2026-10-21T13:41:35.766Z",
-        "reason": "Claude, verificado no Chrome em 21/10/2026: .pergunta summary renderiza 29,12px/22,4px = 1,30; o scan estático resolve errado o clamp() do font-size"
+        "createdAt": "2026-11-04T12:40:00.000Z",
+        "reason": "Claude, verificado em 04/11/2026: as entrelinhas abaixo de 1,3 são só de títulos de display em Bodoni (h1 1,02; eventos e porta 1,04; h2 1,08) e de rótulos de uma linha (botões 1,2). O texto corrido fica entre 1,55 e 1,7. O overlay renderizado não acusa nenhum."
       },
       {
-        "rule": "cream-palette",
-        "value": "*",
+        "rule": "design-system-color",
+        "value": "#000",
         "files": [
-          "blog/**"
+          "index.html"
         ],
-        "createdAt": "2026-10-21T14:17:08.192Z",
-        "reason": "Cloud Dancer (Pantone 2026), a metade 'dia' do sistema dia/noite também no blog; decisão documentada em docs/PESQUISA.md"
+        "createdAt": "2026-11-04T12:26:05.099Z",
+        "reason": "Claude, 04/11/2026: #000 e #fff são os canais da máscara SVG da abertura (intro-luz e .intro__porta), não cores de tela."
       }
     ]
   }

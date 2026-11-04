@@ -96,7 +96,7 @@ export const montar = {
   <li><strong>Curso de noivos.</strong> É obrigatório. A arquidiocese publica o calendário das paróquias, quase sempre em um fim de semana.</li>
   <li><strong>Padrinhos.</strong> O diretório da arquidiocese limita a quatro casais para cada noivo.</li>
   <li><strong>Fora da igreja.</strong> Casar num sítio ou salão exige licença, com pedido por escrito ao pároco.</li>
-  <li><strong>Música.</strong> O diretório pede repertório litúrgico e orienta evitar canções populares, temas de filmes e de novelas durante o rito. Uma canção especial para o casal pode acompanhar a saída. Falo disso em <a href="../como-escolher-musicos-para-casamento/">Como escolher os músicos para o momento mais especial da vida de vocês</a>.</li>
+  <li><strong>Música.</strong> O diretório pede repertório litúrgico e orienta evitar canções populares, temas de filmes e de novelas durante o rito. Uma canção especial para o casal pode acompanhar a saída. Falo disso em <a href="../como-escolher-musicos-para-casamento/">Como escolher os músicos do casamento</a>.</li>
 </ul>
 <div class="caixa caixa--aviso">
   <p class="caixa__titulo">Um cuidado com o calendário</p>

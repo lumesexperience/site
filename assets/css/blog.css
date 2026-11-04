@@ -14,6 +14,10 @@
   font-display: swap;
 }
 
+/* O "1" do Bodoni Moda é idêntico ao "l"; só esse algarismo vem de uma serifa do sistema (igual à página inicial). */
+@font-face { font-family: "Bodoni um"; src: local("Times New Roman"), local("TimesNewRomanPSMT"), local("Liberation Serif"); unicode-range: U+0031; size-adjust: 112%; }
+@font-face { font-family: "Bodoni um Noto"; src: local("Noto Serif"), local("NotoSerif-Regular"); unicode-range: U+0031; size-adjust: 100%; }
+
 /* Fontes do sistema com a largura ajustada à fonte da página: se ela chegar tarde, nada pula. */
 @font-face { font-family: "Bodoni reserva"; src: local("Noto Serif"), local("NotoSerif-Regular"); size-adjust: 96.5%; }
 @font-face { font-family: "Bodoni reserva Georgia"; src: local("Georgia"); size-adjust: 103%; }
@@ -28,25 +32,27 @@
   --pessego: #EDC79B;
   --tinta: #33200F;
   --tinta-suave: #6A4A33;
+  --tinta-funda: #2B1A0F;
   --terracota-marca: #BB7944;
   --terracota: #8E5226;
   --terracota-funda: #6F3E1B;
   --sobre-terracota: #FFF8F0;
+  --branco: #FFFFFF;
   --lume: #BB7944;
   --foco: #8E5226;
   --lume-escuro: #8E5226;
 
-  --noite: #2B1A0F;
-  --noite-2: #3A2416;
-  --noite-linha: #5C3B25;
-  --noite-campo: #9C7A60;
-  --noite-dica: #C2A388;
+  --noite: #693A1C;
+  --noite-2: #7A4726;
+  --noite-linha: #9A6644;
+  --noite-campo: #D1A47F;
+  --noite-dica: #E3C4A6;
   --luz: #EDC79B;
   --luz-clara: #F6DDBF;
-  --noite-foco: #E9A86F;
-  --noite-texto: #F8EBDD;
-  --noite-suave: #DCC4AD;
-  --noite-resposta: #EAD6C2;
+  --noite-foco: #F4BE8C;
+  --noite-texto: #FFF4E8;
+  --noite-suave: #EFD6BE;
+  --noite-resposta: #F7E6D4;
 
   /* Textura de luz: o sol baixo no dia e as luzes acesas na noite. Posições em rem a partir do topo,
      para valer em blocos de qualquer altura. */
@@ -54,11 +60,12 @@
     radial-gradient(58rem 32rem at calc(100% + 6rem) -7rem, rgb(237 199 155 / 0.62), transparent 70%),
     radial-gradient(40rem 26rem at -12rem 30rem, rgb(187 121 68 / 0.12), transparent 70%);
   --textura-noite:
-    radial-gradient(64rem 26rem at 50% -9rem, rgb(237 199 155 / 0.12), transparent 70%),
-    radial-gradient(44rem 30rem at calc(100% + 10rem) 55%, rgb(187 121 68 / 0.12), transparent 70%);
+    radial-gradient(64rem 26rem at 50% -9rem, rgb(237 199 155 / 0.1), transparent 70%),
+    radial-gradient(44rem 30rem at calc(100% + 10rem) 55%, rgb(237 199 155 / 0.08), transparent 70%);
 
-  /* O pôr do sol entre a cerimônia e a festa: do pêssego ao terracota e à noite. Embaixo, as primeiras luzes acesas. */
-  --anoitecer: linear-gradient(to bottom, var(--dia) 0%, #F0D3B0 22%, #E2A877 42%, #BB7944 60%, #6B4026 80%, var(--noite) 100%);
+  /* O pôr do sol entre a cerimônia e a festa: do pêssego ao terracota da marca e à noite terracota.
+     Embaixo, as primeiras luzes acesas. */
+  --anoitecer: linear-gradient(to bottom, var(--dia) 0%, #F0D3B0 24%, #E2A877 46%, #BB7944 68%, #8A4D24 86%, var(--noite) 100%);
   --luzes-do-anoitecer:
     radial-gradient(circle at 12% 70%, color-mix(in srgb, var(--luz-clara) 90%, transparent) 0 2px, transparent 3px),
     radial-gradient(circle at 26% 58%, color-mix(in srgb, var(--luz-clara) 70%, transparent) 0 1.5px, transparent 2.5px),
@@ -68,7 +75,7 @@
     radial-gradient(circle at 86% 60%, color-mix(in srgb, var(--luz-clara) 70%, transparent) 0 1.5px, transparent 2.5px),
     radial-gradient(ellipse at 50% 100%, color-mix(in srgb, var(--luz) 18%, transparent), transparent 70%);
 
-  --serif: "Bodoni Moda", "Bodoni reserva", "Bodoni reserva Georgia", "Bodoni reserva Times", serif;
+  --serif: "Bodoni um", "Bodoni um Noto", "Bodoni Moda", "Bodoni reserva", "Bodoni reserva Georgia", "Bodoni reserva Times", serif;
   --sans: "Manrope", "Manrope reserva", "Manrope reserva Arial", sans-serif;
 
   --largura: 72rem;
@@ -78,10 +85,14 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
+/* O que o navegador desenha sozinho também segue a marca: barra de rolagem, toque, seleção, cursor. */
 html {
   -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: color-mix(in srgb, var(--terracota-marca) 22%, transparent);
   scroll-behavior: smooth;
   scroll-padding-top: 1.5rem;
+  scrollbar-color: var(--terracota-marca) var(--dia);
+  accent-color: var(--terracota);
 }
 
 body {
@@ -97,12 +108,20 @@ body {
   body { font-size: 1.125rem; }
 }
 
-::selection { background: color-mix(in srgb, var(--luz) 45%, transparent); }
+::selection { background: color-mix(in srgb, var(--luz) 70%, transparent); color: var(--tinta-funda); }
+.noite ::selection { background: var(--luz-clara); color: var(--tinta-funda); }
 
 img { display: block; max-width: 100%; height: auto; }
 
-a { color: inherit; text-underline-offset: 0.22em; text-decoration-thickness: 1px; }
-a:hover { text-decoration-thickness: 2px; }
+a {
+  color: inherit;
+  text-decoration-color: color-mix(in srgb, currentColor 55%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+  transition: text-decoration-color 0.2s;
+}
+a:hover { text-decoration-color: currentColor; }
+label, select, summary, button { cursor: pointer; }
 
 h1, h2, h3 {
   margin: 0;
@@ -111,6 +130,7 @@ h1, h2, h3 {
   line-height: 1.1;
   text-wrap: balance;
   overflow-wrap: break-word;
+  font-variant-numeric: lining-nums;
 }
 
 /* O tamanho óptico automático do Bodoni deixa o fio fino demais abaixo de ~60px ("BH" vira "BII"). */
@@ -123,17 +143,14 @@ h3, .lista-numerada > li::before, .prazos dt { --opsz: 14; }
 p, li, dd, td { text-wrap: pretty; }
 p { margin: 0 0 1em; }
 
-/* Texto corrido justificado só nas colunas largas, no computador (pedido do dono, ajustado na revisão
-   impeccable de 03/11/2026): o corpo do artigo, o resumo, o aviso e a bio da autora. No celular e nas
-   colunas estreitas (prazos, checagem, fontes, cartões, linha fina, sumário) o texto fica à esquerda.
+/* Texto corrido justificado só nas colunas largas, no computador (pedido do dono, ajustado nas revisões
+   impeccable de 03 e 04/11/2026): os parágrafos do corpo do artigo e o aviso. No celular e nas colunas
+   estreitas (listas, resumo, prazos, checagem, fontes, cartões, linha fina, sumário, bio da autora) o texto
+   fica à esquerda: nas listas, a justificação abria buracos entre as palavras.
    A hifenização só quebra palavras de 11 letras ou mais, para nunca partir nomes. */
 @media (min-width: 64rem) {
   .texto > p,
-  .texto > ul > li,
-  .lista-numerada > li,
-  .resumo li,
-  .caixa--aviso > p:not(.caixa__titulo),
-  .autora__bio {
+  .caixa--aviso > p:not(.caixa__titulo) {
     text-align: justify;
     -webkit-hyphens: auto;
     hyphens: auto;
@@ -189,37 +206,53 @@ p { margin: 0 0 1em; }
   .botao { padding-inline: 1rem; font-size: 0.9375rem; }
 }
 
-/* ---------- Topo ---------- */
+/* ---------- Topo ----------
+   Igual ao da página inicial: no celular, o logo e três links; no computador, o quarto link e o botão compacto. */
+.topo-faixa { background: var(--pessego); }
 .topo {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding-block: 1.25rem;
+  padding-block: 1rem;
 }
 
 /* A sub-marca da identidade (símbolo + LUMES EXPERIENCE), em terracota da marca: logotipo não entra na regra de contraste. */
 .marca {
   display: inline-flex;
+  flex: none;
   align-items: center;
   min-height: 2.75rem;
   color: var(--terracota-marca);
   text-decoration: none;
 }
-.marca svg { display: block; width: auto; height: clamp(2.35rem, 2rem + 1vw, 2.85rem); aspect-ratio: 1745 / 594; }
+.marca svg { display: block; width: auto; height: 2.35rem; aspect-ratio: 1745 / 594; }
 
-.topo__nav { display: none; }
-
-@media (min-width: 56rem) {
-  .topo__nav { display: flex; gap: 1.75rem; margin-left: auto; margin-right: 1.5rem; }
-  .topo__nav a { color: var(--tinta-suave); text-decoration: none; font-size: 0.9375rem; }
-  .topo__nav a:hover, .topo__nav a[aria-current] { color: var(--terracota); text-decoration: underline; }
+.topo__nav { display: flex; gap: 1.1rem; margin-left: auto; }
+.topo__nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  color: var(--tinta-suave);
+  font-size: 0.9375rem;
+  text-decoration: none;
 }
+.topo__nav a:hover, .topo__nav a[aria-current] { color: var(--terracota); text-decoration: underline; }
+/* Sobre o pêssego pleno, o terracota fechado cai para 3,9:1: o link ativo usa o terracota mais funda (5,6:1). */
+.topo-faixa .topo__nav a:hover, .topo-faixa .topo__nav a[aria-current] { color: var(--terracota-funda); }
+.topo__nav .so-largo, .topo > .botao { display: none; }
 
 @media (max-width: 22.49rem) {
-  .topo__rotulo { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-  .topo .botao { padding-inline: 0.85rem; }
+  .topo__nav a:nth-child(2) { display: none; }
+}
+
+@media (min-width: 56rem) {
+  .topo { padding-block: 1.25rem; }
+  .topo__nav { gap: 1.75rem; margin-right: 1.5rem; }
+  .topo__nav .so-largo, .topo > .botao { display: inline-flex; }
+}
+@media (min-width: 60rem) {
+  .marca svg { height: 3.6rem; }
 }
 
 /* ---------- Capa: o arco da marca, como nas peças da identidade ----------
@@ -322,7 +355,7 @@ p { margin: 0 0 1em; }
 .assinatura img { width: 3.25rem; height: 3.25rem; border-radius: 50%; }
 .assinatura p { margin: 0; line-height: 1.45; }
 .assinatura__nome { font-weight: 600; }
-.assinatura__nome a { color: var(--terracota); }
+.assinatura__nome a { display: inline-block; padding-block: 0.6rem; margin-block: -0.6rem; color: var(--terracota); }
 .assinatura__meta { color: var(--tinta-suave); font-size: 0.9375rem; }
 
 /* Texto numa coluna de leitura; no computador, o sumário acompanha ao lado. */
@@ -366,7 +399,9 @@ p { margin: 0 0 1em; }
 .sumario h2 { margin-bottom: 0.5rem; font-size: 1.25rem; --opsz: 14; }
 .sumario ul { margin: 0; padding: 0; list-style: none; }
 .sumario a {
-  display: block;
+  display: flex;
+  align-items: center;
+  min-height: 2.75rem;
   padding-block: 0.45rem;
   color: var(--tinta-suave);
   font-size: 0.9375rem;
@@ -385,7 +420,7 @@ p { margin: 0 0 1em; }
     content: "";
     position: absolute;
     left: -4px;
-    top: calc(0.45rem + 0.7em - 3.5px);
+    top: calc(50% - 3.5px);
     width: 7px;
     height: 7px;
     border-radius: 50%;
@@ -514,8 +549,10 @@ p { margin: 0 0 1em; }
 }
 .fontes h2 { margin: 0 0 0.75rem; font-size: 1.25rem; color: var(--tinta); --opsz: 14; }
 .fontes ol { margin: 0; padding-left: 1.2rem; }
-.fontes li + li { margin-top: 0.4rem; }
-.fontes a { overflow-wrap: anywhere; }
+.fontes li { line-height: 1.85; }
+.fontes li + li { margin-top: 0.35rem; }
+/* Cada linha da lista passa de 24 px de altura (WCAG 2.5.8) sem desalinhar o número do item. */
+.fontes a { padding-block: 0.2rem; overflow-wrap: anywhere; }
 
 /* ---------- Página do blog ----------
    Uma faixa inteira de pêssego no topo, com o símbolo da marca à direita, e os artigos numa fileira de arcos,
@@ -523,14 +560,14 @@ p { margin: 0 0 1em; }
 .blog__faixa {
   background:
     radial-gradient(48rem 26rem at calc(100% - 8rem) 40%, color-mix(in srgb, var(--sobre-terracota) 45%, transparent), transparent 70%),
-    var(--pessego);
+    linear-gradient(to bottom, var(--pessego) 0, var(--pessego) calc(100% - 5rem), var(--dia) 100%);
 }
 .blog__topo {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   align-items: center;
   gap: 2rem;
-  padding-block: clamp(2rem, 1rem + 4vw, 4.5rem);
+  padding-block: clamp(1rem, 0.5rem + 3vw, 3rem) clamp(3.5rem, 2.5rem + 4vw, 6rem);
 }
 .blog__abertura { max-width: var(--leitura); }
 .blog__faixa .linha-fina { color: var(--tinta-suave); }
@@ -556,8 +593,8 @@ p { margin: 0 0 1em; }
 .cartao {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 6.75rem) minmax(0, 1fr);
-  gap: 1.25rem;
+  grid-template-columns: minmax(0, 5rem) minmax(0, 1fr);
+  gap: 1rem;
   align-items: start;
   align-content: start;
 }
@@ -575,9 +612,13 @@ p { margin: 0 0 1em; }
 }
 
 @media (min-width: 60rem) {
-  .cartoes { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3rem clamp(2rem, 1rem + 2vw, 3.5rem); }
-  .cartao { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; align-items: start; }
-  .cartao .capa__assunto { display: block; }
+  .cartoes { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 2.5rem clamp(3rem, 1rem + 4vw, 5.5rem); align-items: start; }
+  .cartao:first-child { grid-row: span 2; grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+  .cartao:first-child .capa { max-width: 22rem; }
+  .cartao:first-child .capa__assunto { display: block; }
+  .cartao:first-child .cartao__titulo { font-size: clamp(1.75rem, 1.2rem + 1.2vw, 2.375rem); }
+  .cartao:not(:first-child) { padding-top: 2.5rem; border-top: 1px solid var(--dia-linha); }
+  .cartao:nth-child(2) { padding-top: 0; border-top: 0; }
   .cartao__texto p { margin-top: 0.75rem; }
 }
 
@@ -623,7 +664,8 @@ p { margin: 0 0 1em; }
 /* O brilho fica no começo da noite; o rodapé continua no escuro, sem emenda. */
 footer.noite { background: var(--noite); }
 
-.autora { padding-block: clamp(2.5rem, 2rem + 3vw, 4rem); }
+.autora { padding-block: clamp(2.5rem, 2rem + 3vw, 4rem) 0; }
+.autora:last-child { padding-bottom: clamp(2.5rem, 2rem + 3vw, 4rem); }
 .autora__cartao { max-width: var(--leitura); }
 .autora__quem { display: flex; align-items: center; gap: 1rem; }
 .autora__quem picture { flex: none; }
@@ -634,7 +676,7 @@ footer.noite { background: var(--noite); }
 .autora__acoes { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.75rem; margin-top: 1.5rem; }
 .autora__acoes a:not(.botao) { display: inline-flex; align-items: center; min-height: 2.75rem; color: var(--luz-clara); font-weight: 600; }
 
-.leia-tambem { margin-top: 3.5rem; }
+.leia-tambem { padding-block: 3.5rem clamp(2.5rem, 2rem + 3vw, 4rem); }
 .leia-tambem h2 { margin-bottom: 1rem; font-size: 1.375rem; --opsz: 14; }
 .leia-tambem ul { display: grid; gap: 0 2.5rem; margin: 0; padding: 0; list-style: none; }
 
@@ -670,12 +712,14 @@ footer.noite { background: var(--noite); }
 .capa--mini .capa__assunto { display: none; }
 
 /* ---------- Rodapé ---------- */
+/* O fio do rodapé acompanha a coluna de conteúdo, sem passar para as margens. */
 .rodape {
+  position: relative;
   padding-block: 3rem calc(3rem + env(safe-area-inset-bottom));
-  border-top: 1px solid var(--noite-linha);
   color: var(--noite-suave);
   font-size: 0.9375rem;
 }
+.rodape::before { content: ""; position: absolute; top: 0; left: var(--margem); right: var(--margem); border-top: 1px solid var(--noite-linha); }
 .rodape .marca { margin-bottom: 0.75rem; color: var(--luz); }
 .rodape .marca svg { height: 3.25rem; }
 .rodape__links { display: flex; flex-wrap: wrap; gap: 0 1.5rem; margin: 0.75rem 0; padding: 0; list-style: none; }

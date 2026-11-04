@@ -30,7 +30,7 @@ DESIGN.md           o sistema visual: cores, tipos e componentes (não publicar)
 python3 -m http.server 4321    # depois abra http://localhost:4321
 ```
 
-A abertura animada só roda sozinha na primeira visita de cada aba. Para revê-la, abra `http://localhost:4321/?abertura` ou use o botão "Ver a abertura com música", embaixo da foto da Delliz.
+A abertura animada roda sozinha uma vez a cada 30 dias por aparelho (`localStorage`, chave `abertura-vista`). Para revê-la, abra `http://localhost:4321/?abertura` ou use o botão "Rever a abertura, com som", no rodapé.
 
 ## Depoimentos (prévia)
 
@@ -41,9 +41,19 @@ A seção de depoimentos ("Quem já viveu") tem **exemplos para aprovar o layout
 A identidade **Lumes Experience** chegou do dono em 03/11/2026 (pasta "Lumes - Identidade Visual", só em JPG): terracota `#bb7944`, pêssego `#edc79b`, os dois arcos, o L, a estrela e o nome em caixa alta. O site inteiro segue essa identidade; as regras estão no `DESIGN.md`.
 
 - **Vetores.** O logo foi traçado dos JPGs com o `potrace` e reunido em `scripts/blog/marca.mjs`: arcos, linhas, L, estrelas, raios, LUMES e EXPERIENCE. O blog e as imagens de compartilhamento importam de lá. A página inicial, escrita à mão, recebe uma cópia: depois de mudar `marca.mjs`, rode `node scripts/blog/marca-no-index.mjs`, que reescreve o sprite e a arte da abertura entre os marcadores `<!-- marca:... -->` e `<!-- abertura:... -->`.
-- **Abertura.** Na primeira visita, o logo se desenha no pêssego e o arco de dentro vira uma porta que se abre para a página. São cerca de 7 s; clique, tecla ou rolagem pulam. O botão "Ver a abertura com música" repete a abertura com uma trilha composta para ela, sintetizada no navegador (Web Audio, nenhum arquivo de áudio). A animação e a música usam os mesmos tempos (objeto `T` no fim do `index.html`). Com "reduzir movimento", ela não roda sozinha; pelo botão, o logo fica parado e a música toca.
-- **Cores.** O terracota da marca vai no logo e nos ornamentos; botões, links e numerais usam um terracota mais fechado (`#8E5226`), porque o da marca com texto branco não passa no contraste (3,5:1).
+- **Abertura.** Uma vez a cada 30 dias, o logo se desenha no pêssego e o arco de dentro vira uma porta acesa. Ela viaja e pousa nos arcos em volta da foto da Delliz, e a página aparece em volta. São cerca de 4,6 s, e o logo inteiro fica parado quase 1 s; clique, tecla ou rolagem pulam. O botão "Rever a abertura, com som", no rodapé, repete a abertura com uma trilha sintetizada no navegador (Web Audio). A animação e o som usam os mesmos tempos (objeto `T` no fim do `index.html`). Com "reduzir movimento", ela não roda sozinha; pelo botão, o logo fica parado e o som toca.
+- **Cores.** O terracota da marca vai no logo, nos ornamentos e na faixa em arco "Depois da comida, é a música que os convidados mais notam." (só com título grande em branco). Botões, links e numerais usam um terracota mais fechado (`#8E5226`), porque o da marca com texto branco pequeno não passa no contraste (3,5:1). A noite é terracota escuro (`#693A1C`), sem preto: a identidade não tem preto nem cinza.
 - **Ícones.** `assets/img/favicon.svg` é o L com as estrelas em branco sobre terracota; `node scripts/blog/imagens.mjs` gera dele os PNGs.
+
+## O trecho da voz da Delliz (quando chegar o áudio)
+
+A página já tem a vaga para um trecho real da Delliz (uns 30 s), usado em dois lugares: um player na seção "A voz" e a abertura com som. Para ligar:
+
+1. Exporte o trecho em MP3 (ou M4A) com uns 128 kbps e salve em `assets/audio/`, com nome descritivo, por exemplo `assets/audio/delliz-christine-trecho.mp3`. Exemplo com o ffmpeg: `ffmpeg -i original.wav -ss 00:00:12 -t 30 -af "afade=t=in:d=0.3,afade=t=out:st=29:d=1" -c:a libmp3lame -b:a 128k assets/audio/delliz-christine-trecho.mp3`.
+2. No fim do `index.html`, preencha `const AUDIO_DELLIZ = { arquivo: 'assets/audio/delliz-christine-trecho.mp3', inicio: 0 };`. Em `inicio`, ponha o segundo do arquivo em que a abertura deve começar a tocar.
+3. Pronto: o player aparece embaixo da fala da Delliz, e o botão do rodapé passa a dizer "Rever a abertura com a voz da Delliz". Sem o arquivo, o player fica escondido e a abertura usa a trilha sintetizada.
+
+Confirme com a Delliz que ela autoriza o trecho no site.
 
 ## Antes de publicar (obrigatório)
 
@@ -58,14 +68,14 @@ Ele falha se sobrar algum marcador, se um arquivo citado em `assets/` não exist
 ### Para revisar com a Delliz
 
 - **Nome**: usei **Delliz Christine**, com "h", como no Instagram (`@dellizchristine`) e no site do Jeito Ágape. Se o certo for "Cristine", troque em todos os arquivos.
-- **Bio** (seção `#delliz` e a pergunta "Quem é Delliz Christine?"): tem só o que já é público. Vale acrescentar fatos reais e verificáveis: anos cantando, número de casamentos, onde estudou. Nunca números inventados.
-- **Fotos da Delliz**: desde 03/11/2026 vêm do ensaio de estúdio dela (11 fotos RAW da Sony, de 11/06/2024, na pasta do Drive que o dono mandou): no topo, a DSC03151 (luz de palco, microfone vintage); na seção `#delliz`, a DSC02895 (vestido claro); e o rosto das assinaturas é recortado da DSC02688. Todas estão em 4:5 no arco, e o rosto tem 192×192. Quando houver uma foto dela cantando num casamento, ela pode ir para o topo com os mesmos nomes (`assets/img/delliz-christine-cantando-480|720|880`, em `.jpg` e `.webp`). A origem de cada arquivo fica embutida no `.jpg` e num `.webp.json` ao lado, gravada com `impeccable embed-prompt`. Depois de trocar uma foto, rode `node scripts/blog/imagens.mjs` com o site servido, porque as imagens de compartilhamento usam essas fotos. No Mac, o script pede um `google-chrome` no PATH apontando para o Chrome.
+- **A fala da Delliz** (seção `#delliz`, em primeira pessoa desde 04/11/2026, por decisão do dono) e a pergunta "Quem é Delliz Christine?": têm só o que já é público. A Delliz precisa aprovar a fala, que sai no nome dela. Vale acrescentar fatos reais e verificáveis: anos cantando, número de casamentos, onde estudou. Nunca números inventados.
+- **Fotos da Delliz**: desde 03/11/2026 vêm do ensaio de estúdio dela (11 fotos RAW da Sony, de 11/06/2024, na pasta do Drive que o dono mandou): no topo, a DSC03151 (luz de palco, microfone vintage); na seção `#delliz`, a DSC02895 (vestido claro); e o rosto das assinaturas é recortado da DSC02688. Todas estão em 4:5 no arco, e o rosto tem 192×192. Em 04/11/2026, o fundo cinza-frio do estúdio no retrato e no rosto foi aquecido para o pêssego da identidade, com um ajuste de cor por pixel no ffmpeg (`geq`): só os pixels claros e pouco saturados mudam de tom, e pele, cabelo e microfone ficam como estavam. Não houve IA generativa. Quando houver uma foto dela cantando num casamento, ela pode ir para o topo com os mesmos nomes (`assets/img/delliz-christine-cantando-480|720|880`, em `.jpg` e `.webp`). A origem de cada arquivo fica embutida no `.jpg` e num `.webp.json` ao lado, gravada com `impeccable embed-prompt`. Depois de trocar uma foto, rode `node scripts/blog/imagens.mjs` com o site servido, porque as imagens de compartilhamento usam essas fotos. No Mac, o script pede um `google-chrome` no PATH apontando para o Chrome.
 - **Vídeo**: o canal do Jeito Ágape não permite tocar esse vídeo dentro de outros sites, então o arco abre o YouTube em outra aba (no celular, abre o app). Se o canal liberar a incorporação, ou se houver um vídeo do próprio Lumes Experience, dá para tocar na página.
 - **Instagram próprio do Lumes Experience**: quando existir, adicione o link no rodapé e no `sameAs` do nó `#lumes` no JSON-LD.
 
 ### Opcional
 
-- **Medição (GA4)**: no fim do `index.html`, preencha `const GA4_ID = 'G-...'`. Cada clique no WhatsApp vira o evento `whatsapp_click` com `cta_location` (topo, abertura, fatos, formulário, barra no celular, rodapé). Vazio, nenhum script de terceiros é carregado.
+- **Medição (GA4)**: preencha o mesmo ID em dois lugares, `const GA4_ID = 'G-...'` no fim do `index.html` e em `scripts/blog/gerar.mjs` (depois, gere o blog de novo). Cada clique no WhatsApp vira o evento `whatsapp_click` com `cta_location`: `topo`, `abertura`, `passos`, `perguntas`, `formulario`, `barra-celular` e `rodape` na página inicial, e `topo`, `blog` e `rodape` no blog. Marque `whatsapp_click` como evento principal (conversão) no GA4. Vazio, nenhum script de terceiros é carregado.
 - **Preço "a partir de"**: a pesquisa mostra que preço visível aumenta contatos (detalhes em `docs/PESQUISA.md`). Quando houver um valor real, atualize o fato "Valor", a primeira pergunta do FAQ, o JSON-LD (`priceRange` no nó `#lumes`) e o `llms.txt`.
 
 ## Publicar
@@ -111,7 +121,7 @@ Use nomes descritivos (`cerimonia-igreja-nova-lima.jpg`, não `IMG_2034.jpg`) e 
 
 Os fatos moram em quatro lugares que precisam dizer a mesma coisa:
 
-1. o texto visível (abertura, bloco "O Lumes Experience em poucas linhas" perto do fim, FAQ, rodapé);
+1. o texto visível (topo, eventos, FAQ e rodapé; a ficha "em poucas linhas" saiu em 04/11/2026, porque repetia o FAQ);
 2. o JSON-LD no `<head>`;
 3. o `llms.txt`;
 4. a data de atualização: o `<time datetime>` do rodapé, o `dateModified` do JSON-LD, o `<lastmod>` do sitemap e a linha do `llms.txt`.
@@ -124,7 +134,7 @@ O blog fica em `/blog/`, com três artigos assinados por Delliz Christine:
 
 - [O que vocês precisam saber para montar o casamento](blog/como-montar-o-casamento/): decisões, ordem dos fornecedores, cartório em Minas (prazos e valores de 2026) e igreja.
 - [Dicas para quem vai casar](blog/dicas-para-quem-vai-casar/): dez dicas, com chuva e pôr do sol em BH mês a mês.
-- [Como escolher os músicos para o momento mais especial da vida de vocês](blog/como-escolher-musicos-para-casamento/): o que ouvir, perguntar e combinar com a igreja.
+- [Como escolher os músicos do casamento](blog/como-escolher-musicos-para-casamento/): o que ouvir, perguntar e combinar com a igreja.
 
 **Antes de publicar, a Delliz precisa ler e aprovar os três.** Os textos saem no nome dela. Eles foram escritos com pesquisa e fontes (listadas no fim de cada artigo), em primeira pessoa só para recomendações. Não contam experiências que ela não viveu, nem números do Lumes Experience. Se ela quiser acrescentar uma história ou um conselho próprio, é o que mais dá valor ao texto.
 
@@ -158,11 +168,18 @@ O [impeccable](https://impeccable.style/) está instalado em `.claude/skills/imp
 
 - **Primeira rodada.** Crítica de design, detector e auditoria técnica levaram à Delliz no topo, às amostras honestas, à ficha de fatos perto do FAQ, à prévia da mensagem no formulário e aos ajustes de acessibilidade. O relatório fica em `.impeccable/critique/`.
 - **Segunda rodada.** Paleta nude, verde e dourado, com textura "Luz" (halos radiais, sem grão).
+- **Quarta rodada (04/11/2026).** Acabamento com marketing, coerência e "sem cara de IA":
+  - **Cor:** a noite virou terracota; o terracota da marca virou campo na porta da música; o formulário ficou numa porta pêssego.
+  - **Abertura:** cerca de 4,6 s, uma vez a cada 30 dias, com a porta pousando na foto.
+  - **Seções:** eventos em linhas de programa, sem a coroa do Instagram; passos num caminho de estrelas; o FAQ com coluna fixa; a ficha de fatos saiu.
+  - **Texto:** o WhatsApp com um rótulo só; a Delliz em primeira pessoa; o campo Evento no formulário.
+  - **Acabamento:** retrato quente, o "1" do Bodoni corrigido e o navegador vestido nas cores da marca.
+  - O relatório fica em `.impeccable/critique/`.
 - **Terceira rodada (03/11/2026).** A identidade Lumes Experience substituiu a paleta: pêssego claro no dia, terracota nos botões, noite em marrom-terracota, pêssego como luz da noite, os dois arcos em volta da Delliz, a estrela do logo no anoitecer, o logo vetorial no topo e no rodapé e a abertura animada. A textura continua "Luz", agora em pêssego e terracota.
 
 - Numa máquina nova, depois de clonar: o binário do impeccable não vai para o git, e o launcher (`.claude/skills/impeccable/scripts/impeccable`) baixa o da plataforma na primeira vez que roda. O hook do detector fica em `.claude/settings.local.json`, que também é de cada máquina; para ligá-lo de novo, peça ao Claude Code `/impeccable hooks on`.
 - Para reavaliar depois de mudar a página, peça ao Claude Code `/impeccable critique index.html` ou `/impeccable audit index.html`.
-- O detector acusa `cream-palette` no fundo claro: é o pêssego da identidade, e está registrado como exceção em `.impeccable/config.json`. Os avisos `cramped-padding` e `tight-leading` do scan por arquivo são falsos positivos (o motor não lê `padding-block` nem `clamp()`); o scan pela página renderizada não os mostra.
+- O detector acusa `cream-palette` no fundo claro: é o pêssego da identidade, e está registrado como exceção em `.impeccable/config.json`. Os avisos `cramped-padding` e `tight-leading` do scan por arquivo são falsos positivos (o motor não lê `padding-block`, `calc()` nem `clamp()`); o scan pela página renderizada não os mostra. O único aviso que fica de pé é `low-contrast` no título branco da porta terracota: é texto grande (34 a 60 px), que pede 3:1 e tem 3,5:1. O motor não aceita exceção só para esse par de cores.
 
 ## Depois de publicar (SEO local e IAs)
 

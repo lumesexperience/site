@@ -8,7 +8,7 @@ web
 
 ## Users
 
-Casais que vão casar em Belo Horizonte e na região metropolitana e procuram música ao vivo para a cerimônia e para a festa. Chegam pelo Google, por indicação ou por uma IA, quase sempre pelo celular, comparando grupos e querendo saber se a data está livre.
+Casais que vão casar em Belo Horizonte e na região metropolitana e procuram música ao vivo para a cerimônia e para a festa, e também as famílias de debutantes e os casais que celebram bodas ou renovam os votos. Chegam pelo Google, por indicação ou por uma IA, quase sempre pelo celular, comparando grupos e querendo saber se a data está livre.
 
 O blog atende o mesmo casal mais cedo, quando ainda está montando o casamento e procura orientação sobre data, cartório, igreja, fornecedores e música.
 
@@ -29,7 +29,7 @@ A voz da Delliz conduz a cerimônia religiosa e a festa no mesmo casamento, com 
 ## Capabilities and Constraints
 
 - Cerimônia e recepção. A Delliz canta; ela não celebra o casamento.
-- Formação variável, conforme a vontade e o orçamento do casal.
+- Formação variável: quem contrata escolhe, conforme o estilo e o orçamento (dono, 04/11/2026). O site não cita instrumentos.
 - Som próprio, locável junto com o grupo.
 - Preço sob consulta: nada de valores na página.
 - Site estático em HTML, CSS e JS, sem build. O blog é gerado por `scripts/blog/gerar.mjs`.
@@ -41,13 +41,16 @@ A voz da Delliz conduz a cerimônia religiosa e a festa no mesmo casamento, com 
 - Identidade visual (03/11/2026, pasta "Lumes - Identidade Visual"): terracota #bb7944 e pêssego #edc79b, dois arcos de igreja, o L com a estrela, LUMES / EXPERIENCE em caixa alta. O nome do site é "Lumes Experience" (escolha do dono; antes era "Lumens").
 - Os ícones da identidade (exclamação, livro com lâmpada, coroa, foguete, microfone, atendente) são capas de destaques do Instagram; não entram no site.
 - O Jeito Ágape aparece só de leve, na bio da Delliz e no rodapé.
-- O site fala com o casal em "vocês".
+- O site fala com o casal em "vocês"; o grupo fala como "a gente" e "nós". A seção "A voz" fala na primeira pessoa da Delliz (dono, 04/11/2026), e o texto precisa da aprovação dela.
+- O botão do WhatsApp tem um rótulo só: "Consultar a data no WhatsApp".
 - Os artigos do blog saem no nome da Delliz e passam pela aprovação dela antes de publicar.
 
 ## Evidence on Hand
 
 - O vídeo "Espírito Poderoso" no YouTube (https://www.youtube.com/shorts/NBmB7i5MffI), sem embed permitido: o arco do topo abre esse vídeo.
 - Um ensaio de estúdio da Delliz (11 fotos, Sony ZV-E10, 11/06/2024), em uso desde 03/11/2026: no topo (`delliz-christine-cantando-*`, luz de palco), na seção "A voz do Lumes Experience" (`delliz-christine-retrato-*`, vestido claro) e no rosto das assinaturas. São fotos de estúdio, não de casamento: nunca entram nas amostras. Uma delas mostra a Delliz com um rapaz cuja identidade não foi confirmada; ela fica de fora até o dono dizer quem é.
+- Em 04/11/2026, o fundo cinza-frio do estúdio no retrato e no rosto das assinaturas foi aquecido para o pêssego da identidade (ajuste de cor no ffmpeg, sem IA generativa).
+- Um trecho real da voz da Delliz vai entrar no player da seção "A voz" e na abertura com som quando o dono mandar o áudio (a vaga já está pronta, `AUDIO_DELLIZ` no `index.html`).
 - Ainda faltam fotos e vídeos de casamentos reais: as amostras são espaços reservados.
 - Não há depoimentos, números de casamentos nem preços. Não inventar.
 

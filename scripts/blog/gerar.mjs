@@ -7,7 +7,9 @@ import { SPRITE_MARCA } from './marca.mjs';
 
 const RAIZ = new URL('../../', import.meta.url).pathname.replace(/\/$/, '');
 const SITE = 'https://lumesexperience.com.br';
-const WA = 'https://wa.me/5531996154698?text=Ol%C3%A1%2C%20Lumes%20Experience!%20Vi%20o%20site%20e%20quero%20consultar%20uma%20data%20para%20o%20nosso%20casamento.%0AData%3A%20%0ACidade%20e%20local%3A%20%0ACerim%C3%B4nia%3A%20%0AMomentos%20com%20m%C3%BAsica%3A%20';
+const WA = 'https://wa.me/5531996154698?text=Ol%C3%A1%2C%20Lumes%20Experience!%20Vi%20o%20site%20e%20quero%20consultar%20uma%20data.%0AEvento%3A%20%0AData%3A%20%0ACidade%20e%20local%3A%20%0ACerim%C3%B4nia%3A%20%0AMomentos%20com%20m%C3%BAsica%3A%20';
+// O mesmo ID da medição do index.html (GA4_ID). Vazio = nenhum script de terceiros.
+const GA4_ID = '';
 const MESES = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
 
 const dataPorExtenso = (iso) => { const [a, m, d] = iso.split('-').map(Number); return `${d} de ${MESES[m - 1]} de ${a}`; };
@@ -66,28 +68,28 @@ ${JSON.stringify(jsonLd, null, 2).replace(/^/gm, '  ')}
 </head>`;
 }
 
-function topo(raiz) {
+function topo(raiz, { faixa = false } = {}) {
   return `  <a class="pular" href="#principal">Pular para o conteúdo</a>
 
   ${ICONE}
 
-  <header class="topo conteudo">
+  ${faixa ? '<div class="topo-faixa">\n  ' : ''}<header class="topo conteudo">
     <a class="marca" href="${raiz}" aria-label="Lumes Experience, página inicial"><svg viewBox="0 0 1745 594" aria-hidden="true"><use href="#marca-logo"/></svg></a>
     <nav class="topo__nav" aria-label="Seções">
-      <a href="${raiz}#delliz">Delliz</a>
+      <a class="so-largo" href="${raiz}#delliz">Delliz</a>
       <a href="${raiz}#eventos">Eventos</a>
+      <a href="${raiz}#perguntas">Perguntas</a>
       <a href="${raiz}blog/" aria-current="page">Blog</a>
     </nav>
-    <a class="botao botao--compacto" data-cta="topo" target="_blank" rel="noopener"
-       href="${WA}">
-      <svg aria-hidden="true"><use href="#icone-whatsapp"/></svg><span class="topo__rotulo">Consultar data</span>
+    <a class="botao botao--compacto" data-cta="topo" target="_blank" rel="noopener" href="${WA}">
+      <svg aria-hidden="true"><use href="#icone-whatsapp"/></svg>Consultar a data
     </a>
-  </header>`;
+  </header>${faixa ? '\n  </div>' : ''}`;
 }
 
 function fim({ raiz, dataModificada, leiaTambem, script = '' }) {
   const outros = leiaTambem.length ? `
-      <section class="leia-tambem" aria-labelledby="titulo-leia">
+      <section class="leia-tambem conteudo" aria-labelledby="titulo-leia">
         <h2 id="titulo-leia">Leia também</h2>
         <ul>
 ${leiaTambem.map((a) => `          <li>
@@ -113,32 +115,32 @@ ${capa(a, 'capa--mini').replace(/^/gm, '            ')}
               <p>Cantora à frente do Lumes Experience</p>
             </div>
           </div>
-          <p class="autora__bio">O Lumes Experience faz música ao vivo para casamentos em Belo Horizonte e região metropolitana: na cerimônia (católica, evangélica ou ecumênica, na igreja ou ao ar livre) e na recepção, do coquetel à pista. Delliz também integra o Jeito Ágape, ministério de música católica de Belo Horizonte.</p>
+          <p class="autora__bio">O Lumes Experience faz música ao vivo para casamentos, bodas e festas de 15 anos em Belo Horizonte e região: na cerimônia (católica, evangélica ou ecumênica, na igreja ou ao ar livre) e na festa, do coquetel à pista. Delliz também integra o Jeito Ágape, ministério de música católica de Belo Horizonte.</p>
           <div class="autora__acoes">
-            <a class="botao botao--luz" data-cta="blog" target="_blank" rel="noopener"
-               href="${WA}">
-              <svg aria-hidden="true"><use href="#icone-whatsapp"/></svg>Consultar nossa data no WhatsApp
+            <a class="botao botao--luz" data-cta="blog" target="_blank" rel="noopener" href="${WA}">
+              <svg aria-hidden="true"><use href="#icone-whatsapp"/></svg>Consultar a data no WhatsApp
             </a>
             <a href="${raiz}">Conheça o Lumes Experience</a>
           </div>
-        </div>${outros}
-      </section>
+        </div>
+      </section>${outros}
     </div>
   </main>
 
   <footer class="noite">
     <div class="rodape conteudo">
       <a class="marca" href="${raiz}" aria-label="Lumes Experience, página inicial"><svg viewBox="0 0 1745 594" aria-hidden="true"><use href="#marca-logo"/></svg></a>
-      <p>Lumes Experience, música ao vivo para casamentos em Belo Horizonte e região metropolitana.</p>
+      <p>Lumes Experience, música ao vivo para casamentos, bodas e festas de 15 anos em Belo Horizonte e região.</p>
       <ul class="rodape__links">
-        <li><a data-cta="rodape" target="_blank" rel="noopener" href="${WA}">WhatsApp</a></li>
+        <li><a data-cta="rodape" target="_blank" rel="noopener" href="${WA}">WhatsApp (31) 99615-4698</a></li>
         <li><a href="${raiz}blog/">Blog</a></li>
         <li><a href="https://www.instagram.com/dellizchristine/" target="_blank" rel="noopener">Instagram da Delliz</a></li>
         <li><a href="https://jeitoagape.com.br/" target="_blank" rel="noopener">Jeito Ágape</a></li>
       </ul>
+      <p>Delliz Christine é integrante do Jeito Ágape, ministério de música católica.</p>
       <p>© 2026 Lumes Experience. Atualizado em <time datetime="${dataModificada}">${dataModificada.split('-').reverse().join('/')}</time>.</p>
     </div>
-  </footer>${script}
+  </footer>${script}${GA4_ID ? MEDICAO : ''}
 </body>
 </html>
 `;
@@ -163,8 +165,8 @@ function assinatura(raiz, artigo) {
 function capa(artigo, classe) {
   const tema = artigo.tema || TEMA_DA_CAPA[artigo.capa] || 'terracota';
   return `<div class="capa capa--${tema}${classe ? ` ${classe}` : ''}">
-  ${arteDaCapa(artigo.capa, tema)}
-  <p class="capa__assunto">${artigo.assunto}</p>
+  ${arteDaCapa(artigo.capa, tema)}${classe === 'capa--mini' ? '' : `
+  <p class="capa__assunto">${artigo.assunto}</p>`}
 </div>`;
 }
 
@@ -199,6 +201,25 @@ const MARCAR_SECAO = `
     }
     addEventListener('scroll', () => requestAnimationFrame(marcarSecao), { passive: true });
     marcarSecao();
+  </script>`;
+
+// Medição opcional, igual à da página inicial: o clique em qualquer [data-cta] vira whatsapp_click com cta_location.
+const MEDICAO = `
+  <script>
+    addEventListener('load', () => {
+      const s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=${GA4_ID}';
+      document.head.append(s);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function gtag() { dataLayer.push(arguments); };
+      gtag('js', new Date());
+      gtag('config', '${GA4_ID}');
+    });
+    document.addEventListener('click', (e) => {
+      const c = e.target.closest('[data-cta]');
+      if (c && window.gtag) gtag('event', 'whatsapp_click', { cta_location: c.dataset.cta });
+    });
   </script>`;
 
 const AVISO = '<!-- Página gerada por scripts/blog/gerar.mjs: edite o artigo em scripts/blog/artigos/ e gere de novo. -->';
@@ -295,7 +316,7 @@ ${capa(a).replace(/^/gm, '          ')}
         </li>`).join('\n');
   const html = `${cabeca({ titulo: 'Blog do Lumes Experience: dicas para quem vai casar', descricao, url, imagem: `${SITE}/assets/img/og-lumes.jpg`, imagemAlt: 'Lumes Experience, música ao vivo para casamentos em Belo Horizonte', tipoOg: 'website', jsonLd, raiz })}
 <body>
-${topo(raiz)}
+${topo(raiz, { faixa: true })}
 
   <main id="principal">
     <header class="blog__faixa">

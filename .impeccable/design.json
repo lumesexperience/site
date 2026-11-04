@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-03T23:29:34.654Z",
+  "generatedAt": "2026-11-04T12:47:44.311Z",
   "title": "Design System: Lumes Experience",
   "extensions": {
     "colorMeta": {
@@ -22,7 +22,7 @@
       },
       "dia-2": {
         "role": "neutral",
-        "displayName": "Dia Claro",
+        "displayName": "Dia 2",
         "canonical": "#FCF3E8",
         "cssVar": "--dia-2",
         "tonalRamp": [
@@ -38,7 +38,7 @@
       },
       "dia-linha": {
         "role": "neutral",
-        "displayName": "Linha do Dia",
+        "displayName": "Dia Linha",
         "canonical": "#E5C9AA",
         "cssVar": "--dia-linha",
         "tonalRamp": [
@@ -100,6 +100,22 @@
           "oklch(95.0% 0.056 56.4)"
         ]
       },
+      "tinta-funda": {
+        "role": "neutral",
+        "displayName": "Tinta Funda",
+        "canonical": "#2B1A0F",
+        "cssVar": "--tinta-funda",
+        "tonalRamp": [
+          "oklch(15.0% 0.033 53.3)",
+          "oklch(26.4% 0.033 53.3)",
+          "oklch(37.9% 0.033 53.3)",
+          "oklch(49.3% 0.033 53.3)",
+          "oklch(60.7% 0.033 53.3)",
+          "oklch(72.1% 0.033 53.3)",
+          "oklch(83.6% 0.033 53.3)",
+          "oklch(95.0% 0.033 53.3)"
+        ]
+      },
       "terracota": {
         "role": "primary",
         "displayName": "Terracota",
@@ -117,7 +133,7 @@
         ]
       },
       "terracota-funda": {
-        "role": "primary",
+        "role": "neutral",
         "displayName": "Terracota Funda",
         "canonical": "#6F3E1B",
         "cssVar": "--terracota-funda",
@@ -133,7 +149,7 @@
         ]
       },
       "sobre-terracota": {
-        "role": "primary",
+        "role": "neutral",
         "displayName": "Sobre Terracota",
         "canonical": "#FFF8F0",
         "cssVar": "--sobre-terracota",
@@ -148,9 +164,25 @@
           "oklch(95.0% 0.013 71.3)"
         ]
       },
+      "branco": {
+        "role": "secondary",
+        "displayName": "Branco",
+        "canonical": "#FFFFFF",
+        "cssVar": "--branco",
+        "tonalRamp": [
+          "oklch(15.0% 0.000 89.9)",
+          "oklch(26.4% 0.000 89.9)",
+          "oklch(37.9% 0.000 89.9)",
+          "oklch(49.3% 0.000 89.9)",
+          "oklch(60.7% 0.000 89.9)",
+          "oklch(72.1% 0.000 89.9)",
+          "oklch(83.6% 0.000 89.9)",
+          "oklch(95.0% 0.000 89.9)"
+        ]
+      },
       "terracota-marca": {
         "role": "secondary",
-        "displayName": "Terracota da Marca",
+        "displayName": "Terracota Marca",
         "canonical": "#BB7944",
         "cssVar": "--terracota-marca",
         "tonalRamp": [
@@ -181,7 +213,7 @@
         ]
       },
       "foco": {
-        "role": "tertiary",
+        "role": "primary",
         "displayName": "Foco",
         "canonical": "#8E5226",
         "cssVar": "--foco",
@@ -215,81 +247,81 @@
       "noite": {
         "role": "neutral",
         "displayName": "Noite",
-        "canonical": "#2B1A0F",
+        "canonical": "#693A1C",
         "cssVar": "--noite",
         "tonalRamp": [
-          "oklch(15.0% 0.033 53.3)",
-          "oklch(26.4% 0.033 53.3)",
-          "oklch(37.9% 0.033 53.3)",
-          "oklch(49.3% 0.033 53.3)",
-          "oklch(60.7% 0.033 53.3)",
-          "oklch(72.1% 0.033 53.3)",
-          "oklch(83.6% 0.033 53.3)",
-          "oklch(95.0% 0.033 53.3)"
+          "oklch(15.0% 0.079 51.2)",
+          "oklch(26.4% 0.079 51.2)",
+          "oklch(37.9% 0.079 51.2)",
+          "oklch(49.3% 0.079 51.2)",
+          "oklch(60.7% 0.079 51.2)",
+          "oklch(72.1% 0.079 51.2)",
+          "oklch(83.6% 0.079 51.2)",
+          "oklch(95.0% 0.079 51.2)"
         ]
       },
       "noite-2": {
         "role": "neutral",
-        "displayName": "Noite Dois",
-        "canonical": "#3A2416",
+        "displayName": "Noite 2",
+        "canonical": "#7A4726",
         "cssVar": "--noite-2",
         "tonalRamp": [
-          "oklch(15.0% 0.041 52.8)",
-          "oklch(26.4% 0.041 52.8)",
-          "oklch(37.9% 0.041 52.8)",
-          "oklch(49.3% 0.041 52.8)",
-          "oklch(60.7% 0.041 52.8)",
-          "oklch(72.1% 0.041 52.8)",
-          "oklch(83.6% 0.041 52.8)",
-          "oklch(95.0% 0.041 52.8)"
+          "oklch(15.0% 0.084 52.0)",
+          "oklch(26.4% 0.084 52.0)",
+          "oklch(37.9% 0.084 52.0)",
+          "oklch(49.3% 0.084 52.0)",
+          "oklch(60.7% 0.084 52.0)",
+          "oklch(72.1% 0.084 52.0)",
+          "oklch(83.6% 0.084 52.0)",
+          "oklch(95.0% 0.084 52.0)"
         ]
       },
       "noite-linha": {
         "role": "neutral",
-        "displayName": "Linha da Noite",
-        "canonical": "#5C3B25",
+        "displayName": "Noite Linha",
+        "canonical": "#9A6644",
         "cssVar": "--noite-linha",
         "tonalRamp": [
-          "oklch(15.0% 0.058 53.9)",
-          "oklch(26.4% 0.058 53.9)",
-          "oklch(37.9% 0.058 53.9)",
-          "oklch(49.3% 0.058 53.9)",
-          "oklch(60.7% 0.058 53.9)",
-          "oklch(72.1% 0.058 53.9)",
-          "oklch(83.6% 0.058 53.9)",
-          "oklch(95.0% 0.058 53.9)"
+          "oklch(15.0% 0.083 53.4)",
+          "oklch(26.4% 0.083 53.4)",
+          "oklch(37.9% 0.083 53.4)",
+          "oklch(49.3% 0.083 53.4)",
+          "oklch(60.7% 0.083 53.4)",
+          "oklch(72.1% 0.083 53.4)",
+          "oklch(83.6% 0.083 53.4)",
+          "oklch(95.0% 0.083 53.4)"
         ]
       },
       "noite-campo": {
         "role": "neutral",
-        "displayName": "Campo da Noite",
-        "canonical": "#9C7A60",
+        "displayName": "Noite Campo",
+        "canonical": "#D1A47F",
         "cssVar": "--noite-campo",
         "tonalRamp": [
-          "oklch(15.0% 0.057 58.8)",
-          "oklch(26.4% 0.057 58.8)",
-          "oklch(37.9% 0.057 58.8)",
-          "oklch(49.3% 0.057 58.8)",
-          "oklch(60.7% 0.057 58.8)",
-          "oklch(72.1% 0.057 58.8)",
-          "oklch(83.6% 0.057 58.8)",
-          "oklch(95.0% 0.057 58.8)"
+          "oklch(15.0% 0.073 60.8)",
+          "oklch(26.4% 0.073 60.8)",
+          "oklch(37.9% 0.073 60.8)",
+          "oklch(49.3% 0.073 60.8)",
+          "oklch(60.7% 0.073 60.8)",
+          "oklch(72.1% 0.073 60.8)",
+          "oklch(83.6% 0.073 60.8)",
+          "oklch(95.0% 0.073 60.8)"
         ]
       },
       "noite-dica": {
         "role": "neutral",
-        "displayName": "Dica da Noite",
-        "canonical": "#C2A388",
+        "displayName": "Noite Dica",
+        "canonical": "#E3C4A6",
         "cssVar": "--noite-dica",
         "tonalRamp": [
-          "oklch(15.0% 0.052 62.9)",
-          "oklch(26.4% 0.052 62.9)",
-          "oklch(37.9% 0.052 62.9)",
-          "oklch(49.3% 0.052 62.9)",
-          "oklch(60.7% 0.052 62.9)",
-          "oklch(72.1% 0.052 62.9)",
-          "oklch(83.6% 0.052 62.9)",
-          "oklch(95.0% 0.052 62.9)"
+          "oklch(15.0% 0.054 66.1)",
+          "oklch(26.4% 0.054 66.1)",
+          "oklch(37.9% 0.054 66.1)",
+          "oklch(49.3% 0.054 66.1)",
+          "oklch(60.7% 0.054 66.1)",
+          "oklch(72.1% 0.054 66.1)",
+          "oklch(83.6% 0.054 66.1)",
+          "oklch(95.0% 0.054 66.1)"
         ]
       },
       "luz": {
@@ -309,7 +341,7 @@
         ]
       },
       "luz-clara": {
-        "role": "primary",
+        "role": "tertiary",
         "displayName": "Luz Clara",
         "canonical": "#F6DDBF",
         "cssVar": "--luz-clara",
@@ -326,66 +358,114 @@
       },
       "noite-foco": {
         "role": "tertiary",
-        "displayName": "Lume da Noite",
-        "canonical": "#E9A86F",
+        "displayName": "Noite Foco",
+        "canonical": "#F4BE8C",
         "cssVar": "--noite-foco",
         "tonalRamp": [
-          "oklch(15.0% 0.106 61.6)",
-          "oklch(26.4% 0.106 61.6)",
-          "oklch(37.9% 0.106 61.6)",
-          "oklch(49.3% 0.106 61.6)",
-          "oklch(60.7% 0.106 61.6)",
-          "oklch(72.1% 0.106 61.6)",
-          "oklch(83.6% 0.106 61.6)",
-          "oklch(95.0% 0.106 61.6)"
+          "oklch(15.0% 0.090 63.9)",
+          "oklch(26.4% 0.090 63.9)",
+          "oklch(37.9% 0.090 63.9)",
+          "oklch(49.3% 0.090 63.9)",
+          "oklch(60.7% 0.090 63.9)",
+          "oklch(72.1% 0.090 63.9)",
+          "oklch(83.6% 0.090 63.9)",
+          "oklch(95.0% 0.090 63.9)"
         ]
       },
       "noite-texto": {
         "role": "neutral",
-        "displayName": "Texto da Noite",
-        "canonical": "#F8EBDD",
+        "displayName": "Noite Texto",
+        "canonical": "#FFF4E8",
         "cssVar": "--noite-texto",
         "tonalRamp": [
-          "oklch(15.0% 0.023 69.6)",
-          "oklch(26.4% 0.023 69.6)",
-          "oklch(37.9% 0.023 69.6)",
-          "oklch(49.3% 0.023 69.6)",
-          "oklch(60.7% 0.023 69.6)",
-          "oklch(72.1% 0.023 69.6)",
-          "oklch(83.6% 0.023 69.6)",
-          "oklch(95.0% 0.023 69.6)"
+          "oklch(15.0% 0.020 70.0)",
+          "oklch(26.4% 0.020 70.0)",
+          "oklch(37.9% 0.020 70.0)",
+          "oklch(49.3% 0.020 70.0)",
+          "oklch(60.7% 0.020 70.0)",
+          "oklch(72.1% 0.020 70.0)",
+          "oklch(83.6% 0.020 70.0)",
+          "oklch(95.0% 0.020 70.0)"
         ]
       },
       "noite-suave": {
         "role": "neutral",
         "displayName": "Noite Suave",
-        "canonical": "#DCC4AD",
+        "canonical": "#EFD6BE",
         "cssVar": "--noite-suave",
         "tonalRamp": [
-          "oklch(15.0% 0.041 66.0)",
-          "oklch(26.4% 0.041 66.0)",
-          "oklch(37.9% 0.041 66.0)",
-          "oklch(49.3% 0.041 66.0)",
-          "oklch(60.7% 0.041 66.0)",
-          "oklch(72.1% 0.041 66.0)",
-          "oklch(83.6% 0.041 66.0)",
-          "oklch(95.0% 0.041 66.0)"
+          "oklch(15.0% 0.043 66.1)",
+          "oklch(26.4% 0.043 66.1)",
+          "oklch(37.9% 0.043 66.1)",
+          "oklch(49.3% 0.043 66.1)",
+          "oklch(60.7% 0.043 66.1)",
+          "oklch(72.1% 0.043 66.1)",
+          "oklch(83.6% 0.043 66.1)",
+          "oklch(95.0% 0.043 66.1)"
         ]
       },
       "noite-resposta": {
         "role": "neutral",
-        "displayName": "Resposta",
-        "canonical": "#EAD6C2",
+        "displayName": "Noite Resposta",
+        "canonical": "#F7E6D4",
         "cssVar": "--noite-resposta",
         "tonalRamp": [
-          "oklch(15.0% 0.035 67.4)",
-          "oklch(26.4% 0.035 67.4)",
-          "oklch(37.9% 0.035 67.4)",
-          "oklch(49.3% 0.035 67.4)",
-          "oklch(60.7% 0.035 67.4)",
-          "oklch(72.1% 0.035 67.4)",
-          "oklch(83.6% 0.035 67.4)",
-          "oklch(95.0% 0.035 67.4)"
+          "oklch(15.0% 0.030 69.0)",
+          "oklch(26.4% 0.030 69.0)",
+          "oklch(37.9% 0.030 69.0)",
+          "oklch(49.3% 0.030 69.0)",
+          "oklch(60.7% 0.030 69.0)",
+          "oklch(72.1% 0.030 69.0)",
+          "oklch(83.6% 0.030 69.0)",
+          "oklch(95.0% 0.030 69.0)"
+        ]
+      },
+      "anoitecer-1": {
+        "role": "neutral",
+        "displayName": "Anoitecer 1",
+        "canonical": "#F0D3B0",
+        "cssVar": "--anoitecer-1",
+        "tonalRamp": [
+          "oklch(15.0% 0.057 72.2)",
+          "oklch(26.4% 0.057 72.2)",
+          "oklch(37.9% 0.057 72.2)",
+          "oklch(49.3% 0.057 72.2)",
+          "oklch(60.7% 0.057 72.2)",
+          "oklch(72.1% 0.057 72.2)",
+          "oklch(83.6% 0.057 72.2)",
+          "oklch(95.0% 0.057 72.2)"
+        ]
+      },
+      "anoitecer-2": {
+        "role": "neutral",
+        "displayName": "Anoitecer 2",
+        "canonical": "#E2A877",
+        "cssVar": "--anoitecer-2",
+        "tonalRamp": [
+          "oklch(15.0% 0.094 61.0)",
+          "oklch(26.4% 0.094 61.0)",
+          "oklch(37.9% 0.094 61.0)",
+          "oklch(49.3% 0.094 61.0)",
+          "oklch(60.7% 0.094 61.0)",
+          "oklch(72.1% 0.094 61.0)",
+          "oklch(83.6% 0.094 61.0)",
+          "oklch(95.0% 0.094 61.0)"
+        ]
+      },
+      "anoitecer-3": {
+        "role": "neutral",
+        "displayName": "Anoitecer 3",
+        "canonical": "#8A4D24",
+        "cssVar": "--anoitecer-3",
+        "tonalRamp": [
+          "oklch(15.0% 0.099 52.0)",
+          "oklch(26.4% 0.099 52.0)",
+          "oklch(37.9% 0.099 52.0)",
+          "oklch(49.3% 0.099 52.0)",
+          "oklch(60.7% 0.099 52.0)",
+          "oklch(72.1% 0.099 52.0)",
+          "oklch(83.6% 0.099 52.0)",
+          "oklch(95.0% 0.099 52.0)"
         ]
       }
     },
@@ -397,34 +477,24 @@
       },
       {
         "name": "textura-noite",
-        "value": "radial-gradient(64rem 26rem at 50% -9rem, rgb(237 199 155 / 0.12), transparent 70%), radial-gradient(44rem 30rem at calc(100% + 10rem) 55%, rgb(187 121 68 / 0.12), transparent 70%)",
-        "purpose": "Textura \"Luz\" da noite: brilho pêssego no alto e brasa terracota à direita. Não vai no rodapé."
+        "value": "radial-gradient(64rem 26rem at 50% -9rem, rgb(237 199 155 / 0.1), transparent 70%), radial-gradient(44rem 30rem at calc(100% + 10rem) 55%, rgb(237 199 155 / 0.08), transparent 70%)",
+        "purpose": "Textura \"Luz\" da noite terracota: brilho pêssego bem leve no alto e à direita. Não vai no rodapé."
       },
       {
         "name": "anoitecer",
-        "value": "linear-gradient(to bottom, var(--dia) 0%, #F0D3B0 22%, #E2A877 42%, #BB7944 60%, #6B4026 80%, var(--noite) 100%)",
-        "purpose": "O pôr do sol entre a cerimônia e a festa: do pêssego ao terracota e à noite. A estrela do logo acende no meio."
-      },
-      {
-        "name": "luzes-do-anoitecer",
-        "value": "radial-gradient(circle at 12% 70%, color-mix(in srgb, var(--luz-clara) 90%, transparent) 0 2px, transparent 3px), radial-gradient(circle at 26% 58%, color-mix(in srgb, var(--luz-clara) 70%, transparent) 0 1.5px, transparent 2.5px), radial-gradient(circle at 41% 74%, color-mix(in srgb, var(--luz-clara) 85%, transparent) 0 2px, transparent 3px), radial-gradient(circle at 57% 62%, color-mix(in srgb, var(--noite-foco) 80%, transparent) 0 1.5px, transparent 2.5px), radial-gradient(circle at 71% 76%, color-mix(in srgb, var(--luz-clara) 90%, transparent) 0 2px, transparent 3px), radial-gradient(circle at 86% 60%, color-mix(in srgb, var(--luz-clara) 70%, transparent) 0 1.5px, transparent 2.5px), radial-gradient(ellipse at 50% 100%, color-mix(in srgb, var(--luz) 18%, transparent), transparent 70%)",
-        "purpose": "As primeiras luzes acesas na metade de baixo do anoitecer."
-      },
-      {
-        "name": "capa",
-        "value": "radial-gradient(circle at 50% 56%, color-mix(in srgb, var(--lume) 30%, transparent) 0%, color-mix(in srgb, var(--luz) 14%, transparent) 36%, transparent 68%), linear-gradient(170deg, #2B3A30 0%, #1E2921 55%, var(--noite) 100%)",
-        "purpose": "O fundo aceso por dentro das capas do blog."
+        "value": "linear-gradient(to bottom, var(--dia) 0%, #F0D3B0 24%, #E2A877 46%, #BB7944 68%, #8A4D24 86%, var(--noite) 100%)",
+        "purpose": "O pôr do sol entre a cerimônia e a festa. A estrela do logo acende no meio."
       }
     ],
     "shadows": [
       {
         "name": "sombra-arco",
         "value": "0 1.75rem 3rem -1.5rem color-mix(in srgb, var(--tinta) 45%, transparent)",
-        "purpose": "Foto da Delliz e capas do blog."
+        "purpose": "Foto da Delliz, retrato e capas do blog."
       },
       {
         "name": "sombra-barra-noite",
-        "value": "0 -0.75rem 2rem -1rem color-mix(in srgb, var(--noite) 50%, transparent)",
+        "value": "0 -0.75rem 2rem -1rem color-mix(in srgb, var(--tinta-funda) 50%, transparent)",
         "purpose": "Barra fixa do WhatsApp sobre a noite."
       },
       {
@@ -437,12 +507,17 @@
       {
         "name": "foco-dia",
         "value": "outline: 3px solid var(--foco); outline-offset: 3px",
-        "purpose": "Foco de teclado sobre o dia."
+        "purpose": "Foco de teclado sobre o dia e sobre o pêssego."
       },
       {
         "name": "foco-noite",
         "value": "outline-color: var(--noite-foco)",
         "purpose": "Foco de teclado dentro de .noite."
+      },
+      {
+        "name": "foco-porta",
+        "value": "outline-color: var(--tinta-funda)",
+        "purpose": "Foco de teclado dentro da porta terracota."
       }
     ],
     "motion": [
@@ -483,8 +558,8 @@
       },
       {
         "name": "abertura",
-        "value": "100 bpm (1 tempo = 0,6 s); arcos 0-1,7 s, estrela pequena 1,8, L 2,1, estrela 2,7, LUMES 3,45 + 0,15 por letra, EXPERIENCE 4,2, saída 5,1, porta 5,7-6,9 s",
-        "purpose": "A intro da identidade: o logo se desenha no pêssego e o arco de dentro vira porta. Os mesmos tempos movem a trilha (Web Audio)."
+        "value": "cerca de 4,6 s: arcos 0 a 1,05 s; L, estrelas e LUMES até 2,3 s; EXPERIENCE e frase até 2,55 s; logo inteiro parado até 3,3 s; porta acesa viaja de 3,55 s a 4,3 s e abre a partir de 4 s; o pêssego se desfaz até 4,65 s",
+        "purpose": "A abertura: uma vez a cada 30 dias (localStorage), a porta pousa nos arcos da foto da Delliz."
       },
       {
         "name": "desenhar-arco",
@@ -501,7 +576,7 @@
       {
         "name": "minimo",
         "value": "22.49rem",
-        "purpose": "max-width: botão do topo perde o rótulo"
+        "purpose": "max-width: o menu do celular esconde \"Eventos\""
       },
       {
         "name": "estreito",
@@ -536,6 +611,28 @@
         "value": "64rem",
         "purpose": "corpo a 1.125rem, sumário fixo ao lado"
       }
+    ],
+    "navegador": [
+      {
+        "name": "selecao",
+        "value": "::selection { background: color-mix(in srgb, var(--luz) 70%, transparent); color: var(--tinta-funda) }"
+      },
+      {
+        "name": "rolagem",
+        "value": "scrollbar-color: var(--terracota-marca) var(--dia); na noite, var(--luz) var(--noite)"
+      },
+      {
+        "name": "toque",
+        "value": "-webkit-tap-highlight-color: color-mix(in srgb, var(--terracota-marca) 22%, transparent)"
+      },
+      {
+        "name": "sublinhado",
+        "value": "text-decoration-thickness: 1px; text-underline-offset: 0.22em; cor do texto a 55%, 100% no hover"
+      },
+      {
+        "name": "numerais",
+        "value": "font-variant-numeric: lining-nums nos títulos; o \"1\" vem de uma serifa do sistema (unicode-range U+0031)"
+      }
     ]
   },
   "components": [
@@ -548,52 +645,68 @@
       "css": ".ds-marca { display: inline-flex; align-items: center; min-height: 2.75rem; color: var(--terracota-marca); } .ds-marca svg { height: 2.6rem; width: auto; aspect-ratio: 1745 / 594; }"
     },
     {
-      "name": "Logo",
-      "kind": "brand",
-      "refersTo": "marca",
-      "description": "A sub-marca da identidade (arcos, L, estrelas, LUMES EXPERIENCE), vetorial, em terracota da marca no dia e pêssego na noite.",
-      "html": "<a class=\"ds-marca\" href=\"#\" aria-label=\"Lumes Experience\"><svg viewBox=\"0 0 1745 594\" aria-hidden=\"true\"><use href=\"#marca-logo\"/></svg></a>",
-      "css": ".ds-marca { display: inline-flex; align-items: center; min-height: 2.75rem; color: var(--terracota-marca); } .ds-marca svg { height: 2.6rem; width: auto; aspect-ratio: 1745 / 594; }"
-    },
-    {
       "name": "Botão",
       "kind": "button",
       "refersTo": "botao",
-      "description": "A ação principal sobre o dia: consultar a data no WhatsApp.",
-      "html": "<a class=\"ds-botao\" href=\"#\">Consultar nossa data no WhatsApp</a>",
-      "css": ".ds-botao { display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; min-height: 3rem; padding: 0.8rem 1.5rem; border: 0; border-radius: 999px; background: var(--terracota); color: var(--sobre-terracota); font: 600 1rem/1.2 var(--sans); text-decoration: none; transition: background-color 0.2s; } .ds-botao:hover { background: var(--terracota-funda); } .ds-botao:focus-visible { outline: 3px solid var(--foco); outline-offset: 3px; }"
+      "description": "A ação principal sobre o dia e sobre o pêssego. Rótulo único: \"Consultar a data no WhatsApp\".",
+      "html": "<a class=\"ds-botao\" href=\"#\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><use href=\"#icone-whatsapp\"/></svg>Consultar a data no WhatsApp</a>",
+      "css": ".ds-botao { display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; min-height: 3rem; padding: 0.8rem 1.5rem; border: 0; border-radius: 999px; background: var(--terracota); color: var(--sobre-terracota); font: 600 1rem/1.2 var(--sans); text-decoration: none; transition: background-color 0.2s; } .ds-botao svg { width: 1.2em; height: 1.2em; fill: currentColor; } .ds-botao:hover { background: var(--terracota-funda); } .ds-botao:focus-visible { outline: 3px solid var(--foco); outline-offset: 3px; }"
     },
     {
       "name": "Botão de luz",
       "kind": "button",
       "refersTo": "botao-luz",
-      "description": "A ação sobre a noite: formulário, fechamento do blog, barra fixa.",
-      "html": "<div class=\"ds-noite\"><a class=\"ds-botao-luz\" href=\"#\">Mandar no WhatsApp</a></div>",
-      "css": ".ds-noite { padding: 1.5rem; background: var(--noite); } .ds-botao-luz { display: inline-flex; align-items: center; justify-content: center; min-height: 3rem; padding: 0.8rem 1.5rem; border-radius: 999px; background: var(--luz); color: var(--noite); font: 600 1rem/1.2 var(--sans); text-decoration: none; transition: background-color 0.2s; } .ds-botao-luz:hover { background: var(--luz-clara); } .ds-botao-luz:focus-visible { outline: 3px solid var(--noite-foco); outline-offset: 3px; }"
+      "description": "A mesma ação sobre a noite terracota: pêssego com texto da noite.",
+      "html": "<div class=\"ds-noite\"><a class=\"ds-botao-luz\" href=\"#\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><use href=\"#icone-whatsapp\"/></svg>Consultar a data no WhatsApp</a></div>",
+      "css": ".ds-noite { padding: 1.5rem; background: var(--noite); } .ds-botao-luz { display: inline-flex; align-items: center; gap: 0.6rem; min-height: 3rem; padding: 0.8rem 1.5rem; border-radius: 999px; background: var(--luz); color: var(--noite); font: 600 1rem/1.2 var(--sans); text-decoration: none; transition: background-color 0.2s; } .ds-botao-luz svg { width: 1.2em; height: 1.2em; fill: currentColor; } .ds-botao-luz:hover { background: var(--luz-clara); } .ds-botao-luz:focus-visible { outline: 3px solid var(--noite-foco); outline-offset: 3px; }"
     },
     {
       "name": "Navegação do topo",
       "kind": "nav",
       "refersTo": "botao-compacto",
-      "description": "Marca em Bodoni, links em Manrope e o botão compacto.",
-      "html": "<header class=\"ds-topo\"><a class=\"ds-marca\" href=\"#\">Lumes Experience</a><nav class=\"ds-nav\"><a href=\"#\">Delliz</a><a href=\"#\">Momentos</a><a href=\"#\" aria-current=\"page\">Blog</a></nav><a class=\"ds-botao-compacto\" href=\"#\">Consultar data</a></header>",
-      "css": ".ds-topo { display: flex; align-items: center; gap: 1rem; padding: 1.25rem; background: var(--dia); } .ds-marca { font: 500 1.75rem/1 var(--serif); font-variation-settings: \"opsz\" 18; letter-spacing: 0.01em; color: var(--tinta); text-decoration: none; } .ds-nav { display: flex; gap: 1.75rem; margin-left: auto; margin-right: 1.5rem; } .ds-nav a { color: var(--tinta-suave); font: 400 0.9375rem var(--sans); text-decoration: none; text-underline-offset: 0.22em; } .ds-nav a:hover, .ds-nav a[aria-current] { color: var(--terracota); text-decoration: underline; } .ds-botao-compacto { display: inline-flex; align-items: center; min-height: 2.75rem; padding: 0.55rem 1.1rem; border-radius: 999px; background: var(--terracota); color: var(--sobre-terracota); font: 600 0.9375rem/1.2 var(--sans); text-decoration: none; transition: background-color 0.2s; } .ds-botao-compacto:hover { background: var(--terracota-funda); } .ds-topo a:focus-visible { outline: 3px solid var(--foco); outline-offset: 3px; }"
+      "description": "O logo, três links no celular (quatro no computador) e o botão compacto \"Consultar a data\". O link ativo é terracota, ou terracota funda sobre o pêssego.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\">Delliz</a><a href=\"#\">Eventos</a><a href=\"#\">Perguntas</a><a href=\"#\" aria-current=\"page\">Blog</a><a class=\"ds-nav__botao\" href=\"#\">Consultar a data</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 1.75rem; padding: 1rem 1.5rem; background: var(--pessego); font: 400 0.9375rem/1.2 var(--sans); } .ds-nav a { display: inline-flex; align-items: center; min-height: 2.75rem; color: var(--tinta-suave); text-decoration: none; } .ds-nav a:hover, .ds-nav a[aria-current] { color: var(--terracota-funda); text-decoration: underline; text-underline-offset: 0.22em; } .ds-nav .ds-nav__botao { margin-left: auto; padding: 0.55rem 1.1rem; border-radius: 999px; background: var(--terracota); color: var(--sobre-terracota); font-weight: 600; text-decoration: none; }"
     },
     {
-      "name": "Campo da noite",
-      "kind": "input",
-      "refersTo": "campo",
-      "description": "Campo do formulário de consulta, sobre a noite.",
-      "html": "<div class=\"ds-noite-campo\"><label class=\"ds-campo\">Data do casamento<input type=\"text\" placeholder=\"Ex.: 12 de setembro de 2027\"></label></div>",
-      "css": ".ds-noite-campo { padding: 1.5rem; background: var(--noite-2); color: var(--noite-texto); } .ds-campo { display: grid; gap: 0.4rem; font: 600 0.9375rem var(--sans); } .ds-campo input { min-height: 3rem; padding: 0.65rem 0.85rem; border: 1px solid var(--noite-campo); border-radius: 4px; background: var(--noite); color: var(--noite-texto); font: 400 1rem var(--sans); caret-color: var(--luz); } .ds-campo input::placeholder { color: var(--noite-dica); opacity: 1; } .ds-campo input:focus-visible { outline: 3px solid var(--noite-foco); outline-offset: 3px; }"
+      "name": "Porta terracota",
+      "kind": "card",
+      "refersTo": "porta",
+      "description": "O arco chapado no terracota da marca, com o título grande em branco e o texto em tinta funda. Sem brilho nem sombra.",
+      "html": "<section class=\"ds-porta\"><svg viewBox=\"0 0 460 460\" aria-hidden=\"true\"><use href=\"#marca-estrela\"/></svg><h2>Depois da comida, é a música que os convidados mais notam.</h2><p>Ao vivo, ela espera quando a entrada atrasa e continua quando a pista pede mais.</p></section>",
+      "css": ".ds-porta { max-width: 30rem; padding: 6rem 2rem 2.5rem; border-radius: 9999px 9999px 0.375rem 0.375rem; background: var(--terracota-marca); color: var(--tinta-funda); text-align: center; font: 400 1.0625rem/1.6 var(--sans); } .ds-porta svg { width: 2rem; height: 2rem; color: var(--sobre-terracota); fill: currentColor; } .ds-porta h2 { margin: 1rem 0 0; color: var(--branco); font: 500 2.25rem/1.04 var(--serif); font-variation-settings: \"opsz\" 48; }"
+    },
+    {
+      "name": "Porta acesa",
+      "kind": "card",
+      "refersTo": "porta-acesa",
+      "description": "O arco pêssego na noite, com o formulário de consulta dentro: campos claros com borda terracota funda e o botão terracota.",
+      "html": "<div class=\"ds-noite-2\"><form class=\"ds-porta-acesa\"><svg viewBox=\"0 0 460 460\" aria-hidden=\"true\"><use href=\"#marca-estrela\"/></svg><h2>Consultem a data</h2><label>Data<input type=\"date\"></label><a class=\"ds-porta-acesa__botao\" href=\"#\">Consultar a data no WhatsApp</a></form></div>",
+      "css": ".ds-noite-2 { padding: 2rem; background: var(--noite); } .ds-porta-acesa { display: grid; gap: 1rem; max-width: 24rem; margin: auto; padding: 5rem 1.75rem 1.75rem; border-radius: 9999px 9999px 0.375rem 0.375rem; background: var(--pessego); color: var(--tinta); font: 400 1rem/1.5 var(--sans); } .ds-porta-acesa svg { justify-self: center; width: 1.75rem; height: 1.75rem; color: var(--terracota-marca); fill: currentColor; } .ds-porta-acesa h2 { margin: 0; text-align: center; font: 500 2rem/1.08 var(--serif); } .ds-porta-acesa label { display: grid; gap: 0.4rem; font-weight: 600; font-size: 0.9375rem; } .ds-porta-acesa input { min-height: 3rem; padding: 0.65rem 0.85rem; border: 1px solid var(--terracota-funda); border-radius: 4px; background: var(--dia-2); color: var(--tinta); font: inherit; } .ds-porta-acesa input:focus-visible { outline: 3px solid var(--foco); outline-offset: 3px; } .ds-porta-acesa__botao { display: flex; justify-content: center; align-items: center; min-height: 3rem; border-radius: 999px; background: var(--terracota); color: var(--sobre-terracota); font-weight: 600; text-decoration: none; } .ds-porta-acesa__botao:hover { background: var(--terracota-funda); }"
     },
     {
       "name": "Opção",
       "kind": "chip",
       "refersTo": "opcao",
-      "description": "Escolha de momento no formulário; marcada acende em luz.",
-      "html": "<div class=\"ds-noite-opcoes\"><label class=\"ds-opcao\"><input type=\"checkbox\" checked> Cerimônia</label><label class=\"ds-opcao\"><input type=\"checkbox\"> Festa</label></div>",
-      "css": ".ds-noite-opcoes { display: flex; gap: 0.5rem; padding: 1.5rem; background: var(--noite-2); color: var(--noite-texto); font: 400 1rem var(--sans); } .ds-opcao { display: inline-flex; align-items: center; gap: 0.55rem; min-height: 2.75rem; padding: 0.4rem 1rem; border: 1px solid var(--noite-campo); border-radius: 999px; cursor: pointer; } .ds-opcao input { width: 1.1rem; height: 1.1rem; margin: 0; accent-color: var(--luz); } .ds-opcao:has(input:checked) { border-color: var(--luz); background: color-mix(in srgb, var(--luz) 12%, transparent); } .ds-opcao:has(input:focus-visible) { outline: 3px solid var(--noite-foco); outline-offset: 3px; }"
+      "description": "Pílula com a caixa de marcar desenhada (quadrado terracota funda; marcada, terracota com visto creme).",
+      "html": "<label class=\"ds-opcao\"><input type=\"checkbox\" checked>Cerimônia</label><label class=\"ds-opcao\"><input type=\"checkbox\">Pista</label>",
+      "css": ".ds-opcao { display: inline-flex; align-items: center; gap: 0.6rem; min-height: 2.75rem; margin: 0.25rem; padding: 0.4rem 1rem 0.4rem 0.75rem; border: 1px solid color-mix(in srgb, var(--terracota-funda) 55%, transparent); border-radius: 999px; background: var(--pessego); color: var(--tinta); font: 400 1rem/1.2 var(--sans); cursor: pointer; } .ds-opcao input { width: 1.25rem; height: 1.25rem; margin: 0; border: 1.5px solid var(--terracota-funda); border-radius: 4px; background: var(--dia-2) center / 0.85rem no-repeat; appearance: none; } .ds-opcao input:checked { border-color: var(--terracota); background-color: var(--terracota); background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 10'%3E%3Cpath d='M1 5.2 4.3 8.5 11 1.5' fill='none' stroke='%23FFF8F0' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E\"); } .ds-opcao input:focus-visible { outline: 3px solid var(--foco); outline-offset: 2px; }"
+    },
+    {
+      "name": "Evento",
+      "kind": "custom",
+      "refersTo": "evento",
+      "description": "Uma linha de programa: a estrela da marca, o nome grande em Bodoni e o que acontece na festa ao lado. Sem cartão e sem ícone.",
+      "html": "<div class=\"ds-evento\"><h3><svg viewBox=\"0 0 460 460\" aria-hidden=\"true\"><use href=\"#marca-estrela\"/></svg>Casamentos</h3><p>Da entrada da noiva à saída dos noivos. Depois, o coquetel, o jantar, a primeira dança e a pista.</p></div>",
+      "css": ".ds-evento { display: grid; grid-template-columns: 6fr 5fr; gap: 1rem 2rem; align-items: baseline; padding-block: 1.75rem; border-top: 1px solid var(--dia-linha); border-bottom: 1px solid var(--dia-linha); background: var(--dia); } .ds-evento h3 { display: flex; align-items: baseline; gap: 0.85rem; margin: 0; color: var(--tinta); font: 500 2.75rem/1.04 var(--serif); font-variation-settings: \"opsz\" 48; } .ds-evento svg { width: 0.42em; height: 0.42em; color: var(--terracota-marca); fill: currentColor; } .ds-evento p { margin: 0; color: var(--tinta-suave); font: 400 1rem/1.6 var(--sans); }"
+    },
+    {
+      "name": "Caminho de estrelas",
+      "kind": "custom",
+      "refersTo": "passo",
+      "description": "Os passos da reserva: estrelas pêssego ligadas por um fio de 1px, sem números.",
+      "html": "<ol class=\"ds-passos\"><li><svg viewBox=\"0 0 460 460\" aria-hidden=\"true\"><use href=\"#marca-estrela\"/></svg><h3>Consultem a data</h3></li><li><svg viewBox=\"0 0 460 460\" aria-hidden=\"true\"><use href=\"#marca-estrela\"/></svg><h3>Recebam a proposta</h3></li><li><svg viewBox=\"0 0 460 460\" aria-hidden=\"true\"><use href=\"#marca-estrela\"/></svg><h3>Montem o repertório</h3></li></ol>",
+      "css": ".ds-passos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin: 0; padding: 2rem; list-style: none; background: var(--noite); color: var(--noite-texto); } .ds-passos li { position: relative; padding-top: 2rem; border-top: 1px solid var(--noite-linha); } .ds-passos svg { position: absolute; top: -0.6rem; left: 0; width: 1.25rem; height: 1.25rem; color: var(--luz); fill: currentColor; } .ds-passos h3 { margin: 0; font: 500 1.5rem/1.2 var(--serif); }"
     },
     {
       "name": "Caixa de destaque",
@@ -604,14 +717,6 @@
       "css": ".ds-caixa { padding: 1.25rem 1.5rem 1.5rem; border: 1px solid var(--dia-linha); border-radius: 6px; background: var(--dia-2); color: var(--tinta); font: 400 1.0625rem/1.7 var(--sans); } .ds-caixa__titulo { margin: 0 0 0.75rem; color: var(--terracota); font-weight: 650; line-height: 1.4; } .ds-prazos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem 2rem; margin: 0; } .ds-prazos dt { color: var(--terracota); font: 500 1.5rem/1.15 var(--serif); font-variation-settings: \"opsz\" 14; font-variant-numeric: lining-nums; } .ds-prazos dd { margin: 0.2rem 0 0; color: var(--tinta-suave); font-size: 0.9375rem; line-height: 1.5; } .ds-caixa__fonte { margin: 0.9rem 0 0; color: var(--tinta-suave); font-size: 0.875rem; }"
     },
     {
-      "name": "Caixa de aviso",
-      "kind": "card",
-      "refersTo": "caixa",
-      "description": "A variante com lume para o que pode dar errado.",
-      "html": "<aside class=\"ds-caixa-aviso\"><p class=\"ds-caixa-aviso__titulo\">Um cuidado com o calendário</p><p>A paróquia pode pedir o agendamento do civil meses antes, mas a habilitação vale só 90 dias. Perguntem ao cartório como reservar a data antes de entregar os documentos.</p></aside>",
-      "css": ".ds-caixa-aviso { padding: 1.25rem 1.5rem 1.5rem; border: 1px solid color-mix(in srgb, var(--lume) 40%, var(--dia-linha)); border-radius: 6px; background: color-mix(in srgb, var(--lume) 8%, var(--dia-2)); color: var(--tinta); font: 400 1.0625rem/1.7 var(--sans); } .ds-caixa-aviso p { margin: 0; } .ds-caixa-aviso__titulo { margin: 0 0 0.75rem !important; color: var(--lume-escuro); font-weight: 650; line-height: 1.4; }"
-    },
-    {
       "name": "Capa em arco",
       "kind": "custom",
       "refersTo": "capa-assunto",
@@ -620,92 +725,103 @@
       "css": ".ds-capa { position: relative; overflow: hidden; width: 16rem; margin: 0; aspect-ratio: 4 / 5; border-radius: 50% 50% 0.375rem 0.375rem / 40% 40% 0.375rem 0.375rem; background: radial-gradient(circle at 50% 56%, color-mix(in srgb, var(--lume) 30%, transparent) 0%, color-mix(in srgb, var(--luz) 14%, transparent) 36%, transparent 68%), linear-gradient(170deg, #2B3A30 0%, #1E2921 55%, var(--noite) 100%); box-shadow: 0 1.75rem 3rem -1.5rem color-mix(in srgb, var(--tinta) 45%, transparent); } .ds-capa svg { position: absolute; inset: 0; width: 100%; height: 100%; transition: scale 0.6s cubic-bezier(0.2, 0.7, 0.2, 1); } .ds-capa:hover svg { scale: 1.04; } .ds-capa__assunto { position: absolute; left: 50%; bottom: 1rem; translate: -50% 0; padding: 0.3rem 0.85rem; border: 1px solid color-mix(in srgb, var(--luz) 45%, transparent); border-radius: 999px; background: var(--noite); color: var(--luz-clara); font: 600 0.8125rem/1.3 var(--sans); white-space: nowrap; }"
     },
     {
-      "name": "Lista numerada",
-      "kind": "custom",
-      "refersTo": "numeral",
-      "description": "Numerais Bodoni pêssegos sobre fios de 1px: roteiro, passos e listas do blog.",
-      "html": "<ol class=\"ds-lista\"><li>Chegada dos convidados</li><li>Cortejo</li><li>Entrada da noiva</li></ol>",
-      "css": ".ds-lista { margin: 0; padding: 0; list-style: none; counter-reset: item; background: var(--dia); color: var(--tinta); font: 400 1.0625rem/1.65 var(--sans); } .ds-lista li { position: relative; padding: 1rem 0 1rem 2.75rem; border-top: 1px solid var(--dia-linha); counter-increment: item; } .ds-lista li::before { content: counter(item); position: absolute; left: 0; top: 0.95rem; color: var(--terracota); font: 500 1.5rem/1.1 var(--serif); font-variation-settings: \"opsz\" 14; font-variant-numeric: lining-nums; }"
-    },
-    {
       "name": "Anoitecer",
       "kind": "custom",
       "refersTo": "anoitecer",
-      "description": "A faixa de pôr do sol entre o dia e a noite, com as primeiras luzes.",
+      "description": "O pôr do sol entre a cerimônia e a festa: do pêssego ao terracota da marca e à noite terracota, com a estrela do logo acesa.",
       "html": "<div class=\"ds-anoitecer\" aria-hidden=\"true\"></div>",
       "css": ".ds-anoitecer { position: relative; height: 10rem; background: var(--anoitecer); } .ds-anoitecer::after { content: \"\"; position: absolute; inset: auto 0 0; height: 55%; background: var(--luzes-do-anoitecer); }"
     }
   ],
   "narrative": {
     "northStar": "A porta acesa",
-    "overview": "A identidade Lumes Experience (entregue pelo dono em 03/11/2026, pasta \"Lumes - Identidade Visual\") tem duas cores, terracota `#bb7944` e pêssego `#edc79b`, e um símbolo: dois arcos de igreja de mesmo raio, o de dentro mais baixo, e dentro deles um L de alto contraste com uma estrela pequena em cima e uma estrela de quatro pontas acesa ao lado, com oito raios claros atrás. O nome vem em caixa alta geométrica, LUMES, com EXPERIENCE embaixo.\n\nO site leva esse símbolo para a passagem do casamento. A primeira visita abre com o logo se desenhando no pêssego da marca, e o arco de dentro vira uma porta que se abre para a página. A cerimônia acontece num pêssego claro (`--dia`), com tinta marrom e ações em terracota. A festa acontece num marrom-terracota fechado (`--noite`), com texto creme e botões acesos em pêssego (`--luz`). Entre os dois, a faixa `--anoitecer` desce do pêssego ao terracota e à noite, e a estrela do logo acende no meio dela, como a primeira estrela da noite.\n\nO material é luz, sem ruído: halos radiais suaves de pêssego e terracota (`--textura-dia`, `--textura-noite`), nunca grão. A forma recorrente é o arco: o logo, a foto da Delliz dentro dos dois arcos, o retrato, as capas do blog e as miniaturas. A densidade é de revista: colunas de leitura de 42rem, listas numeradas com fio de 1px e numerais Bodoni em terracota. O tom é de convite. O sistema recusa a página de banda com foto em tela cheia e recusa foto genérica no lugar de material que ainda não chegou.",
+    "overview": "A identidade Lumes Experience (entregue pelo dono em 03/11/2026, pasta \"Lumes - Identidade Visual\") tem duas cores, terracota `#bb7944` e pêssego `#edc79b`, e um símbolo: dois arcos de igreja de mesmo raio, o de dentro mais baixo, e dentro deles um L de alto contraste com uma estrela pequena em cima e uma estrela de quatro pontas acesa ao lado, com oito raios claros atrás. O nome vem em caixa alta geométrica, LUMES, com EXPERIENCE embaixo. As peças da identidade são campos chapados: traço claro sobre terracota, traço terracota sobre pêssego. Não há preto nem cinza.\n\nO site leva esse símbolo para a passagem do casamento, e a forma que se repete é **a porta**: o arco de dentro do logo.\n- Na primeira visita, o logo se desenha no pêssego e o arco de dentro vira uma porta acesa que viaja até pousar nos arcos em volta da foto da Delliz.\n- No meio do dia, a mesma porta aparece chapada em terracota, com o motivo da música escrito grande em branco.\n- No fim da noite, ela aparece em pêssego, acesa, com o formulário dentro.\n\nA cerimônia acontece num pêssego claro (`--dia`), com tinta marrom e ações em terracota. A festa acontece numa noite terracota (`--noite`, o terracota da marca no escuro), com texto creme e botões acesos em pêssego (`--luz`). Entre os dois, a faixa `--anoitecer` desce do pêssego ao terracota da marca e à noite, e a estrela do logo acende no meio dela.\n\nO material é luz, sem ruído: halos radiais suaves de pêssego (`--textura-dia`, `--textura-noite`), nunca grão. A densidade é de revista: colunas de leitura de 42rem, listas com fio de 1px, nomes grandes em Bodoni. O tom é de convite. O sistema recusa a página de banda com foto em tela cheia, a grade de cartões iguais com ícone, e foto genérica no lugar de material que ainda não chegou.",
     "keyCharacteristics": [
-      "Dois mundos de fundo, dia (pêssego claro) e noite (terracota fechado); a passagem é sempre o `--anoitecer`. O pêssego pleno da marca (`--pessego`) aparece na abertura.",
-      "Terracota para agir no dia, pêssego para agir na noite.",
-      "O terracota da marca (`--terracota-marca`) fica no logo e nos detalhes (arcos, fios, estrelas); texto e botões usam o terracota fechado (`--terracota`), que passa no contraste.",
+      "Dois mundos de fundo, dia (pêssego claro) e noite (terracota fechado), mais dois campos chapados da marca: a porta terracota e a porta acesa em pêssego. O pêssego pleno (`--pessego`) também é o fundo da abertura e da primeira dobra.",
+      "Terracota para agir no dia e sobre o pêssego, pêssego para agir na noite.",
+      "O terracota da marca (`--terracota-marca`) fica no logo, nos ornamentos e na porta terracota (só com texto grande em branco); texto e botões usam o terracota fechado (`--terracota`).",
       "Bodoni Moda com tamanho óptico fixo para títulos e numerais; Manrope para o resto.",
-      "Os dois arcos e a estrela como assinatura."
+      "Os dois arcos, a porta e a estrela de quatro pontas como assinatura. Nada de ícone genérico: a estrela da marca marca os eventos, os passos, as assinaturas e os espaços vazios."
     ],
     "rules": [
       {
         "name": "A Regra do Dia e da Noite",
-        "body": "Todo bloco pertence ao dia (`--dia` com `--tinta`) ou à noite (`--noite` com `--noite-texto`). A passagem é sempre a faixa `--anoitecer`, nunca um corte seco. A única exceção é a abertura, no pêssego pleno da marca."
+        "body": "Todo bloco de leitura pertence ao dia (`--dia` com `--tinta`) ou à noite (`--noite` com `--noite-texto`). A passagem do dia para a noite é sempre a faixa `--anoitecer`, nunca um corte seco. Os campos chapados da marca (o pêssego da primeira dobra e da faixa do blog, a porta terracota, a porta acesa) são as exceções: eles têm borda dura de propósito, como as peças da identidade, e são sempre um objeto com forma (a porta) ou uma faixa que se desfaz no dia.",
+        "section": "colors"
       },
       {
         "name": "A Regra das Duas Terracotas",
-        "body": "O terracota da marca (#bb7944) é para o logo e os ornamentos; o terracota fechado (#8E5226) é para texto e ação. Nunca troque um pelo outro."
+        "body": "O terracota da marca (#bb7944) é para o logo, os ornamentos e o campo da porta com texto grande; o terracota fechado (#8E5226) é para texto e ação. Nunca troque um pelo outro.",
+        "section": "colors"
       },
       {
         "name": "A Regra da Cor que Age",
-        "body": "No dia, quem age é terracota; na noite, quem age é pêssego (`.botao--luz`). A barra fixa do celular segue a mesma regra."
+        "body": "No dia e no pêssego, quem age é terracota; na noite, quem age é pêssego (`.botao--luz`). A barra fixa do celular segue a mesma regra.",
+        "section": "colors"
       },
       {
         "name": "A Regra do Root Único",
-        "body": "Os tokens de `:root` de `index.html` e de `assets/css/blog.css` são os mesmos; `scripts/checar.mjs` acusa qualquer divergência. Mude um, mude os dois."
+        "body": "Os tokens de `:root` de `index.html` e de `assets/css/blog.css` são os mesmos; `scripts/checar.mjs` acusa qualquer divergência. Mude um, mude os dois.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra do Navegador Vestido",
+        "body": "O que o navegador desenha sozinho segue a marca:\n- seleção de texto em pêssego com tinta funda;\n- barra de rolagem terracota sobre o dia e pêssego sobre a noite (`scrollbar-color`);\n- realce de toque terracota a 22% e `accent-color` terracota;\n- cursor de mão em rótulos, `summary`, `select` e botões;\n- sublinhado de 1px a 0,22em, com a cor do texto a 55% (100% no hover);\n- numerais alinhados nos títulos.",
+        "section": "colors"
       },
       {
         "name": "A Regra do Tamanho Óptico Fixo",
-        "body": "O Bodoni nunca usa o tamanho óptico automático, que afina o traço demais abaixo de ~60px (\"BH\" vira \"BII\"). Todo título e numeral declara `font-variation-settings: \"opsz\" var(--opsz)`: 48 no h1, 24 por padrão, 14 em h3 e numerais, 12 nos nomes pequenos."
+        "body": "O Bodoni nunca usa o tamanho óptico automático, que afina o traço demais abaixo de ~60px (\"BH\" vira \"BII\"). Todo título e numeral declara `font-variation-settings: \"opsz\" var(--opsz)`: 48 no display, na porta, nos eventos e na citação grande; 24 por padrão; 14 nos títulos pequenos, perguntas e legendas.",
+        "section": "typography"
+      },
+      {
+        "name": "A Regra do Um",
+        "body": "No Bodoni Moda o \"1\" é idêntico ao \"l\" (\"15 anos\" lia \"l5 anos\") e a fonte não tem alternativa. O `@font-face` \"Bodoni um\" (Times New Roman, Liberation Serif) e \"Bodoni um Noto\" (Android) troca só o U+0031, com `unicode-range` e `size-adjust`. Ficam na frente de `--serif`; sem a fonte no aparelho, vale o Bodoni.",
+        "section": "typography"
       },
       {
         "name": "A Regra da Fonte Reserva Medida",
-        "body": "Toda fonte tem reservas locais com `size-adjust` medido, para que a troca não mova linhas nem o botão principal."
-      },
-      {
-        "name": "A Regra dos Numerais em Terracota",
-        "body": "Sequência numerada é Bodoni em terracota com numerais alinhados, cada item sobre um fio de 1px: o roteiro, os passos e as listas e prazos do blog."
+        "body": "Toda fonte tem reservas locais com `size-adjust` medido, para que a troca não mova linhas nem o botão principal.",
+        "section": "typography"
       },
       {
         "name": "A Regra do Texto Justificado",
-        "body": "Pedido do dono em 03/11/2026, ajustado na revisão impeccable do mesmo dia: o texto corrido é justificado só nas colunas largas e só a partir de 64rem. Na página inicial, a bio da Delliz, as introduções de seção e as respostas do FAQ; no blog, os parágrafos e listas do corpo do artigo, o resumo, o aviso e a bio da autora. Vai sempre com `hyphens: auto` (o `lang=\"pt-BR\"` da página) e `hyphenate-limit-chars: 11 4 4`, que só quebra palavras de 11 letras ou mais, para nunca partir nomes como Delliz, Christine, Experience ou Horizonte. No celular e nas colunas estreitas (o texto do topo, a ficha de fatos, os passos, o roteiro, as notas, as legendas, os prazos, a checagem, as fontes, os cartões, as citações e o sumário), o texto fica alinhado à esquerda, porque a justificação abre buracos entre as palavras."
+        "body": "Pedido do dono em 03/11/2026 e ajustado nas revisões impeccable de 03 e 04/11/2026. O texto corrido é justificado só nas colunas largas e só a partir de 64rem, com `hyphens: auto` e `hyphenate-limit-chars: 11 4 4` (nunca parte Delliz, Christine, Experience ou Horizonte).\n- **Página inicial:** as respostas do FAQ.\n- **Blog:** os parágrafos do corpo do artigo e o aviso.\n- **À esquerda:** desde 04/11/2026, as listas e o resumo do blog, a bio da Delliz e a da autora, porque a justificação abria buracos visíveis entre as palavras. No celular e nas colunas estreitas, o texto fica sempre à esquerda.",
+        "section": "typography"
       },
       {
         "name": "A Regra da Luz no Lugar da Sombra",
-        "body": "Caixas, cartões, formulário e campos não têm sombra; separam-se por fio de 1px e por tom. Só o arco e a barra fixa projetam sombra."
+        "body": "Caixas, cartões, portas, formulário e campos não têm sombra; separam-se por fio de 1px e por tom. Só o arco das fotos e a barra fixa projetam sombra.",
+        "section": "elevation"
       },
       {
         "name": "A Regra do Halo Sem Ruído",
-        "body": "A textura é feita só de gradientes radiais suaves. Nada de grão, ruído ou imagem de papel."
+        "body": "A textura é feita só de gradientes radiais suaves. Nada de grão, ruído, imagem de papel, vidro desfocado ou brilho atrás de texto branco.",
+        "section": "elevation"
       }
     ],
     "dos": [
-      "**Do** usar o terracota da marca (#bb7944) no logo e nos ornamentos, e o terracota fechado (#8E5226) em texto e botões.",
-      "**Do** manter cada bloco no dia ou na noite e passar de um para o outro pelo `--anoitecer`.",
-      "**Do** usar os vetores de `scripts/blog/marca.mjs` para o logo, a estrela e a abertura, e rodar `marca-no-index.mjs` depois de mudá-los.",
+      "**Do** usar o terracota da marca (#bb7944) no logo, nos ornamentos e no campo da porta com texto grande, e o terracota fechado (#8E5226) em texto e botões.",
+      "**Do** manter cada bloco de leitura no dia ou na noite, e passar de um para o outro pelo `--anoitecer`.",
+      "**Do** usar a estrela da marca (`#marca-estrela`) no lugar de ícones.",
+      "**Do** usar os vetores de `scripts/blog/marca.mjs` e rodar `marca-no-index.mjs` depois de mudá-los.",
       "**Do** declarar `--opsz` em todo texto em Bodoni.",
       "**Do** emoldurar toda foto da Delliz e toda capa no arco de igreja.",
-      "**Do** manter os `:root` de `index.html` e `assets/css/blog.css` iguais e rodar `scripts/checar.mjs`.",
-      "**Do** manter a abertura curta, pulável e só na primeira visita; a ação principal continua sendo o WhatsApp.",
+      "**Do** manter os `:root` de `index.html` e de `assets/css/blog.css` iguais e rodar `scripts/checar.mjs`.",
+      "**Do** manter a abertura curta, pulável, uma vez a cada 30 dias, e com a porta pousando na foto.",
       "**Do** respeitar `prefers-reduced-motion: reduce`."
     ],
     "donts": [
-      "**Don't** usar o terracota da marca (#bb7944) em texto ou com texto branco: não passa no contraste.",
-      "**Don't** redesenhar o logo com fonte: LUMES e EXPERIENCE são os vetores da identidade.",
+      "**Don't** usar o terracota da marca (#bb7944) em texto pequeno ou com texto branco abaixo de 24 px.",
+      "**Don't** pôr brilho, gradiente ou sombra dentro da porta terracota: o título branco perde o contraste.",
+      "**Don't** redesenhar o logo com fonte.",
       "**Don't** tocar som sem um clique da pessoa.",
-      "**Don't** pôr grão, ruído ou imagem de papel na textura.",
+      "**Don't** pôr grão, ruído, vidro desfocado ou imagem de papel na textura.",
+      "**Don't** fazer grade de cartões iguais com ícone, título e texto, nem pôr sobretítulo acima de título.",
       "**Don't** pôr foto genérica ou de estúdio no lugar das amostras de casamento.",
-      "**Don't** dar sombra a caixas, cartões, campos ou formulário.",
-      "**Don't** usar `vector-effect: non-scaling-stroke` em traço com tracejado animado (`stroke-dasharray`): o tracejado sai falhado."
+      "**Don't** usar a coroa ou os outros ícones de destaque do Instagram no site.",
+      "**Don't** dar sombra a caixas, cartões, portas, campos ou formulário.",
+      "**Don't** usar `vector-effect: non-scaling-stroke` em traço com tracejado animado (`stroke-dasharray`)."
     ]
   }
 }

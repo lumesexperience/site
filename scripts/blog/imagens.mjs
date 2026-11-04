@@ -17,7 +17,7 @@ const geradas = [];
 
 const ESTILO_BASE = `html,body{margin:0;width:1200px;height:630px;overflow:hidden}
 body{position:relative;box-sizing:border-box;background:var(--textura-dia),var(--dia)}
-.texto{position:absolute;left:88px;top:72px;bottom:72px;width:640px;display:flex;flex-direction:column;justify-content:space-between}
+.texto{position:absolute;left:88px;top:72px;bottom:72px;width:560px;display:flex;flex-direction:column;justify-content:space-between}
 .marca{display:block;width:250px;height:auto}
 .quem{display:flex;align-items:center;gap:20px;font:600 26px/1.3 var(--sans)}
 .quem img{width:72px;height:72px;border-radius:50%}
@@ -27,7 +27,8 @@ const quem = (linha) => `<div class="quem"><img src="/assets/img/delliz-christin
 
 const paginaDoArtigo = (artigo) => `<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="/assets/css/blog.css"><style>
 ${ESTILO_BASE}
-h1{font-size:${artigo.titulo.length > 50 ? 60 : 72}px;line-height:1.05;letter-spacing:-.01em;font-variation-settings:"opsz" 48}
+/* A coluna do texto termina 64 px antes da capa: o título nunca encosta no arco. */
+h1{font-size:${artigo.titulo.length > 44 ? 58 : 66}px;line-height:1.06;letter-spacing:-.01em;font-variation-settings:"opsz" 48;text-wrap:balance}
 .capa{position:absolute;right:88px;top:64px;width:400px}
 .capa__assunto{font-size:20px;bottom:28px;padding:6px 18px}
 </style></head><body>
@@ -37,10 +38,11 @@ h1{font-size:${artigo.titulo.length > 50 ? 60 : 72}px;line-height:1.05;letter-sp
 
 const paginaInicial = () => `<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="/assets/css/blog.css"><style>
 ${ESTILO_BASE}
-.marca{width:520px}
+/* O mote manda, como no topo do site; o logo fica menor que ele. */
+.marca{width:300px}
 .arcos{position:absolute;z-index:-1;left:-12%;top:-17.6%;width:124%;height:122.4%;overflow:visible}
 .arcos path{fill:none;stroke:var(--terracota-marca);stroke-width:.45}
-h1{font-size:54px;line-height:1.08;text-wrap:nowrap;font-variation-settings:"opsz" 48}
+h1{font-size:68px;line-height:1.04;letter-spacing:-.015em;text-wrap:nowrap;font-variation-settings:"opsz" 48}
 .voz{position:absolute;right:130px;top:92px;width:352px;aspect-ratio:4/5}
 .voz::before{content:"";position:absolute;z-index:-1;left:50%;top:40%;width:190%;aspect-ratio:1;border-radius:50%;translate:-50% -50%;
   background:radial-gradient(circle,color-mix(in srgb,var(--luz-clara) 70%,transparent) 0%,color-mix(in srgb,var(--luz) 42%,transparent) 26%,color-mix(in srgb,var(--luz) 14%,transparent) 46%,transparent 68%)}

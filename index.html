@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Música ao vivo para casamentos, bodas e 15 anos em BH | Lumes Experience</title>
-  <meta name="description" content="Música ao vivo para casamentos, bodas e festas de 15 anos em BH e região, com a cantora Delliz Christine. Cerimônia e festa. Consulte sua data.">
+  <title>Música ao vivo para casamento em BH | Lumes Experience</title>
+  <meta name="description" content="Música ao vivo para casamentos, bodas e festas de 15 anos em BH e região, com a voz de Delliz Christine. Consultem a data pelo WhatsApp.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://lumesexperience.com.br/">
 
@@ -12,12 +12,12 @@
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Lumes Experience">
   <meta property="og:title" content="Lumes Experience: só resta a mim cantar o amor">
-  <meta property="og:description" content="Música ao vivo para casamentos, bodas e festas de 15 anos em BH, com a cantora Delliz Christine. Consulte sua data pelo WhatsApp.">
+  <meta property="og:description" content="Música ao vivo para casamentos, bodas e festas de 15 anos em BH e região, com a voz de Delliz Christine. Consultem a data pelo WhatsApp.">
   <meta property="og:url" content="https://lumesexperience.com.br/">
   <meta property="og:image" content="https://lumesexperience.com.br/assets/img/og-lumes.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Lumes Experience, música ao vivo para casamentos em Belo Horizonte">
+  <meta property="og:image:alt" content="Delliz Christine canta ao microfone, dentro dos dois arcos da Lumes Experience: música ao vivo para casamentos em BH">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#F6E5D2">
   <!-- O dia e a noite são a direção de arte: o escurecimento automático do navegador apagaria a passagem. -->
@@ -27,7 +27,7 @@
   <link rel="icon" href="assets/img/favicon-48.png" sizes="48x48" type="image/png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
-  <!-- A abertura animada roda sozinha só na primeira visita da sessão, e nunca com "reduzir movimento"
+  <!-- A abertura animada roda sozinha uma vez a cada 30 dias (localStorage), e nunca com "reduzir movimento"
        nem quando a página abre numa âncora (#perguntas, por exemplo). Decidido aqui, antes da primeira pintura.
        Para revisar, ?abertura no endereço força a abertura a cada carregamento. -->
   <script>
@@ -36,7 +36,10 @@
       const busca = new URLSearchParams(location.search);
       if (busca.has('previa')) document.documentElement.classList.add('previa');
       const forcar = busca.has('abertura');
-      if ((forcar || (!sessionStorage.getItem('abertura-vista') && !location.hash)) && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      let vista = 0;
+      try { vista = Number(localStorage.getItem('abertura-vista')) || 0; } catch (e) {}
+      const recente = Date.now() - vista < 30 * 24 * 60 * 60 * 1000;
+      if ((forcar || (!recente && !location.hash)) && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
         document.documentElement.classList.add('com-abertura');
       }
     } catch (e) {}
@@ -56,26 +59,35 @@
         "url": "https://lumesexperience.com.br/",
         "name": "Lumes Experience",
         "inLanguage": "pt-BR",
-        "publisher": { "@id": "https://lumesexperience.com.br/#lumes" }
+        "publisher": {
+          "@id": "https://lumesexperience.com.br/#lumes"
+        }
       },
       {
         "@type": "WebPage",
         "@id": "https://lumesexperience.com.br/#webpage",
         "url": "https://lumesexperience.com.br/",
-        "name": "Música ao vivo para casamentos, bodas e 15 anos em BH | Lumes Experience",
-        "description": "Música ao vivo para casamentos, bodas e festas de 15 anos em BH e região, com a cantora Delliz Christine. Cerimônia e festa. Consulte sua data.",
-        "isPartOf": { "@id": "https://lumesexperience.com.br/#website" },
-        "about": { "@id": "https://lumesexperience.com.br/#lumes" },
+        "name": "Música ao vivo para casamento em BH | Lumes Experience",
+        "description": "Música ao vivo para casamentos, bodas e festas de 15 anos em BH e região, com a voz de Delliz Christine. Consultem a data pelo WhatsApp.",
+        "isPartOf": {
+          "@id": "https://lumesexperience.com.br/#website"
+        },
+        "about": {
+          "@id": "https://lumesexperience.com.br/#lumes"
+        },
         "datePublished": "2026-10-20",
-        "dateModified": "2026-11-03",
+        "dateModified": "2026-11-04",
         "inLanguage": "pt-BR"
       },
       {
-        "@type": ["MusicGroup", "LocalBusiness"],
+        "@type": [
+          "MusicGroup",
+          "LocalBusiness"
+        ],
         "@id": "https://lumesexperience.com.br/#lumes",
         "name": "Lumes Experience",
         "url": "https://lumesexperience.com.br/",
-        "description": "Grupo de música ao vivo para casamentos, bodas e festas de 15 anos em Belo Horizonte e região metropolitana, com a cantora Delliz Christine à frente. Toca na cerimônia (católica, evangélica ou ecumênica, na igreja ou ao ar livre) e na recepção, do coquetel à pista.",
+        "description": "Música ao vivo para casamentos, bodas e festas de 15 anos em Belo Horizonte e região, com a voz de Delliz Christine. Toca na cerimônia (católica, evangélica ou ecumênica, na igreja ou ao ar livre) e na festa: coquetel, jantar, primeira dança e pista.",
         "logo": "https://lumesexperience.com.br/assets/img/icon-512.png",
         "image": "https://lumesexperience.com.br/assets/img/og-lumes.jpg",
         "telephone": "+5531996154698",
@@ -86,34 +98,100 @@
           "addressCountry": "BR"
         },
         "areaServed": [
-          { "@type": "AdministrativeArea", "name": "Região Metropolitana de Belo Horizonte" },
-          { "@type": "City", "name": "Belo Horizonte" },
-          { "@type": "City", "name": "Contagem" },
-          { "@type": "City", "name": "Betim" },
-          { "@type": "City", "name": "Nova Lima" },
-          { "@type": "City", "name": "Lagoa Santa" },
-          { "@type": "City", "name": "Sabará" },
-          { "@type": "City", "name": "Santa Luzia" },
-          { "@type": "City", "name": "Brumadinho" }
+          {
+            "@type": "AdministrativeArea",
+            "name": "Região Metropolitana de Belo Horizonte"
+          },
+          {
+            "@type": "City",
+            "name": "Belo Horizonte"
+          },
+          {
+            "@type": "City",
+            "name": "Contagem"
+          },
+          {
+            "@type": "City",
+            "name": "Betim"
+          },
+          {
+            "@type": "City",
+            "name": "Nova Lima"
+          },
+          {
+            "@type": "City",
+            "name": "Lagoa Santa"
+          },
+          {
+            "@type": "City",
+            "name": "Sabará"
+          },
+          {
+            "@type": "City",
+            "name": "Santa Luzia"
+          },
+          {
+            "@type": "City",
+            "name": "Brumadinho"
+          }
         ],
-        "member": { "@id": "https://lumesexperience.com.br/#delliz" },
+        "member": {
+          "@id": "https://lumesexperience.com.br/#delliz"
+        },
         "contactPoint": {
           "@type": "ContactPoint",
           "contactType": "reservas",
+          "telephone": "+5531996154698",
           "url": "https://wa.me/5531996154698",
           "availableLanguage": "pt-BR"
-        }
+        },
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@id": "https://lumesexperience.com.br/#cerimonia"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@id": "https://lumesexperience.com.br/#festa"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@id": "https://lumesexperience.com.br/#bodas"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@id": "https://lumesexperience.com.br/#quinze-anos"
+            }
+          }
+        ]
       },
       {
         "@type": "Person",
         "@id": "https://lumesexperience.com.br/#delliz",
         "name": "Delliz Christine",
         "jobTitle": "Cantora",
+        "description": "Cantora à frente do Lumes Experience. Integra o Jeito Ágape, ministério de música católica de Belo Horizonte, e é uma das vozes da série Incondicional Sessions.",
         "image": "https://lumesexperience.com.br/assets/img/delliz-christine-cantando-720.jpg",
-        "sameAs": ["https://www.instagram.com/dellizchristine/"],
+        "sameAs": [
+          "https://www.instagram.com/dellizchristine/"
+        ],
         "memberOf": [
-          { "@id": "https://lumesexperience.com.br/#lumes" },
-          { "@type": "MusicGroup", "@id": "https://jeitoagape.com.br/#musicgroup", "name": "Jeito Ágape", "url": "https://jeitoagape.com.br/" }
+          {
+            "@id": "https://lumesexperience.com.br/#lumes"
+          },
+          {
+            "@type": "MusicGroup",
+            "@id": "https://jeitoagape.com.br/#musicgroup",
+            "name": "Jeito Ágape",
+            "url": "https://jeitoagape.com.br/"
+          }
         ]
       },
       {
@@ -121,54 +199,160 @@
         "@id": "https://lumesexperience.com.br/#cerimonia",
         "name": "Música ao vivo para cerimônia de casamento",
         "serviceType": "Música para cerimônia de casamento",
-        "description": "Música ao vivo para cerimônias católicas, evangélicas e ecumênicas, na igreja ou ao ar livre: chegada dos convidados, cortejo, entrada da noiva, celebração, alianças, assinaturas e saída dos noivos.",
-        "provider": { "@id": "https://lumesexperience.com.br/#lumes" },
-        "areaServed": { "@type": "AdministrativeArea", "name": "Região Metropolitana de Belo Horizonte" }
+        "description": "Da entrada da noiva à saída dos noivos, na igreja ou ao ar livre, em cerimônia católica, evangélica ou ecumênica.",
+        "provider": {
+          "@id": "https://lumesexperience.com.br/#lumes"
+        },
+        "areaServed": {
+          "@type": "AdministrativeArea",
+          "name": "Região Metropolitana de Belo Horizonte"
+        }
       },
       {
         "@type": "Service",
-        "@id": "https://lumesexperience.com.br/#recepcao",
-        "name": "Música ao vivo para recepção e festa de casamento",
-        "serviceType": "Música para recepção de casamento",
-        "description": "Música ao vivo para coquetel, jantar, primeira dança e pista, com equipamento de som próprio que pode ser locado junto com a música.",
-        "provider": { "@id": "https://lumesexperience.com.br/#lumes" },
-        "areaServed": { "@type": "AdministrativeArea", "name": "Região Metropolitana de Belo Horizonte" }
+        "@id": "https://lumesexperience.com.br/#festa",
+        "name": "Música ao vivo para festa de casamento",
+        "serviceType": "Música para festa de casamento",
+        "description": "O coquetel, o jantar, a primeira dança e a pista, com a formação escolhida pelo casal e equipamento de som próprio, que pode ser alugado junto com a música.",
+        "provider": {
+          "@id": "https://lumesexperience.com.br/#lumes"
+        },
+        "areaServed": {
+          "@type": "AdministrativeArea",
+          "name": "Região Metropolitana de Belo Horizonte"
+        }
       },
       {
         "@type": "Service",
         "@id": "https://lumesexperience.com.br/#bodas",
         "name": "Música ao vivo para bodas e renovação de votos",
         "serviceType": "Música para bodas e renovação de votos",
-        "description": "Música ao vivo para bodas e renovação de votos, na cerimônia e na comemoração, com as músicas que marcaram a história do casal.",
-        "provider": { "@id": "https://lumesexperience.com.br/#lumes" },
-        "areaServed": { "@type": "AdministrativeArea", "name": "Região Metropolitana de Belo Horizonte" }
+        "description": "A música do casamento tocada de novo, na renovação dos votos e na festa com a família e os amigos.",
+        "provider": {
+          "@id": "https://lumesexperience.com.br/#lumes"
+        },
+        "areaServed": {
+          "@type": "AdministrativeArea",
+          "name": "Região Metropolitana de Belo Horizonte"
+        }
       },
       {
         "@type": "Service",
         "@id": "https://lumesexperience.com.br/#quinze-anos",
         "name": "Música ao vivo para festas de 15 anos",
         "serviceType": "Música para festa de 15 anos",
-        "description": "Música ao vivo para festas de 15 anos: entrada da debutante, valsa e festa, com o repertório escolhido com ela e a família.",
-        "provider": { "@id": "https://lumesexperience.com.br/#lumes" },
-        "areaServed": { "@type": "AdministrativeArea", "name": "Região Metropolitana de Belo Horizonte" }
+        "description": "A entrada da debutante, a valsa e a pista com os amigos, com as músicas que ela escolher.",
+        "provider": {
+          "@id": "https://lumesexperience.com.br/#lumes"
+        },
+        "areaServed": {
+          "@type": "AdministrativeArea",
+          "name": "Região Metropolitana de Belo Horizonte"
+        }
       },
       {
         "@type": "FAQPage",
         "@id": "https://lumesexperience.com.br/#perguntas",
-        "isPartOf": { "@id": "https://lumesexperience.com.br/#webpage" },
+        "isPartOf": {
+          "@id": "https://lumesexperience.com.br/#webpage"
+        },
         "mainEntity": [
-          { "@type": "Question", "name": "Quanto custa a música ao vivo para casamento em BH?", "acceptedAnswer": { "@type": "Answer", "text": "O valor do Lumes Experience é sob consulta, porque depende da data, do local, dos momentos com música (cerimônia, coquetel, jantar e pista), da duração e da formação. Mandem esses dados pelo WhatsApp e enviamos uma proposta para o casamento de vocês, sem compromisso." } },
-          { "@type": "Question", "name": "Como pedir uma proposta?", "acceptedAnswer": { "@type": "Answer", "text": "Pelo WhatsApp do Lumes Experience. Mandem a data, a cidade e o local, o tipo de cerimônia e os momentos em que querem música. O formulário no fim desta página monta essa mensagem para vocês." } },
-          { "@type": "Question", "name": "Com quanta antecedência devemos reservar?", "acceptedAnswer": { "@type": "Answer", "text": "Assim que tiverem a data e o local. A data só fica garantida depois da reserva, então quanto antes vocês consultarem, maior a chance de ela estar livre." } },
-          { "@type": "Question", "name": "O Lumes Experience toca na cerimônia e na festa?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Tocamos na cerimônia e na recepção: coquetel, jantar, primeira dança e pista. Vocês escolhem os momentos com música, e a proposta acompanha essa escolha." } },
-          { "@type": "Question", "name": "Vocês tocam em casamento católico, evangélico ou ecumênico?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Tocamos em cerimônias católicas, evangélicas e ecumênicas, na igreja ou ao ar livre. Algumas igrejas permitem só música religiosa na cerimônia ou têm uma lista própria. Vale confirmar as orientações da igreja de vocês, e o repertório segue essas regras." } },
-          { "@type": "Question", "name": "Vocês tocam em bodas e festas de 15 anos?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Além de casamentos, fazemos bodas e renovação de votos e festas de 15 anos, na cerimônia e na festa, com o repertório escolhido com vocês." } },
-          { "@type": "Question", "name": "Que música tocar na entrada da noiva?", "acceptedAnswer": { "@type": "Answer", "text": "Não existe uma música obrigatória: a escolha depende do rito e do estilo do casal. Entre os clássicos mais pedidos estão a Marcha Nupcial de Wagner, o Cânon em Ré de Pachelbel e a Ave Maria. A marcha de Mendelssohn costuma ficar para a saída dos noivos. Muitos casais preferem uma canção que tenha significado para os dois. Na igreja, confirmem antes se a música escolhida é permitida." } },
-          { "@type": "Question", "name": "Podemos escolher as músicas?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. O repertório é escolhido com vocês, momento a momento. Se quiserem uma música que não está no repertório, peçam com antecedência para avaliarmos o arranjo." } },
-          { "@type": "Question", "name": "Qual é a formação do grupo?", "acceptedAnswer": { "@type": "Answer", "text": "A formação é montada para cada casamento, de acordo com o estilo e o orçamento do casal. Pode ser mais enxuta, para uma cerimônia intimista, ou mais completa, para encher a pista." } },
-          { "@type": "Question", "name": "O Lumes Experience leva o equipamento de som?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Temos equipamento de som próprio, que pode ser locado junto com a música. Se o local já tiver som, avisem na mensagem para combinarmos o que for melhor para o espaço." } },
-          { "@type": "Question", "name": "Quais cidades o Lumes Experience atende?", "acceptedAnswer": { "@type": "Answer", "text": "Belo Horizonte e a região metropolitana, como Contagem, Betim, Nova Lima, Lagoa Santa, Sabará, Santa Luzia e Brumadinho. Para casamentos em outras cidades, consultem pelo WhatsApp." } },
-          { "@type": "Question", "name": "Quem é Delliz Christine?", "acceptedAnswer": { "@type": "Answer", "text": "Delliz Christine é a cantora à frente do Lumes Experience. Ela integra o Jeito Ágape, ministério de música católica de Belo Horizonte, e é uma das vozes da série Incondicional Sessions." } }
+          {
+            "@type": "Question",
+            "name": "Quanto custa a música ao vivo para casamento em BH?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O valor do Lumes Experience é sob consulta, porque depende da data, do local, dos momentos com música (cerimônia, coquetel, jantar e pista), da duração e da formação. Mandem esses dados pelo WhatsApp e enviamos uma proposta, sem compromisso."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como pedir uma proposta?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pelo WhatsApp do Lumes Experience, no (31) 99615-4698. Mandem o tipo de evento, a data, a cidade e o local, o tipo de cerimônia e os momentos em que querem música. O formulário no fim desta página monta essa mensagem para vocês."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Com quanta antecedência devemos reservar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Assim que tiverem a data e o local. A data só fica garantida depois da reserva, então quanto antes vocês consultarem, maior a chance de ela estar livre."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O Lumes Experience toca na cerimônia e na festa?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. Tocamos na cerimônia e na festa: coquetel, jantar, primeira dança e pista. Vocês escolhem os momentos com música, e a proposta acompanha essa escolha."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Tocam em casamento católico, evangélico ou ecumênico?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. Tocamos em cerimônias católicas, evangélicas e ecumênicas, na igreja ou ao ar livre. Algumas igrejas permitem só música religiosa na cerimônia ou têm uma lista própria. Vale confirmar as orientações da igreja de vocês, e o repertório segue essas regras."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Tocam em bodas e festas de 15 anos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. Além de casamentos, fazemos bodas e renovação de votos e festas de 15 anos, na cerimônia e na festa."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Que música tocar na entrada da noiva?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não existe uma música obrigatória: a escolha depende do rito e do estilo do casal. Entre os clássicos mais pedidos estão a Marcha Nupcial de Wagner, o Cânon em Ré de Pachelbel e a Ave Maria. A marcha de Mendelssohn costuma ficar para a saída dos noivos. Muitos casais preferem uma canção que tenha significado para os dois. Na igreja, confirmem antes se a música escolhida é permitida."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Podemos escolher as músicas?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. O repertório é escolhido com vocês, momento a momento. Se quiserem uma música que não está no repertório, peçam com antecedência para avaliarmos o arranjo."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Qual é a formação do grupo?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Vocês escolhem. A formação é montada para cada evento, de acordo com o estilo e o orçamento de vocês: mais enxuta, para uma cerimônia intimista, ou mais completa, para encher a pista."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O Lumes Experience leva o equipamento de som?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. Temos equipamento de som próprio, que pode ser alugado junto com a música. Se o local já tiver som, avisem na mensagem para combinarmos o que for melhor para o espaço."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quais cidades o Lumes Experience atende?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Belo Horizonte e a região metropolitana, como Contagem, Betim, Nova Lima, Lagoa Santa, Sabará, Santa Luzia e Brumadinho. Para eventos em outras cidades, consultem pelo WhatsApp."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quem é Delliz Christine?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Delliz Christine é a cantora à frente do Lumes Experience. Ela integra o Jeito Ágape, ministério de música católica de Belo Horizonte, e é uma das vozes da série Incondicional Sessions."
+            }
+          }
         ]
       }
     ]
@@ -191,6 +375,11 @@
       font-display: swap;
     }
 
+    /* O "1" do Bodoni Moda é idêntico ao "l" ("15 anos" lia "l5 anos"), e a fonte não tem alternativa.
+       Só esse algarismo vem de uma serifa do sistema, que tem a bandeira no alto; o resto continua Bodoni. */
+    @font-face { font-family: "Bodoni um"; src: local("Times New Roman"), local("TimesNewRomanPSMT"), local("Liberation Serif"); unicode-range: U+0031; size-adjust: 112%; }
+    @font-face { font-family: "Bodoni um Noto"; src: local("Noto Serif"), local("NotoSerif-Regular"); unicode-range: U+0031; size-adjust: 100%; }
+
     /* Fontes do sistema com a largura ajustada à fonte da página: se ela chegar tarde,
        as linhas quebram no mesmo lugar e o botão principal não pula (medido: 46 px sem isso). */
     @font-face { font-family: "Bodoni reserva"; src: local("Noto Serif"), local("NotoSerif-Regular"); size-adjust: 96.5%; }
@@ -200,8 +389,8 @@
     @font-face { font-family: "Manrope reserva Arial"; src: local("Arial"), local("ArialMT"), local("Helvetica"), local("Liberation Sans"); size-adjust: 103.3%; }
 
     /* Identidade Lumes Experience: terracota (#bb7944) e pêssego (#edc79b). Dia = cerimônia, em pêssego claro.
-       Noite = recepção, em marrom-terracota fechado, com a luz pêssego. O terracota da marca fica nos detalhes
-       (arcos, fios, estrelas); ação e texto usam o terracota fechado, para passar no contraste (WCAG AA). */
+       Noite = festa, em terracota fechado (a identidade não tem preto), com a luz pêssego. O terracota da marca
+       fica no logo, nos ornamentos e em campos com título grande; ação e texto usam o terracota fechado. */
     :root {
       --dia: #F6E5D2;
       --dia-2: #FCF3E8;
@@ -209,24 +398,26 @@
       --pessego: #EDC79B;
       --tinta: #33200F;
       --tinta-suave: #6A4A33;
+      --tinta-funda: #2B1A0F;
       --terracota-marca: #BB7944;
       --terracota: #8E5226;
       --terracota-funda: #6F3E1B;
       --sobre-terracota: #FFF8F0;
+      --branco: #FFFFFF;
       --lume: #BB7944;
       --foco: #8E5226;
 
-      --noite: #2B1A0F;
-      --noite-2: #3A2416;
-      --noite-linha: #5C3B25;
-      --noite-campo: #9C7A60;
-      --noite-dica: #C2A388;
+      --noite: #693A1C;
+      --noite-2: #7A4726;
+      --noite-linha: #9A6644;
+      --noite-campo: #D1A47F;
+      --noite-dica: #E3C4A6;
       --luz: #EDC79B;
       --luz-clara: #F6DDBF;
-      --noite-foco: #E9A86F;
-      --noite-texto: #F8EBDD;
-      --noite-suave: #DCC4AD;
-      --noite-resposta: #EAD6C2;
+      --noite-foco: #F4BE8C;
+      --noite-texto: #FFF4E8;
+      --noite-suave: #EFD6BE;
+      --noite-resposta: #F7E6D4;
 
       /* Textura de luz: o sol baixo no dia e as luzes acesas na noite. Posições em rem a partir do topo,
          para valer em blocos de qualquer altura. */
@@ -234,11 +425,12 @@
         radial-gradient(58rem 32rem at calc(100% + 6rem) -7rem, rgb(237 199 155 / 0.62), transparent 70%),
         radial-gradient(40rem 26rem at -12rem 30rem, rgb(187 121 68 / 0.12), transparent 70%);
       --textura-noite:
-        radial-gradient(64rem 26rem at 50% -9rem, rgb(237 199 155 / 0.12), transparent 70%),
-        radial-gradient(44rem 30rem at calc(100% + 10rem) 55%, rgb(187 121 68 / 0.12), transparent 70%);
+        radial-gradient(64rem 26rem at 50% -9rem, rgb(237 199 155 / 0.1), transparent 70%),
+        radial-gradient(44rem 30rem at calc(100% + 10rem) 55%, rgb(237 199 155 / 0.08), transparent 70%);
 
-      /* O pôr do sol entre a cerimônia e a festa: do pêssego ao terracota e à noite. Embaixo, as primeiras luzes acesas. */
-      --anoitecer: linear-gradient(to bottom, var(--dia) 0%, #F0D3B0 22%, #E2A877 42%, #BB7944 60%, #6B4026 80%, var(--noite) 100%);
+      /* O pôr do sol entre a cerimônia e a festa: do pêssego ao terracota da marca e à noite terracota.
+         Embaixo, as primeiras luzes acesas. */
+      --anoitecer: linear-gradient(to bottom, var(--dia) 0%, #F0D3B0 24%, #E2A877 46%, #BB7944 68%, #8A4D24 86%, var(--noite) 100%);
       --luzes-do-anoitecer:
         radial-gradient(circle at 12% 70%, color-mix(in srgb, var(--luz-clara) 90%, transparent) 0 2px, transparent 3px),
         radial-gradient(circle at 26% 58%, color-mix(in srgb, var(--luz-clara) 70%, transparent) 0 1.5px, transparent 2.5px),
@@ -248,19 +440,25 @@
         radial-gradient(circle at 86% 60%, color-mix(in srgb, var(--luz-clara) 70%, transparent) 0 1.5px, transparent 2.5px),
         radial-gradient(ellipse at 50% 100%, color-mix(in srgb, var(--luz) 18%, transparent), transparent 70%);
 
-      --serif: "Bodoni Moda", "Bodoni reserva", "Bodoni reserva Georgia", "Bodoni reserva Times", serif;
+      --serif: "Bodoni um", "Bodoni um Noto", "Bodoni Moda", "Bodoni reserva", "Bodoni reserva Georgia", "Bodoni reserva Times", serif;
       --sans: "Manrope", "Manrope reserva", "Manrope reserva Arial", sans-serif;
 
       --largura: 72rem;
+      --leitura: 42rem;
       --margem: clamp(1rem, 4vw, 2.5rem);
+      --secao: clamp(4rem, 3rem + 6vw, 7.5rem);
     }
 
     *, *::before, *::after { box-sizing: border-box; }
 
+    /* O que o navegador desenha sozinho também segue a marca: barra de rolagem, toque, seleção, cursor. */
     html {
       -webkit-text-size-adjust: 100%;
+      -webkit-tap-highlight-color: color-mix(in srgb, var(--terracota-marca) 22%, transparent);
       scroll-behavior: smooth;
       scroll-padding-top: 1rem;
+      scrollbar-color: var(--terracota-marca) var(--dia);
+      accent-color: var(--terracota);
     }
 
     /* A barra fixa do WhatsApp não pode cobrir o item focado pelo teclado (WCAG 2.4.11). */
@@ -281,11 +479,20 @@
       body { font-size: 1.125rem; }
     }
 
-    ::selection { background: color-mix(in srgb, var(--luz) 45%, transparent); }
+    ::selection { background: color-mix(in srgb, var(--luz) 70%, transparent); color: var(--tinta-funda); }
+    .noite ::selection, .porta ::selection { background: var(--luz-clara); color: var(--tinta-funda); }
 
     img, video { display: block; max-width: 100%; height: auto; }
 
-    a { color: inherit; text-underline-offset: 0.22em; text-decoration-thickness: 1px; }
+    a {
+      color: inherit;
+      text-decoration-color: color-mix(in srgb, currentColor 55%, transparent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.22em;
+      transition: text-decoration-color 0.2s;
+    }
+    a:hover { text-decoration-color: currentColor; }
+    label, select, summary, button { cursor: pointer; }
 
     h1, h2, h3 {
       margin: 0;
@@ -294,15 +501,14 @@
       line-height: 1.08;
       text-wrap: balance;
       overflow-wrap: break-word;
+      font-variant-numeric: lining-nums;
     }
 
     /* O tamanho óptico automático do Bodoni deixa o fio fino demais abaixo de ~60px ("BH" vira "BII"). */
-    h1, h2, h3, .marca, .promessa__nome, .depoimento blockquote, .passo::before, .pergunta summary, .amostra figcaption {
+    h1, h2, h3, .marca, .compromisso__nome, .depoimento blockquote, .pergunta summary, .amostra figcaption, .assinatura-voz {
       font-variation-settings: "opsz" var(--opsz, 24);
     }
-    h3, .promessa__nome, .pergunta summary, .amostra figcaption { --opsz: 12; }
-    .passo::before { --opsz: 14; }
-    .promessa__nome { --opsz: 14; }
+    h3, .compromisso__nome, .pergunta summary, .amostra figcaption, .assinatura-voz { --opsz: 14; }
     .marca { --opsz: 18; }
 
     h2 { font-size: clamp(2rem, 1.5rem + 2.2vw, 3rem); }
@@ -311,13 +517,10 @@
     p { margin: 0 0 1em; }
 
     /* Texto corrido justificado só nas colunas largas, no computador (pedido do dono, ajustado na revisão
-       impeccable de 03/11/2026). No celular e nas colunas estreitas (topo, ficha de fatos, passos, roteiro,
-       notas, legendas) a justificação abre buracos entre as palavras, então o texto fica alinhado à esquerda.
-       A hifenização só quebra palavras de 11 letras ou mais: nomes como Delliz, Christine, Experience e
-       Horizonte nunca são partidos. */
+       impeccable de 03/11/2026). No celular e nas colunas estreitas a justificação abre buracos entre as
+       palavras, então o texto fica alinhado à esquerda. A hifenização só quebra palavras de 11 letras ou
+       mais: nomes como Delliz, Christine, Experience e Horizonte nunca são partidos. */
     @media (min-width: 64rem) {
-      .delliz__texto p,
-      .introducao,
       .pergunta__resposta p {
         text-align: justify;
         -webkit-hyphens: auto;
@@ -348,8 +551,7 @@
       padding-inline: var(--margem);
     }
 
-    .secao { padding-block: clamp(4rem, 3rem + 6vw, 7.5rem); }
-    .secao--emenda { padding-bottom: 0; }
+    .secao { padding-block: var(--secao); }
     .secao--seguida { padding-top: 0; }
 
     .duas-colunas { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2rem; }
@@ -360,8 +562,6 @@
         gap: 4rem;
       }
     }
-
-    .introducao { max-width: 40rem; color: var(--tinta-suave); margin-top: 1rem; }
 
     /* Botões: terracota sobre o dia, pêssego sobre a noite. Isolamento de cor > "cor que converte". */
     .botao {
@@ -389,45 +589,60 @@
 
     .botao--compacto { min-height: 2.75rem; padding: 0.55rem 1.1rem; font-size: 0.9375rem; }
 
-    /* Em telas de 320 px os rótulos longos quebrariam o botão em duas linhas. */
     @media (max-width: 23.49rem) {
       .botao { padding-inline: 1rem; font-size: 0.9375rem; }
-      .so-largo { display: none; }
     }
 
-    /* ---------- Topo ---------- */
+    /* ---------- Topo ----------
+       No celular, só o logo e três links: o botão do WhatsApp já está na primeira dobra e, depois dela, na barra
+       fixa. No computador entram o quarto link e o botão compacto. */
     .topo {
       position: relative;
       z-index: 2;
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
-      padding-block: 1.25rem;
+      padding-block: 1rem;
     }
 
     /* A sub-marca da identidade (símbolo + LUMES EXPERIENCE), em terracota da marca: logotipo não entra na regra de contraste. */
     .marca {
       display: inline-flex;
+      flex: none;
       align-items: center;
       min-height: 2.75rem;
       color: var(--terracota-marca);
       text-decoration: none;
     }
-    .marca svg { display: block; width: auto; height: clamp(2.35rem, 2rem + 1vw, 2.85rem); aspect-ratio: 1745 / 594; }
+    .marca svg { display: block; width: auto; height: 2.35rem; aspect-ratio: 1745 / 594; }
 
-    .topo__nav { display: none; }
-
-    @media (min-width: 56rem) {
-      .topo__nav { display: flex; gap: 1.75rem; margin-left: auto; margin-right: 1.5rem; }
-      .topo__nav a { color: var(--tinta-suave); text-decoration: none; font-size: 0.9375rem; }
-      .topo__nav a:hover { color: var(--terracota); text-decoration: underline; }
+    .topo__nav { display: flex; gap: 1.1rem; margin-left: auto; }
+    .topo__nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 2.75rem;
+      color: var(--tinta-suave);
+      font-size: 0.9375rem;
+      text-decoration: none;
     }
+    .topo__nav a:hover, .topo__nav a[aria-current] { color: var(--terracota); text-decoration: underline; }
+    /* Sobre o pêssego pleno, o terracota fechado cai para 3,9:1: o link ativo usa o terracota mais funda (5,6:1). */
+    .topo-faixa .topo__nav a:hover, .topo-faixa .topo__nav a[aria-current] { color: var(--terracota-funda); }
+    .topo__nav .so-largo, .topo > .botao { display: none; }
 
     @media (max-width: 22.49rem) {
-      .topo__rotulo { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-      .topo .botao { padding-inline: 0.85rem; }
+      .topo__nav a:nth-child(2) { display: none; }
+    }
+
+    @media (min-width: 56rem) {
+      .topo { padding-block: 1.25rem; }
+      .topo__nav { gap: 1.75rem; margin-right: 1.5rem; }
+      .topo__nav .so-largo, .topo > .botao { display: inline-flex; }
+    }
+    /* No computador o EXPERIENCE do logo passa de 12 px de altura (antes tinha 9,5 px, menor que o menu). */
+    @media (min-width: 60rem) {
+      .marca svg { height: 3.6rem; }
     }
 
     /* ---------- Primeira dobra ----------
@@ -451,39 +666,44 @@
       grid-template-columns: minmax(0, 1fr);
       align-content: center;
       gap: clamp(1.25rem, 3svh, 2rem);
-      min-height: calc(100svh - 4.9rem);
-      padding-block: 0.5rem 3.5rem;
+      min-height: calc(100svh - 4.75rem);
+      padding-block: 1.25rem 3.5rem;
     }
     .abertura .voz-coluna { order: -1; }
 
     @media (min-width: 60rem) {
-      .abertura { --voz-largura: min(30rem, 36vw, calc((100svh - 14rem) / 1.5)); }
+      .abertura { --voz-largura: min(30rem, 36vw, calc((100svh - 15rem) / 1.5)); }
       .abertura__grade {
         grid-template-columns: minmax(0, 1fr) var(--voz-largura);
         column-gap: clamp(2.5rem, 1rem + 3vw, 4.5rem);
         align-items: center;
-        min-height: calc(100svh - 5.4rem);
+        min-height: calc(100svh - 6.1rem);
         padding-block: 2rem 5.5rem;
       }
       .abertura .voz-coluna { order: 0; }
+    }
+    /* Os arcos passam 12% da largura da foto para cada lado. Entre 60rem e 80rem a margem da tela não basta
+       (a 1024 px o arco de fora ficava a 4 px da borda): a foto anda um pouco para a esquerda. */
+    @media (min-width: 60rem) and (max-width: 79.99rem) {
+      .abertura .voz { translate: calc(-1 * (var(--voz-largura) * 0.12 + 1rem - var(--margem))) 0; }
     }
 
     .abertura h1 {
       --opsz: 48;
       max-width: 8.5em;
-      font-size: clamp(2.5rem, 1.6rem + 3.8vw, 3.25rem);
+      font-size: clamp(2.75rem, 1.9rem + 3.6vw, 3.25rem);
       line-height: 1.02;
       letter-spacing: -0.015em;
     }
 
     @media (min-width: 60rem) {
-      .abertura h1 { font-size: clamp(3.75rem, 1.25rem + 3.8vw, 5.5rem); }
+      .abertura h1 { font-size: clamp(3.75rem, 1.25rem + 3.8vw, 4.75rem); }
     }
 
     .abertura__lead {
       max-width: 30rem;
       margin-top: 1rem;
-      font-size: clamp(1.0625rem, 0.95rem + 0.5vw, 1.375rem);
+      font-size: clamp(1.125rem, 1rem + 0.45vw, 1.3125rem);
     }
     @media (min-width: 60rem) {
       .abertura__lead { margin-top: 1.5rem; }
@@ -536,9 +756,9 @@
       stroke-width: 0.36;
       stroke-linecap: round;
       stroke-dasharray: 1;
-      animation: desenhar-arco 2.2s cubic-bezier(0.45, 0, 0.2, 1) 0.15s both;
+      animation: desenhar-arco 1.8s cubic-bezier(0.45, 0, 0.2, 1) 0.1s both;
     }
-    .voz__arcos path + path { animation-delay: 0.45s; }
+    .voz__arcos path + path { animation-delay: 0.35s; }
 
     .voz__aliancas {
       position: absolute;
@@ -556,16 +776,19 @@
       stroke: currentColor;
       stroke-width: 2.2;
       stroke-dasharray: 1;
-      animation: desenhar-arco 1.6s cubic-bezier(0.45, 0, 0.2, 1) 0.9s both;
+      animation: desenhar-arco 1.4s cubic-bezier(0.45, 0, 0.2, 1) 0.7s both;
     }
-    .voz__aliancas circle + circle { animation-delay: 1.15s; }
+    .voz__aliancas circle + circle { animation-delay: 0.9s; }
     /* No computador o botão "Ouvir a Delliz" ocupa menos da foto: as alianças descem para o canto. */
     @media (min-width: 60rem) {
       .voz__aliancas { left: -11%; bottom: 6%; width: 38%; }
     }
-    .voz__aliancas .brilho { fill: currentColor; transform-box: fill-box; transform-origin: center; animation: acender 1s ease 2.1s both; }
+    .voz__aliancas .brilho { fill: currentColor; transform-box: fill-box; transform-origin: center; animation: acender 1s ease 1.8s both; }
 
-    /* Com a abertura na tela, a luz e os arcos da foto esperam a porta abrir para acender. */
+    /* Quando a porta da abertura pousa, os traços do logo caem sobre estes arcos: eles já estão desenhados. */
+    .porta-pousou .voz__arcos path { animation: none; stroke-dashoffset: 0; }
+
+    /* Com a abertura na tela, a luz e os arcos da foto esperam a porta pousar para acender. */
     .com-abertura .voz__moldura::before,
     .com-abertura .voz__arcos path,
     .com-abertura .voz__aliancas * { animation-play-state: paused; }
@@ -579,36 +802,15 @@
       to { stroke-dashoffset: 0; }
     }
 
-    .voz__abertura {
-      margin-top: 1rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      min-height: 2.75rem;
-      padding: 0.5rem 1.1rem 0.5rem 0.9rem;
-      border: 1px solid var(--dia-linha);
-      border-radius: 999px;
-      background: color-mix(in srgb, var(--dia-2) 70%, transparent);
-      color: var(--terracota);
-      font: 600 0.9375rem/1 var(--sans);
-      cursor: pointer;
-      transition: background-color 0.2s, border-color 0.2s;
-    }
-    .voz__abertura:hover { background: var(--dia-2); border-color: var(--terracota-marca); }
-    .voz__abertura svg { width: 1.1rem; height: 1.1rem; fill: currentColor; }
-
     .voz__capa {
       position: absolute;
       inset: 0;
+      display: block;
       width: 100%;
       height: 100%;
-    }
-
-    .voz__capa {
-      display: block;
       overflow: hidden;
       border-radius: 50% 50% 0.375rem 0.375rem / 40% 40% 0.375rem 0.375rem;
-      background: var(--noite-2);
+      background: var(--noite);
       box-shadow: 0 1.75rem 3rem -1.5rem color-mix(in srgb, var(--tinta) 45%, transparent);
       color: var(--noite-texto);
       text-decoration: none;
@@ -621,6 +823,7 @@
     }
     .voz__capa:hover img { scale: 1.03; }
 
+    /* A pílula sobre a foto é sólida: nada de vidro desfocado. */
     .voz__tocar {
       position: absolute;
       left: 50%;
@@ -632,20 +835,19 @@
       min-height: 3rem;
       padding: 0.75rem 1.3rem 0.75rem 1.1rem;
       border-radius: 999px;
-      background: color-mix(in srgb, var(--noite) 72%, transparent);
-      -webkit-backdrop-filter: blur(8px);
-      backdrop-filter: blur(8px);
+      background: color-mix(in srgb, var(--noite) 92%, transparent);
       font: 600 0.9375rem/1 var(--sans);
       white-space: nowrap;
       transition: background-color 0.2s;
     }
-    .voz__capa:hover .voz__tocar { background: var(--noite); }
+    .voz__capa:hover .voz__tocar { background: var(--terracota-funda); }
     .voz__tocar svg { width: 1.1em; height: 1.1em; fill: var(--luz); }
 
-    .voz figcaption { margin-top: 1rem; color: var(--tinta-suave); font-size: 0.875rem; text-align: center; }
+    /* A legenda desce para fora da sombra da foto (sobre ela, o texto suave caía para 4,2:1). */
+    .voz figcaption { margin-top: 1.6rem; color: var(--tinta); font-size: 0.875rem; text-align: center; }
 
-    /* ---------- Delliz ---------- */
-    /* No celular: título, foto, texto. No computador, a foto à esquerda e título e texto ao lado, sem vão embaixo. */
+    /* ---------- A voz: a Delliz em primeira pessoa ---------- */
+    /* No celular: título, foto, texto. No computador, a foto à esquerda e título e texto ao lado. */
     .delliz {
       display: grid;
       grid-template-columns: minmax(0, 1fr);
@@ -661,7 +863,7 @@
       aspect-ratio: 4 / 5;
       object-fit: cover;
       border-radius: 50% 50% 0.375rem 0.375rem / 40% 40% 0.375rem 0.375rem;
-      background: var(--noite-2);
+      background: var(--dia-linha);
       box-shadow: 0 1.75rem 3rem -1.5rem color-mix(in srgb, var(--tinta) 45%, transparent);
     }
     @media (min-width: 56rem) {
@@ -673,63 +875,138 @@
         row-gap: 1.5rem;
         align-items: start;
       }
-      .delliz__retrato { max-width: 18rem; }
+      .delliz__retrato { max-width: 19rem; }
     }
-    .delliz__texto { grid-area: texto; max-width: 38rem; }
-    .delliz__texto p:first-child { font-size: clamp(1.125rem, 1rem + 0.45vw, 1.3125rem); }
+    .delliz__texto { grid-area: texto; max-width: 36rem; }
+    .delliz__texto p:first-child {
+      font-family: var(--serif);
+      font-size: clamp(1.375rem, 1.1rem + 1vw, 1.875rem);
+      line-height: 1.3;
+      font-variation-settings: "opsz" 24;
+    }
+    .assinatura-voz {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin: 1.5rem 0 0;
+      font-family: var(--serif);
+      font-size: clamp(1.375rem, 1.2rem + 0.6vw, 1.75rem);
+    }
+    .assinatura-voz svg { width: 1rem; height: 1rem; color: var(--terracota-marca); }
 
-    .delliz__links { margin: 1.25rem 0 0; padding: 0; list-style: none; }
+    .delliz__links { margin: 0.5rem 0 0; padding: 0; list-style: none; }
     .delliz__links a { display: inline-flex; align-items: center; min-height: 2.75rem; color: var(--terracota); font-weight: 600; }
 
+    /* O trecho da voz da Delliz: a vaga fica pronta e escondida até o áudio chegar (AUDIO_DELLIZ no script). */
+    .ouvir[hidden] { display: none; }
+    .ouvir {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      max-width: 26rem;
+      margin-top: 1.75rem;
+      padding: 0.6rem 1.25rem 0.6rem 0.6rem;
+      border: 1px solid var(--dia-linha);
+      border-radius: 999px;
+      background: var(--dia-2);
+    }
+    .ouvir__botao {
+      display: grid;
+      place-items: center;
+      flex: none;
+      width: 3rem;
+      height: 3rem;
+      border: 0;
+      border-radius: 50%;
+      background: var(--terracota);
+      color: var(--sobre-terracota);
+    }
+    .ouvir__botao:hover { background: var(--terracota-funda); }
+    .ouvir__botao svg { width: 1.2rem; height: 1.2rem; fill: currentColor; }
+    .ouvir__texto { display: grid; gap: 0.1rem; font-size: 0.9375rem; line-height: 1.3; }
+    .ouvir__texto strong { font-weight: 600; }
+    .ouvir__texto span { color: var(--tinta-suave); font-variant-numeric: tabular-nums; }
+
     /* ---------- Eventos: os momentos que a gente canta ----------
-       Três celebrações, sem caixas: fio, símbolo de traço da família da marca (alianças, alianças com brilho,
-       coroa) e o nome em Bodoni. Lado a lado no computador, empilhadas no celular. */
-    .eventos { display: grid; margin: 2.25rem 0 0; padding: 0; list-style: none; }
+       Três linhas de programa, sem cartões nem ícones: o nome grande em Bodoni com a estrela da marca e,
+       ao lado, o que acontece em cada festa. */
+    .eventos { margin: 2.5rem 0 0; padding: 0; list-style: none; border-bottom: 1px solid var(--dia-linha); }
     .evento {
       display: grid;
-      grid-template-columns: 3.5rem minmax(0, 1fr);
-      gap: 0.35rem 1.25rem;
-      padding-block: 1.5rem;
+      gap: 0.6rem 3rem;
+      padding-block: 1.75rem;
       border-top: 1px solid var(--dia-linha);
     }
-    .evento__simbolo { grid-row: span 2; width: 3.5rem; height: auto; color: var(--terracota-marca); overflow: visible; }
-    .evento__simbolo :is(circle, path) { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
-    .evento__simbolo .brilho { fill: currentColor; stroke: none; }
-    .evento__nome { --opsz: 24; font-size: clamp(1.5rem, 1.3rem + 0.8vw, 1.875rem); line-height: 1.15; }
-    .evento p { margin: 0; color: var(--tinta-suave); }
+    .evento__nome {
+      --opsz: 48;
+      display: flex;
+      align-items: baseline;
+      gap: 0.85rem;
+      font-size: clamp(2rem, 1.45rem + 2.4vw, 3.25rem);
+      line-height: 1.04;
+      letter-spacing: -0.01em;
+    }
+    .evento__nome svg { flex: none; width: 0.42em; height: 0.42em; color: var(--terracota-marca); translate: 0 -0.08em; }
+    .evento p { max-width: 34rem; margin: 0; color: var(--tinta-suave); }
 
     @media (min-width: 56rem) {
-      .eventos { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: clamp(2rem, 1rem + 3vw, 4rem); }
-      .evento { grid-template-columns: minmax(0, 1fr); align-content: start; padding-top: 2rem; }
-      .evento__simbolo { grid-row: auto; width: 4.25rem; margin-bottom: 0.75rem; }
+      .evento { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); align-items: baseline; padding-block: 2.25rem; }
     }
 
-    /* ---------- Por que a música faz diferença ---------- */
-    .musica__texto { max-width: 38rem; }
-    .musica__texto p:first-child { font-size: clamp(1.125rem, 1rem + 0.45vw, 1.3125rem); }
-    .musica__fonte { color: var(--tinta-suave); font-size: 0.875rem; }
-    .musica__fonte a { color: var(--terracota); }
+    /* ---------- A porta: a faixa terracota da marca ----------
+       Um arco de igreja chapado no terracota da identidade, com o título grande em branco (texto grande passa
+       com 3,5:1) e o texto em tinta funda (4,7:1). O topo é um meio círculo de verdade, nunca achatado. */
+    .porta-secao { padding-block: 0 var(--secao); }
+    .porta {
+      position: relative;
+      max-width: 54rem;
+      margin-inline: auto;
+      padding: calc(min(54rem, 100vw - 2 * var(--margem)) * 0.2) clamp(1.5rem, 1rem + 4vw, 5rem) clamp(2.5rem, 2rem + 3vw, 4.5rem);
+      border-radius: 9999px 9999px 0.375rem 0.375rem;
+      /* Chapado, como nas peças da identidade: um brilho atrás do título branco derrubaria o contraste. */
+      background: var(--terracota-marca);
+      color: var(--tinta-funda);
+      text-align: center;
+    }
+    .porta__estrela { display: block; width: clamp(1.75rem, 1.4rem + 1.4vw, 2.75rem); height: auto; margin: 0 auto 1.5rem; color: var(--sobre-terracota); }
+    .porta h2 {
+      --opsz: 48;
+      max-width: 16em;
+      margin-inline: auto;
+      color: var(--branco);
+      font-size: clamp(2.125rem, 1.4rem + 3vw, 3.75rem);
+      line-height: 1.04;
+      letter-spacing: -0.01em;
+    }
+    .porta__texto { max-width: 34rem; margin: 1.5rem auto 0; font-size: clamp(1.125rem, 1rem + 0.45vw, 1.3125rem); line-height: 1.6; }
+    .porta__fonte { max-width: 34rem; margin: 1.25rem auto 0; font-size: 0.875rem; }
+    .porta a { text-decoration-color: currentColor; }
+    .porta :focus-visible { outline-color: var(--tinta-funda); }
 
-    /* ---------- O que é mais importante para nós ---------- */
-    .promessas { display: grid; margin: 2.25rem 0 0; padding: 0; list-style: none; }
-    .promessa { padding-block: 1.25rem; border-top: 1px solid var(--dia-linha); }
-    .promessa__nome { display: block; font-family: var(--serif); font-size: 1.375rem; line-height: 1.25; }
-    .promessa p { margin: 0.35rem 0 0; color: var(--tinta-suave); }
+    /* ---------- O que a gente combina antes do dia ---------- */
+    .compromissos { margin: 0; padding: 0; list-style: none; }
+    .compromisso { padding-block: 1.4rem; border-top: 1px solid var(--dia-linha); }
+    .compromisso:last-child { border-bottom: 1px solid var(--dia-linha); }
+    .compromisso__nome { display: block; font-family: var(--serif); font-size: clamp(1.375rem, 1.2rem + 0.6vw, 1.75rem); line-height: 1.25; }
+    .compromisso p { max-width: 34rem; margin: 0.4rem 0 0; color: var(--tinta-suave); }
 
-    @media (min-width: 48rem) {
-      .promessas { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(2rem, 1rem + 3vw, 4rem); }
+    @media (min-width: 56rem) {
+      .compromissos-grade { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+      .compromissos-grade > h2 { position: sticky; top: 2rem; align-self: start; }
     }
 
     /* ---------- Depoimentos (prévia) ----------
        Só aparecem com ?previa no endereço (classe .previa no <html>): por enquanto são exemplos para aprovar o
-       layout, com o selo "Exemplo". Com os depoimentos reais, tire data-previa da seção e os selos. */
+       layout, com o selo "Exemplo". Com os depoimentos reais, tire data-previa da seção e os selos.
+       Em escada: o primeiro grande, os outros dois menores ao lado. */
     [data-previa] { display: none; }
     .previa [data-previa] { display: block; }
-    .depoimentos { display: grid; gap: 2rem; margin: 2.25rem 0 0; padding: 0; list-style: none; }
-    .depoimento { margin: 0; padding-top: 1.5rem; border-top: 1px solid var(--dia-linha); }
+    .depoimentos { display: grid; gap: 2.25rem; margin: 2.5rem 0 0; padding: 0; list-style: none; }
+    .depoimento { position: relative; margin: 0; padding-top: 1.5rem; border-top: 1px solid var(--dia-linha); }
     .depoimento blockquote { margin: 0; font-family: var(--serif); font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem); line-height: 1.35; }
-    .depoimento blockquote p { margin: 0; text-align: start; }
+    .depoimento blockquote p { margin: 0; }
     .depoimento figcaption { margin-top: 1rem; color: var(--tinta-suave); font-size: 0.9375rem; }
+    .depoimentos > li:first-child .depoimento blockquote { --opsz: 48; font-size: clamp(1.625rem, 1.2rem + 1.8vw, 2.5rem); line-height: 1.2; }
     .depoimento__selo {
       display: inline-block;
       margin-left: 0.4rem;
@@ -743,10 +1020,11 @@
     }
 
     @media (min-width: 56rem) {
-      .depoimentos { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: clamp(2rem, 1rem + 3vw, 4rem); }
+      .depoimentos { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(2rem, 1rem + 3vw, 4rem); }
+      .depoimentos > li:first-child { grid-column: 1 / -1; max-width: 46rem; }
     }
 
-    /* O dia vira noite: a passagem da cerimônia para a recepção. */
+    /* O dia vira noite: a passagem da cerimônia para a festa. */
     .anoitecer {
       position: relative;
       height: clamp(9rem, 26vh, 16rem);
@@ -784,24 +1062,33 @@
       background-image: var(--textura-noite);
       color: var(--noite-texto);
       color-scheme: dark;
+      scrollbar-color: var(--luz) var(--noite);
     }
     .noite :focus-visible { outline-color: var(--noite-foco); }
-    /* O brilho fica no começo da noite; o rodapé continua no escuro, sem emenda. */
+    /* O brilho fica no começo da noite; o rodapé continua liso, sem emenda. */
     footer.noite { background: var(--noite); }
+    .introducao { max-width: 40rem; margin-top: 1rem; color: var(--tinta-suave); }
     .noite .introducao { color: var(--noite-suave); }
+    .noite .introducao a { color: var(--luz-clara); }
 
-
-    /* ---------- Amostras ---------- */
+    /* ---------- Amostras ----------
+       Até chegarem as gravações, cada espaço é um arco vazio em traço, com a estrela: honesto, sem foto genérica
+       e sem luz falsa. */
     .amostras__grade {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 0.75rem;
-      max-width: 40rem;
-      margin-top: 2.5rem;
+      max-width: 32rem;
+      margin-top: 2rem;
     }
 
     @media (min-width: 48rem) {
-      .amostras__grade { gap: 1rem; }
+      .amostras__grade { gap: 1.25rem; }
+    }
+    /* No computador, o título e o texto à esquerda e os três arcos à direita, sem deixar meia largura vazia. */
+    @media (min-width: 56rem) {
+      .amostras { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 4rem; align-items: center; }
+      .amostras__grade { margin: 0; max-width: none; }
     }
 
     .amostra { position: relative; margin: 0; }
@@ -820,21 +1107,20 @@
       background: linear-gradient(to bottom, transparent, color-mix(in srgb, var(--noite) 88%, transparent));
       font-family: var(--serif);
       font-size: 1.125rem;
-      line-height: 1.25;
+      line-height: 1.35;
     }
     .amostra__estado { display: block; margin-top: 0.2rem; color: var(--noite-suave); font: 400 0.875rem/1.4 var(--sans); }
 
-    /* Espaço reservado até chegarem as gravações: luzes desfocadas, nada de foto genérica. */
     .amostra--vazia .amostra__midia {
+      display: grid;
+      place-items: center;
       aspect-ratio: 4 / 5;
-      background:
-        radial-gradient(circle at var(--x1, 30%) var(--y1, 26%), color-mix(in srgb, var(--luz-clara) 50%, transparent) 0 4%, transparent 15%),
-        radial-gradient(circle at var(--x2, 68%) var(--y2, 44%), color-mix(in srgb, var(--luz) 32%, transparent) 0 6%, transparent 20%),
-        radial-gradient(circle at var(--x3, 42%) var(--y3, 70%), rgb(201 157 124 / 0.28) 0 8%, transparent 24%),
-        linear-gradient(165deg, #4A2C1A, var(--noite-2) 55%, #24150B);
+      border: 1px solid color-mix(in srgb, var(--luz) 55%, transparent);
+      border-radius: 50% 50% 0.375rem 0.375rem / 40% 40% 0.375rem 0.375rem;
+      background: var(--noite-2);
+      color: var(--luz);
     }
-    .amostra--vazia:nth-child(2n) .amostra__midia { --x1: 72%; --y1: 20%; --x2: 28%; --y2: 52%; --x3: 60%; --y3: 78%; }
-    .amostra--vazia:nth-child(3n) .amostra__midia { --x1: 50%; --y1: 34%; --x2: 20%; --y2: 18%; --x3: 78%; --y3: 64%; }
+    .amostra--vazia .amostra__midia svg { width: 22%; height: auto; }
     .amostra--vazia figcaption { position: static; padding: 0.65rem 0 0; background: none; font-size: 1rem; }
 
     .amostra__controles { position: absolute; top: 0.5rem; right: 0.5rem; display: flex; gap: 0.4rem; }
@@ -843,10 +1129,9 @@
       padding: 0.4rem 0.85rem;
       border: 1px solid color-mix(in srgb, var(--noite-texto) 35%, transparent);
       border-radius: 999px;
-      background: color-mix(in srgb, var(--noite) 72%, transparent);
+      background: color-mix(in srgb, var(--noite) 88%, transparent);
       color: var(--noite-texto);
       font: 600 0.8125rem/1 var(--sans);
-      cursor: pointer;
     }
 
     .ampliada {
@@ -857,56 +1142,54 @@
       background: transparent;
       color: var(--noite-texto);
     }
-    /* O ::backdrop não herda as variáveis do :root em todos os navegadores: o marrom da --noite vai literal. */
-    .ampliada::backdrop { background: rgb(43 26 15 / 0.92); }
+    /* O ::backdrop não herda as variáveis do :root em todos os navegadores: a --noite vai literal. */
+    .ampliada::backdrop { background: rgb(105 58 28 / 0.94); }
     .ampliada img { max-height: 84vh; width: auto; margin-inline: auto; }
     .ampliada button { display: block; margin: 0.75rem auto 0; }
 
-    /* ---------- Como reservar ---------- */
-    .passos { display: grid; gap: 2rem; margin: 2.5rem 0 0; padding: 0; list-style: none; counter-reset: passo; }
+    /* ---------- Como reservar: um caminho de estrelas ----------
+       Cada passo é uma estrela da marca num fio; o fio liga as três e mostra a ordem. */
+    .passos { display: grid; margin: 2.5rem 0 0; padding: 0; list-style: none; }
+    .passo { position: relative; padding: 0 0 2.25rem 2.75rem; }
+    .passo::before {
+      content: "";
+      position: absolute;
+      left: 0.6rem;
+      top: 1.2rem;
+      bottom: -0.2rem;
+      border-left: 1px solid var(--noite-linha);
+    }
+    .passo:last-child { padding-bottom: 0; }
+    .passo:last-child::before { display: none; }
+    .passo__estrela { position: absolute; left: 0; top: 0.1rem; width: 1.25rem; height: 1.25rem; color: var(--luz); }
+    .passo h3 { margin-bottom: 0.4rem; font-size: clamp(1.375rem, 1.2rem + 0.6vw, 1.75rem); }
+    .passo p { max-width: 26rem; margin: 0; color: var(--noite-suave); }
+    .passo a { color: var(--luz-clara); }
 
     @media (min-width: 56rem) {
       .passos { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3rem; }
+      .passo { padding: 2.25rem 0 0; }
+      .passo::before { left: 1.85rem; right: -3rem; top: 0.62rem; bottom: auto; border-left: 0; border-top: 1px solid var(--noite-linha); }
+      .passo:last-child::before { display: block; right: 0; }
+      .passo__estrela { top: 0; }
     }
 
-    .passo { counter-increment: passo; padding-top: 1.25rem; border-top: 1px solid var(--noite-linha); }
-    .passo::before {
-      content: counter(passo);
-      display: block;
-      margin-bottom: 0.75rem;
-      color: var(--luz);
-      font-family: var(--serif);
-      font-size: 2.25rem;
-      line-height: 1;
-      font-variant-numeric: lining-nums;
-    }
-    .passo h3 { margin-bottom: 0.5rem; font-size: 1.375rem; }
-    .passo p { margin: 0; color: var(--noite-suave); }
+    /* ---------- Perguntas ----------
+       No computador, a coluna da esquerda acompanha a leitura: o título, os três grupos e o botão. */
+    .perguntas__lado > h2 { margin-bottom: 0; }
+    .perguntas__indice, .perguntas__acao { display: none; }
 
-    /* ---------- Fatos ---------- */
-    .fatos__lista { margin: 0; display: grid; }
-
-    @media (min-width: 40rem) {
-      .fatos__lista { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 2.5rem; }
+    @media (min-width: 56rem) {
+      .perguntas__lado { position: sticky; top: 2rem; align-self: start; }
+      .perguntas__indice { display: block; margin: 1.75rem 0 0; padding: 0; list-style: none; border-top: 1px solid var(--noite-linha); }
+      .perguntas__indice a { display: flex; align-items: center; min-height: 2.75rem; border-bottom: 1px solid var(--noite-linha); color: var(--noite-suave); text-decoration: none; }
+      .perguntas__indice a:hover { color: var(--luz-clara); }
+      .perguntas__acao { display: block; margin-top: 2rem; }
+      .perguntas__acao p { margin: 0 0 1rem; color: var(--noite-suave); font-size: 0.9375rem; }
+      .perguntas__acao .botao { padding-inline: 1.1rem; font-size: 0.9375rem; white-space: nowrap; }
     }
 
-    .fato {
-      display: grid;
-      grid-template-columns: minmax(0, 7em) minmax(0, 1fr);
-      gap: 1rem;
-      padding-block: 0.9rem;
-      border-top: 1px solid var(--noite-linha);
-    }
-    .fato dt { color: var(--noite-suave); font-size: 0.9375rem; font-weight: 600; }
-    .fato dd { margin: 0; }
-    .fato a { display: inline-block; padding-block: 0.6rem; margin-block: -0.6rem; }
-
-    @media (min-width: 40rem) {
-      .fato { display: block; }
-      .fato dt { margin-bottom: 0.2rem; }
-    }
-
-    /* ---------- Perguntas ---------- */
+    .perguntas__grupo { scroll-margin-top: 2rem; }
     .perguntas__grupo + .perguntas__grupo { margin-top: 2.75rem; }
     .perguntas__grupo h3 { margin-bottom: 0.5rem; font-size: clamp(1.375rem, 1.2rem + 0.6vw, 1.75rem); }
 
@@ -918,9 +1201,8 @@
       padding: 1.2rem 3rem 1.2rem 0;
       list-style: none;
       font-family: var(--serif);
-      font-size: clamp(1.2rem, 1.1rem + 0.4vw, 1.4rem);
+      font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
       line-height: 1.3;
-      cursor: pointer;
     }
     .pergunta summary::-webkit-details-marker { display: none; }
     .pergunta summary::after {
@@ -938,21 +1220,32 @@
     }
     .pergunta[open] summary::after { transform: rotate(45deg); }
 
-    .pergunta__resposta { max-width: 42rem; padding-bottom: 1.4rem; color: var(--noite-resposta); }
+    .pergunta__resposta { max-width: var(--leitura); padding-bottom: 1.4rem; color: var(--noite-resposta); }
     .pergunta__resposta p { margin: 0; }
+    .pergunta__resposta a { color: var(--luz-clara); }
 
-    /* ---------- Consulta de data ---------- */
-    .consulta__texto p { margin-top: 1rem; color: var(--noite-suave); }
-
-    .consulta__form {
-      padding: clamp(1.25rem, 1rem + 2vw, 2.5rem);
-      border: 1px solid var(--noite-linha);
-      border-radius: 6px;
-      background: var(--noite-2);
+    /* ---------- A porta acesa: a consulta de data ----------
+       No fim da noite, um arco pêssego chapado (o pêssego pleno da identidade) com o formulário dentro.
+       Sobre o pêssego, quem age volta a ser o terracota. */
+    .consulta-secao { padding-top: 0; }
+    .porta-acesa {
+      max-width: 44rem;
+      margin-inline: auto;
+      padding: calc(min(44rem, 100vw - 2 * var(--margem)) * 0.16) clamp(1.25rem, 0.75rem + 3vw, 3.5rem) clamp(1.75rem, 1.25rem + 2vw, 3rem);
+      border-radius: 9999px 9999px 0.375rem 0.375rem;
+      background: var(--pessego);
+      color: var(--tinta);
+      color-scheme: light;
     }
+    .porta-acesa :focus-visible { outline-color: var(--foco); }
+    .porta-acesa__estrela { display: block; width: 2rem; height: auto; margin: 0 auto 1.25rem; color: var(--terracota-marca); }
+    .porta-acesa h2 { text-align: center; }
+    .porta-acesa__texto { max-width: 28rem; margin: 1rem auto 2rem; color: var(--tinta-suave); text-align: center; }
 
-    @media (max-width: 23.49rem) {
-      .consulta__form { padding: 1rem; }
+    .consulta__campos { display: grid; gap: 0 1.25rem; }
+    @media (min-width: 40rem) {
+      .consulta__campos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .consulta__campos .campo--largo { grid-column: 1 / -1; }
     }
 
     .campo { display: grid; gap: 0.4rem; margin: 0 0 1.25rem; padding: 0; border: 0; min-width: 0; }
@@ -963,30 +1256,52 @@
       width: 100%;
       min-height: 3rem;
       padding: 0.65rem 0.85rem;
-      border: 1px solid var(--noite-campo);
+      border: 1px solid var(--terracota-funda);
       border-radius: 4px;
-      background: var(--noite);
-      color: var(--noite-texto);
+      background: var(--dia-2);
+      color: var(--tinta);
       font: inherit;
-      caret-color: var(--luz);
+      caret-color: var(--terracota);
     }
-    .campo input::placeholder { color: var(--noite-dica); opacity: 1; }
+    .campo input::placeholder { color: var(--tinta-suave); opacity: 1; }
+    .campo__aviso { margin: 0; color: var(--terracota-funda); font-size: 0.875rem; font-weight: 600; }
+    .campo__aviso:empty { display: none; }
 
     .opcoes { display: flex; flex-wrap: wrap; gap: 0.5rem; }
     .opcao {
       display: inline-flex;
       align-items: center;
-      gap: 0.55rem;
+      gap: 0.6rem;
       min-height: 2.75rem;
-      padding: 0.4rem 1rem;
-      border: 1px solid var(--noite-campo);
+      padding: 0.4rem 1rem 0.4rem 0.75rem;
+      border: 1px solid color-mix(in srgb, var(--terracota-funda) 55%, transparent);
       border-radius: 999px;
-      cursor: pointer;
+      background: color-mix(in srgb, var(--dia-2) 45%, transparent);
+      transition: background-color 0.2s, border-color 0.2s;
     }
-    .opcao input { width: 1.1rem; height: 1.1rem; margin: 0; accent-color: var(--luz); }
-    .opcao:has(input:checked) { border-color: var(--luz); background: color-mix(in srgb, var(--luz) 12%, transparent); }
+    /* A caixa de marcar desenhada: quadrado terracota com cantos suaves e o visto em creme. */
+    .opcao input {
+      flex: none;
+      width: 1.25rem;
+      height: 1.25rem;
+      margin: 0;
+      border: 1.5px solid var(--terracota-funda);
+      border-radius: 4px;
+      background: var(--dia-2) center / 0.85rem no-repeat;
+      -webkit-appearance: none;
+      appearance: none;
+      cursor: pointer;
+      transition: background-color 0.15s, border-color 0.15s;
+    }
+    .opcao input:checked {
+      border-color: var(--terracota);
+      background-color: var(--terracota);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 10'%3E%3Cpath d='M1 5.2 4.3 8.5 11 1.5' fill='none' stroke='%23FFF8F0' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    }
+    .opcao input:focus-visible { outline: 3px solid var(--foco); outline-offset: 2px; }
+    .opcao:has(input:checked) { border-color: var(--terracota); background: var(--dia-2); }
 
-    /* A prévia mostra o texto que o casal vai mandar, antes de sair da página. */
+    /* A prévia mostra o texto que vai para o WhatsApp, antes de sair da página. */
     .previa { margin: 0.25rem 0 1.25rem; }
     .previa__rotulo { margin: 0 0 0.5rem; font-weight: 600; font-size: 0.9375rem; }
     .previa__balao {
@@ -995,28 +1310,41 @@
       margin-left: auto;
       padding: 0.85rem 1rem;
       border-radius: 1rem 1rem 0.25rem 1rem;
-      background: var(--noite);
-      color: var(--noite-resposta);
+      background: var(--dia-2);
+      color: var(--tinta);
       font-size: 0.9375rem;
       line-height: 1.55;
       white-space: pre-line;
       overflow-wrap: break-word;
     }
 
-    .consulta__form .botao { width: 100%; }
-    .consulta__nota { margin: 0.9rem 0 0; color: var(--noite-suave); font-size: 0.875rem; }
+    .porta-acesa .botao { width: 100%; }
+    .consulta__nota { margin: 0.9rem 0 0; color: var(--tinta-suave); font-size: 0.875rem; text-align: center; }
 
     /* ---------- Rodapé ---------- */
+    /* O fio do rodapé acompanha a coluna de conteúdo, sem passar para as margens. */
     .rodape {
+      position: relative;
       padding-block: 3rem calc(3rem + env(safe-area-inset-bottom));
-      border-top: 1px solid var(--noite-linha);
       color: var(--noite-suave);
       font-size: 0.9375rem;
     }
+    .rodape::before { content: ""; position: absolute; top: 0; left: var(--margem); right: var(--margem); border-top: 1px solid var(--noite-linha); }
     .rodape .marca { margin-bottom: 0.75rem; color: var(--luz); }
     .rodape .marca svg { height: 3.25rem; }
-    .rodape__links { display: flex; flex-wrap: wrap; gap: 0 1.5rem; margin: 0.75rem 0; padding: 0; list-style: none; }
-    .rodape__links a { display: inline-flex; align-items: center; min-height: 2.75rem; color: var(--noite-texto); }
+    .rodape__links { display: flex; flex-wrap: wrap; align-items: center; gap: 0 1.5rem; margin: 0.75rem 0; padding: 0; list-style: none; }
+    .rodape__links a, .rodape__rever {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      min-height: 2.75rem;
+      min-width: 2.75rem;
+      color: var(--noite-texto);
+    }
+    .rodape__rever { padding: 0; border: 0; background: none; font: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.22em; text-decoration-color: color-mix(in srgb, currentColor 55%, transparent); }
+    .rodape__rever svg { width: 1rem; height: 1rem; fill: var(--luz); }
+    .rodape__rever, .js .rodape__rever[hidden] { display: none; }
+    .js .rodape__rever { display: inline-flex; }
 
     /* ---------- Barra fixa no celular ---------- */
     .barra-whatsapp {
@@ -1025,10 +1353,8 @@
       z-index: 20;
       padding: 0.75rem var(--margem) calc(0.75rem + env(safe-area-inset-bottom));
       border-top: 1px solid var(--noite-linha);
-      background: color-mix(in srgb, var(--noite) 92%, transparent);
-      -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 -0.75rem 2rem -1rem color-mix(in srgb, var(--noite) 50%, transparent);
+      background: var(--noite);
+      box-shadow: 0 -0.75rem 2rem -1rem color-mix(in srgb, var(--tinta-funda) 50%, transparent);
       translate: 0 110%;
       visibility: hidden;
       transition: translate 0.3s cubic-bezier(0.2, 0.7, 0.2, 1), visibility 0s 0.3s, background-color 0.3s, border-color 0.3s;
@@ -1041,7 +1367,7 @@
     /* Sobre o dia, a barra fica clara e o botão volta ao terracota, como no resto da cerimônia. */
     .barra-whatsapp--dia {
       border-top-color: var(--dia-linha);
-      background: color-mix(in srgb, var(--dia) 92%, transparent);
+      background: var(--dia);
       box-shadow: 0 -0.75rem 2rem -1rem color-mix(in srgb, var(--tinta) 25%, transparent);
     }
     .barra-whatsapp .botao { width: 100%; }
@@ -1052,9 +1378,10 @@
 
     /* ---------- Abertura animada (a intro da identidade) ----------
        O logo principal se desenha no pêssego da marca: os dois arcos, a estrela pequena, o L, a estrela que acende,
-       as linhas e LUMES letra por letra, EXPERIENCE e a frase. Depois o arco de dentro vira uma porta que se abre
-       para a página. Os tempos vêm do JS (variáveis --t-*), que usa os mesmos números para a trilha: assim a
-       música bate com cada gesto. Roda sozinha (sem som) na primeira visita; o botão sob a foto repete com música. */
+       as linhas e LUMES letra por letra, EXPERIENCE e a frase. O logo inteiro fica parado um instante; depois o arco
+       de dentro vira uma porta que viaja até pousar no arco da foto da Delliz, e a página aparece em volta.
+       Os tempos vêm do JS (variáveis --t-*), que usa os mesmos números para a trilha. Roda sozinha (sem som) uma vez
+       a cada 30 dias; o botão do rodapé repete com som. */
     .intro { display: none; }
     .com-abertura .intro,
     .intro.intro--visivel {
@@ -1064,10 +1391,10 @@
       display: grid;
       overflow: hidden;
       cursor: pointer;
-      transition: opacity 0.45s ease;
+      transition: opacity 0.35s ease;
     }
     /* Segurança: se o JS falhar, a abertura some sozinha e a página aparece. */
-    .com-abertura .intro { animation: intro-seguranca 0.01s 9s forwards; }
+    .com-abertura .intro { animation: intro-seguranca 0.01s 7s forwards; }
     .intro.intro--pulando { opacity: 0; pointer-events: none; }
 
     .intro__arte {
@@ -1082,7 +1409,9 @@
     .intro__fundo { position: absolute; inset: 0; width: 100%; height: 100%; }
     .intro__cor { fill: var(--pessego); }
     .intro__porta { fill: #fff; }
-    .intro__logo { position: relative; height: min(64vh, 34rem); width: auto; max-width: 86vw; overflow: visible; color: var(--terracota-marca); }
+    /* A porta viaja acesa (um vão de luz creme) e só abre, mostrando a foto, quando chega aos arcos. */
+    .intro__luz-porta { fill: var(--sobre-terracota); opacity: 0; }
+    .intro__logo { position: relative; height: min(64vh, 34rem); width: auto; max-width: 86vw; overflow: visible; color: var(--terracota-marca); will-change: transform; }
 
     .intro__arco,
     .intro__linha { fill: none; stroke: currentColor; stroke-width: 9; stroke-linecap: round; }
@@ -1117,24 +1446,23 @@
       background: color-mix(in srgb, var(--pessego) 80%, transparent);
       color: var(--terracota-funda);
       font: 600 0.875rem/1 var(--sans);
-      cursor: pointer;
     }
     .intro__pular:hover { background: var(--dia-2); }
 
-    .intro--tocando .intro__arco--fora { animation: intro-desenhar 1.5s cubic-bezier(0.6, 0, 0.25, 1) var(--t-arco1) forwards; }
-    .intro--tocando .intro__arco--dentro { animation: intro-desenhar 1.5s cubic-bezier(0.6, 0, 0.25, 1) var(--t-arco2) forwards; }
-    .intro--tocando .intro__estrela-pequena { animation: intro-cintilar 0.7s cubic-bezier(0.3, 1.6, 0.5, 1) var(--t-estrela-p) forwards, intro-sumir 0.5s ease var(--t-saida) forwards; }
-    .intro--tocando .intro__l { animation: intro-erguer 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) var(--t-l) forwards, intro-sumir 0.5s ease var(--t-saida) forwards; }
-    .intro--tocando .intro__estrela { animation: intro-acender 0.9s cubic-bezier(0.2, 1.5, 0.4, 1) var(--t-estrela) forwards, intro-sumir 0.5s ease var(--t-saida) forwards; }
-    .intro--tocando .intro__raios { animation: intro-raios 1.1s cubic-bezier(0.15, 0.9, 0.3, 1) var(--t-estrela) forwards, intro-sumir 0.5s ease var(--t-saida) forwards; }
-    .intro--tocando .intro__halo { animation: intro-halo 1.6s ease-out var(--t-estrela) forwards, intro-sumir 0.6s ease var(--t-saida) forwards; }
-    .intro--tocando .intro__linha--1 { animation: intro-linha 0.7s cubic-bezier(0.6, 0, 0.2, 1) var(--t-linha1) forwards, intro-sumir 0.5s ease var(--t-saida) forwards; }
-    .intro--tocando .intro__linha--2 { animation: intro-linha 0.7s cubic-bezier(0.6, 0, 0.2, 1) var(--t-linha2) forwards, intro-sumir 0.5s ease var(--t-saida) forwards; }
-    .intro--tocando .intro__letra { animation: intro-letra 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) calc(var(--t-letras) + var(--i) * var(--t-passo)) forwards, intro-sumir 0.5s ease var(--t-saida) forwards; }
-    .intro--tocando .intro__experience { animation: intro-letra 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) var(--t-exp) forwards, intro-sumir 0.5s ease var(--t-saida) forwards; }
-    .intro--tocando .intro__frase { animation: intro-frase 0.8s ease var(--t-frase) forwards, intro-sumir 0.5s ease var(--t-saida) forwards; }
-    .intro--tocando .intro__porta { animation: intro-luz 0.6s ease var(--t-luz) forwards, intro-porta 1.2s cubic-bezier(0.7, 0, 0.2, 1) var(--t-porta) forwards; }
-    .intro--tocando .intro__logo { animation: intro-porta-logo 1.2s cubic-bezier(0.7, 0, 0.2, 1) var(--t-porta) forwards; }
+    .intro--tocando .intro__arco--fora { animation: intro-desenhar 0.95s cubic-bezier(0.6, 0, 0.25, 1) var(--t-arco1) forwards; }
+    .intro--tocando .intro__arco--dentro { animation: intro-desenhar 0.95s cubic-bezier(0.6, 0, 0.25, 1) var(--t-arco2) forwards; }
+    .intro--tocando .intro__estrela-pequena { animation: intro-cintilar 0.6s cubic-bezier(0.3, 1.6, 0.5, 1) var(--t-estrela-p) forwards, intro-sumir 0.4s ease var(--t-saida) forwards; }
+    .intro--tocando .intro__l { animation: intro-erguer 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) var(--t-l) forwards, intro-sumir 0.4s ease var(--t-saida) forwards; }
+    .intro--tocando .intro__estrela { animation: intro-acender 0.8s cubic-bezier(0.2, 1.5, 0.4, 1) var(--t-estrela) forwards, intro-sumir 0.4s ease var(--t-saida) forwards; }
+    .intro--tocando .intro__raios { animation: intro-raios 1s cubic-bezier(0.15, 0.9, 0.3, 1) var(--t-estrela) forwards, intro-sumir 0.4s ease var(--t-saida) forwards; }
+    .intro--tocando .intro__halo { animation: intro-halo 1.4s ease-out var(--t-estrela) forwards, intro-sumir 0.5s ease var(--t-saida) forwards; }
+    .intro--tocando .intro__linha--1 { animation: intro-linha 0.6s cubic-bezier(0.6, 0, 0.2, 1) var(--t-linha1) forwards, intro-sumir 0.4s ease var(--t-saida) forwards; }
+    .intro--tocando .intro__linha--2 { animation: intro-linha 0.6s cubic-bezier(0.6, 0, 0.2, 1) var(--t-linha2) forwards, intro-sumir 0.4s ease var(--t-saida) forwards; }
+    .intro--tocando .intro__letra { animation: intro-letra 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) calc(var(--t-letras) + var(--i) * var(--t-passo)) forwards, intro-sumir 0.4s ease var(--t-saida) forwards; }
+    .intro--tocando .intro__experience { animation: intro-letra 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) var(--t-exp) forwards, intro-sumir 0.4s ease var(--t-saida) forwards; }
+    .intro--tocando .intro__frase { animation: intro-frase 0.6s ease var(--t-frase) forwards, intro-sumir 0.4s ease var(--t-saida) forwards; }
+    .intro--tocando .intro__luz-porta { animation: intro-acender-porta 0.4s ease var(--t-luz) forwards, intro-sumir 0.3s ease var(--t-abre) forwards; }
+    .intro--tocando .intro__porta { animation: intro-luz 0.3s ease var(--t-abre) forwards; }
     .intro--tocando .intro__pular { animation: intro-sumir 0.3s ease var(--t-porta) forwards; }
 
     @keyframes intro-desenhar { to { stroke-dashoffset: 0; } }
@@ -1148,13 +1476,8 @@
     @keyframes intro-frase { from { opacity: 0; transform: translateY(0.5rem); } to { opacity: 1; transform: none; } }
     @keyframes intro-sumir { to { opacity: 0; } }
     @keyframes intro-luz { to { fill: #000; } }
-    @keyframes intro-porta { to { transform: scale(var(--k, 12)); } }
-    @keyframes intro-porta-logo { 0% { transform: none; opacity: 1; } 70% { opacity: 1; } 100% { transform: scale(var(--k, 12)); opacity: 0; } }
+    @keyframes intro-acender-porta { to { opacity: 0.92; } }
     @keyframes intro-seguranca { to { visibility: hidden; opacity: 0; pointer-events: none; } }
-
-    /* O botão de música só existe com JS (a classe .js vem do script do <head>, antes da primeira pintura). */
-    .voz__abertura { display: none; }
-    .js .voz__abertura { display: inline-flex; }
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -1181,6 +1504,7 @@
     <symbol id="icone-whatsapp" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
     <symbol id="icone-tocar" viewBox="0 0 24 24"><path d="M8 5.6v12.8a1 1 0 0 0 1.53.85l10.1-6.4a1 1 0 0 0 0-1.7L9.53 4.75A1 1 0 0 0 8 5.6Z"/></symbol>
     <symbol id="icone-nota" viewBox="0 0 24 24"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6Z"/></symbol>
+    <symbol id="icone-pausar" viewBox="0 0 24 24"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></symbol>
   <!-- marca:inicio (gerado por scripts/blog/marca-no-index.mjs; não edite à mão) -->
   <symbol id="marca-logo" viewBox="180 876 1745 594"><g transform="translate(187.5 886.5) scale(.4108) translate(-561.5 -380.5)"><path d="M561.5 1635V890.5A510 510 0 0 1 1581.5 890.5V1635M561.5 1635V1140A510 510 0 0 1 1581.5 1140V1635M561.5 1780H1581.5" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" vector-effect="non-scaling-stroke"/><path d="M 1268.1 1058.2c-0.4 0.4-0.4 4.8-0.9 9.1-1.3 25.7-8.3 140.3-8.3 142-0.4 2.6-3.5 10.5-7.4 17.9-2.2 4.8-4.4 8.3-7.8 13.1-2.6 3.9-4.8 7-5.2 7 0 0-14.4-11.3-31.8-25.3-17.4-14.4-31.8-25.7-31.8-25.7 0 0.4 11.3 14.4 25.3 31.8 13.9 17.4 25.3 31.8 25.3 31.8 0 0.4-6.5 5.7-10.9 8.7-7 4.8-20.9 10.9-24.4 11.8-1.3 0-36.6 2.2-78.4 4.8-42.3 2.2-76.7 4.4-77.1 4.4 0 0.4 76.7 4.8 77.5 4.8 0.4 0 0.4 0.4 0 0.9 0 0.9 0 0.9 4.4 0.9 4.8 0 17 1.3 26.6 2.6 18.7 3 46.2 10.5 57.9 15.7 3.5 1.7 13.1 7.4 16.6 9.6 0.9 0.9 2.2 1.7 2.2 1.7 0.4 0.4-9.6 13.1-22.2 28.7-12.6 15.7-22.7 28.3-22.2 28.3 0 0 13.1-10.5 28.3-22.7l28.7-23.1 2.2 2.6c3.9 3.9 7.8 9.1 12.2 15.2 3.9 6.5 6.5 11.3 9.1 17.9 3.9 10 3.5 4.4 7.8 80.2 2.2 37.5 4.4 68.4 4.4 68.4 0 0.4 1.3-15.7 2.2-35.3 1.3-19.6 2.6-37 2.6-38.8 3.5-27.9 5.7-40.5 12.6-64 3.5-13.1 10.9-27 20.5-38.8 2.2-3 2.6-3.5 3.5-3 2.6 2.6 51.4 41.4 51.4 41.4 0.4 0-9.1-11.8-20.5-26.1-11.8-14.4-20.9-26.1-20.9-26.1 0-0.4 1.7-1.3 3.5-3 6.5-5.2 18.7-12.2 26.6-15.2 7.4-3 24.8-8.3 36.2-10.5 8.7-1.7 22.7-3.9 30.9-4.8 7-0.9 7.4-0.9 7.4-1.7-0.4-0.4-0.4-0.9 0-0.9 0.9 0 77.5-4.4 77.5-4.8-0.4 0-33.1-2.2-73.2-4.4l-72.7-4.4-4.8-1.7c-11.8-4.4-24.8-12.6-34.4-21.8l-2.2-1.7 23.1-29.2c13.1-15.7 23.5-29.2 23.5-29.6 0.4-0.4-12.2 9.6-28.3 22.2-15.7 13.1-28.7 23.5-29.2 23.5-0.4 0.4-7-9.1-9.6-14.4-4.4-7.8-7.8-17.9-12.2-34.8-4.4-15.7-7.4-34.8-8.3-53.1-1.7-34-5.2-82.8-5.2-81.9 z" fill="currentColor" opacity=".5"/><path d="M 892.2 1004.6c5.2 6.1 8.7 14.4 10.9 24.8 1.7 9.1 2.2 14.4 2.6 38.3 0.4 32.7 0.4 471.8 0 484-0.4 11.8-0.9 17-2.6 24-2.2 11.8-6.1 20.5-11.3 27-0.9 0.9-1.3 1.7-1.3 1.7 0 0.4 79.3 0.4 221.7 0.4l221.7-0.4 0-21.8c0-11.8 0-21.8-0.4-21.8 0 0-3 0.9-6.1 2.2-39.2 15.2-92.8 25.3-156.8 30.1-28.3 2.2-26.6 2.2-129.8 2.6l-98 0 0-256.1c-0.4-293.2-0.4-287.5 0.4-294.5 1.7-20 5.2-30.9 13.1-40.5l2.2-2.6-34.4 0-34 0 2.2 2.6 zM 1272 1135.7c-0.4 0.4-0.4 3.9-0.4 7.8-0.4 7-0.4 10-2.6 22.2-2.2 16.6-8.7 42.7-13.1 52.7-6.5 15.7-12.2 24-23.5 35.3-17.4 17.4-32.2 25.3-63.6 33.1-15.2 3.9-41.8 7.8-52.3 7.8-3 0-3.9 0-3.9 0.4 0.4 0.4 2.6 0.9 7.8 0.9 7.4 0.4 10.5 0.4 21.3 2.2 20 2.6 48.8 10.9 60.5 16.6 12.2 6.1 20.9 12.6 30.9 22.7 10 10.5 17.9 22.2 22.7 34.4 6.1 14.4 12.6 44 14.8 64 0.9 7.8 0.9 8.3 1.7 8.3 0 0 0.4 0 0.4-0.4 0.4 0 0.9-3 0.9-6.5 2.2-18.3 5.2-33.5 11.3-54 1.7-5.7 5.2-14.4 9.1-21.8 1.7-3.9 7-11.8 10.9-17 3.5-4.4 14.4-14.4 18.7-17.9 6.5-4.8 17.4-11.3 24.8-14.4 6.5-3 26.1-8.7 36.2-10.5 9.6-2.2 26.1-4.8 35.3-5.7 2.6 0 3.9-0.4 3.5-1.3-0.4 0-3.5-0.4-7.4-0.9-17.9-2.2-24.8-3.5-42.3-7.8-19.6-4.8-29.2-8.3-40.9-15.7-13.9-8.3-27-21.8-36.6-37-4.8-7.8-8.7-17-11.8-27-5.2-18.3-7-26.6-9.1-42.7-1.7-11.8-2.6-19.2-2.6-24 0-2.6 0-4.4-0.4-4.4-0.4 0-0.4 0.4-0.4 0.4 zM 924.8 849.1c-0.4 0.4-0.4 3-0.9 5.2-1.3 10.5-4.4 23.1-7.8 29.6-3.5 7.8-9.1 14.4-16.1 19.2-8.7 5.7-20.5 9.1-38.8 11.8-3 0-2.2 0.9 1.7 0.9 8.7 1.3 19.6 3.5 26.6 6.1 4.4 1.7 9.1 4.4 12.6 7 5.7 4.4 11.8 12.6 14.8 18.7 1.3 3 3.9 11.3 4.8 15.7 0.9 3.9 2.6 14.4 2.6 16.1 0 3.5 0.9 1.7 1.3-3 1.7-14.8 6.1-28.7 11.8-36.6 2.2-3.5 7.4-8.7 10.9-11.3 7.8-5.7 19.6-10 36.2-12.2 3.5-0.4 6.5-0.9 6.5-0.9 0-0.4-0.9-0.4-2.6-0.4-5.2-0.9-14.8-2.6-20.9-4.4-10.9-3-17-6.5-24-13.1-4.8-4.4-8.7-10.5-11.3-15.7-2.6-7-6.1-20.9-7-32.7-0.4-0.9-0.4-0.9-0.4 0 z" fill="currentColor"/></g><path d="M 721 1123l0 120 77 0 77 0 0-16 0-15-61 0-61 0 0-105 0-104-16 0-16 0 0 120 zM 942 1086c0 88 0 89 5 103 9 26 30 46 58 53 17 4 37 4 54 0 17-5 34-15 44-29 6-7 13-21 16-32 2-7 2-8 3-93l0-85-15 0c-15 0-16 0-16 2 0 1 0 38 0 82-1 75-1 81-2 86-7 19-20 33-38 39-12 3-26 3-38 0-19-6-33-21-37-40-2-6-2-18-2-88l0-81-16 0-16 0 0 83 zM 1385 1078c-33 46-61 84-61 83 0 0-27-36-58-81-31-44-58-81-58-83-2-1-2 11-2 122l0 124 15 0 16 0 0-75 1-75 42 59c24 33 44 60 44 60 0 0 21-28 45-62l44-62 0 77 0 78 16 0 16 0 0-124c0-68 0-124 0-124-1 0-28 38-60 83 zM 1531 1123l0 120 81 0 80 0 0-15 0-16-64 0-64-1-1-36 0-37 55 0 56 0 0-15 0-16-55 0-55-1 0-36 0-37 62 0 62 0 0-15 0-15-78 0-79 0 0 120 zM 1821 1002c-41 5-66 35-61 72 3 25 20 41 61 57 27 10 43 21 48 32 6 15 2 34-10 43-6 5-15 9-23 10-8 2-25 1-35-2-9-2-28-11-35-16-2-2-4-3-4-3-1 0-4 6-7 13l-7 12 2 2c5 4 17 10 26 13 39 16 81 13 106-8 11-8 17-19 21-33 2-6 2-9 2-21-1-11-1-15-3-20-4-10-8-16-15-24-9-8-21-14-44-23-41-16-53-28-50-48 3-18 18-28 42-28 15 0 29 4 47 12 4 1 8 3 8 3 0 0 3-5 7-12 6-14 7-13-8-19-22-10-48-14-68-12 zM 720 1333l0 61 43 0 43 0 0-6 0-5-36 0-37 0 0-23 0-22 32 0 31 0 0-6 0-5-31 0-32 0 0-21 0-22 35 0 36-1 0-5 0-5-42 0-42 0 0 60 zM 844 1290c7 9 17 22 22 29l9 12-4 5c-5 8-40 55-41 57-1 1 0 1 6 1l8 0 19-27 19-26 3 3c1 1 10 13 19 26l18 24 7 0c5 0 7 0 6-1 0-1-10-15-22-31-12-16-22-30-22-31 0 0 4-6 8-12 5-6 14-19 21-29l13-17-7 0-7 0-18 24c-9 14-18 25-18 25 0 0-9-11-18-25l-18-24-8 0-7 0 12 17 zM 969 1333l0 61 6 0 6 0 0-19 0-19 22 0c18-1 24-1 30-3 13-3 22-11 27-21 4-10 4-26 0-36-3-6-11-14-17-17-11-5-16-6-46-6l-28 0 0 60zm 61-47c9 3 16 9 19 16 2 6 2 18 0 24-3 7-10 13-18 16-6 2-10 2-29 2l-21 0 0-30 0-30 21 0c19 0 23 0 28 2 zM 1102 1333l0 61 43 0 43 0 0-6 0-5-36 0-37 0 0-23 0-22 32 0 31 0 0-6 0-5-31 0-32 0 0-22 0-21 35 0 35 0 0-6 0-5-41 0-42 0 0 60 zM 1227 1333l0 61 6 0 7 0 0-19 1-20 21 0 21 0 13 19 14 20 7 0c6 0 7 0 6-1-5-7-28-40-28-40 0-1 3-2 7-4 5-3 12-9 15-14 6-9 7-28 2-38-4-8-10-14-17-18-10-5-15-6-47-6l-28 0 0 60zm 66-46c11 6 16 14 16 27 0 9-3 16-8 22-9 7-17 9-44 9l-17 0 0-31 0-30 23 0c23 0 24 1 30 3 zM 1362 1333l0 61 7 0 6 0 0-61 0-60-6 0-7 0 0 60 zM 1423 1333l0 61 43 0 43 0 0-6 0-5-36 0-37 0 0-23 0-22 32 0 31 0 0-6 0-5-31 0-32 0 0-21 0-22 35 0 36-1 0-5 0-5-42 0-42 0 0 60 zM 1548 1333l0 61 6 0 7 0 0-49 1-49 38 49 39 49 6 0 5 0 0-61 0-60-6 0-7 0 0 49 0 48-39-48-38-49-6 0-6 0 0 60 zM 1734 1274c-21 5-37 20-44 41-2 8-3 23-1 32 5 22 21 39 43 45 13 4 30 3 44-2 6-2 18-10 19-12 0-1-1-3-4-5l-3-4-6 4c-12 11-34 13-50 7-29-12-41-47-23-75 11-17 34-26 56-20 7 1 11 3 18 8l5 4 4-3c1-2 3-4 3-5 0-1-7-7-13-10-11-7-34-9-48-5 zM 1832 1333l0 61 43 0 43 0 0-6 0-5-36 0-37 0 0-23 0-22 32 0 31 0 0-6 0-5-31 0-32 0 0-21 0-22 35 0 36-1 0-5 0-5-42 0-42 0 0 60 z" fill="currentColor"/></symbol>
     <symbol id="marca-simbolo" viewBox="540 360 1063 1440"><path d="M561.5 1635V890.5A510 510 0 0 1 1581.5 890.5V1635M561.5 1635V1140A510 510 0 0 1 1581.5 1140V1635M561.5 1780H1581.5" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round"/><path d="M 1268.1 1058.2c-0.4 0.4-0.4 4.8-0.9 9.1-1.3 25.7-8.3 140.3-8.3 142-0.4 2.6-3.5 10.5-7.4 17.9-2.2 4.8-4.4 8.3-7.8 13.1-2.6 3.9-4.8 7-5.2 7 0 0-14.4-11.3-31.8-25.3-17.4-14.4-31.8-25.7-31.8-25.7 0 0.4 11.3 14.4 25.3 31.8 13.9 17.4 25.3 31.8 25.3 31.8 0 0.4-6.5 5.7-10.9 8.7-7 4.8-20.9 10.9-24.4 11.8-1.3 0-36.6 2.2-78.4 4.8-42.3 2.2-76.7 4.4-77.1 4.4 0 0.4 76.7 4.8 77.5 4.8 0.4 0 0.4 0.4 0 0.9 0 0.9 0 0.9 4.4 0.9 4.8 0 17 1.3 26.6 2.6 18.7 3 46.2 10.5 57.9 15.7 3.5 1.7 13.1 7.4 16.6 9.6 0.9 0.9 2.2 1.7 2.2 1.7 0.4 0.4-9.6 13.1-22.2 28.7-12.6 15.7-22.7 28.3-22.2 28.3 0 0 13.1-10.5 28.3-22.7l28.7-23.1 2.2 2.6c3.9 3.9 7.8 9.1 12.2 15.2 3.9 6.5 6.5 11.3 9.1 17.9 3.9 10 3.5 4.4 7.8 80.2 2.2 37.5 4.4 68.4 4.4 68.4 0 0.4 1.3-15.7 2.2-35.3 1.3-19.6 2.6-37 2.6-38.8 3.5-27.9 5.7-40.5 12.6-64 3.5-13.1 10.9-27 20.5-38.8 2.2-3 2.6-3.5 3.5-3 2.6 2.6 51.4 41.4 51.4 41.4 0.4 0-9.1-11.8-20.5-26.1-11.8-14.4-20.9-26.1-20.9-26.1 0-0.4 1.7-1.3 3.5-3 6.5-5.2 18.7-12.2 26.6-15.2 7.4-3 24.8-8.3 36.2-10.5 8.7-1.7 22.7-3.9 30.9-4.8 7-0.9 7.4-0.9 7.4-1.7-0.4-0.4-0.4-0.9 0-0.9 0.9 0 77.5-4.4 77.5-4.8-0.4 0-33.1-2.2-73.2-4.4l-72.7-4.4-4.8-1.7c-11.8-4.4-24.8-12.6-34.4-21.8l-2.2-1.7 23.1-29.2c13.1-15.7 23.5-29.2 23.5-29.6 0.4-0.4-12.2 9.6-28.3 22.2-15.7 13.1-28.7 23.5-29.2 23.5-0.4 0.4-7-9.1-9.6-14.4-4.4-7.8-7.8-17.9-12.2-34.8-4.4-15.7-7.4-34.8-8.3-53.1-1.7-34-5.2-82.8-5.2-81.9 z" fill="currentColor" opacity=".5"/><path d="M 892.2 1004.6c5.2 6.1 8.7 14.4 10.9 24.8 1.7 9.1 2.2 14.4 2.6 38.3 0.4 32.7 0.4 471.8 0 484-0.4 11.8-0.9 17-2.6 24-2.2 11.8-6.1 20.5-11.3 27-0.9 0.9-1.3 1.7-1.3 1.7 0 0.4 79.3 0.4 221.7 0.4l221.7-0.4 0-21.8c0-11.8 0-21.8-0.4-21.8 0 0-3 0.9-6.1 2.2-39.2 15.2-92.8 25.3-156.8 30.1-28.3 2.2-26.6 2.2-129.8 2.6l-98 0 0-256.1c-0.4-293.2-0.4-287.5 0.4-294.5 1.7-20 5.2-30.9 13.1-40.5l2.2-2.6-34.4 0-34 0 2.2 2.6 zM 1272 1135.7c-0.4 0.4-0.4 3.9-0.4 7.8-0.4 7-0.4 10-2.6 22.2-2.2 16.6-8.7 42.7-13.1 52.7-6.5 15.7-12.2 24-23.5 35.3-17.4 17.4-32.2 25.3-63.6 33.1-15.2 3.9-41.8 7.8-52.3 7.8-3 0-3.9 0-3.9 0.4 0.4 0.4 2.6 0.9 7.8 0.9 7.4 0.4 10.5 0.4 21.3 2.2 20 2.6 48.8 10.9 60.5 16.6 12.2 6.1 20.9 12.6 30.9 22.7 10 10.5 17.9 22.2 22.7 34.4 6.1 14.4 12.6 44 14.8 64 0.9 7.8 0.9 8.3 1.7 8.3 0 0 0.4 0 0.4-0.4 0.4 0 0.9-3 0.9-6.5 2.2-18.3 5.2-33.5 11.3-54 1.7-5.7 5.2-14.4 9.1-21.8 1.7-3.9 7-11.8 10.9-17 3.5-4.4 14.4-14.4 18.7-17.9 6.5-4.8 17.4-11.3 24.8-14.4 6.5-3 26.1-8.7 36.2-10.5 9.6-2.2 26.1-4.8 35.3-5.7 2.6 0 3.9-0.4 3.5-1.3-0.4 0-3.5-0.4-7.4-0.9-17.9-2.2-24.8-3.5-42.3-7.8-19.6-4.8-29.2-8.3-40.9-15.7-13.9-8.3-27-21.8-36.6-37-4.8-7.8-8.7-17-11.8-27-5.2-18.3-7-26.6-9.1-42.7-1.7-11.8-2.6-19.2-2.6-24 0-2.6 0-4.4-0.4-4.4-0.4 0-0.4 0.4-0.4 0.4 zM 924.8 849.1c-0.4 0.4-0.4 3-0.9 5.2-1.3 10.5-4.4 23.1-7.8 29.6-3.5 7.8-9.1 14.4-16.1 19.2-8.7 5.7-20.5 9.1-38.8 11.8-3 0-2.2 0.9 1.7 0.9 8.7 1.3 19.6 3.5 26.6 6.1 4.4 1.7 9.1 4.4 12.6 7 5.7 4.4 11.8 12.6 14.8 18.7 1.3 3 3.9 11.3 4.8 15.7 0.9 3.9 2.6 14.4 2.6 16.1 0 3.5 0.9 1.7 1.3-3 1.7-14.8 6.1-28.7 11.8-36.6 2.2-3.5 7.4-8.7 10.9-11.3 7.8-5.7 19.6-10 36.2-12.2 3.5-0.4 6.5-0.9 6.5-0.9 0-0.4-0.9-0.4-2.6-0.4-5.2-0.9-14.8-2.6-20.9-4.4-10.9-3-17-6.5-24-13.1-4.8-4.4-8.7-10.5-11.3-15.7-2.6-7-6.1-20.9-7-32.7-0.4-0.9-0.4-0.9-0.4 0 z" fill="currentColor"/></symbol>
@@ -1191,7 +1515,7 @@
   <!-- abertura:inicio (gerado por scripts/blog/marca-no-index.mjs; não edite à mão) -->
   <div class="intro" id="intro">
     <div class="intro__arte" aria-hidden="true">
-      <svg class="intro__fundo"><defs><mask id="intro-mascara" maskUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%"><rect width="100%" height="100%" fill="#fff"/><path class="intro__porta" d="M0 0"/></mask></defs><rect class="intro__cor" width="100%" height="100%" mask="url(#intro-mascara)"/></svg>
+      <svg class="intro__fundo"><defs><mask id="intro-mascara" maskUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%"><rect width="100%" height="100%" fill="#fff"/><path class="intro__porta" d="M0 0"/></mask></defs><rect class="intro__cor" width="100%" height="100%" mask="url(#intro-mascara)"/><path class="intro__luz-porta" d="M0 0"/></svg>
       <svg class="intro__logo" viewBox="540 360 1063 1800">
         <defs><radialGradient id="intro-brilho"><stop offset="0" stop-color="#FFF8F0" stop-opacity=".95"/><stop offset=".38" stop-color="#F6DDBF" stop-opacity=".6"/><stop offset="1" stop-color="#F6DDBF" stop-opacity="0"/></radialGradient></defs>
         <circle class="intro__halo" cx="1267" cy="1290" r="380" fill="url(#intro-brilho)"/>
@@ -1216,14 +1540,13 @@
   <header class="topo conteudo">
     <a class="marca" href="./" aria-label="Lumes Experience, página inicial"><svg viewBox="0 0 1745 594" aria-hidden="true"><use href="#marca-logo"/></svg></a>
     <nav class="topo__nav" aria-label="Seções">
-      <a href="#delliz">Delliz</a>
+      <a class="so-largo" href="#delliz">Delliz</a>
       <a href="#eventos">Eventos</a>
       <a href="#perguntas">Perguntas</a>
       <a href="blog/">Blog</a>
     </nav>
-    <a class="botao botao--compacto" data-cta="topo" target="_blank" rel="noopener"
-       href="https://wa.me/5531996154698?text=Ol%C3%A1%2C%20Lumes%20Experience!%20Vi%20o%20site%20e%20quero%20consultar%20uma%20data%20para%20o%20nosso%20casamento.%0AData%3A%20%0ACidade%20e%20local%3A%20%0ACerim%C3%B4nia%3A%20%0AMomentos%20com%20m%C3%BAsica%3A%20">
-      <svg aria-hidden="true"><use href="#icone-whatsapp"/></svg><span class="topo__rotulo">Consultar data</span>
+    <a class="botao botao--compacto" data-cta="topo" target="_blank" rel="noopener" href="https://wa.me/5531996154698?text=Ol%C3%A1%2C%20Lumes%20Experience!%20Vi%20o%20site%20e%20quero%20consultar%20uma%20data.%0AEvento%3A%20%0AData%3A%20%0ACidade%20e%20local%3A%20%0ACerim%C3%B4nia%3A%20%0AMomentos%20com%20m%C3%BAsica%3A%20">
+      <svg aria-hidden="true"><use href="#icone-whatsapp"/></svg>Consultar a data
     </a>
   </header>
   </div>
@@ -1235,12 +1558,11 @@
         <h1 id="titulo">Só resta a mim cantar o amor.</h1>
         <p class="abertura__lead">Música ao vivo para casamentos, bodas e festas de 15 anos em Belo Horizonte e região, com a voz de Delliz Christine.</p>
         <div class="abertura__acoes" id="acoes-abertura">
-          <a class="botao" data-cta="abertura" target="_blank" rel="noopener"
-             href="https://wa.me/5531996154698?text=Ol%C3%A1%2C%20Lumes%20Experience!%20Vi%20o%20site%20e%20quero%20consultar%20uma%20data%20para%20o%20nosso%20casamento.%0AData%3A%20%0ACidade%20e%20local%3A%20%0ACerim%C3%B4nia%3A%20%0AMomentos%20com%20m%C3%BAsica%3A%20">
-            <svg aria-hidden="true"><use href="#icone-whatsapp"/></svg><span>Consultar <span class="so-largo">nossa </span>data no WhatsApp</span>
+          <a class="botao" data-cta="abertura" target="_blank" rel="noopener" href="https://wa.me/5531996154698?text=Ol%C3%A1%2C%20Lumes%20Experience!%20Vi%20o%20site%20e%20quero%20consultar%20uma%20data.%0AEvento%3A%20%0AData%3A%20%0ACidade%20e%20local%3A%20%0ACerim%C3%B4nia%3A%20%0AMomentos%20com%20m%C3%BAsica%3A%20">
+            <svg aria-hidden="true"><use href="#icone-whatsapp"/></svg>Consultar a data no WhatsApp
           </a>
         </div>
-        <p class="abertura__nota">A conversa abre no WhatsApp com a mensagem pronta para vocês completarem, sem compromisso.</p>
+        <p class="abertura__nota">A mensagem já abre pronta no WhatsApp, sem compromisso.</p>
       </div>
 
       <!-- Link, não player embutido: o dono do vídeo não liberou a reprodução fora do YouTube. -->
@@ -1258,7 +1580,8 @@
             <circle pathLength="1" cx="70" cy="48" r="27"/>
             <path class="brilho" d="M100 4q1.6 7.4 9 9q-7.4 1.6-9 9q-1.6-7.4-9-9q7.4-1.6 9-9Z"/>
           </svg>
-          <a class="voz__capa" href="https://www.youtube.com/shorts/NBmB7i5MffI" target="_blank" rel="noopener"
+          <!-- A porta da abertura pousa neste arco (id usado pelo script). -->
+          <a class="voz__capa" id="voz-capa" href="https://www.youtube.com/shorts/NBmB7i5MffI" target="_blank" rel="noopener"
              aria-label="Ouvir a Delliz: Delliz Christine canta “Espírito Poderoso”, no YouTube">
             <picture>
               <source type="image/webp" sizes="(min-width: 60rem) min(30rem, 36vw), min(15rem, 58vw)"
@@ -1282,69 +1605,68 @@
       <div class="delliz">
         <h2 id="titulo-delliz">A voz do Lumes Experience</h2>
         <picture class="delliz__retrato">
-          <source type="image/webp" sizes="(min-width: 56rem) 18rem, 16rem"
+          <source type="image/webp" sizes="(min-width: 56rem) 19rem, 16rem"
                   srcset="assets/img/delliz-christine-retrato-480.webp 480w, assets/img/delliz-christine-retrato-720.webp 720w">
           <img src="assets/img/delliz-christine-retrato-480.jpg"
                srcset="assets/img/delliz-christine-retrato-480.jpg 480w, assets/img/delliz-christine-retrato-720.jpg 720w"
-               sizes="(min-width: 56rem) 18rem, 16rem" width="480" height="600" loading="lazy" decoding="async"
+               sizes="(min-width: 56rem) 19rem, 16rem" width="480" height="600" loading="lazy" decoding="async"
                alt="Delliz Christine, de vestido claro, sorri de olhos fechados com um microfone vintage junto ao rosto">
         </picture>
         <div class="delliz__texto">
-          <p>O Lumes Experience é um grupo de música ao vivo para casamentos, bodas e festas de 15 anos em Belo Horizonte e região metropolitana. Tocamos na cerimônia, na igreja ou ao ar livre, e na festa, do coquetel à pista.</p>
-          <p>Delliz Christine é a cantora à frente do Lumes Experience. Também integra o Jeito Ágape, ministério de música católica de Belo Horizonte, e é uma das vozes da série Incondicional Sessions.</p>
-          <p>No Lumes Experience, a proposta é música que acompanha cada momento do casamento sem tirar a atenção do casal: do silêncio antes da entrada da noiva à última música da festa.</p>
+          <p>Sou a Delliz Christine. No mesmo casamento, a voz que acompanha a entrada da noiva é a que volta à noite para abrir a pista.</p>
+          <p>Canto também no Jeito Ágape, ministério de música católica de Belo Horizonte, e sou uma das vozes da série Incondicional Sessions.</p>
+          <p>Na igreja, o repertório segue o que a paróquia pede. Na festa, segue o que vocês pedem.</p>
+          <p class="assinatura-voz"><svg viewBox="0 0 460 460" aria-hidden="true"><use href="#marca-estrela"/></svg>Delliz Christine</p>
           <ul class="delliz__links">
             <li><a href="https://www.instagram.com/dellizchristine/" target="_blank" rel="noopener">@dellizchristine no Instagram</a></li>
           </ul>
-          <!-- Sem JS o botão não aparece (CSS .js): a abertura e a trilha dependem dele. -->
-          <button class="voz__abertura" type="button" data-abertura-musica>
-            <svg aria-hidden="true"><use href="#icone-nota"/></svg>Ver a abertura com música
-          </button>
+          <!-- O trecho da voz da Delliz (o mesmo da abertura). Fica escondido até AUDIO_DELLIZ ser preenchido no script. -->
+          <div class="ouvir" id="ouvir" hidden>
+            <button class="ouvir__botao" type="button" aria-label="Ouvir um trecho da Delliz">
+              <svg aria-hidden="true"><use href="#icone-tocar"/></svg>
+            </button>
+            <p class="ouvir__texto" id="ouvir-texto"><strong>Ouvir a Delliz</strong><span>Um trecho, sem sair da página</span></p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="secao conteudo" id="eventos" aria-labelledby="titulo-eventos">
+    <section class="secao secao--seguida conteudo" id="eventos" aria-labelledby="titulo-eventos">
       <h2 id="titulo-eventos">Os momentos que a gente canta</h2>
-      <p class="introducao">Música ao vivo para as celebrações em que o amor é o motivo da festa. Em cada uma, o repertório é escolhido com vocês.</p>
       <ul class="eventos">
         <li class="evento">
-          <svg class="evento__simbolo" viewBox="0 0 64 48" aria-hidden="true"><circle cx="24" cy="28" r="13"/><circle cx="38" cy="28" r="13"/><path class="brilho" d="M52 4q1.2 5.2 6.4 6.4q-5.2 1.2-6.4 6.4q-1.2-5.2-6.4-6.4q5.2-1.2 6.4-6.4Z"/></svg>
-          <h3 class="evento__nome">Casamentos</h3>
-          <p>Na cerimônia, católica, evangélica ou ecumênica, na igreja ou ao ar livre, da entrada da noiva à saída dos noivos. Na recepção, do coquetel e do jantar à primeira dança e à pista.</p>
+          <h3 class="evento__nome"><svg viewBox="0 0 460 460" aria-hidden="true"><use href="#marca-estrela"/></svg>Casamentos</h3>
+          <p>Da entrada da noiva à saída dos noivos, na igreja ou ao ar livre, em cerimônia católica, evangélica ou ecumênica. Depois, o coquetel, o jantar, a primeira dança e a pista.</p>
         </li>
         <li class="evento">
-          <svg class="evento__simbolo" viewBox="0 0 64 48" aria-hidden="true"><circle cx="22" cy="30" r="12"/><circle cx="35" cy="30" r="12"/><path class="brilho" d="M50 3q1 4.4 5.4 5.4q-4.4 1-5.4 5.4q-1-4.4-5.4-5.4q4.4-1 5.4-5.4Z"/><path class="brilho" d="M58 16q.7 3 3.7 3.7q-3 .7-3.7 3.7q-.7-3-3.7-3.7q3-.7 3.7-3.7Z"/></svg>
-          <h3 class="evento__nome">Bodas e renovação de votos</h3>
-          <p>Para celebrar os anos juntos com as músicas que marcaram a história de vocês, na renovação dos votos e na comemoração com a família e os amigos.</p>
+          <h3 class="evento__nome"><svg viewBox="0 0 460 460" aria-hidden="true"><use href="#marca-estrela"/></svg>Bodas e renovação de votos</h3>
+          <p>A música do casamento de vocês tocada de novo, na renovação dos votos e na festa com a família e os amigos.</p>
         </li>
         <li class="evento">
-          <svg class="evento__simbolo" viewBox="0 0 64 48" aria-hidden="true"><path d="M12 40h40M14 40l-3-21 11 9 10-16 10 16 11-9-3 21"/><path class="brilho" d="M32 0q1 4.2 5.2 5.2q-4.2 1-5.2 5.2q-1-4.2-5.2-5.2q4.2-1 5.2-5.2Z"/></svg>
-          <h3 class="evento__nome">Festas de 15 anos</h3>
-          <p>Da entrada da debutante à valsa e à festa, com o repertório escolhido com ela e com a família.</p>
+          <h3 class="evento__nome"><svg viewBox="0 0 460 460" aria-hidden="true"><use href="#marca-estrela"/></svg>Festas de 15 anos</h3>
+          <p>A entrada da debutante, a valsa e a pista com os amigos, com as músicas que ela escolher.</p>
         </li>
       </ul>
     </section>
 
-    <section class="secao secao--seguida conteudo" id="musica" aria-labelledby="titulo-musica">
-      <div class="duas-colunas">
-        <h2 id="titulo-musica">Por que a música faz diferença</h2>
-        <div class="musica__texto">
-          <p>Numa pesquisa do The Knot com convidados de casamentos nos Estados Unidos, a música foi o segundo item mais notado, atrás só da comida. Não é por acaso: é ela que avisa a todos que a noiva vai entrar, segura o silêncio antes do sim e decide se a pista enche.</p>
-          <p>Ao vivo, a música acompanha o que acontece. Se a entrada atrasa, a música espera; se a pista pede mais, o repertório segue. E a voz que canta o momento de vocês está ali, diante de todos.</p>
-          <p class="musica__fonte">Fonte: <a href="https://www.theknot.com/content/wedding-details-guests-care-about-most" target="_blank" rel="noopener">The Knot, “Wedding details guests care about most”</a>.</p>
-        </div>
+    <section class="porta-secao conteudo" id="musica" aria-labelledby="titulo-musica">
+      <div class="porta">
+        <svg class="porta__estrela" viewBox="0 0 460 460" aria-hidden="true"><use href="#marca-estrela"/></svg>
+        <h2 id="titulo-musica">Depois da comida, é a música que os convidados mais notam.</h2>
+        <p class="porta__texto">É ela que avisa que a noiva vai entrar e que segura o silêncio antes do sim. Ao vivo, ela espera quando a entrada atrasa e continua quando a pista pede mais.</p>
+        <p class="porta__fonte">Pesquisa do The Knot com convidados de casamentos nos Estados Unidos: <a href="https://www.theknot.com/content/wedding-details-guests-care-about-most" target="_blank" rel="noopener">“Wedding details guests care about most”</a>.</p>
       </div>
     </section>
 
     <section class="secao secao--seguida conteudo" id="compromisso" aria-labelledby="titulo-compromisso">
-      <h2 id="titulo-compromisso">O que é mais importante para nós</h2>
-      <ul class="promessas">
-        <li class="promessa"><span class="promessa__nome">O repertório de vocês</span><p>Cada música é escolhida com vocês, momento a momento, do jeito que vocês sonharam.</p></li>
-        <li class="promessa"><span class="promessa__nome">O rito respeitado</span><p>Na cerimônia, seguimos as regras da igreja e alinhamos os detalhes com a igreja ou o cerimonial antes do dia.</p></li>
-        <li class="promessa"><span class="promessa__nome">A atenção em vocês</span><p>A música acompanha cada momento sem roubar a cena: o centro do dia são vocês.</p></li>
-        <li class="promessa"><span class="promessa__nome">Tudo num lugar só</span><p>Formação montada para o evento e som próprio, que pode ser locado junto, para vocês não dependerem de mais um fornecedor.</p></li>
-      </ul>
+      <div class="duas-colunas compromissos-grade">
+        <h2 id="titulo-compromisso">O que a gente combina antes do dia</h2>
+        <ul class="compromissos">
+          <li class="compromisso"><span class="compromisso__nome">As regras da igreja</span><p>Antes do dia, confirmamos com a paróquia ou com o cerimonial o que pode tocar e em que momento.</p></li>
+          <li class="compromisso"><span class="compromisso__nome">O silêncio na hora certa</span><p>A música entra quando a noiva aparece na porta e se cala para os votos.</p></li>
+          <li class="compromisso"><span class="compromisso__nome">Um fornecedor a menos</span><p>Vocês escolhem a formação, e o som pode vir junto, com o nosso equipamento.</p></li>
+        </ul>
+      </div>
     </section>
 
     <!-- Depoimentos: por enquanto são EXEMPLOS para aprovar o layout com o cliente. Só aparecem com ?previa no endereço
@@ -1353,9 +1675,9 @@
     <section class="secao secao--seguida conteudo" id="depoimentos" aria-labelledby="titulo-depoimentos" data-previa data-nosnippet>
       <h2 id="titulo-depoimentos">Quem já viveu</h2>
       <ul class="depoimentos">
-        <li><figure class="depoimento"><blockquote><p>“Quando a Delliz começou a cantar na entrada da noiva, a igreja inteira se emocionou. Até hoje os convidados falam disso.”</p></blockquote><figcaption>Ana e Rafael, casamento <span class="depoimento__selo">Exemplo</span></figcaption></figure></li>
-        <li><figure class="depoimento"><blockquote><p>“Combinaram cada detalhe com a paróquia e a festa não teve um minuto de silêncio. A gente só precisou aproveitar.”</p></blockquote><figcaption>Juliana e Pedro, casamento <span class="depoimento__selo">Exemplo</span></figcaption></figure></li>
-        <li><figure class="depoimento"><blockquote><p>“Na renovação dos nossos votos, tocaram a música do nosso casamento, 25 anos depois. Foi como casar de novo.”</p></blockquote><figcaption>Marta e José, bodas de prata <span class="depoimento__selo">Exemplo</span></figcaption></figure></li>
+        <li><figure class="depoimento"><blockquote><p>“Quando a Delliz começou a cantar na entrada da noiva, a igreja inteira ficou em silêncio. Até hoje os convidados falam disso.”</p></blockquote><figcaption>Ana e Rafael, casamento <span class="depoimento__selo">Exemplo</span></figcaption></figure></li>
+        <li><figure class="depoimento"><blockquote><p>“Combinaram cada detalhe com a paróquia, e a pista não esvaziou. A gente só precisou aproveitar.”</p></blockquote><figcaption>Juliana e Pedro, casamento <span class="depoimento__selo">Exemplo</span></figcaption></figure></li>
+        <li><figure class="depoimento"><blockquote><p>“Na renovação dos nossos votos, tocaram a música do nosso casamento, 25 anos depois.”</p></blockquote><figcaption>Marta e José, bodas de prata <span class="depoimento__selo">Exemplo</span></figcaption></figure></li>
       </ul>
     </section>
 
@@ -1363,8 +1685,11 @@
 
     <div class="noite">
       <section class="secao conteudo" id="amostras" aria-labelledby="titulo-amostras">
+        <div class="amostras">
+        <div>
         <h2 id="titulo-amostras">Fotos e vídeos dos casamentos</h2>
         <p class="introducao">Os primeiros registros de casamentos com o Lumes Experience entram aqui em breve. Enquanto isso, <a href="https://www.youtube.com/shorts/NBmB7i5MffI" target="_blank" rel="noopener">ouçam a Delliz em “Espírito Poderoso”, no YouTube</a>.</p>
+        </div>
 
         <!--
           Como trocar um espaço reservado por um vídeo real (passo a passo no README):
@@ -1393,120 +1718,128 @@
         -->
         <div class="amostras__grade">
           <figure class="amostra amostra--video amostra--vazia">
-            <div class="amostra__midia"></div>
+            <div class="amostra__midia"><svg viewBox="0 0 460 460" aria-hidden="true"><use href="#marca-estrela"/></svg></div>
             <figcaption>Entrada da noiva<span class="amostra__estado">Vídeo em breve</span></figcaption>
           </figure>
           <figure class="amostra amostra--foto amostra--vazia">
-            <div class="amostra__midia"></div>
+            <div class="amostra__midia"><svg viewBox="0 0 460 460" aria-hidden="true"><use href="#marca-estrela"/></svg></div>
             <figcaption>Na igreja<span class="amostra__estado">Foto em breve</span></figcaption>
           </figure>
           <figure class="amostra amostra--video amostra--vazia">
-            <div class="amostra__midia"></div>
+            <div class="amostra__midia"><svg viewBox="0 0 460 460" aria-hidden="true"><use href="#marca-estrela"/></svg></div>
             <figcaption>Pista<span class="amostra__estado">Vídeo em breve</span></figcaption>
           </figure>
+        </div>
         </div>
       </section>
 
       <section class="secao secao--seguida conteudo" aria-labelledby="titulo-passos">
-        <h2 id="titulo-passos">Como reservar a sua data</h2>
+        <h2 id="titulo-passos">Como reservar a data</h2>
         <ol class="passos">
-          <li class="passo"><h3>Consultem a data</h3><p>Mandem pelo WhatsApp a data, a cidade e o tipo de cerimônia.</p></li>
-          <li class="passo"><h3>Recebam a proposta</h3><p>Conversamos sobre os momentos, o estilo e a formação, e enviamos a proposta.</p></li>
-          <li class="passo"><h3>Montem o repertório</h3><p>Com a data reservada, escolhemos juntos a música de cada momento e alinhamos os detalhes com a igreja ou o cerimonial.</p></li>
+          <li class="passo"><svg class="passo__estrela" viewBox="0 0 460 460" aria-hidden="true"><use href="#marca-estrela"/></svg><h3>Consultem a data</h3><p>Mandem pelo <a data-cta="passos" target="_blank" rel="noopener" href="https://wa.me/5531996154698?text=Ol%C3%A1%2C%20Lumes%20Experience!%20Vi%20o%20site%20e%20quero%20consultar%20uma%20data.%0AEvento%3A%20%0AData%3A%20%0ACidade%20e%20local%3A%20%0ACerim%C3%B4nia%3A%20%0AMomentos%20com%20m%C3%BAsica%3A%20">WhatsApp</a> o tipo de evento, a data, a cidade e o tipo de cerimônia.</p></li>
+          <li class="passo"><svg class="passo__estrela" viewBox="0 0 460 460" aria-hidden="true"><use href="#marca-estrela"/></svg><h3>Recebam a proposta</h3><p>A gente conversa sobre os momentos, o estilo e a formação, e manda a proposta.</p></li>
+          <li class="passo"><svg class="passo__estrela" viewBox="0 0 460 460" aria-hidden="true"><use href="#marca-estrela"/></svg><h3>Montem o repertório</h3><p>Com a data reservada, vocês escolhem com a gente a música de cada momento.</p></li>
         </ol>
-      </section>
-
-      <section class="secao secao--seguida conteudo" aria-labelledby="titulo-fatos">
-        <div class="duas-colunas">
-          <h2 id="titulo-fatos">O Lumes Experience em poucas linhas</h2>
-          <dl class="fatos__lista">
-            <div class="fato"><dt>Eventos</dt><dd>Casamentos, bodas e renovação de votos, festas de 15 anos.</dd></div>
-            <div class="fato"><dt>Onde</dt><dd>Belo Horizonte e região metropolitana. Outras cidades, sob consulta.</dd></div>
-            <div class="fato"><dt>Cerimônias</dt><dd>Católica, evangélica e ecumênica, na igreja ou ao ar livre.</dd></div>
-            <div class="fato"><dt>Momentos</dt><dd>Cerimônia, coquetel, jantar e pista. Vocês escolhem quais.</dd></div>
-            <div class="fato"><dt>Formação</dt><dd>Montada para cada evento, conforme o estilo e o orçamento de vocês.</dd></div>
-            <div class="fato"><dt>Som</dt><dd>Equipamento próprio, que pode ser locado junto com a música.</dd></div>
-            <div class="fato"><dt>Valor</dt><dd>Sob consulta, conforme data, local, momentos e formação.</dd></div>
-            <div class="fato"><dt>À frente</dt><dd>Delliz Christine, cantora.</dd></div>
-            <div class="fato"><dt>Contato</dt><dd><a data-cta="fatos" target="_blank" rel="noopener" href="https://wa.me/5531996154698?text=Ol%C3%A1%2C%20Lumes%20Experience!%20Vi%20o%20site%20e%20quero%20consultar%20uma%20data%20para%20o%20nosso%20casamento.%0AData%3A%20%0ACidade%20e%20local%3A%20%0ACerim%C3%B4nia%3A%20%0AMomentos%20com%20m%C3%BAsica%3A%20">WhatsApp do Lumes Experience</a></dd></div>
-          </dl>
-        </div>
       </section>
 
       <section class="secao secao--seguida conteudo" id="perguntas" aria-labelledby="titulo-perguntas">
         <div class="duas-colunas">
-          <h2 id="titulo-perguntas">Perguntas frequentes</h2>
+          <div class="perguntas__lado">
+            <h2 id="titulo-perguntas">Perguntas frequentes</h2>
+            <ul class="perguntas__indice">
+              <li><a href="#perguntas-valor">Valor e reserva</a></li>
+              <li><a href="#perguntas-cerimonia">Cerimônia e repertório</a></li>
+              <li><a href="#perguntas-grupo">O grupo</a></li>
+            </ul>
+            <div class="perguntas__acao">
+              <p>A resposta que faltar vem na conversa.</p>
+              <a class="botao botao--luz" data-cta="perguntas" target="_blank" rel="noopener" href="https://wa.me/5531996154698?text=Ol%C3%A1%2C%20Lumes%20Experience!%20Vi%20o%20site%20e%20quero%20consultar%20uma%20data.%0AEvento%3A%20%0AData%3A%20%0ACidade%20e%20local%3A%20%0ACerim%C3%B4nia%3A%20%0AMomentos%20com%20m%C3%BAsica%3A%20">
+                <svg aria-hidden="true"><use href="#icone-whatsapp"/></svg>Consultar a data no WhatsApp
+              </a>
+            </div>
+          </div>
           <div>
-            <div class="perguntas__grupo">
+            <div class="perguntas__grupo" id="perguntas-valor">
               <h3>Valor e reserva</h3>
-              <details class="pergunta"><summary>Quanto custa a música ao vivo para casamento em BH?</summary><div class="pergunta__resposta"><p>O valor do Lumes Experience é sob consulta, porque depende da data, do local, dos momentos com música (cerimônia, coquetel, jantar e pista), da duração e da formação. Mandem esses dados pelo WhatsApp e enviamos uma proposta para o casamento de vocês, sem compromisso.</p></div></details>
-              <details class="pergunta"><summary>Como pedir uma proposta?</summary><div class="pergunta__resposta"><p>Pelo WhatsApp do Lumes Experience. Mandem a data, a cidade e o local, o tipo de cerimônia e os momentos em que querem música. O formulário no fim desta página monta essa mensagem para vocês.</p></div></details>
+              <details class="pergunta"><summary>Quanto custa a música ao vivo para casamento em BH?</summary><div class="pergunta__resposta"><p>O valor do Lumes Experience é sob consulta, porque depende da data, do local, dos momentos com música (cerimônia, coquetel, jantar e pista), da duração e da formação. Mandem esses dados pelo <a data-cta="perguntas" target="_blank" rel="noopener" href="https://wa.me/5531996154698?text=Ol%C3%A1%2C%20Lumes%20Experience!%20Vi%20o%20site%20e%20quero%20consultar%20uma%20data.%0AEvento%3A%20%0AData%3A%20%0ACidade%20e%20local%3A%20%0ACerim%C3%B4nia%3A%20%0AMomentos%20com%20m%C3%BAsica%3A%20">WhatsApp</a> e enviamos uma proposta, sem compromisso.</p></div></details>
+              <details class="pergunta"><summary>Como pedir uma proposta?</summary><div class="pergunta__resposta"><p>Pelo WhatsApp do Lumes Experience, no <a data-cta="perguntas" target="_blank" rel="noopener" href="https://wa.me/5531996154698?text=Ol%C3%A1%2C%20Lumes%20Experience!%20Vi%20o%20site%20e%20quero%20consultar%20uma%20data.%0AEvento%3A%20%0AData%3A%20%0ACidade%20e%20local%3A%20%0ACerim%C3%B4nia%3A%20%0AMomentos%20com%20m%C3%BAsica%3A%20">(31) 99615-4698</a>. Mandem o tipo de evento, a data, a cidade e o local, o tipo de cerimônia e os momentos em que querem música. O formulário no fim desta página monta essa mensagem para vocês.</p></div></details>
               <details class="pergunta"><summary>Com quanta antecedência devemos reservar?</summary><div class="pergunta__resposta"><p>Assim que tiverem a data e o local. A data só fica garantida depois da reserva, então quanto antes vocês consultarem, maior a chance de ela estar livre.</p></div></details>
             </div>
-            <div class="perguntas__grupo">
+            <div class="perguntas__grupo" id="perguntas-cerimonia">
               <h3>Cerimônia e repertório</h3>
-              <details class="pergunta"><summary>O Lumes Experience toca na cerimônia e na festa?</summary><div class="pergunta__resposta"><p>Sim. Tocamos na cerimônia e na recepção: coquetel, jantar, primeira dança e pista. Vocês escolhem os momentos com música, e a proposta acompanha essa escolha.</p></div></details>
-              <details class="pergunta"><summary>Vocês tocam em casamento católico, evangélico ou ecumênico?</summary><div class="pergunta__resposta"><p>Sim. Tocamos em cerimônias católicas, evangélicas e ecumênicas, na igreja ou ao ar livre. Algumas igrejas permitem só música religiosa na cerimônia ou têm uma lista própria. Vale confirmar as orientações da igreja de vocês, e o repertório segue essas regras.</p></div></details>
-              <details class="pergunta"><summary>Vocês tocam em bodas e festas de 15 anos?</summary><div class="pergunta__resposta"><p>Sim. Além de casamentos, fazemos bodas e renovação de votos e festas de 15 anos, na cerimônia e na festa, com o repertório escolhido com vocês.</p></div></details>
+              <details class="pergunta"><summary>O Lumes Experience toca na cerimônia e na festa?</summary><div class="pergunta__resposta"><p>Sim. Tocamos na cerimônia e na festa: coquetel, jantar, primeira dança e pista. Vocês escolhem os momentos com música, e a proposta acompanha essa escolha.</p></div></details>
+              <details class="pergunta"><summary>Tocam em casamento católico, evangélico ou ecumênico?</summary><div class="pergunta__resposta"><p>Sim. Tocamos em cerimônias católicas, evangélicas e ecumênicas, na igreja ou ao ar livre. Algumas igrejas permitem só música religiosa na cerimônia ou têm uma lista própria. Vale confirmar as orientações da igreja de vocês, e o repertório segue essas regras.</p></div></details>
+              <details class="pergunta"><summary>Tocam em bodas e festas de 15 anos?</summary><div class="pergunta__resposta"><p>Sim. Além de casamentos, fazemos bodas e renovação de votos e festas de 15 anos, na cerimônia e na festa.</p></div></details>
               <details class="pergunta"><summary>Que música tocar na entrada da noiva?</summary><div class="pergunta__resposta"><p>Não existe uma música obrigatória: a escolha depende do rito e do estilo do casal. Entre os clássicos mais pedidos estão a Marcha Nupcial de Wagner, o Cânon em Ré de Pachelbel e a Ave Maria. A marcha de Mendelssohn costuma ficar para a saída dos noivos. Muitos casais preferem uma canção que tenha significado para os dois. Na igreja, confirmem antes se a música escolhida é permitida.</p></div></details>
               <details class="pergunta"><summary>Podemos escolher as músicas?</summary><div class="pergunta__resposta"><p>Sim. O repertório é escolhido com vocês, momento a momento. Se quiserem uma música que não está no repertório, peçam com antecedência para avaliarmos o arranjo.</p></div></details>
             </div>
-            <div class="perguntas__grupo">
+            <div class="perguntas__grupo" id="perguntas-grupo">
               <h3>O grupo</h3>
-              <details class="pergunta"><summary>Qual é a formação do grupo?</summary><div class="pergunta__resposta"><p>A formação é montada para cada casamento, de acordo com o estilo e o orçamento do casal. Pode ser mais enxuta, para uma cerimônia intimista, ou mais completa, para encher a pista.</p></div></details>
-              <details class="pergunta"><summary>O Lumes Experience leva o equipamento de som?</summary><div class="pergunta__resposta"><p>Sim. Temos equipamento de som próprio, que pode ser locado junto com a música. Se o local já tiver som, avisem na mensagem para combinarmos o que for melhor para o espaço.</p></div></details>
-              <details class="pergunta"><summary>Quais cidades o Lumes Experience atende?</summary><div class="pergunta__resposta"><p>Belo Horizonte e a região metropolitana, como Contagem, Betim, Nova Lima, Lagoa Santa, Sabará, Santa Luzia e Brumadinho. Para casamentos em outras cidades, consultem pelo WhatsApp.</p></div></details>
+              <details class="pergunta"><summary>Qual é a formação do grupo?</summary><div class="pergunta__resposta"><p>Vocês escolhem. A formação é montada para cada evento, de acordo com o estilo e o orçamento de vocês: mais enxuta, para uma cerimônia intimista, ou mais completa, para encher a pista.</p></div></details>
+              <details class="pergunta"><summary>O Lumes Experience leva o equipamento de som?</summary><div class="pergunta__resposta"><p>Sim. Temos equipamento de som próprio, que pode ser alugado junto com a música. Se o local já tiver som, avisem na mensagem para combinarmos o que for melhor para o espaço.</p></div></details>
+              <details class="pergunta"><summary>Quais cidades o Lumes Experience atende?</summary><div class="pergunta__resposta"><p>Belo Horizonte e a região metropolitana, como Contagem, Betim, Nova Lima, Lagoa Santa, Sabará, Santa Luzia e Brumadinho. Para eventos em outras cidades, consultem pelo <a data-cta="perguntas" target="_blank" rel="noopener" href="https://wa.me/5531996154698?text=Ol%C3%A1%2C%20Lumes%20Experience!%20Vi%20o%20site%20e%20quero%20consultar%20uma%20data.%0AEvento%3A%20%0AData%3A%20%0ACidade%20e%20local%3A%20%0ACerim%C3%B4nia%3A%20%0AMomentos%20com%20m%C3%BAsica%3A%20">WhatsApp</a>.</p></div></details>
               <details class="pergunta"><summary>Quem é Delliz Christine?</summary><div class="pergunta__resposta"><p>Delliz Christine é a cantora à frente do Lumes Experience. Ela integra o Jeito Ágape, ministério de música católica de Belo Horizonte, e é uma das vozes da série Incondicional Sessions.</p></div></details>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="secao secao--seguida conteudo" id="consulta" aria-labelledby="titulo-consulta">
-        <div class="duas-colunas">
-          <div class="consulta__texto">
-            <h2 id="titulo-consulta">Consultem a sua data</h2>
-            <p>Contem o que já sabem do casamento. A mensagem abre pronta no WhatsApp do Lumes Experience, e vocês revisam antes de enviar.</p>
-          </div>
+      <section class="secao conteudo consulta-secao" id="consulta" aria-labelledby="titulo-consulta">
+        <div class="porta-acesa">
+          <svg class="porta-acesa__estrela" viewBox="0 0 460 460" aria-hidden="true"><use href="#marca-estrela"/></svg>
+          <h2 id="titulo-consulta">Consultem a data</h2>
+          <p class="porta-acesa__texto">Contem o que já sabem da festa. A mensagem abre pronta no WhatsApp do Lumes Experience, e vocês revisam antes de enviar.</p>
           <form class="consulta__form" id="consulta-form" action="#" novalidate>
-            <div class="campo">
-              <label for="campo-data">Data do casamento</label>
-              <input id="campo-data" name="data" type="date">
-            </div>
-            <div class="campo">
-              <label for="campo-local">Cidade e local</label>
-              <input id="campo-local" name="local" type="text" autocomplete="off" placeholder="Ex.: Nova Lima, igreja e salão">
-            </div>
-            <div class="campo">
-              <label for="campo-cerimonia">Tipo de cerimônia</label>
-              <select id="campo-cerimonia" name="cerimonia">
-                <option>Ainda não sabemos</option>
-                <option>Católica</option>
-                <option>Evangélica</option>
-                <option>Ecumênica</option>
-                <option>Outra</option>
-              </select>
-            </div>
-            <fieldset class="campo">
-              <legend>Momentos com música</legend>
-              <div class="opcoes">
-                <label class="opcao"><input type="checkbox" name="momentos" value="Cerimônia">Cerimônia</label>
-                <label class="opcao"><input type="checkbox" name="momentos" value="Coquetel">Coquetel</label>
-                <label class="opcao"><input type="checkbox" name="momentos" value="Jantar">Jantar</label>
-                <label class="opcao"><input type="checkbox" name="momentos" value="Pista">Pista</label>
+            <div class="consulta__campos">
+              <div class="campo">
+                <label for="campo-evento">Evento</label>
+                <select id="campo-evento" name="evento">
+                  <option>Casamento</option>
+                  <option>Bodas ou renovação de votos</option>
+                  <option>Festa de 15 anos</option>
+                </select>
               </div>
-            </fieldset>
+              <div class="campo">
+                <label for="campo-data">Data</label>
+                <input id="campo-data" name="data" type="date" aria-describedby="aviso-data">
+                <p class="campo__aviso" id="aviso-data" aria-live="polite"></p>
+              </div>
+              <div class="campo">
+                <label for="campo-local">Cidade e local</label>
+                <input id="campo-local" name="local" type="text" autocomplete="off" maxlength="120" placeholder="Ex.: Nova Lima, igreja e salão">
+              </div>
+              <div class="campo">
+                <label for="campo-cerimonia">Tipo de cerimônia</label>
+                <select id="campo-cerimonia" name="cerimonia">
+                  <option>Ainda não sabemos</option>
+                  <option>Católica</option>
+                  <option>Evangélica</option>
+                  <option>Ecumênica</option>
+                  <option>Sem cerimônia religiosa</option>
+                  <option>Outra</option>
+                </select>
+              </div>
+              <fieldset class="campo campo--largo">
+                <legend>Momentos com música</legend>
+                <div class="opcoes">
+                  <label class="opcao"><input type="checkbox" name="momentos" value="Cerimônia">Cerimônia</label>
+                  <label class="opcao"><input type="checkbox" name="momentos" value="Coquetel">Coquetel</label>
+                  <label class="opcao"><input type="checkbox" name="momentos" value="Jantar">Jantar</label>
+                  <label class="opcao"><input type="checkbox" name="momentos" value="Pista">Pista</label>
+                </div>
+              </fieldset>
+            </div>
             <div class="previa">
               <p class="previa__rotulo" id="previa-rotulo">A mensagem que vai abrir no WhatsApp</p>
-              <output class="previa__balao" id="previa" for="campo-data campo-local campo-cerimonia" aria-labelledby="previa-rotulo" aria-live="off">Olá, Lumes Experience! Vi o site e quero consultar uma data para o nosso casamento.
+              <output class="previa__balao" id="previa" for="campo-evento campo-data campo-local campo-cerimonia" aria-labelledby="previa-rotulo" aria-live="off">Olá, Lumes Experience! Vi o site e quero consultar uma data.
+Evento:
 Data:
 Cidade e local:
 Cerimônia:
 Momentos com música:</output>
             </div>
-            <a class="botao botao--luz" id="consulta-enviar" data-cta="formulario" target="_blank" rel="noopener"
-               href="https://wa.me/5531996154698?text=Ol%C3%A1%2C%20Lumes%20Experience!%20Vi%20o%20site%20e%20quero%20consultar%20uma%20data%20para%20o%20nosso%20casamento.%0AData%3A%20%0ACidade%20e%20local%3A%20%0ACerim%C3%B4nia%3A%20%0AMomentos%20com%20m%C3%BAsica%3A%20">
-              <svg aria-hidden="true"><use href="#icone-whatsapp"/></svg>Consultar no WhatsApp
+            <a class="botao" id="consulta-enviar" data-cta="formulario" target="_blank" rel="noopener" href="https://wa.me/5531996154698?text=Ol%C3%A1%2C%20Lumes%20Experience!%20Vi%20o%20site%20e%20quero%20consultar%20uma%20data.%0AEvento%3A%20%0AData%3A%20%0ACidade%20e%20local%3A%20%0ACerim%C3%B4nia%3A%20%0AMomentos%20com%20m%C3%BAsica%3A%20">
+              <svg aria-hidden="true"><use href="#icone-whatsapp"/></svg>Consultar a data no WhatsApp
             </a>
             <p class="consulta__nota">Todos os campos são opcionais. Nada é enviado antes de vocês tocarem em enviar no WhatsApp.</p>
             <noscript><p class="consulta__nota">Com o JavaScript desligado, o botão abre a mensagem em branco: completem os dados no próprio WhatsApp.</p></noscript>
@@ -1519,22 +1852,22 @@ Momentos com música:</output>
   <footer class="noite" id="rodape">
     <div class="rodape conteudo">
       <a class="marca" href="./" aria-label="Lumes Experience, página inicial"><svg viewBox="0 0 1745 594" aria-hidden="true"><use href="#marca-logo"/></svg></a>
-      <p>Lumes Experience, música ao vivo para casamentos em Belo Horizonte e região metropolitana.</p>
+      <p>Lumes Experience, música ao vivo para casamentos, bodas e festas de 15 anos em Belo Horizonte e região.</p>
       <ul class="rodape__links">
-        <li><a data-cta="rodape" target="_blank" rel="noopener" href="https://wa.me/5531996154698?text=Ol%C3%A1%2C%20Lumes%20Experience!%20Vi%20o%20site%20e%20quero%20consultar%20uma%20data%20para%20o%20nosso%20casamento.%0AData%3A%20%0ACidade%20e%20local%3A%20%0ACerim%C3%B4nia%3A%20%0AMomentos%20com%20m%C3%BAsica%3A%20">WhatsApp</a></li>
+        <li><a data-cta="rodape" target="_blank" rel="noopener" href="https://wa.me/5531996154698?text=Ol%C3%A1%2C%20Lumes%20Experience!%20Vi%20o%20site%20e%20quero%20consultar%20uma%20data.%0AEvento%3A%20%0AData%3A%20%0ACidade%20e%20local%3A%20%0ACerim%C3%B4nia%3A%20%0AMomentos%20com%20m%C3%BAsica%3A%20">WhatsApp (31) 99615-4698</a></li>
         <li><a href="blog/">Blog</a></li>
         <li><a href="https://www.instagram.com/dellizchristine/" target="_blank" rel="noopener">Instagram da Delliz</a></li>
         <li><a href="https://jeitoagape.com.br/" target="_blank" rel="noopener">Jeito Ágape</a></li>
+        <li><button class="rodape__rever" type="button" data-abertura-musica><svg aria-hidden="true"><use href="#icone-nota"/></svg><span data-rotulo-abertura>Rever a abertura, com som</span></button></li>
       </ul>
       <p>Delliz Christine é integrante do Jeito Ágape, ministério de música católica.</p>
-      <p>© 2026 Lumes Experience. Atualizado em <time datetime="2026-11-03">03/11/2026</time>.</p>
+      <p>© 2026 Lumes Experience. Atualizado em <time datetime="2026-11-04">04/11/2026</time>.</p>
     </div>
   </footer>
 
   <div class="barra-whatsapp" id="barra-whatsapp">
-    <a class="botao botao--luz" data-cta="barra-celular" target="_blank" rel="noopener"
-       href="https://wa.me/5531996154698?text=Ol%C3%A1%2C%20Lumes%20Experience!%20Vi%20o%20site%20e%20quero%20consultar%20uma%20data%20para%20o%20nosso%20casamento.%0AData%3A%20%0ACidade%20e%20local%3A%20%0ACerim%C3%B4nia%3A%20%0AMomentos%20com%20m%C3%BAsica%3A%20">
-      <svg aria-hidden="true"><use href="#icone-whatsapp"/></svg><span>Consultar <span class="so-largo">nossa </span>data no WhatsApp</span>
+    <a class="botao botao--luz" data-cta="barra-celular" target="_blank" rel="noopener" href="https://wa.me/5531996154698?text=Ol%C3%A1%2C%20Lumes%20Experience!%20Vi%20o%20site%20e%20quero%20consultar%20uma%20data.%0AEvento%3A%20%0AData%3A%20%0ACidade%20e%20local%3A%20%0ACerim%C3%B4nia%3A%20%0AMomentos%20com%20m%C3%BAsica%3A%20">
+      <svg aria-hidden="true"><use href="#icone-whatsapp"/></svg>Consultar a data no WhatsApp
     </a>
   </div>
 
@@ -1546,6 +1879,7 @@ Momentos com música:</output>
     (() => {
       const WHATSAPP = '5531996154698';
       // Vazio = sem medição. Com um ID (ex.: 'G-XXXXXXXXXX'), registra o evento whatsapp_click por seção.
+      // O mesmo ID vai em scripts/blog/gerar.mjs (GA4_ID), para medir também o blog.
       const GA4_ID = '';
 
       const reduzirMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1568,13 +1902,16 @@ Momentos com música:</output>
       const formulario = document.getElementById('consulta-form');
       const botaoConsulta = document.getElementById('consulta-enviar');
       const previa = document.getElementById('previa');
+      const avisoData = document.getElementById('aviso-data');
+      const hoje = dataIsoDeHoje();
 
-      formulario.elements.data.min = dataIsoDeHoje();
+      formulario.elements.data.min = hoje;
 
       const mensagemDoFormulario = () => {
         const dados = new FormData(formulario);
         return [
-          'Olá, Lumes Experience! Vi o site e quero consultar uma data para o nosso casamento.',
+          'Olá, Lumes Experience! Vi o site e quero consultar uma data.',
+          `Evento: ${dados.get('evento')}`,
           `Data: ${formatarData(dados.get('data'))}`,
           `Cidade e local: ${dados.get('local').trim()}`,
           `Cerimônia: ${dados.get('cerimonia')}`,
@@ -1583,6 +1920,9 @@ Momentos com música:</output>
       };
 
       const atualizarConsulta = () => {
+        // A data passada não impede o envio (pode ser engano de ano), mas avisa ao lado do campo.
+        const data = formulario.elements.data.value;
+        avisoData.textContent = data && data < hoje ? 'Essa data já passou. Confiram o dia e o ano.' : '';
         const mensagem = mensagemDoFormulario();
         botaoConsulta.href = linkWhatsapp(mensagem);
         previa.value = mensagem;
@@ -1598,22 +1938,25 @@ Momentos com música:</output>
         botaoConsulta.click();
       });
 
-      // Barra fixa no celular: some enquanto outro botão do WhatsApp está na tela.
+      // Barra fixa no celular: aparece sempre que nenhum outro botão do WhatsApp está inteiro na tela, inclusive
+      // na primeira dobra de um celular baixo (no Safari com as barras à mostra, o botão do topo pode ficar abaixo
+      // da dobra), e some quando o botão do topo, o formulário ou o rodapé aparecem.
       const barra = document.getElementById('barra-whatsapp');
       const botaoBarra = barra.querySelector('.botao');
       const alvosComBotao = [document.getElementById('acoes-abertura'), document.getElementById('consulta'), document.getElementById('rodape')];
       const visiveis = new Set();
       const observadorBarra = new IntersectionObserver((entradas) => {
         entradas.forEach((entrada) => {
-          if (entrada.isIntersecting) visiveis.add(entrada.target);
+          // O botão do topo só conta quando está inteiro na tela; o formulário e o rodapé, assim que aparecem.
+          const conta = entrada.target.id === 'acoes-abertura' ? entrada.intersectionRatio > 0.98 : entrada.isIntersecting;
+          if (conta) visiveis.add(entrada.target);
           else visiveis.delete(entrada.target);
         });
-        const passouDaAbertura = alvosComBotao[0].getBoundingClientRect().bottom < 0;
-        barra.classList.toggle('visivel', passouDaAbertura && visiveis.size === 0);
-      });
+        barra.classList.toggle('visivel', visiveis.size === 0);
+      }, { threshold: [0, 1] });
       alvosComBotao.forEach((alvo) => observadorBarra.observe(alvo));
 
-      // A barra segue a regra do resto da página: clara e terracota sobre o dia, escura e pêssego sobre a noite.
+      // A barra segue a regra do resto da página: clara e terracota sobre o dia, terracota e pêssego sobre a noite.
       const noitesAtrasDaBarra = new Set();
       const observadorFundo = new IntersectionObserver((entradas) => {
         entradas.forEach((entrada) => {
@@ -1704,43 +2047,94 @@ Momentos com música:</output>
   </script>
 
   <script>
-    // ---------- Abertura animada e trilha ----------
+    // ---------- A voz da Delliz, a abertura animada e a trilha ----------
     // A partitura: os mesmos tempos (em segundos) movem a animação (variáveis --t-* do CSS) e a música.
-    // 100 bpm, um tempo = 0,6 s. Arcos em colcheias, a estrela no contratempo, LUMES em semicolcheias.
     (() => {
-      const intro = document.getElementById('intro');
-      if (!intro) return;
+      // O trecho real da voz da Delliz (mp3 ou m4a em assets/audio/, uns 30 s). Vazio: a abertura com som usa a
+      // trilha sintetizada e o player da seção "A voz" fica escondido. Preenchido, os dois tocam este arquivo;
+      // "inicio" é o segundo do arquivo em que a abertura começa.
+      const AUDIO_DELLIZ = { arquivo: '', inicio: 0 };
+
       const raiz = document.documentElement;
-      const logo = intro.querySelector('.intro__logo');
-      const porta = intro.querySelector('.intro__porta');
-      const pular = intro.querySelector('.intro__pular');
-      const botaoMusica = document.querySelector('[data-abertura-musica]');
+      const botoesAbertura = [...document.querySelectorAll('[data-abertura-musica]')];
       const reduzir = matchMedia('(prefers-reduced-motion: reduce)');
 
-      const T = { arco1: 0, arco2: 0.2, estrelaP: 1.8, l: 2.1, estrela: 2.7, linha1: 3.2, letras: 3.45, passo: 0.15, linha2: 3.9, exp: 4.2, frase: 4.45, saida: 5.1, luz: 5.3, porta: 5.7, fim: 6.9 };
-      const VARIAVEIS = { arco1: 'arco1', arco2: 'arco2', estrelaP: 'estrela-p', l: 'l', estrela: 'estrela', linha1: 'linha1', letras: 'letras', passo: 'passo', linha2: 'linha2', exp: 'exp', frase: 'frase', saida: 'saida', luz: 'luz', porta: 'porta' };
+      // ---------- O player da seção "A voz" ----------
+      const ouvir = document.getElementById('ouvir');
+      if (ouvir && AUDIO_DELLIZ.arquivo) {
+        const audio = new Audio();
+        audio.preload = 'none';
+        audio.src = AUDIO_DELLIZ.arquivo;
+        const botao = ouvir.querySelector('button');
+        const icone = botao.querySelector('use');
+        const estado = ouvir.querySelector('.ouvir__texto span');
+        const minutos = (s) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
+        const mostrar = () => {
+          const tocando = !audio.paused;
+          botao.setAttribute('aria-label', tocando ? 'Pausar o trecho da Delliz' : 'Ouvir um trecho da Delliz');
+          icone.setAttribute('href', tocando ? '#icone-pausar' : '#icone-tocar');
+          estado.textContent = Number.isFinite(audio.duration) ? `${minutos(audio.currentTime)} de ${minutos(audio.duration)}` : 'Um trecho, sem sair da página';
+        };
+        botao.addEventListener('click', () => (audio.paused ? audio.play().catch(() => {}) : audio.pause()));
+        ['play', 'pause', 'timeupdate', 'loadedmetadata', 'ended'].forEach((nome) => audio.addEventListener(nome, mostrar));
+        ouvir.hidden = false;
+      }
+
+      const intro = document.getElementById('intro');
+      if (!intro) return;
+      const logo = intro.querySelector('.intro__logo');
+      const porta = intro.querySelector('.intro__porta');
+      const luzDaPorta = intro.querySelector('.intro__luz-porta');
+      const desenharPorta = (d) => { porta.setAttribute('d', d); if (luzDaPorta) luzDaPorta.setAttribute('d', d); };
+      const pular = intro.querySelector('.intro__pular');
+      const capa = document.getElementById('voz-capa');
+
+      botoesAbertura.forEach((botao) => {
+        const rotulo = botao.querySelector('[data-rotulo-abertura]');
+        if (rotulo && AUDIO_DELLIZ.arquivo) rotulo.textContent = 'Rever a abertura com a voz da Delliz';
+      });
+
+      // Cerca de 4,6 s. O logo inteiro (com EXPERIENCE e a frase) fica parado de 2,55 s a 3,3 s; a porta acende,
+      // viaja de 3,55 s a 4,3 s até pousar nos arcos da foto (abrindo a partir de 4 s) e a página aparece em volta.
+      const T = { arco1: 0, arco2: 0.1, estrelaP: 0.7, l: 0.85, estrela: 1.1, linha1: 1.35, letras: 1.45, passo: 0.09, linha2: 1.7, exp: 1.85, frase: 1.95, saida: 3.3, luz: 3.35, porta: 3.55, abre: 4.0, pouso: 4.3, fim: 4.65 };
+      const VARIAVEIS = { arco1: 'arco1', arco2: 'arco2', estrelaP: 'estrela-p', l: 'l', estrela: 'estrela', linha1: 'linha1', letras: 'letras', passo: 'passo', linha2: 'linha2', exp: 'exp', frase: 'frase', saida: 'saida', luz: 'luz', porta: 'porta', abre: 'abre' };
       Object.entries(VARIAVEIS).forEach(([k, nome]) => intro.style.setProperty(`--t-${nome}`, `${T[k]}s`));
 
-      // A porta é o arco de dentro do logo, medido em pixels na tela, com as laterais descendo até o chão.
-      // Abre a partir do centro do arco até cobrir a tela inteira; o logo cresce junto, então os traços
-      // dos arcos acompanham a borda da porta.
-      function medirPorta() {
+      // A porta é o arco de dentro do logo, em pixels na tela, com as laterais descendo até o "chão".
+      const arco = ({ cx, cy, r, chao }) => `M${(cx - r).toFixed(1)} ${chao.toFixed(1)}V${cy.toFixed(1)}A${r.toFixed(1)} ${r.toFixed(1)} 0 0 1 ${(cx + r).toFixed(1)} ${cy.toFixed(1)}V${chao.toFixed(1)}Z`;
+
+      function medirInicio() {
+        logo.style.transform = '';
+        logo.style.opacity = '';
         const m = logo.getScreenCTM();
-        if (!m) return;
+        if (!m) return null;
         const ponto = (x, y) => ({ x: m.a * x + m.c * y + m.e, y: m.b * x + m.d * y + m.f });
         const a = ponto(561.5, 630);
         const b = ponto(1581.5, 630);
         const r = (b.x - a.x) / 2;
-        const cx = (a.x + b.x) / 2;
-        const cy = a.y + r;
-        const chao = innerHeight + 40;
-        porta.setAttribute('d', `M${a.x.toFixed(1)} ${chao}V${cy.toFixed(1)}A${r.toFixed(1)} ${r.toFixed(1)} 0 0 1 ${b.x.toFixed(1)} ${cy.toFixed(1)}V${chao}Z`);
-        porta.style.transformOrigin = `${cx}px ${cy}px`;
+        const geo = { cx: (a.x + b.x) / 2, cy: a.y + r, r, chao: innerHeight + 40 };
         const caixa = logo.getBoundingClientRect();
-        logo.style.transformOrigin = `${cx - caixa.left}px ${cy - caixa.top}px`;
-        const k = (Math.max(cx, innerWidth - cx, cy, innerHeight - cy) / r) * 1.4;
-        intro.style.setProperty('--k', k.toFixed(2));
+        logo.style.transformOrigin = `${geo.cx - caixa.left}px ${geo.cy - caixa.top}px`;
+        desenharPorta(arco(geo));
+        return geo;
       }
+
+      // Onde a porta pousa: o arco de dentro da marca em volta da foto da Delliz (.voz__arcos, raio de 0,6 da
+      // largura da foto, centro a 0,694 da largura abaixo do topo). Os dois arcos do logo têm a mesma proporção,
+      // então os traços do logo caem exatamente sobre os da foto. Se a foto não estiver na tela, a porta cresce
+      // até cobrir tudo, como antes.
+      function medirDestino(inicio) {
+        if (capa) {
+          const c = capa.getBoundingClientRect();
+          if (c.width > 0 && c.top >= 0 && c.bottom <= innerHeight + c.height * 0.3) {
+            return { pousa: true, cx: c.left + c.width / 2, cy: c.top + c.width * 0.694, r: c.width * 0.6, chao: c.top + c.width * 1.29 };
+          }
+        }
+        const k = (Math.max(inicio.cx, innerWidth - inicio.cx, inicio.cy, innerHeight - inicio.cy) / inicio.r) * 1.4;
+        return { pousa: false, cx: inicio.cx, cy: inicio.cy, r: inicio.r * k, chao: innerHeight + 40 };
+      }
+
+      const suave = (t) => (t < 0.5 ? 4 * t * t * t : 1 - (-2 * t + 2) ** 3 / 2);
 
       let atual = null;
 
@@ -1751,56 +2145,99 @@ Momentos com música:</output>
       function terminar() {
         if (!atual) return;
         atual.timers.forEach(clearTimeout);
+        cancelAnimationFrame(atual.quadro);
         const voltarFoco = atual.comMusica;
         atual = null;
         revelar();
         intro.classList.remove('intro--tocando', 'intro--visivel', 'intro--pulando');
-        intro.getAnimations().forEach((a) => a.cancel());
-        try { sessionStorage.setItem('abertura-vista', '1'); } catch (e) {}
+        intro.getAnimations({ subtree: true }).forEach((a) => a.cancel());
+        logo.style.transform = '';
+        logo.style.opacity = '';
+        desenharPorta('M0 0');
+        try { localStorage.setItem('abertura-vista', String(Date.now())); } catch (e) {}
         document.removeEventListener('keydown', pularAbertura, true);
         removeEventListener('wheel', pularAbertura);
         removeEventListener('touchmove', pularAbertura);
-        if (voltarFoco && botaoMusica) botaoMusica.focus({ preventScroll: true });
+        if (voltarFoco && botoesAbertura[0]) botoesAbertura[0].focus({ preventScroll: true });
       }
 
       function pularAbertura() {
         if (!atual || atual.pulando) return;
         atual.pulando = true;
+        cancelAnimationFrame(atual.quadro);
         if (atual.trilha) atual.trilha.desligar(0.45);
         revelar();
         intro.classList.add('intro--pulando');
-        atual.timers.push(setTimeout(terminar, 460));
+        atual.timers.push(setTimeout(terminar, 380));
+      }
+
+      async function prepararSom() {
+        try {
+          const trilha = AUDIO_DELLIZ.arquivo ? await criarTrilhaDaDelliz() : criarTrilha();
+          // O navegador pode demorar (ou se recusar) a liberar o som: espera no máximo meio segundo
+          // e, sem som liberado, a abertura roda em silêncio em vez de não aparecer.
+          await Promise.race([trilha.ctx.resume(), new Promise((r) => setTimeout(r, 500))]);
+          if (trilha.ctx.state === 'running') return trilha;
+          trilha.ctx.close().catch(() => {});
+        } catch (e) {}
+        return null;
       }
 
       async function tocar(comMusica) {
         if (atual) terminar();
-        let trilha = null;
-        if (comMusica) {
-          // O navegador pode demorar (ou se recusar) a liberar o som: espera no máximo meio segundo
-          // e, sem som liberado, a abertura roda em silêncio em vez de não aparecer.
-          try {
-            trilha = criarTrilha();
-            await Promise.race([trilha.ctx.resume(), new Promise((r) => setTimeout(r, 500))]);
-            if (trilha.ctx.state !== 'running') { trilha.ctx.close().catch(() => {}); trilha = null; }
-          } catch (e) { trilha = null; }
-        }
         intro.classList.add('intro--visivel');
-        medirPorta();
+        // Ao rever pelo rodapé, a página volta ao topo por trás do pêssego, para a porta pousar na foto.
+        if (comMusica) scrollTo({ top: 0, behavior: 'instant' });
+        const trilha = comMusica ? await prepararSom() : null;
+        const inicioGeo = medirInicio();
         // O som sai com um pequeno atraso (latência da placa de som); a imagem espera o mesmo tanto.
         const atraso = trilha ? 0.2 + (trilha.ctx.outputLatency || trilha.ctx.baseLatency || 0) : 0.05;
         intro.classList.add('intro--tocando');
         const inicio = document.timeline.currentTime + atraso * 1000;
         intro.getAnimations({ subtree: true }).forEach((a) => { a.startTime = inicio; });
         if (trilha) trilha.agendar(trilha.ctx.currentTime + 0.2);
-        atual = { trilha, comMusica, pulando: false, timers: [] };
-        if (reduzir.matches) {
+        atual = { trilha, comMusica, pulando: false, timers: [], quadro: 0 };
+
+        if (reduzir.matches || !inicioGeo) {
           // Sem movimento: o logo fica parado, a música toca e a tela esmaece no tempo da porta.
           atual.timers.push(setTimeout(() => {
+            revelar();
             intro.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 900, easing: 'ease', fill: 'forwards' });
           }, (atraso + T.porta) * 1000));
+          atual.timers.push(setTimeout(terminar, (atraso + T.porta + 1) * 1000));
+        } else {
+          let destino = null;
+          const comeco = inicio + T.porta * 1000;
+          const duracao = (T.pouso - T.porta) * 1000;
+          const passo = () => {
+            if (!atual) return;
+            const agora = document.timeline.currentTime;
+            if (agora >= comeco) {
+              if (!destino) {
+                destino = medirDestino(inicioGeo);
+                if (destino.pousa) raiz.classList.add('porta-pousou');
+                else revelar();
+              }
+              const t = Math.min(1, (agora - comeco) / duracao);
+              const e = suave(t);
+              const g = {};
+              ['cx', 'cy', 'r', 'chao'].forEach((p) => { g[p] = inicioGeo[p] + (destino[p] - inicioGeo[p]) * e; });
+              desenharPorta(arco(g));
+              logo.style.transform = `translate(${(g.cx - inicioGeo.cx).toFixed(2)}px, ${(g.cy - inicioGeo.cy).toFixed(2)}px) scale(${(g.r / inicioGeo.r).toFixed(4)})`;
+              if (!destino.pousa) logo.style.opacity = String(Math.max(0, 1 - Math.max(0, e - 0.6) / 0.4));
+              if (t >= 1) {
+                // Pousou: a luz, os arcos e as alianças da foto acendem, e o pêssego da abertura se desfaz.
+                revelar();
+                intro.classList.add('intro--pulando');
+                atual.timers.push(setTimeout(terminar, (T.fim - T.pouso) * 1000 + 40));
+                return;
+              }
+            }
+            atual.quadro = requestAnimationFrame(passo);
+          };
+          atual.quadro = requestAnimationFrame(passo);
+          atual.timers.push(setTimeout(terminar, (atraso + T.fim + 1.2) * 1000));
         }
-        atual.timers.push(setTimeout(revelar, (atraso + T.porta) * 1000));
-        atual.timers.push(setTimeout(terminar, (atraso + T.fim) * 1000));
         document.addEventListener('keydown', pularAbertura, true);
         addEventListener('wheel', pularAbertura, { passive: true });
         addEventListener('touchmove', pularAbertura, { passive: true });
@@ -1809,15 +2246,51 @@ Momentos com música:</output>
 
       intro.addEventListener('click', pularAbertura);
 
-      if (botaoMusica && (window.AudioContext || window.webkitAudioContext)) {
-        botaoMusica.addEventListener('click', () => tocar(true));
-      } else if (botaoMusica) {
-        botaoMusica.remove();
-      }
+      const temSom = window.AudioContext || window.webkitAudioContext;
+      botoesAbertura.forEach((botao) => {
+        if (temSom) botao.addEventListener('click', () => tocar(true));
+        else botao.closest('li')?.remove();
+      });
 
       if (raiz.classList.contains('com-abertura')) tocar(false);
 
-      // ---------- A trilha: sintetizada aqui mesmo (Web Audio), em Ré maior, I–vi–IV–I ----------
+      // ---------- O trecho real da Delliz (quando AUDIO_DELLIZ.arquivo estiver preenchido) ----------
+      async function criarTrilhaDaDelliz() {
+        const Contexto = window.AudioContext || window.webkitAudioContext;
+        const ctx = new Contexto({ latencyHint: 'interactive' });
+        ctx.resume();
+        const resposta = await fetch(AUDIO_DELLIZ.arquivo);
+        const buffer = await ctx.decodeAudioData(await resposta.arrayBuffer());
+        const mestre = ctx.createGain();
+        mestre.gain.value = 0;
+        mestre.connect(ctx.destination);
+        return {
+          ctx,
+          agendar(t0) {
+            const fonte = ctx.createBufferSource();
+            fonte.buffer = buffer;
+            fonte.connect(mestre);
+            // A voz continua um pouco depois de a página aparecer e desce devagar.
+            const fimDoSom = t0 + T.fim + 2;
+            mestre.gain.setValueAtTime(0, t0);
+            mestre.gain.linearRampToValueAtTime(1, t0 + 0.15);
+            mestre.gain.setValueAtTime(1, fimDoSom - 1.4);
+            mestre.gain.linearRampToValueAtTime(0, fimDoSom);
+            fonte.start(t0, AUDIO_DELLIZ.inicio);
+            fonte.stop(fimDoSom + 0.1);
+            setTimeout(() => ctx.close().catch(() => {}), (T.fim + 2.6) * 1000);
+          },
+          desligar(segundos) {
+            const agora = ctx.currentTime;
+            mestre.gain.cancelScheduledValues(agora);
+            mestre.gain.setValueAtTime(mestre.gain.value, agora);
+            mestre.gain.linearRampToValueAtTime(0, agora + segundos);
+            setTimeout(() => ctx.close().catch(() => {}), segundos * 1000 + 150);
+          },
+        };
+      }
+
+      // ---------- A trilha sintetizada aqui mesmo (Web Audio), em Ré maior, I–vi–IV–I ----------
       // Cordas suaves no fundo, sinos (celesta) para a luz, harpa para o L e as letras, um grave e um
       // sopro de ar para a estrela e para a porta, e uma reverberação de salão gerada na hora.
       function criarTrilha() {
@@ -1973,18 +2446,18 @@ Momentos com música:</output>
             mestre.gain.setValueAtTime(0, t0);
             mestre.gain.linearRampToValueAtTime(0.9, t0 + 0.08);
             // Harmonia: Ré(add9) nos arcos, Si menor na estrela, Sol maj7 no EXPERIENCE, Ré aberto na porta.
-            cordas(t(0), t(T.estrela), [50, 57, 64, 66]);
+            cordas(t(0), t(T.estrela), [50, 57, 64, 66], 0.05, 0.7);
             cordas(t(T.estrela), t(T.exp), [47, 54, 57, 61, 62], 0.05, 0.25);
             cordas(t(T.exp), t(T.saida), [43, 50, 59, 66], 0.05, 0.5);
-            cordas(t(T.saida), t(T.fim + 0.6), [38, 45, 50, 57, 64, 66, 69], 0.06, 0.7, 2.4);
-            // A luz correndo pelos arcos: arpejo de sinos, uma colcheia por nota.
-            [74, 78, 81, 86, 88, 90].forEach((n, i) => sino(t(T.arco1 + i * 0.3), n, 0.05 + i * 0.006));
+            cordas(t(T.saida), t(T.fim + 0.6), [38, 45, 50, 57, 64, 66, 69], 0.06, 0.5, 2.4);
+            // A luz correndo pelos arcos: arpejo de sinos.
+            [74, 78, 81, 86, 88, 90].forEach((n, i) => sino(t(T.arco1 + i * 0.16), n, 0.05 + i * 0.006));
             // A estrela pequena cintila.
             sino(t(T.estrelaP), 93, 0.09, 2.8);
             sino(t(T.estrelaP + 0.07), 98, 0.035, 1.6);
             // O L se ergue: harpa grave, e o ar sobe até a estrela.
             harpa(t(T.l), 50, 0.16, 2.2);
-            harpa(t(T.l + 0.15), 57, 0.12, 2);
+            harpa(t(T.l + 0.12), 57, 0.12, 2);
             ar(t(T.l), t(T.estrela), 400, 1800, 6000, 0.09);
             // A estrela acende: grave e um cacho de sinos.
             grave(t(T.estrela), 38, 0.4, 1.6);
@@ -1993,12 +2466,12 @@ Momentos com música:</output>
             [78, 81, 83, 86, 88].forEach((n, i) => harpa(t(T.letras + i * T.passo), n, 0.11, 1.5));
             // EXPERIENCE: um acorde de sinos.
             [83, 86, 90].forEach((n, i) => sino(t(T.exp + i * 0.06), n, 0.05, 2.4));
-            // A porta abre: sopro de ar da esquerda para a direita, grave e o Ré final.
+            // A porta abre e viaja: sopro de ar da esquerda para a direita, grave e o Ré final quando pousa.
             ar(t(T.luz - 0.1), t(T.fim), 250, 2600, 700, 0.16, -0.7, 0.7);
             grave(t(T.porta), 38, 0.3, 2.4);
-            sino(t(T.porta), 86, 0.08, 3.6);
-            sino(t(T.porta + 0.18), 93, 0.05, 3.2);
-            harpa(t(T.porta), 62, 0.12, 3);
+            sino(t(T.pouso), 86, 0.08, 3.6);
+            sino(t(T.pouso + 0.18), 93, 0.05, 3.2);
+            harpa(t(T.pouso), 62, 0.12, 3);
             // Depois do fim, o som desce devagar e o contexto fecha.
             mestre.gain.setValueAtTime(0.9, t(T.fim + 0.4));
             mestre.gain.linearRampToValueAtTime(0, t(T.fim + 2.6));

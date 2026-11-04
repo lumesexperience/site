@@ -31,6 +31,8 @@ const semComentarios = (html) => html.replace(/<!--[\s\S]*?-->/g, ' ');
 const textoVisivel = (html) => semComentarios(html)
   .replace(/<script[\s\S]*?<\/script>/g, ' ')
   .replace(/<style[\s\S]*?<\/style>/g, ' ')
+  // Tags de texto em linha (um link no meio da frase) saem sem deixar espaço; as de bloco viram espaço.
+  .replace(/<\/?(?:a|strong|em|b|i|span|time|abbr)\b[^>]*>/g, '')
   .replace(/<[^>]+>/g, ' ')
   .replace(/\s+/g, ' ');
 

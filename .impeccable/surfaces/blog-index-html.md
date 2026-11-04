@@ -13,14 +13,22 @@ Audience and job: a couple planning a wedding in BH reads an article signed by D
 
 ## Direction contract
 
-THESIS: the reading happens in light-peach daylight and the end of each article falls into the terracotta night, where the logo star lights up. It refuses the generic blog of identical grey cards and stock photos.
+THESIS: the reading happens in light-peach daylight, and the end of each article falls into the terracotta night, where the logo star lights up. It refuses the generic blog of identical grey cards and stock photos.
 
-OWN-WORLD: the Lumes Experience identity (terracotta #bb7944, peach #edc79b, double arch, the L and the star), pinned by the owner on 2026-11-03. Light peach day (--dia, --dia-2), deep terracotta #8E5226 for actions, numerals and details, brand terracotta only on the logo and ornaments, peach --luz on the night, the "lume" (brand terracotta) only in points (TOC light, cover lights, halos). Night --noite #2B1A0F. Bodoni Moda + Manrope. The brand arch frames every cover; the vector sub-brand logo in the header and footer. Body text justified with pt-BR hyphenation.
+OWN-WORLD: the Lumes Experience identity (terracotta #bb7944, peach #edc79b, the double arch, the L and the star), pinned by the owner on 2026-11-03, with the same tokens as the home page (`:root` checked by scripts/checar.mjs).
+- Light peach day; deep terracotta #8E5226 for actions and numerals.
+- Brand terracotta on the logo, the ornaments and the cover fields.
+- Peach --luz on the terracotta night (--noite #693A1C).
+- Bodoni Moda (system-serif "1") + Manrope. The brand arch frames every cover.
+- Body text justified only in the wide article column on desktop.
 
-STORY: the reader sees who writes (byline with photo), reads "Em resumo", navigates through the TOC, uses the highlight boxes (checklist, deadlines, warning, church norm), checks the sources and closes on the night with Delliz and the WhatsApp button.
+STORY: the reader sees who writes (byline with photo), reads "Em resumo", navigates through the TOC (44 px targets), uses the highlight boxes (checklist, deadlines, warning, church norm) and checks the sources. The article closes on the night with Delliz, "Consultar a data no WhatsApp" and "Leia também".
 
-FIRST VIEWPORT: article on desktop with the title, standfirst and byline on the left and the arch cover (peach line art on the terracotta night, a chip with the topic) on the right; on mobile, an arch-topped band above the breadcrumb and the title. Index: an h1 with Delliz's byline, then the featured article in a portrait arch plus two cards in banded arches.
+FIRST VIEWPORT: the same header as the home page (logo, Eventos · Perguntas · Blog on a phone, plus Delliz and the compact CTA on a computer).
+- **Index:** the header sits inside a peach band that fades into the day, with the h1, the byline and the brand symbol. Below it, the newest article is featured in a portrait arch and the other two are rows with small arches.
+- **Article on a computer:** the title, standfirst and byline on the left, and the arch cover on the right.
+- **Article on a phone:** a small arch above the breadcrumb.
 
-FORM: identity applied by the owner's decision on 2026-11-03 (approved system change); structure and texture kept from earlier rounds; an extension of the incumbent world, with no concept roll owed (new-work.md, extend an existing surface). Signature: covers drawn in scripts/blog/capas.mjs (rings, string of lights, music staff), identical on the page and in the share image; a sticky TOC with a light that turns on at the section being read.
+FORM: identity applied by the owner's decision on 2026-11-03 and extended on 2026-11-04 (terracotta night, one WhatsApp label, same navigation as the home page). Signature: covers drawn in scripts/blog/capas.mjs (rings, string of lights, music staff), identical on the page and in the share image; a sticky TOC with a light at the section being read.
 
-FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md and every shipping raster carrying its provenance.

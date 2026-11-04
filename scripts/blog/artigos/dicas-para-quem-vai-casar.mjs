@@ -61,7 +61,7 @@ export const dicas = {
 <ul>
   <li><strong>Buffet:</strong> peçam a degustação do cardápio que vão contratar.</li>
   <li><strong>Foto e vídeo:</strong> peçam um casamento completo, não só os melhores momentos.</li>
-  <li><strong>Música:</strong> ouçam gravações ao vivo, sem edição. Explico o que observar em <a href="../como-escolher-musicos-para-casamento/">Como escolher os músicos para o momento mais especial da vida de vocês</a>.</li>
+  <li><strong>Música:</strong> ouçam gravações ao vivo, sem edição. Explico o que observar em <a href="../como-escolher-musicos-para-casamento/">Como escolher os músicos do casamento</a>.</li>
 </ul>
 
 <h2>8. Coloquem tudo por escrito</h2>
