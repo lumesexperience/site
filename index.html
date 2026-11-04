@@ -35,6 +35,8 @@
     try {
       const busca = new URLSearchParams(location.search);
       if (busca.has('previa')) document.documentElement.classList.add('previa');
+      // Prévia de fontes para o dono escolher (04/11/2026): ?fonte=bodoni-leve|cormorant|gilda|marcellus.
+      if (/^(atual|bodoni-leve|cormorant|gilda|marcellus)$/.test(busca.get('fonte') || '')) document.documentElement.dataset.fonte = busca.get('fonte');
       const forcar = busca.has('abertura');
       let vista = 0;
       try { vista = Number(localStorage.getItem('abertura-vista')) || 0; } catch (e) {}
@@ -270,7 +272,7 @@
             "name": "Como pedir uma proposta?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Pelo WhatsApp do Lumes Experience, no (31) 99615-4698. Mandem o tipo de evento, a data, a cidade e o local, o tipo de cerimônia e os momentos em que querem música. O formulário no fim desta página monta essa mensagem para vocês."
+              "text": "Pelo WhatsApp do Lumes Experience, no (31) 99615-4698. Mandem o tipo de evento, a data, a cidade e o local, o tipo de cerimônia e os momentos em que querem música. O botão do WhatsApp nesta página já abre a mensagem pronta para vocês completarem."
             }
           },
           {
@@ -375,6 +377,11 @@
       font-display: swap;
     }
 
+    /* Prévia de fontes dos títulos (?fonte=...). Sem o parâmetro, nenhuma destas é baixada. */
+    @font-face { font-family: "Cormorant Garamond"; src: url("assets/fonts/cormorant-garamond.woff2") format("woff2"); font-weight: 300 700; font-display: swap; }
+    @font-face { font-family: "Gilda Display"; src: url("assets/fonts/gilda-display.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+    @font-face { font-family: "Marcellus"; src: url("assets/fonts/marcellus.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+
     /* O "1" do Bodoni Moda é idêntico ao "l" ("15 anos" lia "l5 anos"), e a fonte não tem alternativa.
        Só esse algarismo vem de uma serifa do sistema, que tem a bandeira no alto; o resto continua Bodoni. */
     @font-face { font-family: "Bodoni um"; src: local("Times New Roman"), local("TimesNewRomanPSMT"), local("Liberation Serif"); unicode-range: U+0031; size-adjust: 112%; }
@@ -451,6 +458,34 @@
 
     *, *::before, *::after { box-sizing: border-box; }
 
+    /* ---------- Prévia de fontes (?fonte=...) ---------- */
+    [data-fonte="bodoni-leve"] { --peso-titulo: 400; }
+    [data-fonte="cormorant"] { --serif: "Cormorant Garamond", "Bodoni reserva Georgia", serif; --peso-titulo: 600; }
+    [data-fonte="gilda"] { --serif: "Gilda Display", "Bodoni reserva Georgia", serif; --peso-titulo: 400; }
+    [data-fonte="marcellus"] { --serif: "Marcellus", "Bodoni reserva Georgia", serif; --peso-titulo: 400; }
+    [data-fonte] :is(h1, h2, h3, .compromisso__nome, .depoimento blockquote, .pergunta summary, .amostra figcaption, .assinatura-voz, .delliz__texto p:first-child, .historia__fecho) { font-synthesis: none; }
+    /* A Cormorant desenha pequeno: sobe um pouco para ficar do mesmo tamanho visual. */
+    [data-fonte="cormorant"] :is(h1, h2, h3) { font-size-adjust: 0.5; }
+    .escolha-fonte { display: none; }
+    [data-fonte] .escolha-fonte {
+      position: fixed;
+      z-index: 40;
+      top: 0.5rem;
+      left: 50%;
+      translate: -50% 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.25rem;
+      max-width: calc(100vw - 1rem);
+      padding: 0.35rem;
+      border-radius: 1.25rem;
+      background: var(--tinta-funda);
+      font: 600 0.8125rem/1 var(--sans);
+    }
+    .escolha-fonte a { display: inline-flex; align-items: center; min-height: 2.25rem; padding: 0 0.75rem; border-radius: 999px; color: var(--noite-texto); text-decoration: none; }
+    .escolha-fonte a[aria-current] { background: var(--luz); color: var(--tinta-funda); }
+
     /* O que o navegador desenha sozinho também segue a marca: barra de rolagem, toque, seleção, cursor. */
     html {
       -webkit-text-size-adjust: 100%;
@@ -497,7 +532,7 @@
     h1, h2, h3 {
       margin: 0;
       font-family: var(--serif);
-      font-weight: 500;
+      font-weight: var(--peso-titulo, 500);
       line-height: 1.08;
       text-wrap: balance;
       overflow-wrap: break-word;
@@ -927,6 +962,26 @@
     .ouvir__texto strong { font-weight: 600; }
     .ouvir__texto span { color: var(--tinta-suave); font-variant-numeric: tabular-nums; }
 
+    /* ---------- A história de vocês vira repertório ----------
+       As alianças em traço (as mesmas da foto do topo), o título e três perguntas da conversa. No computador, as
+       perguntas vêm em ziguezague, como uma conversa, e não em três colunas. */
+    .historia { max-width: 52rem; margin-inline: auto; }
+    .historia > h2, .historia__intro, .historia__fecho { text-align: center; }
+    .historia__aliancas { display: block; width: 6rem; height: auto; margin: 0 auto 1.25rem; overflow: visible; color: var(--terracota-marca); }
+    .historia__aliancas circle { fill: none; stroke: currentColor; stroke-width: 2.2; }
+    .historia__aliancas .brilho { fill: currentColor; }
+    .historia__intro { max-width: 30rem; margin: 1rem auto 0; color: var(--tinta-suave); font-size: clamp(1.125rem, 1rem + 0.45vw, 1.3125rem); }
+    .historia__perguntas { margin: 2.5rem 0 0; padding: 0; list-style: none; }
+    .historia__perguntas li { max-width: 28rem; padding-block: 1.25rem; border-top: 1px solid var(--dia-linha); }
+    .historia__perguntas li:last-child { border-bottom: 1px solid var(--dia-linha); }
+    .historia__perguntas h3 { font-size: clamp(1.5rem, 1.25rem + 1vw, 2.125rem); line-height: 1.15; --opsz: 24; }
+    .historia__perguntas p { margin: 0.4rem 0 0; color: var(--tinta-suave); }
+    .historia__fecho { max-width: 30rem; margin: 2rem auto 0; font-family: var(--serif); font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem); line-height: 1.35; font-variation-settings: "opsz" 14; }
+    @media (min-width: 56rem) {
+      .historia__perguntas li:nth-child(2) { margin-left: auto; text-align: right; }
+      .historia__perguntas li:last-child { border-bottom: 0; }
+    }
+
     /* ---------- Eventos: os momentos que a gente canta ----------
        Três linhas de programa, sem cartões nem ícones: o nome grande em Bodoni com a estrela da marca e,
        ao lado, o que acontece em cada festa. */
@@ -1242,72 +1297,13 @@
     .porta-acesa h2 { text-align: center; }
     .porta-acesa__texto { max-width: 28rem; margin: 1rem auto 2rem; color: var(--tinta-suave); text-align: center; }
 
-    .consulta__campos { display: grid; gap: 0 1.25rem; }
-    @media (min-width: 40rem) {
-      .consulta__campos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .consulta__campos .campo--largo { grid-column: 1 / -1; }
-    }
-
-    .campo { display: grid; gap: 0.4rem; margin: 0 0 1.25rem; padding: 0; border: 0; min-width: 0; }
-    .campo > label, .campo legend { padding: 0; font-weight: 600; font-size: 0.9375rem; }
-    .campo legend { margin-bottom: 0.4rem; }
-
-    .campo input:not([type="checkbox"]), .campo select {
-      width: 100%;
-      min-height: 3rem;
-      padding: 0.65rem 0.85rem;
-      border: 1px solid var(--terracota-funda);
-      border-radius: 4px;
-      background: var(--dia-2);
-      color: var(--tinta);
-      font: inherit;
-      caret-color: var(--terracota);
-    }
-    .campo input::placeholder { color: var(--tinta-suave); opacity: 1; }
-    .campo__aviso { margin: 0; color: var(--terracota-funda); font-size: 0.875rem; font-weight: 600; }
-    .campo__aviso:empty { display: none; }
-
-    .opcoes { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-    .opcao {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      min-height: 2.75rem;
-      padding: 0.4rem 1rem 0.4rem 0.75rem;
-      border: 1px solid color-mix(in srgb, var(--terracota-funda) 55%, transparent);
-      border-radius: 999px;
-      background: color-mix(in srgb, var(--dia-2) 45%, transparent);
-      transition: background-color 0.2s, border-color 0.2s;
-    }
-    /* A caixa de marcar desenhada: quadrado terracota com cantos suaves e o visto em creme. */
-    .opcao input {
-      flex: none;
-      width: 1.25rem;
-      height: 1.25rem;
-      margin: 0;
-      border: 1.5px solid var(--terracota-funda);
-      border-radius: 4px;
-      background: var(--dia-2) center / 0.85rem no-repeat;
-      -webkit-appearance: none;
-      appearance: none;
-      cursor: pointer;
-      transition: background-color 0.15s, border-color 0.15s;
-    }
-    .opcao input:checked {
-      border-color: var(--terracota);
-      background-color: var(--terracota);
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 10'%3E%3Cpath d='M1 5.2 4.3 8.5 11 1.5' fill='none' stroke='%23FFF8F0' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-    }
-    .opcao input:focus-visible { outline: 3px solid var(--foco); outline-offset: 2px; }
-    .opcao:has(input:checked) { border-color: var(--terracota); background: var(--dia-2); }
-
     /* A prévia mostra o texto que vai para o WhatsApp, antes de sair da página. */
     .previa { margin: 0.25rem 0 1.25rem; }
     .previa__rotulo { margin: 0 0 0.5rem; font-weight: 600; font-size: 0.9375rem; }
     .previa__balao {
       display: block;
       max-width: 26rem;
-      margin-left: auto;
+      margin: 0 0 0 auto;
       padding: 0.85rem 1rem;
       border-radius: 1rem 1rem 0.25rem 1rem;
       background: var(--dia-2);
@@ -1319,6 +1315,8 @@
     }
 
     .porta-acesa .botao { width: 100%; }
+    .porta-acesa .previa { max-width: 26rem; margin-inline: auto; }
+    .consulta__nota a { color: var(--terracota-funda); font-weight: 600; }
     .consulta__nota { margin: 0.9rem 0 0; color: var(--tinta-suave); font-size: 0.875rem; text-align: center; }
 
     /* ---------- Rodapé ---------- */
@@ -1499,6 +1497,10 @@
 </head>
 <body>
   <a class="pular" href="#principal">Pular para o conteúdo</a>
+  <!-- Prévia de fontes para o dono (só aparece com ?fonte=...). Sai depois da escolha. -->
+  <nav class="escolha-fonte" aria-label="Prévia de fontes">
+    <a href="?fonte=atual#principal">Atual</a><a href="?fonte=bodoni-leve#principal">Bodoni leve</a><a href="?fonte=cormorant#principal">Cormorant</a><a href="?fonte=gilda#principal">Gilda</a><a href="?fonte=marcellus#principal">Marcellus</a>
+  </nav>
 
   <svg class="icones" width="0" height="0" aria-hidden="true">
     <symbol id="icone-whatsapp" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
@@ -1628,6 +1630,24 @@
             <p class="ouvir__texto" id="ouvir-texto"><strong>Ouvir a Delliz</strong><span>Um trecho, sem sair da página</span></p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- A história do casal vira repertório (dono, 04/11/2026): sem fato inventado, só o que a gente pergunta. -->
+    <section class="secao secao--seguida conteudo" id="historia" aria-labelledby="titulo-historia">
+      <div class="historia">
+        <svg class="historia__aliancas" viewBox="0 0 120 84" aria-hidden="true">
+          <circle cx="42" cy="48" r="27"/><circle cx="70" cy="48" r="27"/>
+          <path class="brilho" d="M100 4q1.6 7.4 9 9q-7.4 1.6-9 9q-1.6-7.4-9-9q7.4-1.6 9-9Z"/>
+        </svg>
+        <h2 id="titulo-historia">A história de vocês vira repertório</h2>
+        <p class="historia__intro">Antes de escolher qualquer música, a gente quer ouvir a história de vocês.</p>
+        <ol class="historia__perguntas">
+          <li><h3>Como vocês se conheceram?</h3><p>Às vezes é dali que sai a música da entrada.</p></li>
+          <li><h3>Que música é de vocês dois?</h3><p>Ela pode tocar nas alianças, na saída ou na primeira dança.</p></li>
+          <li><h3>Quem vocês querem homenagear?</h3><p>A canção dos pais, a dos avós, a de quem vai fazer falta naquele dia.</p></li>
+        </ol>
+        <p class="historia__fecho">Nas bodas, essa história já tem anos de música. Nos 15 anos, quem conta é a debutante.</p>
       </div>
     </section>
 
@@ -1762,7 +1782,7 @@
             <div class="perguntas__grupo" id="perguntas-valor">
               <h3>Valor e reserva</h3>
               <details class="pergunta"><summary>Quanto custa a música ao vivo para casamento em BH?</summary><div class="pergunta__resposta"><p>O valor do Lumes Experience é sob consulta, porque depende da data, do local, dos momentos com música (cerimônia, coquetel, jantar e pista), da duração e da formação. Mandem esses dados pelo <a data-cta="perguntas" target="_blank" rel="noopener" href="https://wa.me/5531996154698?text=Ol%C3%A1%2C%20Lumes%20Experience!%20Vi%20o%20site%20e%20quero%20consultar%20uma%20data.%0AEvento%3A%20%0AData%3A%20%0ACidade%20e%20local%3A%20%0ACerim%C3%B4nia%3A%20%0AMomentos%20com%20m%C3%BAsica%3A%20">WhatsApp</a> e enviamos uma proposta, sem compromisso.</p></div></details>
-              <details class="pergunta"><summary>Como pedir uma proposta?</summary><div class="pergunta__resposta"><p>Pelo WhatsApp do Lumes Experience, no <a data-cta="perguntas" target="_blank" rel="noopener" href="https://wa.me/5531996154698?text=Ol%C3%A1%2C%20Lumes%20Experience!%20Vi%20o%20site%20e%20quero%20consultar%20uma%20data.%0AEvento%3A%20%0AData%3A%20%0ACidade%20e%20local%3A%20%0ACerim%C3%B4nia%3A%20%0AMomentos%20com%20m%C3%BAsica%3A%20">(31) 99615-4698</a>. Mandem o tipo de evento, a data, a cidade e o local, o tipo de cerimônia e os momentos em que querem música. O formulário no fim desta página monta essa mensagem para vocês.</p></div></details>
+              <details class="pergunta"><summary>Como pedir uma proposta?</summary><div class="pergunta__resposta"><p>Pelo WhatsApp do Lumes Experience, no <a data-cta="perguntas" target="_blank" rel="noopener" href="https://wa.me/5531996154698?text=Ol%C3%A1%2C%20Lumes%20Experience!%20Vi%20o%20site%20e%20quero%20consultar%20uma%20data.%0AEvento%3A%20%0AData%3A%20%0ACidade%20e%20local%3A%20%0ACerim%C3%B4nia%3A%20%0AMomentos%20com%20m%C3%BAsica%3A%20">(31) 99615-4698</a>. Mandem o tipo de evento, a data, a cidade e o local, o tipo de cerimônia e os momentos em que querem música. O botão do WhatsApp nesta página já abre a mensagem pronta para vocês completarem.</p></div></details>
               <details class="pergunta"><summary>Com quanta antecedência devemos reservar?</summary><div class="pergunta__resposta"><p>Assim que tiverem a data e o local. A data só fica garantida depois da reserva, então quanto antes vocês consultarem, maior a chance de ela estar livre.</p></div></details>
             </div>
             <div class="perguntas__grupo" id="perguntas-cerimonia">
@@ -1788,62 +1808,20 @@
         <div class="porta-acesa">
           <svg class="porta-acesa__estrela" viewBox="0 0 460 460" aria-hidden="true"><use href="#marca-estrela"/></svg>
           <h2 id="titulo-consulta">Consultem a data</h2>
-          <p class="porta-acesa__texto">Contem o que já sabem da festa. A mensagem abre pronta no WhatsApp do Lumes Experience, e vocês revisam antes de enviar.</p>
-          <form class="consulta__form" id="consulta-form" action="#" novalidate>
-            <div class="consulta__campos">
-              <div class="campo">
-                <label for="campo-evento">Evento</label>
-                <select id="campo-evento" name="evento">
-                  <option>Casamento</option>
-                  <option>Bodas ou renovação de votos</option>
-                  <option>Festa de 15 anos</option>
-                </select>
-              </div>
-              <div class="campo">
-                <label for="campo-data">Data</label>
-                <input id="campo-data" name="data" type="date" aria-describedby="aviso-data">
-                <p class="campo__aviso" id="aviso-data" aria-live="polite"></p>
-              </div>
-              <div class="campo">
-                <label for="campo-local">Cidade e local</label>
-                <input id="campo-local" name="local" type="text" autocomplete="off" maxlength="120" placeholder="Ex.: Nova Lima, igreja e salão">
-              </div>
-              <div class="campo">
-                <label for="campo-cerimonia">Tipo de cerimônia</label>
-                <select id="campo-cerimonia" name="cerimonia">
-                  <option>Ainda não sabemos</option>
-                  <option>Católica</option>
-                  <option>Evangélica</option>
-                  <option>Ecumênica</option>
-                  <option>Sem cerimônia religiosa</option>
-                  <option>Outra</option>
-                </select>
-              </div>
-              <fieldset class="campo campo--largo">
-                <legend>Momentos com música</legend>
-                <div class="opcoes">
-                  <label class="opcao"><input type="checkbox" name="momentos" value="Cerimônia">Cerimônia</label>
-                  <label class="opcao"><input type="checkbox" name="momentos" value="Coquetel">Coquetel</label>
-                  <label class="opcao"><input type="checkbox" name="momentos" value="Jantar">Jantar</label>
-                  <label class="opcao"><input type="checkbox" name="momentos" value="Pista">Pista</label>
-                </div>
-              </fieldset>
-            </div>
-            <div class="previa">
-              <p class="previa__rotulo" id="previa-rotulo">A mensagem que vai abrir no WhatsApp</p>
-              <output class="previa__balao" id="previa" for="campo-evento campo-data campo-local campo-cerimonia" aria-labelledby="previa-rotulo" aria-live="off">Olá, Lumes Experience! Vi o site e quero consultar uma data.
+          <p class="porta-acesa__texto">É só chamar no WhatsApp. A mensagem já abre pronta: completem com o que já sabem da festa e enviem.</p>
+          <div class="previa">
+            <p class="previa__rotulo" id="previa-rotulo">A mensagem que abre no WhatsApp</p>
+            <p class="previa__balao" aria-labelledby="previa-rotulo">Olá, Lumes Experience! Vi o site e quero consultar uma data.
 Evento:
 Data:
 Cidade e local:
 Cerimônia:
-Momentos com música:</output>
-            </div>
-            <a class="botao" id="consulta-enviar" data-cta="formulario" target="_blank" rel="noopener" href="https://wa.me/5531996154698?text=Ol%C3%A1%2C%20Lumes%20Experience!%20Vi%20o%20site%20e%20quero%20consultar%20uma%20data.%0AEvento%3A%20%0AData%3A%20%0ACidade%20e%20local%3A%20%0ACerim%C3%B4nia%3A%20%0AMomentos%20com%20m%C3%BAsica%3A%20">
-              <svg aria-hidden="true"><use href="#icone-whatsapp"/></svg>Consultar a data no WhatsApp
-            </a>
-            <p class="consulta__nota">Todos os campos são opcionais. Nada é enviado antes de vocês tocarem em enviar no WhatsApp.</p>
-            <noscript><p class="consulta__nota">Com o JavaScript desligado, o botão abre a mensagem em branco: completem os dados no próprio WhatsApp.</p></noscript>
-          </form>
+Momentos com música:</p>
+          </div>
+          <a class="botao" data-cta="contato" target="_blank" rel="noopener" href="https://wa.me/5531996154698?text=Ol%C3%A1%2C%20Lumes%20Experience!%20Vi%20o%20site%20e%20quero%20consultar%20uma%20data.%0AEvento%3A%20%0AData%3A%20%0ACidade%20e%20local%3A%20%0ACerim%C3%B4nia%3A%20%0AMomentos%20com%20m%C3%BAsica%3A%20">
+            <svg aria-hidden="true"><use href="#icone-whatsapp"/></svg>Consultar a data no WhatsApp
+          </a>
+          <p class="consulta__nota">Ou chamem no <a data-cta="contato-numero" target="_blank" rel="noopener" href="https://wa.me/5531996154698?text=Ol%C3%A1%2C%20Lumes%20Experience!%20Vi%20o%20site%20e%20quero%20consultar%20uma%20data.%0AEvento%3A%20%0AData%3A%20%0ACidade%20e%20local%3A%20%0ACerim%C3%B4nia%3A%20%0AMomentos%20com%20m%C3%BAsica%3A%20">(31) 99615-4698</a>. Sem compromisso.</p>
         </div>
       </section>
     </div>
@@ -1877,66 +1855,15 @@ Momentos com música:</output>
 
   <script>
     (() => {
-      const WHATSAPP = '5531996154698';
       // Vazio = sem medição. Com um ID (ex.: 'G-XXXXXXXXXX'), registra o evento whatsapp_click por seção.
       // O mesmo ID vai em scripts/blog/gerar.mjs (GA4_ID), para medir também o blog.
       const GA4_ID = '';
 
       const reduzirMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-      const linkWhatsapp = (texto) => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(texto)}`;
-
-      const formatarData = (valorIso) => {
-        if (!valorIso) return '';
-        const [ano, mes, dia] = valorIso.split('-');
-        return `${dia}/${mes}/${ano}`;
-      };
-
-      const dataIsoDeHoje = () => {
-        const hoje = new Date();
-        const mes = String(hoje.getMonth() + 1).padStart(2, '0');
-        const dia = String(hoje.getDate()).padStart(2, '0');
-        return `${hoje.getFullYear()}-${mes}-${dia}`;
-      };
-
-      const formulario = document.getElementById('consulta-form');
-      const botaoConsulta = document.getElementById('consulta-enviar');
-      const previa = document.getElementById('previa');
-      const avisoData = document.getElementById('aviso-data');
-      const hoje = dataIsoDeHoje();
-
-      formulario.elements.data.min = hoje;
-
-      const mensagemDoFormulario = () => {
-        const dados = new FormData(formulario);
-        return [
-          'Olá, Lumes Experience! Vi o site e quero consultar uma data.',
-          `Evento: ${dados.get('evento')}`,
-          `Data: ${formatarData(dados.get('data'))}`,
-          `Cidade e local: ${dados.get('local').trim()}`,
-          `Cerimônia: ${dados.get('cerimonia')}`,
-          `Momentos com música: ${dados.getAll('momentos').join(', ')}`,
-        ].join('\n');
-      };
-
-      const atualizarConsulta = () => {
-        // A data passada não impede o envio (pode ser engano de ano), mas avisa ao lado do campo.
-        const data = formulario.elements.data.value;
-        avisoData.textContent = data && data < hoje ? 'Essa data já passou. Confiram o dia e o ano.' : '';
-        const mensagem = mensagemDoFormulario();
-        botaoConsulta.href = linkWhatsapp(mensagem);
-        previa.value = mensagem;
-      };
-
-      formulario.addEventListener('input', atualizarConsulta);
-      // Ao voltar para a página, o navegador restaura os campos sem disparar "input".
-      window.addEventListener('pageshow', atualizarConsulta);
-      botaoConsulta.addEventListener('click', atualizarConsulta);
-      // O botão é um link (funciona sem JS); Enter num campo abre o mesmo link.
-      formulario.addEventListener('submit', (evento) => {
-        evento.preventDefault();
-        botaoConsulta.click();
-      });
+      // Prévia de fontes: marca a opção atual na barrinha.
+      const fonte = document.documentElement.dataset.fonte;
+      if (fonte) document.querySelectorAll('.escolha-fonte a').forEach((a) => { if (a.href.includes(`fonte=${fonte}#`)) a.setAttribute('aria-current', 'true'); });
 
       // Barra fixa no celular: aparece sempre que nenhum outro botão do WhatsApp está inteiro na tela, inclusive
       // na primeira dobra de um celular baixo (no Safari com as barras à mostra, o botão do topo pode ficar abaixo

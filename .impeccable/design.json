@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-04T12:47:44.311Z",
+  "generatedAt": "2026-11-04T13:15:43.982Z",
   "title": "Design System: Lumes Experience",
   "extensions": {
     "colorMeta": {
@@ -735,7 +735,7 @@
   ],
   "narrative": {
     "northStar": "A porta acesa",
-    "overview": "A identidade Lumes Experience (entregue pelo dono em 03/11/2026, pasta \"Lumes - Identidade Visual\") tem duas cores, terracota `#bb7944` e pêssego `#edc79b`, e um símbolo: dois arcos de igreja de mesmo raio, o de dentro mais baixo, e dentro deles um L de alto contraste com uma estrela pequena em cima e uma estrela de quatro pontas acesa ao lado, com oito raios claros atrás. O nome vem em caixa alta geométrica, LUMES, com EXPERIENCE embaixo. As peças da identidade são campos chapados: traço claro sobre terracota, traço terracota sobre pêssego. Não há preto nem cinza.\n\nO site leva esse símbolo para a passagem do casamento, e a forma que se repete é **a porta**: o arco de dentro do logo.\n- Na primeira visita, o logo se desenha no pêssego e o arco de dentro vira uma porta acesa que viaja até pousar nos arcos em volta da foto da Delliz.\n- No meio do dia, a mesma porta aparece chapada em terracota, com o motivo da música escrito grande em branco.\n- No fim da noite, ela aparece em pêssego, acesa, com o formulário dentro.\n\nA cerimônia acontece num pêssego claro (`--dia`), com tinta marrom e ações em terracota. A festa acontece numa noite terracota (`--noite`, o terracota da marca no escuro), com texto creme e botões acesos em pêssego (`--luz`). Entre os dois, a faixa `--anoitecer` desce do pêssego ao terracota da marca e à noite, e a estrela do logo acende no meio dela.\n\nO material é luz, sem ruído: halos radiais suaves de pêssego (`--textura-dia`, `--textura-noite`), nunca grão. A densidade é de revista: colunas de leitura de 42rem, listas com fio de 1px, nomes grandes em Bodoni. O tom é de convite. O sistema recusa a página de banda com foto em tela cheia, a grade de cartões iguais com ícone, e foto genérica no lugar de material que ainda não chegou.",
+    "overview": "A identidade Lumes Experience (entregue pelo dono em 03/11/2026, pasta \"Lumes - Identidade Visual\") tem duas cores, terracota `#bb7944` e pêssego `#edc79b`, e um símbolo: dois arcos de igreja de mesmo raio, o de dentro mais baixo, e dentro deles um L de alto contraste com uma estrela pequena em cima e uma estrela de quatro pontas acesa ao lado, com oito raios claros atrás. O nome vem em caixa alta geométrica, LUMES, com EXPERIENCE embaixo. As peças da identidade são campos chapados: traço claro sobre terracota, traço terracota sobre pêssego. Não há preto nem cinza.\n\nO site leva esse símbolo para a passagem do casamento, e a forma que se repete é **a porta**: o arco de dentro do logo.\n- Na primeira visita, o logo se desenha no pêssego e o arco de dentro vira uma porta acesa que viaja até pousar nos arcos em volta da foto da Delliz.\n- No meio do dia, a mesma porta aparece chapada em terracota, com o motivo da música escrito grande em branco.\n- No fim da noite, ela aparece em pêssego, acesa, com o contato do WhatsApp dentro.\n\nA cerimônia acontece num pêssego claro (`--dia`), com tinta marrom e ações em terracota. A festa acontece numa noite terracota (`--noite`, o terracota da marca no escuro), com texto creme e botões acesos em pêssego (`--luz`). Entre os dois, a faixa `--anoitecer` desce do pêssego ao terracota da marca e à noite, e a estrela do logo acende no meio dela.\n\nO material é luz, sem ruído: halos radiais suaves de pêssego (`--textura-dia`, `--textura-noite`), nunca grão. A densidade é de revista: colunas de leitura de 42rem, listas com fio de 1px, nomes grandes em Bodoni. O tom é de convite. O sistema recusa a página de banda com foto em tela cheia, a grade de cartões iguais com ícone, e foto genérica no lugar de material que ainda não chegou.",
     "keyCharacteristics": [
       "Dois mundos de fundo, dia (pêssego claro) e noite (terracota fechado), mais dois campos chapados da marca: a porta terracota e a porta acesa em pêssego. O pêssego pleno (`--pessego`) também é o fundo da abertura e da primeira dobra.",
       "Terracota para agir no dia e sobre o pêssego, pêssego para agir na noite.",
@@ -791,7 +791,7 @@
       },
       {
         "name": "A Regra da Luz no Lugar da Sombra",
-        "body": "Caixas, cartões, portas, formulário e campos não têm sombra; separam-se por fio de 1px e por tom. Só o arco das fotos e a barra fixa projetam sombra.",
+        "body": "Caixas, cartões, portas e campos não têm sombra; separam-se por fio de 1px e por tom. Só o arco das fotos e a barra fixa projetam sombra.",
         "section": "elevation"
       },
       {
@@ -820,7 +820,7 @@
       "**Don't** fazer grade de cartões iguais com ícone, título e texto, nem pôr sobretítulo acima de título.",
       "**Don't** pôr foto genérica ou de estúdio no lugar das amostras de casamento.",
       "**Don't** usar a coroa ou os outros ícones de destaque do Instagram no site.",
-      "**Don't** dar sombra a caixas, cartões, portas, campos ou formulário.",
+      "**Don't** dar sombra a caixas, cartões, portas ou campos.",
       "**Don't** usar `vector-effect: non-scaling-stroke` em traço com tracejado animado (`stroke-dasharray`)."
     ]
   }

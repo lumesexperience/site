@@ -75,7 +75,7 @@ Ele falha se sobrar algum marcador, se um arquivo citado em `assets/` não exist
 
 ### Opcional
 
-- **Medição (GA4)**: preencha o mesmo ID em dois lugares, `const GA4_ID = 'G-...'` no fim do `index.html` e em `scripts/blog/gerar.mjs` (depois, gere o blog de novo). Cada clique no WhatsApp vira o evento `whatsapp_click` com `cta_location`: `topo`, `abertura`, `passos`, `perguntas`, `formulario`, `barra-celular` e `rodape` na página inicial, e `topo`, `blog` e `rodape` no blog. Marque `whatsapp_click` como evento principal (conversão) no GA4. Vazio, nenhum script de terceiros é carregado.
+- **Medição (GA4)**: preencha o mesmo ID em dois lugares, `const GA4_ID = 'G-...'` no fim do `index.html` e em `scripts/blog/gerar.mjs` (depois, gere o blog de novo). Cada clique no WhatsApp vira o evento `whatsapp_click` com `cta_location`: `topo`, `abertura`, `passos`, `perguntas`, `contato`, `contato-numero`, `barra-celular` e `rodape` na página inicial, e `topo`, `blog` e `rodape` no blog. Marque `whatsapp_click` como evento principal (conversão) no GA4. Vazio, nenhum script de terceiros é carregado.
 - **Preço "a partir de"**: a pesquisa mostra que preço visível aumenta contatos (detalhes em `docs/PESQUISA.md`). Quando houver um valor real, atualize o fato "Valor", a primeira pergunta do FAQ, o JSON-LD (`priceRange` no nó `#lumes`) e o `llms.txt`.
 
 ## Publicar
@@ -169,10 +169,10 @@ O [impeccable](https://impeccable.style/) está instalado em `.claude/skills/imp
 - **Primeira rodada.** Crítica de design, detector e auditoria técnica levaram à Delliz no topo, às amostras honestas, à ficha de fatos perto do FAQ, à prévia da mensagem no formulário e aos ajustes de acessibilidade. O relatório fica em `.impeccable/critique/`.
 - **Segunda rodada.** Paleta nude, verde e dourado, com textura "Luz" (halos radiais, sem grão).
 - **Quarta rodada (04/11/2026).** Acabamento com marketing, coerência e "sem cara de IA":
-  - **Cor:** a noite virou terracota; o terracota da marca virou campo na porta da música; o formulário ficou numa porta pêssego.
+  - **Cor:** a noite virou terracota; o terracota da marca virou campo na porta da música; o contato do WhatsApp ficou numa porta pêssego.
   - **Abertura:** cerca de 4,6 s, uma vez a cada 30 dias, com a porta pousando na foto.
   - **Seções:** eventos em linhas de programa, sem a coroa do Instagram; passos num caminho de estrelas; o FAQ com coluna fixa; a ficha de fatos saiu.
-  - **Texto:** o WhatsApp com um rótulo só; a Delliz em primeira pessoa; o campo Evento no formulário.
+  - **Texto:** o WhatsApp com um rótulo só; a Delliz em primeira pessoa; a seção "A história de vocês vira repertório"; o formulário saiu (o contato é direto pelo WhatsApp, por decisão do dono).
   - **Acabamento:** retrato quente, o "1" do Bodoni corrigido e o navegador vestido nas cores da marca.
   - O relatório fica em `.impeccable/critique/`.
 - **Terceira rodada (03/11/2026).** A identidade Lumes Experience substituiu a paleta: pêssego claro no dia, terracota nos botões, noite em marrom-terracota, pêssego como luz da noite, os dois arcos em volta da Delliz, a estrela do logo no anoitecer, o logo vetorial no topo e no rodapé e a abertura animada. A textura continua "Luz", agora em pêssego e terracota.

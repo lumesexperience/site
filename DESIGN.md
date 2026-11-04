@@ -233,7 +233,7 @@ A identidade Lumes Experience (entregue pelo dono em 03/11/2026, pasta "Lumes - 
 O site leva esse símbolo para a passagem do casamento, e a forma que se repete é **a porta**: o arco de dentro do logo.
 - Na primeira visita, o logo se desenha no pêssego e o arco de dentro vira uma porta acesa que viaja até pousar nos arcos em volta da foto da Delliz.
 - No meio do dia, a mesma porta aparece chapada em terracota, com o motivo da música escrito grande em branco.
-- No fim da noite, ela aparece em pêssego, acesa, com o formulário dentro.
+- No fim da noite, ela aparece em pêssego, acesa, com o contato do WhatsApp dentro.
 
 A cerimônia acontece num pêssego claro (`--dia`), com tinta marrom e ações em terracota. A festa acontece numa noite terracota (`--noite`, o terracota da marca no escuro), com texto creme e botões acesos em pêssego (`--luz`). Entre os dois, a faixa `--anoitecer` desce do pêssego ao terracota da marca e à noite, e a estrela do logo acende no meio dela.
 
@@ -259,7 +259,7 @@ O terracota e o pêssego da identidade, abertos em tons de uso: um pêssego clar
 
 ### Secondary
 - **Terracota da Marca** (`--terracota-marca`, #BB7944): o logo do topo, os traços da abertura, os dois arcos e as alianças em volta da Delliz, as estrelas sobre o dia, os fios decorativos e **o campo da porta terracota**. Nunca texto pequeno nem fundo de botão: com branco dá 3,5:1, que só passa para texto grande (24 px ou mais). Por isso, dentro da porta, o título é **Branco** (`--branco`, só ali) e o texto corrido é **Tinta Funda** (`--tinta-funda`, 4,7:1).
-- **Pêssego** (`--pessego`, #EDC79B): o fundo da abertura, da primeira dobra (o topo e a foto), da faixa do índice do blog e da porta acesa do formulário.
+- **Pêssego** (`--pessego`, #EDC79B): o fundo da abertura, da primeira dobra (o topo e a foto), da faixa do índice do blog e da porta acesa do contato.
 
 ### Tertiary
 - **Lume** (`--lume`): o terracota da marca em pontos de luz: o centro dos halos, a luz que acende no trilho do sumário do blog, a mistura no fundo da caixa de aviso.
@@ -333,15 +333,16 @@ Uma coluna centralizada de até 72rem (`--largura`) com margem fluida (`--margem
 O ritmo varia de propósito, para a página não ser uma pilha de seções iguais:
 1. o topo dividido (texto e a Delliz no arco);
 2. "A voz", com o retrato à esquerda e a fala da Delliz ao lado;
-3. os eventos em linhas de programa, com nomes grandes;
-4. a porta terracota, centrada e chapada;
-5. os compromissos numa lista ao lado do título (5:7);
-6. os depoimentos em escada, quando houver;
-7. o anoitecer;
-8. as amostras em arcos;
-9. os passos num caminho de estrelas;
-10. o FAQ com a coluna da esquerda fixa;
-11. a porta acesa, centrada.
+3. a história do casal, centrada, com as alianças e as perguntas em ziguezague;
+4. os eventos em linhas de programa, com nomes grandes;
+5. a porta terracota, centrada e chapada;
+6. os compromissos numa lista ao lado do título (5:7);
+7. os depoimentos em escada, quando houver;
+8. o anoitecer;
+9. as amostras, com o texto ao lado dos arcos;
+10. os passos num caminho de estrelas;
+11. o FAQ com a coluna da esquerda fixa;
+12. a porta acesa, centrada, com o contato do WhatsApp.
 
 A partir de 56rem, a navegação completa e o botão compacto aparecem no topo e a barra fixa do WhatsApp some. A partir de 60rem, o topo e os artigos viram duas colunas. No celular, o topo mostra o logo e três links (Eventos, Perguntas, Blog), sem botão: o WhatsApp está na primeira dobra e, depois dela, na barra fixa.
 
@@ -354,7 +355,7 @@ O sistema é plano, e a profundidade vem da luz: os halos da textura "Luz" e o h
 - **Sombra da barra** (`box-shadow: 0 -0.75rem 2rem -1rem color-mix(in srgb, var(--tinta-funda) 50%, transparent)`): a barra fixa do celular.
 
 ### Named Rules
-**A Regra da Luz no Lugar da Sombra.** Caixas, cartões, portas, formulário e campos não têm sombra; separam-se por fio de 1px e por tom. Só o arco das fotos e a barra fixa projetam sombra.
+**A Regra da Luz no Lugar da Sombra.** Caixas, cartões, portas e campos não têm sombra; separam-se por fio de 1px e por tom. Só o arco das fotos e a barra fixa projetam sombra.
 
 **A Regra do Halo Sem Ruído.** A textura é feita só de gradientes radiais suaves. Nada de grão, ruído, imagem de papel, vidro desfocado ou brilho atrás de texto branco.
 
@@ -409,15 +410,13 @@ O logo inteiro fica parado de 2,55 s a 3,3 s. Depois os detalhes somem e o arco 
 Um arco chapado em `--terracota-marca`, de até 54rem, centrado. Dentro: a estrela da marca em creme, o título grande em branco, o texto em tinta funda e a fonte do The Knot com link. Sem brilho, sem sombra. É o único bloco centrado no dia.
 
 ### A porta acesa (a consulta de data)
-Um arco chapado em `--pessego`, de até 44rem, centrado na noite. Dentro:
+Um arco chapado em `--pessego`, de até 44rem, centrado na noite. Por decisão do dono (04/11/2026), não há formulário: o contato é direto pelo WhatsApp. Dentro:
 - a estrela e o título "Consultem a data";
-- o formulário em duas colunas (Evento, Data, Cidade e local, Tipo de cerimônia) e os momentos em pílulas;
-- a prévia da mensagem num balão `--dia-2` e o botão terracota.
+- a mensagem pronta que abre no WhatsApp, num balão `--dia-2` (Evento, Data, Cidade e local, Cerimônia, Momentos com música, para o casal completar);
+- o botão terracota "Consultar a data no WhatsApp" e o número "(31) 99615-4698", com "Sem compromisso".
 
-Detalhes:
-- **Campos:** fundo `--dia-2`, borda `--terracota-funda`, cantos de 4px, 3rem de altura.
-- **Caixas de marcar:** desenhadas, com quadrado de 1,25rem, borda terracota funda e visto creme sobre terracota.
-- **Data passada:** um aviso ao lado do campo ("Essa data já passou. Confiram o dia e o ano."), sem bloquear o envio.
+### A história ("A história de vocês vira repertório")
+As alianças em traço terracota da marca (as mesmas da foto do topo), o título e a frase centrados, e três perguntas da conversa com o casal ("Como vocês se conheceram?", "Que música é de vocês dois?", "Quem vocês querem homenagear?") em Bodoni, com a resposta curta embaixo. No computador, as perguntas vêm em ziguezague, como uma conversa, e não em três colunas. Fecha com uma frase para bodas e 15 anos. Fica logo depois de "A voz".
 
 ### Eventos ("Os momentos que a gente canta")
 Três linhas de programa, sem cartões e sem ícones. Cada uma tem a estrela da marca, o nome em Bodoni grande (Evento) e, ao lado, o que acontece na festa, com fio de 1px entre elas. A coroa, que é capa de destaque do Instagram, saiu.
@@ -492,5 +491,5 @@ O título, o índice dos três grupos e o botão do WhatsApp ficam numa coluna f
 - **Don't** fazer grade de cartões iguais com ícone, título e texto, nem pôr sobretítulo acima de título.
 - **Don't** pôr foto genérica ou de estúdio no lugar das amostras de casamento.
 - **Don't** usar a coroa ou os outros ícones de destaque do Instagram no site.
-- **Don't** dar sombra a caixas, cartões, portas, campos ou formulário.
+- **Don't** dar sombra a caixas, cartões, portas ou campos.
 - **Don't** usar `vector-effect: non-scaling-stroke` em traço com tracejado animado (`stroke-dasharray`).
